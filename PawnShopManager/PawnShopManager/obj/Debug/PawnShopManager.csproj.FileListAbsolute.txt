@@ -1,1 +1,9 @@
 D:\WorkSpace\Work\C#\Pawn Shop Manager\PawnShopManager\PawnShopManager\bin\Debug\PawnShopManager.exe.config
+D:\WorkSpace\Work\C#\Pawn Shop Manager\PawnShopManager\PawnShopManager\obj\Debug\PawnShopManager.csprojResolveAssemblyReference.cache
+D:\WorkSpace\Work\C#\Pawn Shop Manager\PawnShopManager\PawnShopManager\obj\Debug\PawnShopManager.GUI.MainForm.resources
+D:\WorkSpace\Work\C#\Pawn Shop Manager\PawnShopManager\PawnShopManager\obj\Debug\PawnShopManager.Properties.Resources.resources
+D:\WorkSpace\Work\C#\Pawn Shop Manager\PawnShopManager\PawnShopManager\obj\Debug\PawnShopManager.csproj.GenerateResource.Cache
+D:\WorkSpace\Work\C#\Pawn Shop Manager\PawnShopManager\PawnShopManager\bin\Debug\PawnShopManager.exe
+D:\WorkSpace\Work\C#\Pawn Shop Manager\PawnShopManager\PawnShopManager\bin\Debug\PawnShopManager.pdb
+D:\WorkSpace\Work\C#\Pawn Shop Manager\PawnShopManager\PawnShopManager\obj\Debug\PawnShopManager.exe
+D:\WorkSpace\Work\C#\Pawn Shop Manager\PawnShopManager\PawnShopManager\obj\Debug\PawnShopManager.pdb

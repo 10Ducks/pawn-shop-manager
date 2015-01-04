@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="SqlServer" id="Project262769" template="Default" database="SqlServer" >
+	<schema name="dbo" catalogname="PawnShop" schemaname="dbo" defo="y" >
+		<table name="Customers" generator_rows="10" >
+			<comment><![CDATA[Bang Khach hang]]></comment>
+			<column name="Customer_Id" type="int" jt="4" mandatory="y" autoincrement="y" regexp="sequence:from=0;step=1;" >
+				<comment><![CDATA[ID cua khach hang]]></comment>
+			</column>
+			<column name="Customer_Name" type="nvarchar" length="50" jt="12" mandatory="y" >
+				<comment><![CDATA[Ten khach hang]]></comment>
+			</column>
+			<column name="Customer_Identity_Card" type="varchar" length="20" jt="12" mandatory="y" regexp="([ABCDHNPRST]|[A-EGHN-T]|[A-Z]){1,2}" >
+				<comment><![CDATA[Chung minh nhan dan cua Khach hang]]></comment>
+			</column>
+			<column name="Customer_Address" type="nvarchar" length="100" jt="12" >
+				<comment><![CDATA[Dia chi khach hang
+]]></comment>
+			</column>
+			<column name="Customer_Phone" type="varchar" length="20" jt="12" regexp="((\([0-9]{3}\) )|([0-9]{3}-))[0-9]{3}-[0-9]{4}" >
+				<comment><![CDATA[Dien thoai Khach hang]]></comment>
+			</column>
+			<column name="Customer_Email" type="varchar" length="50" jt="12" regexp="[a-z]{4,8}([0-9]{0,3}|.[a-z]{4,10})@([a-z]{4,9}.)?([a-z-]{6}).(org|com|net)" >
+				<comment><![CDATA[Email cua Khach Hang]]></comment>
+			</column>
+			<column name="Customer_Image" type="varchar" length="50" jt="12" regexp="" >
+				<comment><![CDATA[Hinh chup cua Khach Hang (hinh anh luu tren may, CSDL chi luu ten cua tam hinh)]]></comment>
+			</column>
+			<column name="Customer_Note" type="text" length="600" jt="-1" >
+				<comment><![CDATA[Ghi chu ve khach hang]]></comment>
+			</column>
+			<column name="Customer_Delete_Flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<index name="Pk_Customer" unique="PRIMARY_KEY" >
+				<column name="Customer_Id" />
+			</index>
+			<fk name="Fk_Customers" to_schema="dbo" to_table="Orders" >
+				<fk_column name="Customer_Id" pk="Customer_Id" />
+				<comment><![CDATA[Khoa ngoai Khach hang - Don hang]]></comment>
+			</fk>
+			<fk name="Fk_Customers_0" to_schema="dbo" to_table="Logs" >
+				<fk_column name="Customer_Id" pk="Log_Customer_Id" />
+			</fk>
+		</table>
+		<table name="Items" generator_rows="10" >
+			<comment><![CDATA[Cac mat hang duoc cam]]></comment>
+			<column name="Item_Id" type="int" jt="4" mandatory="y" autoincrement="y" >
+				<comment><![CDATA[Id cua mat hang]]></comment>
+			</column>
+			<column name="Item_Name" type="nvarchar" length="100" jt="12" mandatory="y" >
+				<comment><![CDATA[Ten cua mat hang]]></comment>
+			</column>
+			<column name="Item_Cost" type="money" jt="3" mandatory="y" regexp="int:from=0;to=999999999;" >
+				<comment><![CDATA[Gia tien cua mat hang]]></comment>
+			</column>
+			<column name="Item_Amount" type="int" jt="4" mandatory="y" >
+				<comment><![CDATA[So luong cua mat hang]]></comment>
+			</column>
+			<column name="Item_Unit" type="varchar" length="10" jt="12" mandatory="y" >
+				<comment><![CDATA[Don vi tinh]]></comment>
+			</column>
+			<column name="Item_Image" type="varchar" length="100" jt="12" >
+				<comment><![CDATA[Hinh cua mat hang, luu duong dan]]></comment>
+			</column>
+			<column name="Item_Delete_Flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+				<comment><![CDATA[Co xoa]]></comment>
+			</column>
+			<index name="Pk_Items" unique="PRIMARY_KEY" >
+				<column name="Item_Id" />
+			</index>
+			<fk name="Fk_Items" to_schema="dbo" to_table="Order_Detail" >
+				<fk_column name="Item_Id" pk="Item_Id" />
+			</fk>
+			<fk name="Fk_Items_0" to_schema="dbo" to_table="Logs" >
+				<fk_column name="Item_Id" pk="Log_Item_Id" />
+			</fk>
+		</table>
+		<table name="Logs" generator_rows="10" >
+			<comment><![CDATA[Bang ghi nhat ky]]></comment>
+			<column name="Log_Id" type="int" jt="4" mandatory="y" autoincrement="y" >
+				<comment><![CDATA[Id cua bang Log]]></comment>
+			</column>
+			<column name="Log_Staff_Id" type="int" jt="4" mandatory="y" >
+				<comment><![CDATA[Ai ghi log?]]></comment>
+			</column>
+			<column name="Log_Status_Id" type="tinyint" jt="-6" mandatory="y" >
+				<comment><![CDATA[Trang thai cua log 
+vd: them sua xoa ...]]></comment>
+			</column>
+			<column name="Log_Table" type="varchar" length="50" jt="12" mandatory="y" >
+				<comment><![CDATA[Bang nao duoc su dung]]></comment>
+			</column>
+			<column name="Log_Customer_Id" type="int" jt="4" >
+				<comment><![CDATA[khach hang nao?]]></comment>
+			</column>
+			<column name="Log_Item_Id" type="int" jt="4" >
+				<comment><![CDATA[mat hang nao]]></comment>
+			</column>
+			<column name="Log_Order_Id" type="int" jt="4" >
+				<comment><![CDATA[Hoa don nao?]]></comment>
+			</column>
+			<column name="Log_Create_Date" type="datetime" jt="93" mandatory="y" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;01.01.2009 00:00:00 000&#039;;" >
+				<comment><![CDATA[Ngay tao log]]></comment>
+			</column>
+			<column name="Log_Note" type="ntext" length="600" jt="-1" >
+				<comment><![CDATA[Ghi chu]]></comment>
+			</column>
+			<column name="Log_Delete_Flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+				<comment><![CDATA[Co xoa]]></comment>
+			</column>
+			<index name="Pk_Logs" unique="PRIMARY_KEY" >
+				<column name="Log_Id" />
+			</index>
+			<index name="Pk_Logs_0" unique="UNIQUE" >
+				<column name="Log_Customer_Id" />
+			</index>
+			<index name="Pk_Logs_1" unique="UNIQUE" >
+				<column name="Log_Staff_Id" />
+			</index>
+			<index name="Pk_Logs_2" unique="UNIQUE" >
+				<column name="Log_Order_Id" />
+			</index>
+			<index name="Pk_Logs_3" unique="UNIQUE" >
+				<column name="Log_Item_Id" />
+			</index>
+			<index name="Pk_Logs_4" unique="UNIQUE" >
+				<column name="Log_Status_Id" />
+			</index>
+		</table>
+		<table name="Order_Detail" generator_rows="10" >
+			<comment><![CDATA[Chi tiet dat hang]]></comment>
+			<column name="Order_Detail_Id" type="int" jt="4" mandatory="y" autoincrement="y" >
+				<comment><![CDATA[Id chi tiet dat hang]]></comment>
+			</column>
+			<column name="Order_Id" type="int" jt="4" mandatory="y" >
+				<comment><![CDATA[Khoa ngoai voi bang Orders]]></comment>
+			</column>
+			<column name="Item_Id" type="int" jt="4" mandatory="y" >
+				<comment><![CDATA[Khoa ngoai voi bang Items]]></comment>
+			</column>
+			<column name="Order_Detail_Amount" type="int" jt="4" >
+				<comment><![CDATA[So luong mat hang]]></comment>
+			</column>
+			<column name="Order_Detail_Create_Date" type="datetime" jt="93" mandatory="y" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;01.01.2009 00:00:00 000&#039;;" >
+				<comment><![CDATA[Ngay tao]]></comment>
+			</column>
+			<column name="Order_Detail_Note" type="ntext" length="600" jt="-1" >
+				<comment><![CDATA[Ghi chu]]></comment>
+			</column>
+			<column name="Order_Detail_Staff_Id" type="int" jt="4" mandatory="y" >
+				<comment><![CDATA[Nhan vien ban hang]]></comment>
+			</column>
+			<column name="Order_Detail_Delete_Flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+				<comment><![CDATA[Co xoa]]></comment>
+			</column>
+			<index name="Pk_Order_Detail" unique="PRIMARY_KEY" >
+				<column name="Order_Detail_Id" />
+			</index>
+			<index name="idx_Order_Detail" unique="NORMAL" >
+				<column name="Order_Id" />
+			</index>
+			<index name="Pk_Order_Detail_0" unique="UNIQUE" >
+				<column name="Item_Id" />
+			</index>
+			<index name="Pk_Order_Detail_1" unique="UNIQUE" >
+				<column name="Order_Detail_Staff_Id" />
+			</index>
+			<fk name="Fk_Order_Detail" to_schema="dbo" to_table="Orders" >
+				<fk_column name="Order_Id" pk="Order_Id" />
+				<comment><![CDATA[Khoa ngoai bang Ban hang - Chi tiet Ban hang]]></comment>
+			</fk>
+		</table>
+		<table name="Orders" generator_rows="10" >
+			<comment><![CDATA[Bang don dat hang]]></comment>
+			<column name="Order_Id" type="int" jt="4" mandatory="y" autoincrement="y" >
+				<comment><![CDATA[Id cua bang dat hang]]></comment>
+			</column>
+			<column name="Customer_Id" type="int" jt="4" mandatory="y" >
+				<comment><![CDATA[id cua khach hang da dat]]></comment>
+			</column>
+			<column name="Order_Create_Date" type="datetime" jt="93" mandatory="y" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;01.01.2009 00:00:00 000&#039;;" >
+				<comment><![CDATA[Ngay tao hoa don]]></comment>
+			</column>
+			<column name="Order_Cost" type="money" jt="3" regexp="int:from=0;to=999999999;" >
+				<comment><![CDATA[Gia cua hoa don]]></comment>
+			</column>
+			<column name="Order_Expiration_Date" type="datetime" jt="93" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;01.01.2009 00:00:00 000&#039;;" >
+				<comment><![CDATA[Ngay het han]]></comment>
+			</column>
+			<column name="Order_Payment_Date" type="datetime" jt="93" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;01.01.2009 00:00:00 000&#039;;" >
+				<comment><![CDATA[Ngay tra tien]]></comment>
+			</column>
+			<column name="Order_Note" type="ntext" length="600" jt="-1" >
+				<comment><![CDATA[Ghi chu]]></comment>
+			</column>
+			<column name="Order_Delete_Flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+				<comment><![CDATA[Co xoa]]></comment>
+			</column>
+			<index name="Pk_Orders" unique="PRIMARY_KEY" >
+				<column name="Order_Id" />
+			</index>
+			<index name="Pk_Orders_0" unique="UNIQUE" >
+				<column name="Customer_Id" />
+			</index>
+			<fk name="Fk_Orders" to_schema="dbo" to_table="Logs" >
+				<fk_column name="Order_Id" pk="Log_Order_Id" />
+			</fk>
+		</table>
+		<table name="Roles" generator_rows="10" >
+			<comment><![CDATA[Chuc vu cua nhan vien
+1: Admin - Boss
+2: Ke toan
+3: Nhan vien ban hang]]></comment>
+			<column name="Role_Id" type="tinyint" jt="-6" mandatory="y" autoincrement="y" regexp="sequence:from=0;step=1;" >
+				<comment><![CDATA[Id cua chuc vu]]></comment>
+			</column>
+			<column name="Role_Name" type="nvarchar" length="20" jt="12" mandatory="y" regexp="[a-z]{3}" >
+				<comment><![CDATA[Ten cua chuc vu]]></comment>
+			</column>
+			<column name="Role_Note" type="ntext" length="600" jt="-1" regexp="((I|Mike|Rudi) (loves flowers|like sports|like swimming|watches football). ){1,2}" >
+				<comment><![CDATA[Ghi chu]]></comment>
+			</column>
+			<column name="Role_Delete_Flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+				<comment><![CDATA[Co xoa]]></comment>
+			</column>
+			<index name="Pk_Roles" unique="PRIMARY_KEY" >
+				<column name="Role_Id" />
+			</index>
+			<fk name="Fk_Roles" to_schema="dbo" to_table="Staffs" >
+				<fk_column name="Role_Id" pk="Staff_Role_Id" />
+			</fk>
+		</table>
+		<table name="Staffs" generator_rows="10" >
+			<column name="Staff_Id" type="int" jt="4" mandatory="y" autoincrement="y" />
+			<column name="Staff_Account" type="varchar" length="50" jt="12" mandatory="y" />
+			<column name="Staff_Password" type="varchar" length="256" jt="12" mandatory="y" />
+			<column name="Staff_Name" type="nvarchar" length="100" jt="12" mandatory="y" />
+			<column name="Staff_Address" type="nvarchar" length="100" jt="12" />
+			<column name="Staff_Email" type="varchar" length="50" jt="12" />
+			<column name="Staff_Phone" type="varchar" length="20" jt="12" />
+			<column name="Staff_Role_Id" type="tinyint" jt="-6" mandatory="y" />
+			<column name="Staff_Image" type="varchar" length="50" jt="12" />
+			<column name="Staff_Note" type="ntext" length="600" jt="-1" />
+			<column name="Staff_Delete_Flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<index name="Pk_Staffs" unique="PRIMARY_KEY" >
+				<column name="Staff_Id" />
+			</index>
+			<index name="Pk_Staffs_0" unique="UNIQUE" >
+				<column name="Staff_Role_Id" />
+			</index>
+			<index name="Idx_Staffs" unique="UNIQUE" >
+				<column name="Staff_Account" />
+			</index>
+			<fk name="Fk_Staffs" to_schema="dbo" to_table="Logs" >
+				<fk_column name="Staff_Id" pk="Log_Staff_Id" />
+			</fk>
+			<fk name="Fk_Staffs_0" to_schema="dbo" to_table="Order_Detail" >
+				<fk_column name="Staff_Id" pk="Order_Detail_Staff_Id" />
+			</fk>
+		</table>
+		<table name="Status_Log" generator_rows="10" >
+			<comment><![CDATA[trang thai]]></comment>
+			<column name="Status_Id" type="tinyint" jt="-6" mandatory="y" autoincrement="y" />
+			<column name="Status_Name" type="varchar" length="20" jt="12" mandatory="y" />
+			<column name="Status_Description" type="nvarchar" length="100" jt="12" >
+				<comment><![CDATA[Mo ta]]></comment>
+			</column>
+			<column name="Status_Note" type="ntext" length="600" jt="-1" regexp="((I|Mike|Rudi) (loves flowers|like sports|like swimming|watches football). ){1,2}" />
+			<column name="Status_Delete_Flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<index name="Pk_Statu" unique="PRIMARY_KEY" >
+				<column name="Status_Id" />
+			</index>
+			<fk name="Fk_Status_Log" to_schema="dbo" to_table="Logs" >
+				<fk_column name="Status_Id" pk="Log_Status_Id" />
+			</fk>
+		</table>
+	</schema>
+	<connector name="SqlServer" database="SqlServer" driver_class="net.sourceforge.jtds.jdbc.Driver" driver_jar="jtds-1.3.1.jar" host="localhost" port="1433" instance="PawnShop" user="sa" schema_mapping="" />
+	<layout id="Layout319209" name="Default" show_relation_columns="y" >
+		<entity schema="dbo" name="Status_Log" color="b2cdf7" x="480" y="45" />
+		<entity schema="dbo" name="Items" color="b2cdf7" x="435" y="210" />
+		<entity schema="dbo" name="Order_Detail" color="b2cdf7" x="630" y="360" />
+		<entity schema="dbo" name="Logs" color="b2cdf7" x="285" y="45" />
+		<entity schema="dbo" name="Customers" color="b2cdf7" x="45" y="60" />
+		<entity schema="dbo" name="Orders" color="b2cdf7" x="60" y="345" />
+		<entity schema="dbo" name="Roles" color="b2cdf7" x="900" y="60" />
+		<entity schema="dbo" name="Staffs" color="b2cdf7" x="720" y="60" />
+		<script name="Sql" id="SQL267500" >
+			<string><![CDATA[select * from roles]]></string>
+		</script>
+	</layout>
+</project>

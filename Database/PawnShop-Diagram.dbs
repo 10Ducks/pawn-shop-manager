@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="SqlServer" id="Project262769" template="Default" database="SqlServer" >
+	<schema name="dbo" catalogname="PawnShop" schemaname="dbo" defo="y" >
+		<table name="Customers" generator_rows="10" >
+			<comment><![CDATA[Bang Khach hang]]></comment>
+			<column name="Customer_Id" type="int" jt="4" mandatory="y" autoincrement="y" regexp="sequence:from=0;step=1;" >
+				<comment><![CDATA[ID cua khach hang]]></comment>
+			</column>
+			<column name="Customer_Name" type="nvarchar" length="50" jt="12" mandatory="y" >
+				<comment><![CDATA[Ten khach hang]]></comment>
+			</column>
+			<column name="Customer_Identity_Card" type="varchar" length="20" jt="12" mandatory="y" regexp="([ABCDHNPRST]|[A-EGHN-T]|[A-Z]){1,2}" >
+				<comment><![CDATA[Chung minh nhan dan cua Khach hang]]></comment>
+			</column>
+			<column name="Customer_Address" type="nvarchar" length="100" jt="12" >
+				<comment><![CDATA[Dia chi khach hang
+]]></comment>
+			</column>
+			<column name="Customer_Phone" type="varchar" length="20" jt="12" regexp="((\([0-9]{3}\) )|([0-9]{3}-))[0-9]{3}-[0-9]{4}" >
+				<comment><![CDATA[Dien thoai Khach hang]]></comment>
+			</column>
+			<column name="Customer_Email" type="varchar" length="50" jt="12" regexp="[a-z]{4,8}([0-9]{0,3}|.[a-z]{4,10})@([a-z]{4,9}.)?([a-z-]{6}).(org|com|net)" >
+				<comment><![CDATA[Email cua Khach Hang]]></comment>
+			</column>
+			<column name="Customer_Image" type="varchar" length="50" jt="12" regexp="" >
+				<comment><![CDATA[Hinh chup cua Khach Hang (hinh anh luu tren may, CSDL chi luu ten cua tam hinh)]]></comment>
+			</column>
+			<column name="Customer_Note" type="text" length="600" jt="-1" >
+				<comment><![CDATA[Ghi chu ve khach hang]]></comment>
+			</column>
+			<column name="Customer_Delete_Flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<index name="Pk_Customer" unique="PRIMARY_KEY" >
+				<column name="Customer_Id" />
+			</index>
+			<fk name="Fk_Customers" to_schema="dbo" to_table="Orders" >
+				<fk_column name="Customer_Id" pk="Customer_Id" />
+				<comment><![CDATA[Khoa ngoai Khach hang - Don hang]]></comment>
+			</fk>
+			<fk name="Fk_Customers_0" to_schema="dbo" to_table="Logs" >
+				<fk_column name="Customer_Id" pk="Log_Customer_Id" />
+			</fk>
+		</table>
+		<table name="Items" generator_rows="10" >
+			<comment><![CDATA[Cac mat hang duoc cam]]></comment>
+			<column name="Item_Id" type="int" jt="4" mandatory="y" autoincrement="y" >
+				<comment><![CDATA[Id cua mat hang]]></comment>
+			</column>
+			<column name="Item_Name" type="nvarchar" length="100" jt="12" mandatory="y" >
+				<comment><![CDATA[Ten cua mat hang]]></comment>
+			</column>
+			<column name="Item_Cost" type="money" jt="3" mandatory="y" regexp="int:from=0;to=999999999;" >
+				<comment><![CDATA[Gia tien cua mat hang]]></comment>
+			</column>
+			<column name="Item_Amount" type="int" jt="4" mandatory="y" >
+				<comment><![CDATA[So luong cua mat hang]]></comment>
+			</column>
+			<column name="Item_Unit" type="varchar" length="10" jt="12" mandatory="y" >
+				<comment><![CDATA[Don vi tinh]]></comment>
+			</column>
+			<column name="Item_Image" type="varchar" length="100" jt="12" >
+				<comment><![CDATA[Hinh cua mat hang, luu duong dan]]></comment>
+			</column>
+			<column name="Item_Delete_Flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+				<comment><![CDATA[Co xoa]]></comment>
+			</column>
+			<index name="Pk_Items" unique="PRIMARY_KEY" >
+				<column name="Item_Id" />
+			</index>
+			<fk name="Fk_Items" to_schema="dbo" to_table="Order_Detail" >
+				<fk_column name="Item_Id" pk="Item_Id" />
+			</fk>
+			<fk name="Fk_Items_0" to_schema="dbo" to_table="Logs" >
+				<fk_column name="Item_Id" pk="Log_Item_Id" />
+			</fk>
+		</table>
+		<table name="Logs" generator_rows="10" >
+			<comment><![CDATA[Bang ghi nhat ky]]></comment>
+			<column name="Log_Id" type="int" jt="4" mandatory="y" autoincrement="y" >
+				<comment><![CDATA[Id cua bang Log]]></comment>
+			</column>
+			<column name="Log_Staff_Id" type="int" jt="4" mandatory="y" >
+				<comment><![CDATA[Ai ghi log?]]></comment>
+			</column>
+			<column name="Log_Status_Id" type="tinyint" jt="-6" mandatory="y" >
+				<comment><![CDATA[Trang thai cua log 
+vd: them sua xoa ...]]></comment>
+			</column>
+			<column name="Log_Table" type="varchar" length="50" jt="12" mandatory="y" >
+				<comment><![CDATA[Bang nao duoc su dung]]></comment>
+			</column>
+			<column name="Log_Customer_Id" type="int" jt="4" >
+				<comment><![CDATA[khach hang nao?]]></comment>
+			</column>
+			<column name="Log_Item_Id" type="int" jt="4" >
+				<comment><![CDATA[mat hang nao]]></comment>
+			</column>
+			<column name="Log_Order_Id" type="int" jt="4" >
+				<comment><![CDATA[Hoa don nao?]]></comment>
+			</column>
+			<column name="Log_Create_Date" type="datetime" jt="93" mandatory="y" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;01.01.2009 00:00:00 000&#039;;" >
+				<comment><![CDATA[Ngay tao log]]></comment>
+			</column>
+			<column name="Log_Note" type="ntext" length="600" jt="-1" >
+				<comment><![CDATA[Ghi chu]]></comment>
+			</column>
+			<column name="Log_Delete_Flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+				<comment><![CDATA[Co xoa]]></comment>
+			</column>
+			<index name="Pk_Logs" unique="PRIMARY_KEY" >
+				<column name="Log_Id" />
+			</index>
+			<index name="Pk_Logs_0" unique="UNIQUE" >
+				<column name="Log_Customer_Id" />
+			</index>
+			<index name="Pk_Logs_1" unique="UNIQUE" >
+				<column name="Log_Staff_Id" />
+			</index>
+			<index name="Pk_Logs_2" unique="UNIQUE" >
+				<column name="Log_Order_Id" />
+			</index>
+			<index name="Pk_Logs_3" unique="UNIQUE" >
+				<column name="Log_Item_Id" />
+			</index>
+			<index name="Pk_Logs_4" unique="UNIQUE" >
+				<column name="Log_Status_Id" />
+			</index>
+		</table>
+		<table name="Order_Detail" generator_rows="10" >
+			<comment><![CDATA[Chi tiet dat hang]]></comment>
+			<column name="Order_Detail_Id" type="int" jt="4" mandatory="y" autoincrement="y" >
+				<comment><![CDATA[Id chi tiet dat hang]]></comment>
+			</column>
+			<column name="Order_Id" type="int" jt="4" mandatory="y" >
+				<comment><![CDATA[Khoa ngoai voi bang Orders]]></comment>
+			</column>
+			<column name="Item_Id" type="int" jt="4" mandatory="y" >
+				<comment><![CDATA[Khoa ngoai voi bang Items]]></comment>
+			</column>
+			<column name="Order_Detail_Amount" type="int" jt="4" >
+				<comment><![CDATA[So luong mat hang]]></comment>
+			</column>
+			<column name="Order_Detail_Create_Date" type="datetime" jt="93" mandatory="y" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;01.01.2009 00:00:00 000&#039;;" >
+				<comment><![CDATA[Ngay tao]]></comment>
+			</column>
+			<column name="Order_Detail_Note" type="ntext" length="600" jt="-1" >
+				<comment><![CDATA[Ghi chu]]></comment>
+			</column>
+			<column name="Order_Detail_Staff_Id" type="int" jt="4" mandatory="y" >
+				<comment><![CDATA[Nhan vien ban hang]]></comment>
+			</column>
+			<column name="Order_Detail_Delete_Flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+				<comment><![CDATA[Co xoa]]></comment>
+			</column>
+			<index name="Pk_Order_Detail" unique="PRIMARY_KEY" >
+				<column name="Order_Detail_Id" />
+			</index>
+			<index name="idx_Order_Detail" unique="NORMAL" >
+				<column name="Order_Id" />
+			</index>
+			<index name="Pk_Order_Detail_0" unique="UNIQUE" >
+				<column name="Item_Id" />
+			</index>
+			<index name="Pk_Order_Detail_1" unique="UNIQUE" >
+				<column name="Order_Detail_Staff_Id" />
+			</index>
+			<fk name="Fk_Order_Detail" to_schema="dbo" to_table="Orders" >
+				<fk_column name="Order_Id" pk="Order_Id" />
+				<comment><![CDATA[Khoa ngoai bang Ban hang - Chi tiet Ban hang]]></comment>
+			</fk>
+		</table>
+		<table name="Orders" generator_rows="10" >
+			<comment><![CDATA[Bang don dat hang]]></comment>
+			<column name="Order_Id" type="int" jt="4" mandatory="y" autoincrement="y" >
+				<comment><![CDATA[Id cua bang dat hang]]></comment>
+			</column>
+			<column name="Customer_Id" type="int" jt="4" mandatory="y" >
+				<comment><![CDATA[id cua khach hang da dat]]></comment>
+			</column>
+			<column name="Order_Create_Date" type="datetime" jt="93" mandatory="y" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;01.01.2009 00:00:00 000&#039;;" >
+				<comment><![CDATA[Ngay tao hoa don]]></comment>
+			</column>
+			<column name="Order_Cost" type="money" jt="3" regexp="int:from=0;to=999999999;" >
+				<comment><![CDATA[Gia cua hoa don]]></comment>
+			</column>
+			<column name="Order_Expiration_Date" type="datetime" jt="93" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;01.01.2009 00:00:00 000&#039;;" >
+				<comment><![CDATA[Ngay het han]]></comment>
+			</column>
+			<column name="Order_Payment_Date" type="datetime" jt="93" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;01.01.2009 00:00:00 000&#039;;" >
+				<comment><![CDATA[Ngay tra tien]]></comment>
+			</column>
+			<column name="Order_Note" type="ntext" length="600" jt="-1" >
+				<comment><![CDATA[Ghi chu]]></comment>
+			</column>
+			<column name="Order_Delete_Flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+				<comment><![CDATA[Co xoa]]></comment>
+			</column>
+			<index name="Pk_Orders" unique="PRIMARY_KEY" >
+				<column name="Order_Id" />
+			</index>
+			<index name="Pk_Orders_0" unique="UNIQUE" >
+				<column name="Customer_Id" />
+			</index>
+			<fk name="Fk_Orders" to_schema="dbo" to_table="Logs" >
+				<fk_column name="Order_Id" pk="Log_Order_Id" />
+			</fk>
+		</table>
+		<table name="Roles" generator_rows="10" >
+			<comment><![CDATA[Chuc vu cua nhan vien
+1: Admin - Boss
+2: Ke toan
+3: Nhan vien ban hang]]></comment>
+			<column name="Role_Id" type="tinyint" jt="-6" mandatory="y" autoincrement="y" regexp="sequence:from=0;step=1;" >
+				<comment><![CDATA[Id cua chuc vu]]></comment>
+			</column>
+			<column name="Role_Name" type="nvarchar" length="20" jt="12" mandatory="y" regexp="[a-z]{3}" >
+				<comment><![CDATA[Ten cua chuc vu]]></comment>
+			</column>
+			<column name="Role_Note" type="ntext" length="600" jt="-1" regexp="((I|Mike|Rudi) (loves flowers|like sports|like swimming|watches football). ){1,2}" >
+				<comment><![CDATA[Ghi chu]]></comment>
+			</column>
+			<column name="Role_Delete_Flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+				<comment><![CDATA[Co xoa]]></comment>
+			</column>
+			<index name="Pk_Roles" unique="PRIMARY_KEY" >
+				<column name="Role_Id" />
+			</index>
+		</table>
+		<table name="Staffs" generator_rows="10" >
+			<column name="Staff_Id" type="int" jt="4" mandatory="y" autoincrement="y" />
+			<column name="Staff_Account" type="varchar" length="50" jt="12" mandatory="y" />
+			<column name="Staff_Password" type="varchar" length="256" jt="12" mandatory="y" />
+			<column name="Staff_Name" type="nvarchar" length="100" jt="12" mandatory="y" />
+			<column name="Staff_Address" type="nvarchar" length="100" jt="12" />
+			<column name="Staff_Email" type="varchar" length="50" jt="12" />
+			<column name="Staff_Phone" type="varchar" length="20" jt="12" />
+			<column name="Staff_Role_Id" type="tinyint" jt="-6" mandatory="y" />
+			<column name="Staff_Image" type="varchar" length="50" jt="12" />
+			<column name="Staff_Note" type="ntext" length="600" jt="-1" />
+			<column name="Staff_Delete_Flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<index name="Pk_Staffs" unique="PRIMARY_KEY" >
+				<column name="Staff_Id" />
+			</index>
+			<index name="Pk_Staffs_0" unique="UNIQUE" >
+				<column name="Staff_Role_Id" />
+			</index>
+			<index name="Idx_Staffs" unique="UNIQUE" >
+				<column name="Staff_Account" />
+			</index>
+			<fk name="Fk_Staffs" to_schema="dbo" to_table="Logs" >
+				<fk_column name="Staff_Id" pk="Log_Staff_Id" />
+			</fk>
+			<fk name="Fk_Staffs_0" to_schema="dbo" to_table="Order_Detail" >
+				<fk_column name="Staff_Id" pk="Order_Detail_Staff_Id" />
+			</fk>
+		</table>
+		<table name="Status_Log" generator_rows="10" >
+			<comment><![CDATA[trang thai]]></comment>
+			<column name="Status_Id" type="tinyint" jt="-6" mandatory="y" autoincrement="y" />
+			<column name="Status_Name" type="varchar" length="20" jt="12" mandatory="y" />
+			<column name="Status_Description" type="nvarchar" length="100" jt="12" >
+				<comment><![CDATA[Mo ta]]></comment>
+			</column>
+			<column name="Status_Note" type="ntext" length="600" jt="-1" regexp="((I|Mike|Rudi) (loves flowers|like sports|like swimming|watches football). ){1,2}" />
+			<column name="Status_Delete_Flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<index name="Pk_Statu" unique="PRIMARY_KEY" >
+				<column name="Status_Id" />
+			</index>
+		</table>
+	</schema>
+	<connector name="SqlServer" database="SqlServer" driver_class="net.sourceforge.jtds.jdbc.Driver" driver_jar="jtds-1.3.1.jar" host="localhost" port="1433" instance="PawnShop" user="sa" schema_mapping="" />
+	<layout id="Layout319209" name="Default" show_relation_columns="y" >
+		<entity schema="dbo" name="Items" color="b2cdf7" x="435" y="210" />
+		<entity schema="dbo" name="Order_Detail" color="b2cdf7" x="630" y="360" />
+		<entity schema="dbo" name="Customers" color="b2cdf7" x="45" y="60" />
+		<entity schema="dbo" name="Orders" color="b2cdf7" x="60" y="345" />
+		<entity schema="dbo" name="Roles" color="b2cdf7" x="900" y="60" />
+		<entity schema="dbo" name="Staffs" color="b2cdf7" x="720" y="60" />
+		<entity schema="dbo" name="Status_Log" color="b2cdf7" x="480" y="45" />
+		<entity schema="dbo" name="Logs" color="b2cdf7" x="285" y="45" />
+		<script name="Sql" id="SQL1033865" >
+			<string><![CDATA[CREATE SCHEMA dbo;
+
+CREATE TABLE dbo.Logs ( 
+	Log_Id               int NOT NULL   IDENTITY,
+	Log_Staff_Id         int NOT NULL   ,
+	Log_Status_Id        tinyint NOT NULL   ,
+	Log_Table            varchar(50) NOT NULL   ,
+	Log_Customer_Id      int    ,
+	Log_Item_Id          int    ,
+	Log_Order_Id         int    ,
+	Log_Create_Date      datetime NOT NULL   ,
+	Log_Note             ntext    ,
+	Log_Delete_Flag      bit NOT NULL CONSTRAINT defo_Logs_Log_Delete_Flag DEFAULT 0  ,
+	CONSTRAINT Pk_Logs PRIMARY KEY ( Log_Id ),
+	CONSTRAINT Pk_Logs_0 UNIQUE ( Log_Customer_Id ) ,
+	CONSTRAINT Pk_Logs_1 UNIQUE ( Log_Staff_Id ) ,
+	CONSTRAINT Pk_Logs_2 UNIQUE ( Log_Order_Id ) ,
+	CONSTRAINT Pk_Logs_3 UNIQUE ( Log_Item_Id ) ,
+	CONSTRAINT Pk_Logs_4 UNIQUE ( Log_Status_Id ) 
+ );
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Bang ghi nhat ky' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Logs';;
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Id cua bang Log' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Logs', @level2type=N'COLUMN',@level2name=N'Log_Id';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Ai ghi log?' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Logs', @level2type=N'COLUMN',@level2name=N'Log_Staff_Id';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Trang thai cua log 
+vd: them sua xoa ...' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Logs', @level2type=N'COLUMN',@level2name=N'Log_Status_Id';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Bang nao duoc su dung' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Logs', @level2type=N'COLUMN',@level2name=N'Log_Table';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'khach hang nao?' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Logs', @level2type=N'COLUMN',@level2name=N'Log_Customer_Id';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'mat hang nao' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Logs', @level2type=N'COLUMN',@level2name=N'Log_Item_Id';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Hoa don nao?' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Logs', @level2type=N'COLUMN',@level2name=N'Log_Order_Id';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Ngay tao log' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Logs', @level2type=N'COLUMN',@level2name=N'Log_Create_Date';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Ghi chu' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Logs', @level2type=N'COLUMN',@level2name=N'Log_Note';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Co xoa' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Logs', @level2type=N'COLUMN',@level2name=N'Log_Delete_Flag';
+
+CREATE TABLE dbo.Orders ( 
+	Order_Id             int NOT NULL   IDENTITY,
+	Customer_Id          int NOT NULL   ,
+	Order_Create_Date    datetime NOT NULL   ,
+	Order_Cost           money    ,
+	Order_Expiration_Date datetime    ,
+	Order_Payment_Date   datetime    ,
+	Order_Note           ntext    ,
+	Order_Delete_Flag    bit NOT NULL CONSTRAINT defo_Orders_Order_Delete_Flag DEFAULT 0  ,
+	CONSTRAINT Pk_Orders PRIMARY KEY ( Order_Id ),
+	CONSTRAINT Pk_Orders_0 UNIQUE ( Customer_Id ) 
+ );
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Bang don dat hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Orders';;
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Id cua bang dat hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Orders', @level2type=N'COLUMN',@level2name=N'Order_Id';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'id cua khach hang da dat' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Orders', @level2type=N'COLUMN',@level2name=N'Customer_Id';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Ngay tao hoa don' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Orders', @level2type=N'COLUMN',@level2name=N'Order_Create_Date';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Gia cua hoa don' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Orders', @level2type=N'COLUMN',@level2name=N'Order_Cost';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Ngay het han' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Orders', @level2type=N'COLUMN',@level2name=N'Order_Expiration_Date';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Ngay tra tien' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Orders', @level2type=N'COLUMN',@level2name=N'Order_Payment_Date';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Ghi chu' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Orders', @level2type=N'COLUMN',@level2name=N'Order_Note';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Co xoa' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Orders', @level2type=N'COLUMN',@level2name=N'Order_Delete_Flag';
+
+CREATE TABLE dbo.Roles ( 
+	Role_Id              tinyint NOT NULL   IDENTITY,
+	Role_Name            nvarchar(20) NOT NULL   ,
+	Role_Note            ntext    ,
+	Role_Delete_Flag     bit NOT NULL CONSTRAINT defo_Roles_Role_Delete_Flag DEFAULT 0  ,
+	CONSTRAINT Pk_Roles PRIMARY KEY ( Role_Id )
+ );
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Chuc vu cua nhan vien
+1: Admin - Boss
+2: Ke toan
+3: Nhan vien ban hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Roles';;
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Id cua chuc vu' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Roles', @level2type=N'COLUMN',@level2name=N'Role_Id';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Ten cua chuc vu' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Roles', @level2type=N'COLUMN',@level2name=N'Role_Name';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Ghi chu' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Roles', @level2type=N'COLUMN',@level2name=N'Role_Note';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Co xoa' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Roles', @level2type=N'COLUMN',@level2name=N'Role_Delete_Flag';
+
+CREATE TABLE dbo.Status_Log ( 
+	Status_Id            tinyint NOT NULL   IDENTITY,
+	Status_Name          varchar(20) NOT NULL   ,
+	Status_Description   nvarchar(100)    ,
+	Status_Note          ntext    ,
+	Status_Delete_Flag   bit NOT NULL CONSTRAINT defo_Status_Log_Status_Delete_Flag DEFAULT 0  ,
+	CONSTRAINT Pk_Statu PRIMARY KEY ( Status_Id )
+ );
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'trang thai' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Status_Log';;
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Mo ta' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Status_Log', @level2type=N'COLUMN',@level2name=N'Status_Description';
+
+CREATE TABLE dbo.Customers ( 
+	Customer_Id          int NOT NULL   IDENTITY,
+	Customer_Name        nvarchar(50) NOT NULL   ,
+	Customer_Identity_Card varchar(20) NOT NULL   ,
+	Customer_Address     nvarchar(100)    ,
+	Customer_Phone       varchar(20)    ,
+	Customer_Email       varchar(50)    ,
+	Customer_Image       varchar(50)    ,
+	Customer_Note        text    ,
+	Customer_Delete_Flag bit NOT NULL CONSTRAINT defo_Customers_Customer_Delete_Flag DEFAULT 0  ,
+	CONSTRAINT Pk_Customer PRIMARY KEY ( Customer_Id )
+ );
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Bang Khach hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customers';;
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'ID cua khach hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customers', @level2type=N'COLUMN',@level2name=N'Customer_Id';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Ten khach hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customers', @level2type=N'COLUMN',@level2name=N'Customer_Name';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Chung minh nhan dan cua Khach hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customers', @level2type=N'COLUMN',@level2name=N'Customer_Identity_Card';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Dia chi khach hang
+' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customers', @level2type=N'COLUMN',@level2name=N'Customer_Address';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Dien thoai Khach hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customers', @level2type=N'COLUMN',@level2name=N'Customer_Phone';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Email cua Khach Hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customers', @level2type=N'COLUMN',@level2name=N'Customer_Email';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Hinh chup cua Khach Hang (hinh anh luu tren may, CSDL chi luu ten cua tam hinh)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customers', @level2type=N'COLUMN',@level2name=N'Customer_Image';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Ghi chu ve khach hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Customers', @level2type=N'COLUMN',@level2name=N'Customer_Note';
+
+CREATE TABLE dbo.Order_Detail ( 
+	Order_Detail_Id      int NOT NULL   IDENTITY,
+	Order_Id             int NOT NULL   ,
+	Item_Id              int NOT NULL   ,
+	Order_Detail_Amount  int    ,
+	Order_Detail_Create_Date datetime NOT NULL   ,
+	Order_Detail_Note    ntext    ,
+	Order_Detail_Staff_Id int NOT NULL   ,
+	Order_Detail_Delete_Flag bit NOT NULL CONSTRAINT defo_Order_Detail_Order_Detail_Delete_Flag DEFAULT 0  ,
+	CONSTRAINT Pk_Order_Detail PRIMARY KEY ( Order_Detail_Id ),
+	CONSTRAINT Pk_Order_Detail_0 UNIQUE ( Item_Id ) ,
+	CONSTRAINT Pk_Order_Detail_1 UNIQUE ( Order_Detail_Staff_Id ) 
+ );
+
+CREATE INDEX idx_Order_Detail ON dbo.Order_Detail ( Order_Id );
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Chi tiet dat hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Order_Detail';;
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Id chi tiet dat hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Order_Detail', @level2type=N'COLUMN',@level2name=N'Order_Detail_Id';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Khoa ngoai voi bang Orders' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Order_Detail', @level2type=N'COLUMN',@level2name=N'Order_Id';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Khoa ngoai voi bang Items' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Order_Detail', @level2type=N'COLUMN',@level2name=N'Item_Id';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'So luong mat hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Order_Detail', @level2type=N'COLUMN',@level2name=N'Order_Detail_Amount';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Ngay tao' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Order_Detail', @level2type=N'COLUMN',@level2name=N'Order_Detail_Create_Date';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Ghi chu' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Order_Detail', @level2type=N'COLUMN',@level2name=N'Order_Detail_Note';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Nhan vien ban hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Order_Detail', @level2type=N'COLUMN',@level2name=N'Order_Detail_Staff_Id';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Co xoa' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Order_Detail', @level2type=N'COLUMN',@level2name=N'Order_Detail_Delete_Flag';
+
+CREATE TABLE dbo.Staffs ( 
+	Staff_Id             int NOT NULL   IDENTITY,
+	Staff_Account        varchar(50) NOT NULL   ,
+	Staff_Password       varchar(256) NOT NULL   ,
+	Staff_Name           nvarchar(100) NOT NULL   ,
+	Staff_Address        nvarchar(100)    ,
+	Staff_Email          varchar(50)    ,
+	Staff_Phone          varchar(20)    ,
+	Staff_Role_Id        tinyint NOT NULL   ,
+	Staff_Image          varchar(50)    ,
+	Staff_Note           ntext    ,
+	Staff_Delete_Flag    bit NOT NULL CONSTRAINT defo_Staffs_Staff_Delete_Flag DEFAULT 0  ,
+	CONSTRAINT Pk_Staffs PRIMARY KEY ( Staff_Id ),
+	CONSTRAINT Pk_Staffs_0 UNIQUE ( Staff_Role_Id ) ,
+	CONSTRAINT Idx_Staffs UNIQUE ( Staff_Account ) 
+ );
+
+CREATE TABLE dbo.Items ( 
+	Item_Id              int NOT NULL   IDENTITY,
+	Item_Name            nvarchar(100) NOT NULL   ,
+	Item_Cost            money NOT NULL   ,
+	Item_Amount          int NOT NULL   ,
+	Item_Unit            varchar(10) NOT NULL   ,
+	Item_Image           varchar(100)    ,
+	Item_Delete_Flag     bit NOT NULL CONSTRAINT defo_Items_Item_Delete_Flag DEFAULT 0  ,
+	CONSTRAINT Pk_Items PRIMARY KEY ( Item_Id )
+ );
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Cac mat hang duoc cam' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Items';;
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Id cua mat hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Items', @level2type=N'COLUMN',@level2name=N'Item_Id';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Ten cua mat hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Items', @level2type=N'COLUMN',@level2name=N'Item_Name';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Gia tien cua mat hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Items', @level2type=N'COLUMN',@level2name=N'Item_Cost';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'So luong cua mat hang' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Items', @level2type=N'COLUMN',@level2name=N'Item_Amount';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Don vi tinh' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Items', @level2type=N'COLUMN',@level2name=N'Item_Unit';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Hinh cua mat hang, luu duong dan' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Items', @level2type=N'COLUMN',@level2name=N'Item_Image';
+
+exec sp_addextendedproperty  @name=N'MS_Description', @value=N'Co xoa' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Items', @level2type=N'COLUMN',@level2name=N'Item_Delete_Flag';
+
+ALTER TABLE dbo.Customers ADD CONSTRAINT Fk_Customers FOREIGN KEY ( Customer_Id ) REFERENCES dbo.Orders( Customer_Id ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE dbo.Customers ADD CONSTRAINT Fk_Customers_0 FOREIGN KEY ( Customer_Id ) REFERENCES dbo.Logs( Log_Customer_Id ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE dbo.Items ADD CONSTRAINT Fk_Items FOREIGN KEY ( Item_Id ) REFERENCES dbo.Order_Detail( Item_Id ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE dbo.Items ADD CONSTRAINT Fk_Items_0 FOREIGN KEY ( Item_Id ) REFERENCES dbo.Logs( Log_Item_Id ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE dbo.Order_Detail ADD CONSTRAINT Fk_Order_Detail FOREIGN KEY ( Order_Id ) REFERENCES dbo.Orders( Order_Id ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE dbo.Orders ADD CONSTRAINT Fk_Orders FOREIGN KEY ( Order_Id ) REFERENCES dbo.Logs( Log_Order_Id ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE dbo.Staffs ADD CONSTRAINT Fk_Staffs FOREIGN KEY ( Staff_Id ) REFERENCES dbo.Logs( Log_Staff_Id ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE dbo.Staffs ADD CONSTRAINT Fk_Staffs_0 FOREIGN KEY ( Staff_Id ) REFERENCES dbo.Order_Detail( Order_Detail_Staff_Id ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+INSERT INTO dbo.Logs( Log_Id, Log_Staff_Id, Log_Status_Id, Log_Table, Log_Customer_Id, Log_Item_Id, Log_Order_Id, Log_Create_Date, Log_Note, Log_Delete_Flag ) VALUES ( 1087, 0, 0, 'Mike watches football. ', 0, 0, 0, '2008-09-24 11:14:49.983', 'net.sourceforge.jtds.jdbc.ClobImpl@153d528', 1 ); 
+INSERT INTO dbo.Logs( Log_Id, Log_Staff_Id, Log_Status_Id, Log_Table, Log_Customer_Id, Log_Item_Id, Log_Order_Id, Log_Create_Date, Log_Note, Log_Delete_Flag ) VALUES ( 1088, 1, 1, 'Mike watches football. Rudi watches football. ', 1, 1, 1, '2008-05-15 05:44:07.937', 'net.sourceforge.jtds.jdbc.ClobImpl@5d9d41', 1 ); 
+INSERT INTO dbo.Logs( Log_Id, Log_Staff_Id, Log_Status_Id, Log_Table, Log_Customer_Id, Log_Item_Id, Log_Order_Id, Log_Create_Date, Log_Note, Log_Delete_Flag ) VALUES ( 1089, 2, 2, 'Mike watches football. I watches football. ', 2, 2, 2, '2008-07-31 03:25:39.2', 'net.sourceforge.jtds.jdbc.ClobImpl@1ff2e2f', 1 ); 
+INSERT INTO dbo.Logs( Log_Id, Log_Staff_Id, Log_Status_Id, Log_Table, Log_Customer_Id, Log_Item_Id, Log_Order_Id, Log_Create_Date, Log_Note, Log_Delete_Flag ) VALUES ( 1090, 3, 3, 'I like sports. Mike watches football. ', 3, 3, 3, '2008-03-17 07:45:56.737', 'net.sourceforge.jtds.jdbc.ClobImpl@3111b5', 0 ); 
+INSERT INTO dbo.Logs( Log_Id, Log_Staff_Id, Log_Status_Id, Log_Table, Log_Customer_Id, Log_Item_Id, Log_Order_Id, Log_Create_Date, Log_Note, Log_Delete_Flag ) VALUES ( 1091, 4, 4, 'Mike watches football. Rudi watches football. ', 4, 4, 4, '2008-10-11 18:03:35.807', 'net.sourceforge.jtds.jdbc.ClobImpl@181b67d', 0 ); 
+INSERT INTO dbo.Logs( Log_Id, Log_Staff_Id, Log_Status_Id, Log_Table, Log_Customer_Id, Log_Item_Id, Log_Order_Id, Log_Create_Date, Log_Note, Log_Delete_Flag ) VALUES ( 1092, 5, 5, 'Mike like swimming. I watches football. ', 5, 5, 5, '2008-10-06 09:52:56.833', 'net.sourceforge.jtds.jdbc.ClobImpl@f3d8b3', 0 ); 
+INSERT INTO dbo.Logs( Log_Id, Log_Staff_Id, Log_Status_Id, Log_Table, Log_Customer_Id, Log_Item_Id, Log_Order_Id, Log_Create_Date, Log_Note, Log_Delete_Flag ) VALUES ( 1093, 6, 6, 'Rudi watches football. ', 6, 6, 6, '2008-02-12 02:08:03.84', 'net.sourceforge.jtds.jdbc.ClobImpl@1180fdb', 1 ); 
+INSERT INTO dbo.Logs( Log_Id, Log_Staff_Id, Log_Status_Id, Log_Table, Log_Customer_Id, Log_Item_Id, Log_Order_Id, Log_Create_Date, Log_Note, Log_Delete_Flag ) VALUES ( 1094, 7, 7, 'Mike watches football. Rudi watches football. ', 7, 7, 7, '2008-03-14 11:11:35.423', 'net.sourceforge.jtds.jdbc.ClobImpl@b92ad1', 0 ); 
+INSERT INTO dbo.Logs( Log_Id, Log_Staff_Id, Log_Status_Id, Log_Table, Log_Customer_Id, Log_Item_Id, Log_Order_Id, Log_Create_Date, Log_Note, Log_Delete_Flag ) VALUES ( 1095, 8, 8, 'I like sports. Rudi watches football. ', 8, 8, 8, '2008-05-03 16:41:51.873', 'net.sourceforge.jtds.jdbc.ClobImpl@82c3f', 1 ); 
+INSERT INTO dbo.Logs( Log_Id, Log_Staff_Id, Log_Status_Id, Log_Table, Log_Customer_Id, Log_Item_Id, Log_Order_Id, Log_Create_Date, Log_Note, Log_Delete_Flag ) VALUES ( 1096, 9, 9, 'Mike watches football. Mike watches football. ', 9, null, 9, '2008-08-22 05:16:24.96', 'net.sourceforge.jtds.jdbc.ClobImpl@911382', 0 ); 
+
+]]></string>
+		</script>
+	</layout>
+</project>
