@@ -1,0 +1,9 @@
+http://flatuicolors.com/
+bảng màu dành cho flat design
+ALIZAZIN 	E74C3C (đỏ)
+ORANGE 		F39C12 (cam)
+
+
+Ứng dụng:
+Form Layout:	1300, 700
+Form Child:		1282, 582
