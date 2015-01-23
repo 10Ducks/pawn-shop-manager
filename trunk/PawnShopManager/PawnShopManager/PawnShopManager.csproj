@@ -122,69 +122,70 @@
   <ItemGroup>
     <Folder Include="Dto\" />
     <Folder Include="Entity\" />
+    <Folder Include="Images\active\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Clock-01-128.png" />
+    <None Include="Images\normal\Clock-01-128.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Data-Information-128.png" />
+    <None Include="Images\normal\Data-Information-128.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Dollar-128.png" />
+    <None Include="Images\normal\Dollar-128.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Euro-128.png" />
+    <None Include="Images\normal\Euro-128.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Search-128.png" />
+    <None Include="Images\normal\Search-128.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Warning-Message-128.png" />
+    <None Include="Images\normal\Warning-Message-128.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\User-48.png" />
+    <None Include="Images\normal\User-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Login-Arrow-48.png" />
+    <None Include="Images\normal\Login-Arrow-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Logout-48.png" />
+    <None Include="Images\normal\Logout-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Login-Arrow-48 hover.png" />
+    <None Include="Images\hover\Login-Arrow-48 hover.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Logout-48 hover.png" />
+    <None Include="Images\hover\Logout-48 hover.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Money-Bag-48.png" />
+    <None Include="Images\normal\Money-Bag-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Clock-01-48.png" />
+    <None Include="Images\normal\Clock-01-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Data-Find-48.png" />
+    <None Include="Images\normal\Data-Find-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Book-Open-48.png" />
+    <None Include="Images\normal\Book-Open-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Dollar-48.png" />
+    <None Include="Images\normal\Dollar-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Search-48.png" />
+    <None Include="Images\normal\Search-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\Book-Open-48 hover.png" />
-    <Content Include="Images\Clock-01-48 hover.png" />
-    <Content Include="Images\Data-Find-48 hover.png" />
-    <Content Include="Images\Dollar-48 hover.png" />
+    <Content Include="Images\hover\Book-Open-48 hover.png" />
+    <Content Include="Images\hover\Clock-01-48 hover.png" />
+    <Content Include="Images\hover\Data-Find-48 hover.png" />
+    <Content Include="Images\hover\Dollar-48 hover.png" />
     <Content Include="Images\Login-02-32.ico" />
-    <Content Include="Images\Login-02-32.png" />
-    <Content Include="Images\Money-Bag-48 hover.png" />
+    <Content Include="Images\normal\Login-02-32.png" />
+    <Content Include="Images\hover\Money-Bag-48 hover.png" />
     <Content Include="Images\Money-Gold-32.ico" />
-    <Content Include="Images\Money-Gold-32.png" />
-    <Content Include="Images\Search-48 hover.png" />
+    <Content Include="Images\normal\Money-Gold-32.png" />
+    <Content Include="Images\hover\Search-48 hover.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -65,7 +65,7 @@ namespace PawnShopManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Book_Open_48 {
             get {
-                object obj = ResourceManager.GetObject("Book-Open-48", resourceCulture);
+                object obj = ResourceManager.GetObject("Book_Open_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -85,7 +85,7 @@ namespace PawnShopManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Clock_01_128 {
             get {
-                object obj = ResourceManager.GetObject("Clock-01-128", resourceCulture);
+                object obj = ResourceManager.GetObject("Clock_01_128", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -95,7 +95,7 @@ namespace PawnShopManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Clock_01_48 {
             get {
-                object obj = ResourceManager.GetObject("Clock-01-48", resourceCulture);
+                object obj = ResourceManager.GetObject("Clock_01_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -115,7 +115,7 @@ namespace PawnShopManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Data_Find_48 {
             get {
-                object obj = ResourceManager.GetObject("Data-Find-48", resourceCulture);
+                object obj = ResourceManager.GetObject("Data_Find_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -135,7 +135,7 @@ namespace PawnShopManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Data_Information_128 {
             get {
-                object obj = ResourceManager.GetObject("Data-Information-128", resourceCulture);
+                object obj = ResourceManager.GetObject("Data_Information_128", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -145,7 +145,7 @@ namespace PawnShopManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Dollar_128 {
             get {
-                object obj = ResourceManager.GetObject("Dollar-128", resourceCulture);
+                object obj = ResourceManager.GetObject("Dollar_128", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -155,7 +155,7 @@ namespace PawnShopManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Dollar_48 {
             get {
-                object obj = ResourceManager.GetObject("Dollar-48", resourceCulture);
+                object obj = ResourceManager.GetObject("Dollar_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -175,8 +175,28 @@ namespace PawnShopManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Euro_128 {
             get {
-                object obj = ResourceManager.GetObject("Euro-128", resourceCulture);
+                object obj = ResourceManager.GetObject("Euro_128", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login_02_32 {
+            get {
+                object obj = ResourceManager.GetObject("Login_02_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Login_02_321 {
+            get {
+                object obj = ResourceManager.GetObject("Login_02_321", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -185,7 +205,7 @@ namespace PawnShopManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Login_Arrow_48 {
             get {
-                object obj = ResourceManager.GetObject("Login-Arrow-48", resourceCulture);
+                object obj = ResourceManager.GetObject("Login_Arrow_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -195,7 +215,7 @@ namespace PawnShopManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Login_Arrow_48_hover {
             get {
-                object obj = ResourceManager.GetObject("Login-Arrow-48 hover", resourceCulture);
+                object obj = ResourceManager.GetObject("Login_Arrow_48_hover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -205,7 +225,7 @@ namespace PawnShopManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Logout_48 {
             get {
-                object obj = ResourceManager.GetObject("Logout-48", resourceCulture);
+                object obj = ResourceManager.GetObject("Logout_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -215,7 +235,7 @@ namespace PawnShopManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Logout_48_hover {
             get {
-                object obj = ResourceManager.GetObject("Logout-48 hover", resourceCulture);
+                object obj = ResourceManager.GetObject("Logout_48_hover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -225,7 +245,7 @@ namespace PawnShopManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Money_Bag_48 {
             get {
-                object obj = ResourceManager.GetObject("Money-Bag-48", resourceCulture);
+                object obj = ResourceManager.GetObject("Money_Bag_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +263,29 @@ namespace PawnShopManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Money_Gold_32 {
+            get {
+                object obj = ResourceManager.GetObject("Money_Gold_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Money_Gold_321 {
+            get {
+                object obj = ResourceManager.GetObject("Money_Gold_321", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Search_128 {
             get {
-                object obj = ResourceManager.GetObject("Search-128", resourceCulture);
+                object obj = ResourceManager.GetObject("Search_128", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -255,7 +295,7 @@ namespace PawnShopManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Search_48 {
             get {
-                object obj = ResourceManager.GetObject("Search-48", resourceCulture);
+                object obj = ResourceManager.GetObject("Search_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -275,7 +315,7 @@ namespace PawnShopManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap User_48 {
             get {
-                object obj = ResourceManager.GetObject("User-48", resourceCulture);
+                object obj = ResourceManager.GetObject("User_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -285,7 +325,7 @@ namespace PawnShopManager.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Warning_Message_128 {
             get {
-                object obj = ResourceManager.GetObject("Warning-Message-128", resourceCulture);
+                object obj = ResourceManager.GetObject("Warning_Message_128", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
