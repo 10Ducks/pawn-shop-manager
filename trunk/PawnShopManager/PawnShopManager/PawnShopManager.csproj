@@ -59,6 +59,12 @@
     <Compile Include="GUI\Body\Gold-body.Designer.cs">
       <DependentUpon>Gold-body.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Body\Xe-body.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Body\Xe-body.Designer.cs">
+      <DependentUpon>Xe-body.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,7 +128,6 @@
   <ItemGroup>
     <Folder Include="Dto\" />
     <Folder Include="Entity\" />
-    <Folder Include="Images\active\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\normal\Clock-01-128.png" />
@@ -176,6 +181,12 @@
     <None Include="Images\normal\Search-48.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\active\Book-Open-48-active.png" />
+    <Content Include="Images\active\Clock-01-48-active.png" />
+    <Content Include="Images\active\Data-Find-48-active.png" />
+    <Content Include="Images\active\Dollar-48-active.png" />
+    <Content Include="Images\active\Money-Bag-48-active.png" />
+    <Content Include="Images\active\Search-48-active.png" />
     <Content Include="Images\hover\Book-Open-48 hover.png" />
     <Content Include="Images\hover\Clock-01-48 hover.png" />
     <Content Include="Images\hover\Data-Find-48 hover.png" />

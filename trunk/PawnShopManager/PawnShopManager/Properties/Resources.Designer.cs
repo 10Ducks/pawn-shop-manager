@@ -73,6 +73,16 @@ namespace PawnShopManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Book_Open_48_active {
+            get {
+                object obj = ResourceManager.GetObject("Book_Open_48_active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Book_Open_48_hover {
             get {
                 object obj = ResourceManager.GetObject("Book_Open_48_hover", resourceCulture);
@@ -103,6 +113,16 @@ namespace PawnShopManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Clock_01_48_active {
+            get {
+                object obj = ResourceManager.GetObject("Clock_01_48_active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Clock_01_48_hover {
             get {
                 object obj = ResourceManager.GetObject("Clock_01_48_hover", resourceCulture);
@@ -116,6 +136,16 @@ namespace PawnShopManager.Properties {
         internal static System.Drawing.Bitmap Data_Find_48 {
             get {
                 object obj = ResourceManager.GetObject("Data_Find_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Data_Find_48_active {
+            get {
+                object obj = ResourceManager.GetObject("Data_Find_48_active", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +186,16 @@ namespace PawnShopManager.Properties {
         internal static System.Drawing.Bitmap Dollar_48 {
             get {
                 object obj = ResourceManager.GetObject("Dollar_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dollar_48_active {
+            get {
+                object obj = ResourceManager.GetObject("Dollar_48_active", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +293,16 @@ namespace PawnShopManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Money_Bag_48_active {
+            get {
+                object obj = ResourceManager.GetObject("Money_Bag_48_active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Money_Bag_48_hover {
             get {
                 object obj = ResourceManager.GetObject("Money_Bag_48_hover", resourceCulture);
@@ -296,6 +346,16 @@ namespace PawnShopManager.Properties {
         internal static System.Drawing.Bitmap Search_48 {
             get {
                 object obj = ResourceManager.GetObject("Search_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Search_48_active {
+            get {
+                object obj = ResourceManager.GetObject("Search_48_active", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
