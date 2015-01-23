@@ -7,3 +7,11 @@ ORANGE 		F39C12 (cam)
 Ứng dụng:
 Form Layout:	1300, 700
 Form Child:		1282, 582
+
+ hướng dẫn giải đề thi lập trình của các lớp
+Part 1: https://www.youtube.com/watch?v=3pLMqDj5xoE&feature=youtu.be
+Part 2: https://www.youtube.com/watch?v=aygQlSd7gQg&feature=youtu.be
+Part 3: https://www.youtube.com/watch?v=TD5GlRJKiSE&feature=youtu.be
+Part 4: https://www.youtube.com/watch?v=Vjy7dKoLjo4&feature=youtu.be
+Part 5: https://www.youtube.com/watch?v=yiakt8qQoAg&feature=youtu.be
+Part 6: https://www.youtube.com/watch?v=3HKB0NJ0gvU&feature=youtu.be

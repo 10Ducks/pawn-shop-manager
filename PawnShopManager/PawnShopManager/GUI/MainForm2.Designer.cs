@@ -39,16 +39,16 @@
          this.dockSite6 = new DevComponents.DotNetBar.DockSite();
          this.dockSite7 = new DevComponents.DotNetBar.DockSite();
          this.bar1 = new DevComponents.DotNetBar.Bar();
-         this.dockSite3 = new DevComponents.DotNetBar.DockSite();
-         this.dockContainerItem3 = new DevComponents.DotNetBar.DockContainerItem();
          this.bntCamDo = new DevComponents.DotNetBar.LabelItem();
          this.bntQLHangCam = new DevComponents.DotNetBar.LabelItem();
          this.bntThongKe = new DevComponents.DotNetBar.LabelItem();
          this.bntKiemHang = new DevComponents.DotNetBar.LabelItem();
          this.bntThuChi = new DevComponents.DotNetBar.LabelItem();
          this.bntTimKiem = new DevComponents.DotNetBar.LabelItem();
-         this.bntExit = new DevComponents.DotNetBar.LabelItem();
          this.lblClear = new DevComponents.DotNetBar.LabelItem();
+         this.bntExit = new DevComponents.DotNetBar.LabelItem();
+         this.dockSite3 = new DevComponents.DotNetBar.DockSite();
+         this.dockContainerItem3 = new DevComponents.DotNetBar.DockContainerItem();
          this.dockSite7.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
          this.SuspendLayout();
@@ -152,8 +152,8 @@
          // 
          // bar1
          // 
-         this.bar1.AccessibleDescription = "bar1 (bar1)";
-         this.bar1.AccessibleName = "bar1";
+         this.bar1.AccessibleDescription = "DotNetBar Bar (bar1)";
+         this.bar1.AccessibleName = "DotNetBar Bar";
          this.bar1.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
          this.bar1.BackColor = System.Drawing.Color.White;
          this.bar1.BarType = DevComponents.DotNetBar.eBarType.MenuBar;
@@ -177,22 +177,6 @@
          this.bar1.TabIndex = 0;
          this.bar1.TabNavigation = true;
          this.bar1.TabStop = false;
-         // 
-         // dockSite3
-         // 
-         this.dockSite3.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-         this.dockSite3.Dock = System.Windows.Forms.DockStyle.Top;
-         this.dockSite3.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-         this.dockSite3.Location = new System.Drawing.Point(0, 79);
-         this.dockSite3.Name = "dockSite3";
-         this.dockSite3.Size = new System.Drawing.Size(1284, 0);
-         this.dockSite3.TabIndex = 2;
-         this.dockSite3.TabStop = false;
-         // 
-         // dockContainerItem3
-         // 
-         this.dockContainerItem3.Name = "dockContainerItem3";
-         this.dockContainerItem3.Text = "dockContainerItem3";
          // 
          // bntCamDo
          // 
@@ -274,6 +258,14 @@
          this.bntTimKiem.MouseLeave += new System.EventHandler(this.bntTimKiem_MouseLeave);
          this.bntTimKiem.MouseHover += new System.EventHandler(this.bntTimKiem_MouseHover);
          // 
+         // lblClear
+         // 
+         this.lblClear.Name = "lblClear";
+         this.lblClear.PaddingBottom = 5;
+         this.lblClear.PaddingLeft = 400;
+         this.lblClear.PaddingRight = 400;
+         this.lblClear.PaddingTop = 5;
+         // 
          // bntExit
          // 
          this.bntExit.Image = global::PawnShopManager.Properties.Resources.Logout_48;
@@ -284,22 +276,32 @@
          this.bntExit.PaddingRight = 5;
          this.bntExit.PaddingTop = 5;
          this.bntExit.Text = "Thoát";
+         this.bntExit.Click += new System.EventHandler(this.bntExit_Click);
          this.bntExit.MouseLeave += new System.EventHandler(this.bntExit_MouseLeave);
          this.bntExit.MouseHover += new System.EventHandler(this.bntExit_MouseHover);
          // 
-         // lblClear
+         // dockSite3
          // 
-         this.lblClear.Name = "lblClear";
-         this.lblClear.PaddingBottom = 5;
-         this.lblClear.PaddingLeft = 400;
-         this.lblClear.PaddingRight = 400;
-         this.lblClear.PaddingTop = 5;
+         this.dockSite3.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+         this.dockSite3.Dock = System.Windows.Forms.DockStyle.Top;
+         this.dockSite3.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
+         this.dockSite3.Location = new System.Drawing.Point(0, 79);
+         this.dockSite3.Name = "dockSite3";
+         this.dockSite3.Size = new System.Drawing.Size(1284, 0);
+         this.dockSite3.TabIndex = 2;
+         this.dockSite3.TabStop = false;
+         // 
+         // dockContainerItem3
+         // 
+         this.dockContainerItem3.Name = "dockContainerItem3";
+         this.dockContainerItem3.Text = "dockContainerItem3";
          // 
          // MainForm2
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(1284, 662);
+         this.ControlBox = false;
          this.Controls.Add(this.dockSite2);
          this.Controls.Add(this.dockSite1);
          this.Controls.Add(this.dockSite3);
@@ -317,7 +319,6 @@
          this.Text = "Cầm đồ 73 Ngô Sĩ Liên";
          this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm2_FormClosed);
          this.Load += new System.EventHandler(this.MainForm2_Load);
-         this.Resize += new System.EventHandler(this.MainForm2_Resize);
          this.dockSite7.ResumeLayout(false);
          ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
          this.ResumeLayout(false);

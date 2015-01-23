@@ -17,10 +17,6 @@ namespace PawnShopManager.GUI.body
          InitializeComponent();
       }
 
-      private void Gold_body_Resize(object sender, EventArgs e)
-      {
-         Console.WriteLine("Width-child: " + this.Width);
-         Console.WriteLine("Height-child: " + this.Height);
-      }
+      
    }
 }

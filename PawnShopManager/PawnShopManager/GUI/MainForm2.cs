@@ -105,10 +105,9 @@ namespace PawnShopManager.GUI
       }
 #endregion
 
-      private void MainForm2_Resize(object sender, EventArgs e)
+      private void bntExit_Click(object sender, EventArgs e)
       {
-         Console.WriteLine("Width: " + this.Width);
-         Console.WriteLine("Height: " + this.Height);
+         this.Close();
       }
    }
 }
