@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88095CD7-6FAE-4420-BC0F-C046A65B7E88}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PawnShopManager</RootNamespace>
+    <AssemblyName>PawnShopManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.Instrumentation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\Result.cs" />
+    <Compile Include="Controller\SystemError.cs" />
+    <Compile Include="Dao\BaseDao.cs" />
+    <Compile Include="Dao\DbProviderFactory.cs" />
+    <Compile Include="GUI\Body\Gold-body.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Body\Gold-body.Designer.cs">
+      <DependentUpon>Gold-body.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainForm2.Designer.cs">
+      <DependentUpon>MainForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\AesExample.cs" />
+    <Compile Include="Util\base64.cs" />
+    <Compile Include="Util\Const.cs" />
+    <Compile Include="Util\Sha256.cs" />
+    <Compile Include="Util\UtilCommon.cs" />
+    <EmbeddedResource Include="GUI\Body\Gold-body.resx">
+      <DependentUpon>Gold-body.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainForm2.resx">
+      <DependentUpon>MainForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dto\" />
+    <Folder Include="Entity\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Clock-01-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Data-Information-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Dollar-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Euro-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Search-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Warning-Message-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\User-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Login-Arrow-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Logout-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Login-Arrow-48 hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Logout-48 hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Money-Bag-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Clock-01-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Data-Find-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Book-Open-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Dollar-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Search-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Book-Open-48 hover.png" />
+    <Content Include="Images\Clock-01-48 hover.png" />
+    <Content Include="Images\Data-Find-48 hover.png" />
+    <Content Include="Images\Dollar-48 hover.png" />
+    <Content Include="Images\Login-02-32.ico" />
+    <Content Include="Images\Login-02-32.png" />
+    <Content Include="Images\Money-Bag-48 hover.png" />
+    <Content Include="Images\Money-Gold-32.ico" />
+    <Content Include="Images\Money-Gold-32.png" />
+    <Content Include="Images\Search-48 hover.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
