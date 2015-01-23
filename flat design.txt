@@ -2,6 +2,7 @@ http://flatuicolors.com/
 bảng màu dành cho flat design
 ALIZAZIN 	E74C3C (đỏ)
 ORANGE 		F39C12 (cam)
+3498DB xanh duong
 
 
 Ứng dụng:

@@ -20,8 +20,9 @@ namespace PawnShopManager.GUI
       private void buttonX1_Click(object sender, EventArgs e)
       {
          MainForm2 mainForm = new MainForm2();
-         mainForm.parent = this;
+         mainForm.parent = this;         
          mainForm.Show();
+         mainForm.WindowState = FormWindowState.Maximized;
          this.Hide();
       }
 

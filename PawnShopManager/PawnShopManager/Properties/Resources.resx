@@ -121,6 +121,9 @@
   <data name="Book_Open_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\normal\book-open-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Book_Open_48_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\active\book-open-48-active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Book_Open_48_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\hover\book-open-48 hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,11 +133,17 @@
   <data name="Clock_01_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\normal\clock-01-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Clock_01_48_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\active\clock-01-48-active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Clock_01_48_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\hover\clock-01-48 hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Data_Find_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\normal\data-find-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Data_Find_48_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\active\data-find-48-active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Data_Find_48_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\hover\data-find-48 hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -147,6 +156,9 @@
   </data>
   <data name="Dollar_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\normal\dollar-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dollar_48_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\active\dollar-48-active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dollar_48_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\hover\dollar-48 hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,6 +187,9 @@
   <data name="Money_Bag_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\normal\money-bag-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Money_Bag_48_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\active\money-bag-48-active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Money_Bag_48_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\hover\money-bag-48 hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -189,6 +204,9 @@
   </data>
   <data name="Search_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\normal\search-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Search_48_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\active\search-48-active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Search_48_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\hover\search-48 hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

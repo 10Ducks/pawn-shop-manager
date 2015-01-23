@@ -28,23 +28,23 @@
       /// </summary>
       private void InitializeComponent()
       {
-         DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn1 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-         DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn2 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-         DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn3 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-         DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn4 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-         DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn5 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-         DevComponents.DotNetBar.SuperGrid.GridRow gridRow1 = new DevComponents.DotNetBar.SuperGrid.GridRow();
-         DevComponents.DotNetBar.SuperGrid.GridCell gridCell1 = new DevComponents.DotNetBar.SuperGrid.GridCell();
-         DevComponents.DotNetBar.SuperGrid.GridCell gridCell2 = new DevComponents.DotNetBar.SuperGrid.GridCell();
-         DevComponents.DotNetBar.SuperGrid.GridCell gridCell3 = new DevComponents.DotNetBar.SuperGrid.GridCell();
-         DevComponents.DotNetBar.SuperGrid.GridCell gridCell4 = new DevComponents.DotNetBar.SuperGrid.GridCell();
-         DevComponents.DotNetBar.SuperGrid.GridCell gridCell5 = new DevComponents.DotNetBar.SuperGrid.GridCell();
-         DevComponents.DotNetBar.SuperGrid.GridRow gridRow2 = new DevComponents.DotNetBar.SuperGrid.GridRow();
-         DevComponents.DotNetBar.SuperGrid.GridRow gridRow3 = new DevComponents.DotNetBar.SuperGrid.GridRow();
-         DevComponents.DotNetBar.SuperGrid.GridRow gridRow4 = new DevComponents.DotNetBar.SuperGrid.GridRow();
-         DevComponents.DotNetBar.SuperGrid.GridRow gridRow5 = new DevComponents.DotNetBar.SuperGrid.GridRow();
-         DevComponents.DotNetBar.SuperGrid.GridRow gridRow6 = new DevComponents.DotNetBar.SuperGrid.GridRow();
-         DevComponents.DotNetBar.SuperGrid.GridRow gridRow7 = new DevComponents.DotNetBar.SuperGrid.GridRow();
+         DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn96 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+         DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn97 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+         DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn98 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+         DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn99 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+         DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn100 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+         DevComponents.DotNetBar.SuperGrid.GridRow gridRow134 = new DevComponents.DotNetBar.SuperGrid.GridRow();
+         DevComponents.DotNetBar.SuperGrid.GridCell gridCell96 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+         DevComponents.DotNetBar.SuperGrid.GridCell gridCell97 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+         DevComponents.DotNetBar.SuperGrid.GridCell gridCell98 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+         DevComponents.DotNetBar.SuperGrid.GridCell gridCell99 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+         DevComponents.DotNetBar.SuperGrid.GridCell gridCell100 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+         DevComponents.DotNetBar.SuperGrid.GridRow gridRow135 = new DevComponents.DotNetBar.SuperGrid.GridRow();
+         DevComponents.DotNetBar.SuperGrid.GridRow gridRow136 = new DevComponents.DotNetBar.SuperGrid.GridRow();
+         DevComponents.DotNetBar.SuperGrid.GridRow gridRow137 = new DevComponents.DotNetBar.SuperGrid.GridRow();
+         DevComponents.DotNetBar.SuperGrid.GridRow gridRow138 = new DevComponents.DotNetBar.SuperGrid.GridRow();
+         DevComponents.DotNetBar.SuperGrid.GridRow gridRow139 = new DevComponents.DotNetBar.SuperGrid.GridRow();
+         DevComponents.DotNetBar.SuperGrid.GridRow gridRow140 = new DevComponents.DotNetBar.SuperGrid.GridRow();
          this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
          this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
          this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -98,9 +98,9 @@
          this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
          this.panelEx1.Location = new System.Drawing.Point(0, 0);
          this.panelEx1.Name = "panelEx1";
-         this.panelEx1.Size = new System.Drawing.Size(1266, 566);
+         this.panelEx1.Size = new System.Drawing.Size(1282, 633);
          this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
-         this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+         this.panelEx1.Style.BackColor1.Color = System.Drawing.Color.Transparent;
          this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
          this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
          this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
@@ -116,13 +116,13 @@
          this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
          this.groupPanel4.Location = new System.Drawing.Point(3, 464);
          this.groupPanel4.Name = "groupPanel4";
-         this.groupPanel4.Size = new System.Drawing.Size(1260, 99);
+         this.groupPanel4.Size = new System.Drawing.Size(1276, 166);
          // 
          // 
          // 
+         this.groupPanel4.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
          this.groupPanel4.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
          this.groupPanel4.Style.BackColorGradientAngle = 90;
-         this.groupPanel4.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
          this.groupPanel4.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
          this.groupPanel4.Style.BorderBottomWidth = 1;
          this.groupPanel4.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
@@ -169,18 +169,20 @@
          this.groupPanel3.Controls.Add(this.labelX6);
          this.groupPanel3.Location = new System.Drawing.Point(3, 176);
          this.groupPanel3.Name = "groupPanel3";
-         this.groupPanel3.Size = new System.Drawing.Size(1260, 282);
+         this.groupPanel3.Size = new System.Drawing.Size(1276, 282);
          // 
          // 
          // 
+         this.groupPanel3.Style.BackColor = System.Drawing.Color.Transparent;
          this.groupPanel3.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
          this.groupPanel3.Style.BackColorGradientAngle = 90;
-         this.groupPanel3.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
          this.groupPanel3.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
          this.groupPanel3.Style.BorderBottomWidth = 1;
          this.groupPanel3.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+         this.groupPanel3.Style.BorderGradientAngle = 0;
          this.groupPanel3.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
          this.groupPanel3.Style.BorderLeftWidth = 1;
+         this.groupPanel3.Style.BorderLightGradientAngle = 0;
          this.groupPanel3.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
          this.groupPanel3.Style.BorderRightWidth = 1;
          this.groupPanel3.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
@@ -228,48 +230,48 @@
          this.superGridControl1.ForeColor = System.Drawing.Color.Black;
          this.superGridControl1.Location = new System.Drawing.Point(10, 160);
          this.superGridControl1.Name = "superGridControl1";
-         gridColumn1.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
-         gridColumn1.MinimumWidth = 30;
-         gridColumn1.Name = "Tên vật cầm";
-         gridColumn1.NullString = "";
-         gridColumn1.SortIndicator = DevComponents.DotNetBar.SuperGrid.SortIndicator.None;
-         gridColumn2.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
-         gridColumn2.Name = "Số lượng (chỉ)";
-         gridColumn3.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
-         gridColumn3.Name = "Chất lượng";
-         gridColumn4.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
-         gridColumn4.Name = "Thành tiền";
-         gridColumn5.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
-         gridColumn5.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridButtonXEditControl);
-         gridColumn5.Name = "Hủy";
-         gridColumn5.RenderType = typeof(DevComponents.DotNetBar.SuperGrid.GridCheckBoxXEditControl);
-         this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn1);
-         this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn2);
-         this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn3);
-         this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn4);
-         this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn5);
-         gridCell1.Value = "1";
-         gridCell2.Value = "2";
-         gridCell3.Value = "3";
-         gridCell4.Value = "4";
-         gridCell5.CellStyles.MouseOver.TextColor = System.Drawing.Color.Red;
-         gridCell5.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridButtonXEditControl);
-         gridCell5.Value = "5";
-         gridRow1.Cells.Add(gridCell1);
-         gridRow1.Cells.Add(gridCell2);
-         gridRow1.Cells.Add(gridCell3);
-         gridRow1.Cells.Add(gridCell4);
-         gridRow1.Cells.Add(gridCell5);
-         gridRow1.Checked = true;
-         gridRow1.Expanded = true;
-         gridRow1.InfoText = "InfoText";
-         this.superGridControl1.PrimaryGrid.Rows.Add(gridRow1);
-         this.superGridControl1.PrimaryGrid.Rows.Add(gridRow2);
-         this.superGridControl1.PrimaryGrid.Rows.Add(gridRow3);
-         this.superGridControl1.PrimaryGrid.Rows.Add(gridRow4);
-         this.superGridControl1.PrimaryGrid.Rows.Add(gridRow5);
-         this.superGridControl1.PrimaryGrid.Rows.Add(gridRow6);
-         this.superGridControl1.PrimaryGrid.Rows.Add(gridRow7);
+         gridColumn96.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+         gridColumn96.MinimumWidth = 30;
+         gridColumn96.Name = "Tên vật cầm";
+         gridColumn96.NullString = "";
+         gridColumn96.SortIndicator = DevComponents.DotNetBar.SuperGrid.SortIndicator.None;
+         gridColumn97.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+         gridColumn97.Name = "Số lượng (chỉ)";
+         gridColumn98.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+         gridColumn98.Name = "Chất lượng";
+         gridColumn99.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+         gridColumn99.Name = "Thành tiền";
+         gridColumn100.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+         gridColumn100.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridButtonXEditControl);
+         gridColumn100.Name = "Hủy";
+         gridColumn100.RenderType = typeof(DevComponents.DotNetBar.SuperGrid.GridCheckBoxXEditControl);
+         this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn96);
+         this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn97);
+         this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn98);
+         this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn99);
+         this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn100);
+         gridCell96.Value = "1";
+         gridCell97.Value = "2";
+         gridCell98.Value = "3";
+         gridCell99.Value = "4";
+         gridCell100.CellStyles.MouseOver.TextColor = System.Drawing.Color.Red;
+         gridCell100.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridButtonXEditControl);
+         gridCell100.Value = "5";
+         gridRow134.Cells.Add(gridCell96);
+         gridRow134.Cells.Add(gridCell97);
+         gridRow134.Cells.Add(gridCell98);
+         gridRow134.Cells.Add(gridCell99);
+         gridRow134.Cells.Add(gridCell100);
+         gridRow134.Checked = true;
+         gridRow134.Expanded = true;
+         gridRow134.InfoText = "InfoText";
+         this.superGridControl1.PrimaryGrid.Rows.Add(gridRow134);
+         this.superGridControl1.PrimaryGrid.Rows.Add(gridRow135);
+         this.superGridControl1.PrimaryGrid.Rows.Add(gridRow136);
+         this.superGridControl1.PrimaryGrid.Rows.Add(gridRow137);
+         this.superGridControl1.PrimaryGrid.Rows.Add(gridRow138);
+         this.superGridControl1.PrimaryGrid.Rows.Add(gridRow139);
+         this.superGridControl1.PrimaryGrid.Rows.Add(gridRow140);
          this.superGridControl1.PrimaryGrid.SelectionGranularity = DevComponents.DotNetBar.SuperGrid.SelectionGranularity.RowWithCellHighlight;
          this.superGridControl1.Size = new System.Drawing.Size(1106, 113);
          this.superGridControl1.TabIndex = 13;
@@ -445,6 +447,7 @@
          // 
          // 
          this.checkBoxX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.checkBoxX2.FocusCuesEnabled = false;
          this.checkBoxX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.checkBoxX2.ForeColor = System.Drawing.Color.Black;
          this.checkBoxX2.Location = new System.Drawing.Point(357, 14);
@@ -464,6 +467,7 @@
          this.checkBoxX1.Checked = true;
          this.checkBoxX1.CheckState = System.Windows.Forms.CheckState.Checked;
          this.checkBoxX1.CheckValue = "Y";
+         this.checkBoxX1.FocusCuesEnabled = false;
          this.checkBoxX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.checkBoxX1.ForeColor = System.Drawing.Color.Black;
          this.checkBoxX1.Location = new System.Drawing.Point(227, 14);
@@ -505,26 +509,25 @@
          this.groupPanel2.Controls.Add(this.labelX3);
          this.groupPanel2.Controls.Add(this.textBoxX1);
          this.groupPanel2.Controls.Add(this.labelX2);
+         this.groupPanel2.DrawTitleBox = false;
          this.groupPanel2.Location = new System.Drawing.Point(3, 60);
          this.groupPanel2.Name = "groupPanel2";
-         this.groupPanel2.Size = new System.Drawing.Size(1260, 110);
+         this.groupPanel2.Size = new System.Drawing.Size(1276, 110);
          // 
          // 
          // 
+         this.groupPanel2.Style.BackColor = System.Drawing.Color.Transparent;
          this.groupPanel2.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
          this.groupPanel2.Style.BackColorGradientAngle = 90;
-         this.groupPanel2.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
          this.groupPanel2.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
          this.groupPanel2.Style.BorderBottomWidth = 1;
-         this.groupPanel2.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-         this.groupPanel2.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+         this.groupPanel2.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+         this.groupPanel2.Style.BorderColor2 = System.Drawing.Color.Transparent;
          this.groupPanel2.Style.BorderLeftWidth = 1;
-         this.groupPanel2.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
          this.groupPanel2.Style.BorderRightWidth = 1;
-         this.groupPanel2.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
          this.groupPanel2.Style.BorderTopWidth = 1;
          this.groupPanel2.Style.CornerDiameter = 4;
-         this.groupPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+         this.groupPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
          this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
          this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
          this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
@@ -679,26 +682,25 @@
          this.groupPanel1.Controls.Add(this.lblMaHD);
          this.groupPanel1.Controls.Add(this.cboLoaiHang);
          this.groupPanel1.Controls.Add(this.labelX1);
+         this.groupPanel1.DrawTitleBox = false;
          this.groupPanel1.Location = new System.Drawing.Point(3, 3);
          this.groupPanel1.Name = "groupPanel1";
-         this.groupPanel1.Size = new System.Drawing.Size(1260, 51);
+         this.groupPanel1.Size = new System.Drawing.Size(1276, 51);
          // 
          // 
          // 
-         this.groupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+         this.groupPanel1.Style.BackColor = System.Drawing.Color.Transparent;
+         this.groupPanel1.Style.BackColor2 = System.Drawing.Color.Transparent;
          this.groupPanel1.Style.BackColorGradientAngle = 90;
-         this.groupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
          this.groupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
          this.groupPanel1.Style.BorderBottomWidth = 1;
          this.groupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-         this.groupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+         this.groupPanel1.Style.BorderGradientAngle = 0;
          this.groupPanel1.Style.BorderLeftWidth = 1;
-         this.groupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
          this.groupPanel1.Style.BorderRightWidth = 1;
-         this.groupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
          this.groupPanel1.Style.BorderTopWidth = 1;
          this.groupPanel1.Style.CornerDiameter = 4;
-         this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+         this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
          this.groupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
          this.groupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
          this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
@@ -784,11 +786,12 @@
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(1266, 566);
+         this.AutoSize = true;
+         this.ClientSize = new System.Drawing.Size(1282, 633);
          this.ControlBox = false;
          this.Controls.Add(this.panelEx1);
+         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
          this.MaximizeBox = false;
-         this.MaximumSize = new System.Drawing.Size(1282, 582);
          this.MinimumSize = new System.Drawing.Size(1282, 582);
          this.Name = "Gold_body";
          this.ShowIcon = false;
@@ -807,7 +810,6 @@
       private DevComponents.DotNetBar.PanelEx panelEx1;
       private DevComponents.DotNetBar.Controls.GroupPanel groupPanel4;
       private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
-      private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
       private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
       private DevComponents.DotNetBar.LabelX lblMaHD;
       private DevComponents.DotNetBar.Controls.ComboBoxEx cboLoaiHang;
@@ -840,6 +842,7 @@
       private DevComponents.DotNetBar.ButtonX buttonX1;
       private DevComponents.DotNetBar.LabelX labelX11;
       private DevComponents.DotNetBar.SuperGrid.SuperGridControl superGridControl1;
+      private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
 
    }
 }
