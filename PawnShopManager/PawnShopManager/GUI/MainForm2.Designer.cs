@@ -28,6 +28,7 @@
       /// </summary>
       private void InitializeComponent()
       {
+
          this.components = new System.ComponentModel.Container();
          System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm2));
          this.dockContainerItem3 = new DevComponents.DotNetBar.DockContainerItem();
@@ -190,6 +191,166 @@
             this.bntTimKiem,
             this.lblPadding,
             this.bntThoat});
+<<<<<<< .mine
+            this.bar1.Location = new System.Drawing.Point(0, 0);
+            this.bar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bar1.MenuBar = true;
+            this.bar1.Name = "bar1";
+            this.bar1.Size = new System.Drawing.Size(1709, 81);
+            this.bar1.Stretch = true;
+            this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.bar1.TabIndex = 0;
+            this.bar1.TabNavigation = true;
+            this.bar1.TabStop = false;
+            // 
+            // bntCamDo
+            // 
+            this.bntCamDo.Image = global::PawnShopManager.Properties.Resources.Money_Bag_48;
+            this.bntCamDo.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.bntCamDo.Name = "bntCamDo";
+            this.bntCamDo.PaddingBottom = 5;
+            this.bntCamDo.PaddingLeft = 5;
+            this.bntCamDo.PaddingRight = 5;
+            this.bntCamDo.PaddingTop = 5;
+            this.bntCamDo.Text = "Cầm đồ";
+            this.bntCamDo.TextLineAlignment = System.Drawing.StringAlignment.Far;
+            this.bntCamDo.Tooltip = "Cầm đồ";
+            this.bntCamDo.MouseLeave += new System.EventHandler(this.bntCamDo_MouseLeave);
+            this.bntCamDo.MouseHover += new System.EventHandler(this.bntCamDo_MouseHover);
+            // 
+            // bntQLHangCam
+            // 
+            this.bntQLHangCam.Image = global::PawnShopManager.Properties.Resources.Data_Find_48;
+            this.bntQLHangCam.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.bntQLHangCam.Name = "bntQLHangCam";
+            this.bntQLHangCam.PaddingBottom = 5;
+            this.bntQLHangCam.PaddingLeft = 5;
+            this.bntQLHangCam.PaddingRight = 5;
+            this.bntQLHangCam.PaddingTop = 5;
+            this.bntQLHangCam.Text = "QL Hàng cầm";
+            this.bntQLHangCam.MouseLeave += new System.EventHandler(this.bntQLHangCam_MouseLeave);
+            this.bntQLHangCam.MouseHover += new System.EventHandler(this.bntQLHangCam_MouseHover);
+            // 
+            // bntThongKe
+            // 
+            this.bntThongKe.Image = global::PawnShopManager.Properties.Resources.Clock_01_48;
+            this.bntThongKe.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.bntThongKe.Name = "bntThongKe";
+            this.bntThongKe.PaddingBottom = 5;
+            this.bntThongKe.PaddingLeft = 5;
+            this.bntThongKe.PaddingRight = 5;
+            this.bntThongKe.PaddingTop = 5;
+            this.bntThongKe.Text = "Thống kê";
+            this.bntThongKe.MouseLeave += new System.EventHandler(this.bntThongKe_MouseLeave);
+            this.bntThongKe.MouseHover += new System.EventHandler(this.bntThongKe_MouseHover);
+            // 
+            // bntKiemHang
+            // 
+            this.bntKiemHang.Image = global::PawnShopManager.Properties.Resources.Book_Open_48;
+            this.bntKiemHang.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.bntKiemHang.Name = "bntKiemHang";
+            this.bntKiemHang.PaddingBottom = 5;
+            this.bntKiemHang.PaddingLeft = 5;
+            this.bntKiemHang.PaddingRight = 5;
+            this.bntKiemHang.PaddingTop = 5;
+            this.bntKiemHang.Text = "Kiếm Hàng";
+            this.bntKiemHang.MouseLeave += new System.EventHandler(this.bntKiemHang_MouseLeave);
+            this.bntKiemHang.MouseHover += new System.EventHandler(this.bntKiemHang_MouseHover);
+            // 
+            // bntThuChi
+            // 
+            this.bntThuChi.Image = global::PawnShopManager.Properties.Resources.Dollar_48;
+            this.bntThuChi.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.bntThuChi.Name = "bntThuChi";
+            this.bntThuChi.PaddingBottom = 5;
+            this.bntThuChi.PaddingLeft = 5;
+            this.bntThuChi.PaddingRight = 5;
+            this.bntThuChi.PaddingTop = 5;
+            this.bntThuChi.Text = "Thu/Chi";
+            this.bntThuChi.MouseLeave += new System.EventHandler(this.bntThuChi_MouseLeave);
+            this.bntThuChi.MouseHover += new System.EventHandler(this.bntThuChi_MouseHover);
+            // 
+            // bntTimKiem
+            // 
+            this.bntTimKiem.Image = global::PawnShopManager.Properties.Resources.Search_48;
+            this.bntTimKiem.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.bntTimKiem.Name = "bntTimKiem";
+            this.bntTimKiem.PaddingBottom = 5;
+            this.bntTimKiem.PaddingLeft = 5;
+            this.bntTimKiem.PaddingRight = 5;
+            this.bntTimKiem.PaddingTop = 5;
+            this.bntTimKiem.Text = "Tìm kiếm";
+            this.bntTimKiem.MouseLeave += new System.EventHandler(this.bntTimKiem_MouseLeave);
+            this.bntTimKiem.MouseHover += new System.EventHandler(this.bntTimKiem_MouseHover);
+            // 
+            // lblClear
+            // 
+            this.lblClear.Name = "lblClear";
+            this.lblClear.PaddingBottom = 5;
+            this.lblClear.PaddingLeft = 400;
+            this.lblClear.PaddingRight = 400;
+            this.lblClear.PaddingTop = 5;
+            // 
+            // bntExit
+            // 
+            this.bntExit.Image = global::PawnShopManager.Properties.Resources.Logout_48;
+            this.bntExit.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.bntExit.Name = "bntExit";
+            this.bntExit.PaddingBottom = 5;
+            this.bntExit.PaddingLeft = 5;
+            this.bntExit.PaddingRight = 5;
+            this.bntExit.PaddingTop = 5;
+            this.bntExit.Text = "Thoát";
+            this.bntExit.Click += new System.EventHandler(this.bntExit_Click);
+            this.bntExit.MouseLeave += new System.EventHandler(this.bntExit_MouseLeave);
+            this.bntExit.MouseHover += new System.EventHandler(this.bntExit_MouseHover);
+            // 
+            // dockSite3
+            // 
+            this.dockSite3.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dockSite3.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
+            this.dockSite3.Location = new System.Drawing.Point(0, 82);
+            this.dockSite3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dockSite3.Name = "dockSite3";
+            this.dockSite3.Size = new System.Drawing.Size(1709, 0);
+            this.dockSite3.TabIndex = 2;
+            this.dockSite3.TabStop = false;
+            // 
+            // dockContainerItem3
+            // 
+            this.dockContainerItem3.Name = "dockContainerItem3";
+            this.dockContainerItem3.Text = "dockContainerItem3";
+            // 
+            // MainForm2
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1709, 806);
+            this.ControlBox = false;
+            this.Controls.Add(this.dockSite2);
+            this.Controls.Add(this.dockSite1);
+            this.Controls.Add(this.dockSite3);
+            this.Controls.Add(this.dockSite4);
+            this.Controls.Add(this.dockSite5);
+            this.Controls.Add(this.dockSite6);
+            this.Controls.Add(this.dockSite7);
+            this.Controls.Add(this.dockSite8);
+            this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1727, 851);
+            this.MinimumSize = new System.Drawing.Size(1727, 851);
+            this.Name = "MainForm2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cầm đồ 73 Ngô Sĩ Liên";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm2_FormClosed);
+            this.Load += new System.EventHandler(this.MainForm2_Load);
+            this.dockSite7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
+            this.ResumeLayout(false);
+=======
          this.bar1.Location = new System.Drawing.Point(0, 0);
          this.bar1.MenuBar = true;
          this.bar1.Name = "bar1";
@@ -356,6 +517,7 @@
          this.dockSite7.ResumeLayout(false);
          ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
          this.ResumeLayout(false);
+>>>>>>> .r13
 
       }
 
