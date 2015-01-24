@@ -63,6 +63,26 @@ namespace PawnShopManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_New_48 {
+            get {
+                object obj = ResourceManager.GetObject("Add_New_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Add_New_48_hover {
+            get {
+                object obj = ResourceManager.GetObject("Add_New_48_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Book_Open_48 {
             get {
                 object obj = ResourceManager.GetObject("Book_Open_48", resourceCulture);
@@ -166,6 +186,66 @@ namespace PawnShopManager.Properties {
         internal static System.Drawing.Bitmap Data_Information_128 {
             get {
                 object obj = ResourceManager.GetObject("Data_Information_128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Delete_48 {
+            get {
+                object obj = ResourceManager.GetObject("Delete_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Delete_48_hover {
+            get {
+                object obj = ResourceManager.GetObject("Delete_48_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Document_Add_02_48 {
+            get {
+                object obj = ResourceManager.GetObject("Document_Add_02_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Document_Add_02_48_hover {
+            get {
+                object obj = ResourceManager.GetObject("Document_Add_02_48_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Document_Delete_02_48 {
+            get {
+                object obj = ResourceManager.GetObject("Document_Delete_02_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Document_Delete_02_48_hover {
+            get {
+                object obj = ResourceManager.GetObject("Document_Delete_02_48_hover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,6 +413,46 @@ namespace PawnShopManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Printer_48 {
+            get {
+                object obj = ResourceManager.GetObject("Printer_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Printer_48_hover {
+            get {
+                object obj = ResourceManager.GetObject("Printer_48_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_48 {
+            get {
+                object obj = ResourceManager.GetObject("Save_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_48_hover {
+            get {
+                object obj = ResourceManager.GetObject("Save_48_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Search_128 {
             get {
                 object obj = ResourceManager.GetObject("Search_128", resourceCulture);
@@ -366,6 +486,26 @@ namespace PawnShopManager.Properties {
         internal static System.Drawing.Bitmap Search_48_hover {
             get {
                 object obj = ResourceManager.GetObject("Search_48_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_128 {
+            get {
+                object obj = ResourceManager.GetObject("User_128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_32 {
+            get {
+                object obj = ResourceManager.GetObject("User_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

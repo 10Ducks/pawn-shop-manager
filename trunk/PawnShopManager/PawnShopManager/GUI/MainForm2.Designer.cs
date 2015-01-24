@@ -106,7 +106,7 @@
          this.dockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
          this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
          this.dockSite4.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-         this.dockSite4.Location = new System.Drawing.Point(0, 662);
+         this.dockSite4.Location = new System.Drawing.Point(0, 684);
          this.dockSite4.Name = "dockSite4";
          this.dockSite4.Size = new System.Drawing.Size(1284, 0);
          this.dockSite4.TabIndex = 12;
@@ -119,7 +119,7 @@
          this.dockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
          this.dockSite1.Location = new System.Drawing.Point(0, 84);
          this.dockSite1.Name = "dockSite1";
-         this.dockSite1.Size = new System.Drawing.Size(0, 578);
+         this.dockSite1.Size = new System.Drawing.Size(0, 600);
          this.dockSite1.TabIndex = 9;
          this.dockSite1.TabStop = false;
          // 
@@ -130,7 +130,7 @@
          this.dockSite2.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
          this.dockSite2.Location = new System.Drawing.Point(1284, 84);
          this.dockSite2.Name = "dockSite2";
-         this.dockSite2.Size = new System.Drawing.Size(0, 578);
+         this.dockSite2.Size = new System.Drawing.Size(0, 600);
          this.dockSite2.TabIndex = 10;
          this.dockSite2.TabStop = false;
          // 
@@ -138,7 +138,7 @@
          // 
          this.dockSite8.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
          this.dockSite8.Dock = System.Windows.Forms.DockStyle.Bottom;
-         this.dockSite8.Location = new System.Drawing.Point(0, 662);
+         this.dockSite8.Location = new System.Drawing.Point(0, 684);
          this.dockSite8.Name = "dockSite8";
          this.dockSite8.Size = new System.Drawing.Size(1284, 0);
          this.dockSite8.TabIndex = 16;
@@ -150,7 +150,7 @@
          this.dockSite5.Dock = System.Windows.Forms.DockStyle.Left;
          this.dockSite5.Location = new System.Drawing.Point(0, 84);
          this.dockSite5.Name = "dockSite5";
-         this.dockSite5.Size = new System.Drawing.Size(0, 578);
+         this.dockSite5.Size = new System.Drawing.Size(0, 600);
          this.dockSite5.TabIndex = 13;
          this.dockSite5.TabStop = false;
          // 
@@ -160,7 +160,7 @@
          this.dockSite6.Dock = System.Windows.Forms.DockStyle.Right;
          this.dockSite6.Location = new System.Drawing.Point(1284, 84);
          this.dockSite6.Name = "dockSite6";
-         this.dockSite6.Size = new System.Drawing.Size(0, 578);
+         this.dockSite6.Size = new System.Drawing.Size(0, 600);
          this.dockSite6.TabIndex = 14;
          this.dockSite6.TabStop = false;
          // 
@@ -497,7 +497,8 @@
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.AutoSize = true;
-         this.ClientSize = new System.Drawing.Size(1284, 662);
+         this.ClientSize = new System.Drawing.Size(1284, 684);
+         this.ControlBox = false;
          this.Controls.Add(this.dockSite2);
          this.Controls.Add(this.dockSite1);
          this.Controls.Add(this.dockSite3);
@@ -506,6 +507,7 @@
          this.Controls.Add(this.dockSite6);
          this.Controls.Add(this.dockSite7);
          this.Controls.Add(this.dockSite8);
+         this.Cursor = System.Windows.Forms.Cursors.Default;
          this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
          this.IsMdiContainer = true;
          this.MinimumSize = new System.Drawing.Size(1300, 700);
