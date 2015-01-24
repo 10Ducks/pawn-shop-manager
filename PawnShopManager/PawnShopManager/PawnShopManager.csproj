@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar.Keyboard, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.Instrumentation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0" />
@@ -53,17 +54,11 @@
     <Compile Include="Controller\SystemError.cs" />
     <Compile Include="Dao\BaseDao.cs" />
     <Compile Include="Dao\DbProviderFactory.cs" />
-    <Compile Include="GUI\Body\Gold-body.cs">
+    <Compile Include="GUI\BODY\CamDo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Body\Gold-body.Designer.cs">
-      <DependentUpon>Gold-body.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Body\Xe-body.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Body\Xe-body.Designer.cs">
-      <DependentUpon>Xe-body.cs</DependentUpon>
+    <Compile Include="GUI\BODY\CamDo.Designer.cs">
+      <DependentUpon>CamDo.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\LoginForm.cs">
       <SubType>Form</SubType>
@@ -90,8 +85,8 @@
     <Compile Include="Util\Const.cs" />
     <Compile Include="Util\Sha256.cs" />
     <Compile Include="Util\UtilCommon.cs" />
-    <EmbeddedResource Include="GUI\Body\Gold-body.resx">
-      <DependentUpon>Gold-body.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\BODY\CamDo.resx">
+      <DependentUpon>CamDo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -187,16 +182,30 @@
     <Content Include="Images\active\Dollar-48-active.png" />
     <Content Include="Images\active\Money-Bag-48-active.png" />
     <Content Include="Images\active\Search-48-active.png" />
+    <Content Include="Images\hover\Add-New-48 hover.png" />
     <Content Include="Images\hover\Book-Open-48 hover.png" />
     <Content Include="Images\hover\Clock-01-48 hover.png" />
     <Content Include="Images\hover\Data-Find-48 hover.png" />
+    <Content Include="Images\hover\Delete-48 hover.png" />
+    <Content Include="Images\hover\Document-Add-02-48 hover.png" />
+    <Content Include="Images\hover\Document-Delete-02-48 hover.png" />
     <Content Include="Images\hover\Dollar-48 hover.png" />
+    <Content Include="Images\hover\Printer-48 hover.png" />
+    <Content Include="Images\hover\Save-48 hover.png" />
     <Content Include="Images\Login-02-32.ico" />
+    <Content Include="Images\normal\Add-New-48.png" />
+    <Content Include="Images\normal\Delete-48.png" />
+    <Content Include="Images\normal\Document-Add-02-48.png" />
+    <Content Include="Images\normal\Document-Delete-02-48.png" />
     <Content Include="Images\normal\Login-02-32.png" />
     <Content Include="Images\hover\Money-Bag-48 hover.png" />
     <Content Include="Images\Money-Gold-32.ico" />
     <Content Include="Images\normal\Money-Gold-32.png" />
     <Content Include="Images\hover\Search-48 hover.png" />
+    <Content Include="Images\normal\Printer-48.png" />
+    <Content Include="Images\normal\Save-48.png" />
+    <Content Include="Images\normal\User-128.png" />
+    <Content Include="Images\normal\User-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
