@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
+using PawnShopManager.GUI.BODY;
 
 namespace PawnShopManager.GUI
 {
@@ -15,7 +16,8 @@ namespace PawnShopManager.GUI
    {
       public LoginForm parent;
       public DevComponents.DotNetBar.Metro.MetroForm child = null;
-      private Body.CamDo camDoForm = null;
+      private CamDo camDoForm = null;
+      private KiemHang kiemHangForm = null;
       private Hashtable SESSION = new Hashtable();
       public MainForm2()
       {
@@ -113,6 +115,7 @@ namespace PawnShopManager.GUI
       {
          SESSION["Action"] = enumButtonAction.bntCamDo;
          activeButton(bntCamDo);
+         openChild(enumButtonAction.bntCamDo);
       }
 
       public enum enumButtonAction
@@ -136,6 +139,7 @@ namespace PawnShopManager.GUI
       {
          SESSION["Action"] = enumButtonAction.bntKiemHang;
          activeButton(bntKiemHang);
+         openChild(enumButtonAction.bntKiemHang);
       }
 
       private void bntThuChi_Click(object sender, EventArgs e)
@@ -225,21 +229,34 @@ namespace PawnShopManager.GUI
          {
             child.Hide();
          }
+         //this.WindowState = FormWindowState.Normal;
          switch (bntAction)
          {
             case enumButtonAction.bntCamDo:
                if (camDoForm == null)
                {
-                  camDoForm = new Body.CamDo();
+                  camDoForm = new CamDo();
                   camDoForm.parent = this;
                   camDoForm.MdiParent = this;
-                  camDoForm.Show();
-                  camDoForm.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
                }
+               camDoForm.Show();
+               camDoForm.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
+               child = camDoForm;
+
+               break;
+            case enumButtonAction.bntKiemHang:
+               if (kiemHangForm == null)
+               {
+                  kiemHangForm = new KiemHang();
+                  kiemHangForm.MdiParent = this;
+               }
+               kiemHangForm.Show();
+               kiemHangForm.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
+               child = kiemHangForm;
                break;
          }
-
-
+         
+        //this.WindowState = FormWindowState.Maximized;
       }
       #endregion
    }
