@@ -60,6 +60,12 @@
     <Compile Include="GUI\BODY\CamDo.Designer.cs">
       <DependentUpon>CamDo.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\BODY\KiemHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BODY\KiemHang.Designer.cs">
+      <DependentUpon>KiemHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <Compile Include="Util\UtilCommon.cs" />
     <EmbeddedResource Include="GUI\BODY\CamDo.resx">
       <DependentUpon>CamDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BODY\KiemHang.resx">
+      <DependentUpon>KiemHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

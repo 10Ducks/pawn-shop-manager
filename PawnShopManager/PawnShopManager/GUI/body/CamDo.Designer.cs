@@ -1,4 +1,4 @@
-﻿namespace PawnShopManager.GUI.Body
+﻿namespace PawnShopManager.GUI.BODY
 {
    partial class CamDo
    {
@@ -28,12 +28,12 @@
       /// </summary>
       private void InitializeComponent()
       {
-         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
          this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
          this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
          this.bntThemBienNhanMoi = new DevComponents.DotNetBar.LabelX();
@@ -56,6 +56,40 @@
          this.dateTimeInput_NgayCam = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
          this.labelX12 = new DevComponents.DotNetBar.LabelX();
          this.groupVang = new DevComponents.DotNetBar.Controls.GroupPanel();
+         this.txtTienChu_Xe = new DevComponents.DotNetBar.Controls.TextBoxX();
+         this.lblTienChu_Xe = new DevComponents.DotNetBar.LabelX();
+         this.txtTienCam_Xe = new DevComponents.DotNetBar.Controls.TextBoxX();
+         this.lblTienCam_Xe = new DevComponents.DotNetBar.LabelX();
+         this.txtNhanSoXe = new DevComponents.DotNetBar.Controls.TextBoxX();
+         this.txtBienSoXe = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
+         this.txtChatLuong = new DevComponents.DotNetBar.Controls.TextBoxX();
+         this.txtLoaiXe = new DevComponents.DotNetBar.Controls.TextBoxX();
+         this.txtTienChu_Vang = new DevComponents.DotNetBar.Controls.TextBoxX();
+         this.lblTongTien_Vang2 = new DevComponents.DotNetBar.LabelX();
+         this.lblTienChu_Vang = new DevComponents.DotNetBar.LabelX();
+         this.lblTongTien_Vang1 = new DevComponents.DotNetBar.LabelX();
+         this.dataGridDsHangCam = new DevComponents.DotNetBar.Controls.DataGridViewX();
+         this.clTenVatCam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+         this.clSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+         this.clChatLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+         this.clThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+         this.clHuy = new DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn();
+         this.lblDsHangCam = new DevComponents.DotNetBar.LabelX();
+         this.bntThemHangCam = new DevComponents.DotNetBar.ButtonX();
+         this.cboLoaiVang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+         this.cboItem_18k = new DevComponents.Editors.ComboItem();
+         this.cboItem_24k = new DevComponents.Editors.ComboItem();
+         this.cboItem_VangTrang = new DevComponents.Editors.ComboItem();
+         this.lbl_2 = new DevComponents.DotNetBar.LabelX();
+         this.txtTienCam_Vang = new DevComponents.DotNetBar.Controls.TextBoxX();
+         this.lbl_4 = new DevComponents.DotNetBar.LabelX();
+         this.txtSoLuong = new DevComponents.DotNetBar.Controls.TextBoxX();
+         this.lbl_3 = new DevComponents.DotNetBar.LabelX();
+         this.txtTenVatCam = new DevComponents.DotNetBar.Controls.TextBoxX();
+         this.lbl_1 = new DevComponents.DotNetBar.LabelX();
+         this.chboxNhieuMon = new DevComponents.DotNetBar.Controls.CheckBoxX();
+         this.chboxMotMon = new DevComponents.DotNetBar.Controls.CheckBoxX();
+         this.labelX6 = new DevComponents.DotNetBar.LabelX();
          this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
          this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
          this.txtDienThoai = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
@@ -71,43 +105,9 @@
          this.cboItemVang = new DevComponents.Editors.ComboItem();
          this.cboItemXe = new DevComponents.Editors.ComboItem();
          this.labelX1 = new DevComponents.DotNetBar.LabelX();
-         this.labelX6 = new DevComponents.DotNetBar.LabelX();
-         this.chboxMotMon = new DevComponents.DotNetBar.Controls.CheckBoxX();
-         this.chboxNhieuMon = new DevComponents.DotNetBar.Controls.CheckBoxX();
-         this.lbl_1 = new DevComponents.DotNetBar.LabelX();
-         this.txtTenVatCam = new DevComponents.DotNetBar.Controls.TextBoxX();
-         this.lbl_3 = new DevComponents.DotNetBar.LabelX();
-         this.txtSoLuong = new DevComponents.DotNetBar.Controls.TextBoxX();
-         this.lbl_4 = new DevComponents.DotNetBar.LabelX();
-         this.txtTienCam_Vang = new DevComponents.DotNetBar.Controls.TextBoxX();
-         this.lbl_2 = new DevComponents.DotNetBar.LabelX();
-         this.cboLoaiVang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
          this.comboItem3 = new DevComponents.Editors.ComboItem();
          this.comboItem2 = new DevComponents.Editors.ComboItem();
          this.comboItem1 = new DevComponents.Editors.ComboItem();
-         this.bntThemHangCam = new DevComponents.DotNetBar.ButtonX();
-         this.lblDsHangCam = new DevComponents.DotNetBar.LabelX();
-         this.clHuy = new DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn();
-         this.clThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.clChatLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.clSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.clTenVatCam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.dataGridDsHangCam = new DevComponents.DotNetBar.Controls.DataGridViewX();
-         this.lblTongTien_Vang1 = new DevComponents.DotNetBar.LabelX();
-         this.lblTienChu_Vang = new DevComponents.DotNetBar.LabelX();
-         this.lblTongTien_Vang2 = new DevComponents.DotNetBar.LabelX();
-         this.txtTienChu_Vang = new DevComponents.DotNetBar.Controls.TextBoxX();
-         this.txtChatLuong = new DevComponents.DotNetBar.Controls.TextBoxX();
-         this.txtLoaiXe = new DevComponents.DotNetBar.Controls.TextBoxX();
-         this.txtBienSoXe = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
-         this.txtNhanSoXe = new DevComponents.DotNetBar.Controls.TextBoxX();
-         this.cboItem_18k = new DevComponents.Editors.ComboItem();
-         this.cboItem_24k = new DevComponents.Editors.ComboItem();
-         this.cboItem_VangTrang = new DevComponents.Editors.ComboItem();
-         this.lblTienCam_Xe = new DevComponents.DotNetBar.LabelX();
-         this.txtTienCam_Xe = new DevComponents.DotNetBar.Controls.TextBoxX();
-         this.lblTienChu_Xe = new DevComponents.DotNetBar.LabelX();
-         this.txtTienChu_Xe = new DevComponents.DotNetBar.Controls.TextBoxX();
          this.panelEx1.SuspendLayout();
          this.groupPanel4.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.txtThoiHanQuaHan)).BeginInit();
@@ -116,9 +116,9 @@
          ((System.ComponentModel.ISupportInitialize)(this.txtLaiSuatThoaThuan)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_NgayCam)).BeginInit();
          this.groupVang.SuspendLayout();
+         ((System.ComponentModel.ISupportInitialize)(this.dataGridDsHangCam)).BeginInit();
          this.groupPanel2.SuspendLayout();
          this.groupPanel1.SuspendLayout();
-         ((System.ComponentModel.ISupportInitialize)(this.dataGridDsHangCam)).BeginInit();
          this.SuspendLayout();
          // 
          // panelEx1
@@ -143,8 +143,7 @@
          // 
          // groupPanel4
          // 
-         this.groupPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+         this.groupPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
          this.groupPanel4.BackColor = System.Drawing.Color.White;
          this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
@@ -578,7 +577,7 @@
          // 
          // groupVang
          // 
-         this.groupVang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+         this.groupVang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
          this.groupVang.BackColor = System.Drawing.Color.White;
          this.groupVang.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
@@ -643,9 +642,581 @@
          this.groupVang.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
          this.groupVang.TabIndex = 2;
          // 
+         // txtTienChu_Xe
+         // 
+         this.txtTienChu_Xe.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.txtTienChu_Xe.Border.Class = "TextBoxBorder";
+         this.txtTienChu_Xe.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.txtTienChu_Xe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+         this.txtTienChu_Xe.ForeColor = System.Drawing.Color.Black;
+         this.txtTienChu_Xe.Location = new System.Drawing.Point(213, 172);
+         this.txtTienChu_Xe.Name = "txtTienChu_Xe";
+         this.txtTienChu_Xe.Size = new System.Drawing.Size(661, 35);
+         this.txtTienChu_Xe.TabIndex = 29;
+         this.txtTienChu_Xe.Text = "Một triệu đồng";
+         this.txtTienChu_Xe.Visible = false;
+         // 
+         // lblTienChu_Xe
+         // 
+         this.lblTienChu_Xe.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.lblTienChu_Xe.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+         this.lblTienChu_Xe.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
+         this.lblTienChu_Xe.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.lblTienChu_Xe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblTienChu_Xe.ForeColor = System.Drawing.Color.Black;
+         this.lblTienChu_Xe.Location = new System.Drawing.Point(21, 174);
+         this.lblTienChu_Xe.Name = "lblTienChu_Xe";
+         this.lblTienChu_Xe.Size = new System.Drawing.Size(192, 27);
+         this.lblTienChu_Xe.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.lblTienChu_Xe.TabIndex = 28;
+         this.lblTienChu_Xe.Text = "Số tiền bằng chữ:";
+         this.lblTienChu_Xe.Visible = false;
+         // 
+         // txtTienCam_Xe
+         // 
+         this.txtTienCam_Xe.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.txtTienCam_Xe.Border.Class = "TextBoxBorder";
+         this.txtTienCam_Xe.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.txtTienCam_Xe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+         this.txtTienCam_Xe.ForeColor = System.Drawing.Color.Black;
+         this.txtTienCam_Xe.Location = new System.Drawing.Point(213, 131);
+         this.txtTienCam_Xe.Name = "txtTienCam_Xe";
+         this.txtTienCam_Xe.Size = new System.Drawing.Size(386, 35);
+         this.txtTienCam_Xe.TabIndex = 27;
+         this.txtTienCam_Xe.Visible = false;
+         // 
+         // lblTienCam_Xe
+         // 
+         this.lblTienCam_Xe.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.lblTienCam_Xe.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+         this.lblTienCam_Xe.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
+         this.lblTienCam_Xe.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.lblTienCam_Xe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblTienCam_Xe.ForeColor = System.Drawing.Color.Black;
+         this.lblTienCam_Xe.Location = new System.Drawing.Point(21, 141);
+         this.lblTienCam_Xe.Name = "lblTienCam_Xe";
+         this.lblTienCam_Xe.Size = new System.Drawing.Size(171, 27);
+         this.lblTienCam_Xe.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.lblTienCam_Xe.TabIndex = 26;
+         this.lblTienCam_Xe.Text = "Tiền cầm:";
+         this.lblTienCam_Xe.Visible = false;
+         // 
+         // txtNhanSoXe
+         // 
+         this.txtNhanSoXe.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.txtNhanSoXe.Border.Class = "TextBoxBorder";
+         this.txtNhanSoXe.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.txtNhanSoXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.txtNhanSoXe.ForeColor = System.Drawing.Color.Black;
+         this.txtNhanSoXe.Location = new System.Drawing.Point(198, 74);
+         this.txtNhanSoXe.Name = "txtNhanSoXe";
+         this.txtNhanSoXe.Size = new System.Drawing.Size(178, 31);
+         this.txtNhanSoXe.TabIndex = 25;
+         this.txtNhanSoXe.Visible = false;
+         // 
+         // txtBienSoXe
+         // 
+         this.txtBienSoXe.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.txtBienSoXe.BackgroundStyle.Class = "TextBoxBorder";
+         this.txtBienSoXe.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.txtBienSoXe.ButtonClear.Visible = true;
+         this.txtBienSoXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+         this.txtBienSoXe.ForeColor = System.Drawing.Color.Black;
+         this.txtBienSoXe.Location = new System.Drawing.Point(198, 38);
+         this.txtBienSoXe.Mask = "CCCC - 00000";
+         this.txtBienSoXe.Name = "txtBienSoXe";
+         this.txtBienSoXe.Size = new System.Drawing.Size(178, 31);
+         this.txtBienSoXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.txtBienSoXe.TabIndex = 24;
+         this.txtBienSoXe.Text = "";
+         this.txtBienSoXe.Visible = false;
+         // 
+         // txtChatLuong
+         // 
+         this.txtChatLuong.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.txtChatLuong.Border.Class = "TextBoxBorder";
+         this.txtChatLuong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.txtChatLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.txtChatLuong.ForeColor = System.Drawing.Color.Black;
+         this.txtChatLuong.Location = new System.Drawing.Point(631, 74);
+         this.txtChatLuong.Name = "txtChatLuong";
+         this.txtChatLuong.Size = new System.Drawing.Size(243, 31);
+         this.txtChatLuong.TabIndex = 23;
+         this.txtChatLuong.Visible = false;
+         // 
+         // txtLoaiXe
+         // 
+         this.txtLoaiXe.AutoCompleteCustomSource.AddRange(new string[] {
+            "Air Blade",
+            "Nouvou",
+            "Dylan",
+            "Shark",
+            "Click",
+            "Dream",
+            "Future",
+            "Future Neo",
+            "Honda",
+            "Piaggio",
+            "SH",
+            "SH 150i"});
+         this.txtLoaiXe.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+         this.txtLoaiXe.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+         this.txtLoaiXe.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.txtLoaiXe.Border.Class = "TextBoxBorder";
+         this.txtLoaiXe.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.txtLoaiXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.txtLoaiXe.ForeColor = System.Drawing.Color.Black;
+         this.txtLoaiXe.Location = new System.Drawing.Point(631, 37);
+         this.txtLoaiXe.Name = "txtLoaiXe";
+         this.txtLoaiXe.Size = new System.Drawing.Size(243, 31);
+         this.txtLoaiXe.TabIndex = 22;
+         this.txtLoaiXe.Visible = false;
+         // 
+         // txtTienChu_Vang
+         // 
+         this.txtTienChu_Vang.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.txtTienChu_Vang.Border.Class = "TextBoxBorder";
+         this.txtTienChu_Vang.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.txtTienChu_Vang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+         this.txtTienChu_Vang.ForeColor = System.Drawing.Color.Black;
+         this.txtTienChu_Vang.Location = new System.Drawing.Point(213, 265);
+         this.txtTienChu_Vang.Name = "txtTienChu_Vang";
+         this.txtTienChu_Vang.Size = new System.Drawing.Size(661, 35);
+         this.txtTienChu_Vang.TabIndex = 19;
+         this.txtTienChu_Vang.Text = "Một triệu đồng";
+         // 
+         // lblTongTien_Vang2
+         // 
+         this.lblTongTien_Vang2.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.lblTongTien_Vang2.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+         this.lblTongTien_Vang2.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
+         this.lblTongTien_Vang2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.lblTongTien_Vang2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+         this.lblTongTien_Vang2.ForeColor = System.Drawing.Color.Black;
+         this.lblTongTien_Vang2.Location = new System.Drawing.Point(213, 233);
+         this.lblTongTien_Vang2.Name = "lblTongTien_Vang2";
+         this.lblTongTien_Vang2.Size = new System.Drawing.Size(386, 27);
+         this.lblTongTien_Vang2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.lblTongTien_Vang2.TabIndex = 18;
+         this.lblTongTien_Vang2.Text = "1,000,000";
+         // 
+         // lblTienChu_Vang
+         // 
+         this.lblTienChu_Vang.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.lblTienChu_Vang.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+         this.lblTienChu_Vang.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
+         this.lblTienChu_Vang.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.lblTienChu_Vang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblTienChu_Vang.ForeColor = System.Drawing.Color.Black;
+         this.lblTienChu_Vang.Location = new System.Drawing.Point(21, 273);
+         this.lblTienChu_Vang.Name = "lblTienChu_Vang";
+         this.lblTienChu_Vang.Size = new System.Drawing.Size(192, 27);
+         this.lblTienChu_Vang.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.lblTienChu_Vang.TabIndex = 17;
+         this.lblTienChu_Vang.Text = "Số tiền bằng chữ:";
+         // 
+         // lblTongTien_Vang1
+         // 
+         this.lblTongTien_Vang1.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.lblTongTien_Vang1.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+         this.lblTongTien_Vang1.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
+         this.lblTongTien_Vang1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.lblTongTien_Vang1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblTongTien_Vang1.ForeColor = System.Drawing.Color.Black;
+         this.lblTongTien_Vang1.Location = new System.Drawing.Point(21, 233);
+         this.lblTongTien_Vang1.Name = "lblTongTien_Vang1";
+         this.lblTongTien_Vang1.Size = new System.Drawing.Size(192, 27);
+         this.lblTongTien_Vang1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.lblTongTien_Vang1.TabIndex = 16;
+         this.lblTongTien_Vang1.Text = "Tổng tiền cầm:";
+         // 
+         // dataGridDsHangCam
+         // 
+         this.dataGridDsHangCam.AllowUserToAddRows = false;
+         this.dataGridDsHangCam.AllowUserToDeleteRows = false;
+         this.dataGridDsHangCam.BackgroundColor = System.Drawing.Color.White;
+         this.dataGridDsHangCam.BorderStyle = System.Windows.Forms.BorderStyle.None;
+         dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+         dataGridViewCellStyle49.BackColor = System.Drawing.SystemColors.Control;
+         dataGridViewCellStyle49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         dataGridViewCellStyle49.ForeColor = System.Drawing.SystemColors.WindowText;
+         dataGridViewCellStyle49.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+         dataGridViewCellStyle49.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+         dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+         this.dataGridDsHangCam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle49;
+         this.dataGridDsHangCam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+         this.dataGridDsHangCam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clTenVatCam,
+            this.clSoLuong,
+            this.clChatLuong,
+            this.clThanhTien,
+            this.clHuy});
+         dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+         dataGridViewCellStyle54.BackColor = System.Drawing.SystemColors.Window;
+         dataGridViewCellStyle54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         dataGridViewCellStyle54.ForeColor = System.Drawing.Color.Black;
+         dataGridViewCellStyle54.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+         dataGridViewCellStyle54.SelectionForeColor = System.Drawing.Color.Black;
+         dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+         this.dataGridDsHangCam.DefaultCellStyle = dataGridViewCellStyle54;
+         this.dataGridDsHangCam.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+         this.dataGridDsHangCam.Location = new System.Drawing.Point(21, 141);
+         this.dataGridDsHangCam.MultiSelect = false;
+         this.dataGridDsHangCam.Name = "dataGridDsHangCam";
+         this.dataGridDsHangCam.ReadOnly = true;
+         this.dataGridDsHangCam.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+         this.dataGridDsHangCam.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Transparent;
+         this.dataGridDsHangCam.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(1);
+         this.dataGridDsHangCam.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+         this.dataGridDsHangCam.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+         this.dataGridDsHangCam.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+         this.dataGridDsHangCam.Size = new System.Drawing.Size(853, 94);
+         this.dataGridDsHangCam.TabIndex = 15;
+         // 
+         // clTenVatCam
+         // 
+         dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+         this.clTenVatCam.DefaultCellStyle = dataGridViewCellStyle50;
+         this.clTenVatCam.FillWeight = 45.68528F;
+         this.clTenVatCam.Frozen = true;
+         this.clTenVatCam.HeaderText = "Tên vật cầm";
+         this.clTenVatCam.Name = "clTenVatCam";
+         this.clTenVatCam.ReadOnly = true;
+         this.clTenVatCam.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+         this.clTenVatCam.Width = 162;
+         // 
+         // clSoLuong
+         // 
+         dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+         this.clSoLuong.DefaultCellStyle = dataGridViewCellStyle51;
+         this.clSoLuong.FillWeight = 45.68528F;
+         this.clSoLuong.Frozen = true;
+         this.clSoLuong.HeaderText = "Số lượng (chỉ)";
+         this.clSoLuong.Name = "clSoLuong";
+         this.clSoLuong.ReadOnly = true;
+         this.clSoLuong.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+         this.clSoLuong.Width = 162;
+         // 
+         // clChatLuong
+         // 
+         dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+         this.clChatLuong.DefaultCellStyle = dataGridViewCellStyle52;
+         this.clChatLuong.FillWeight = 45.68528F;
+         this.clChatLuong.Frozen = true;
+         this.clChatLuong.HeaderText = "Chất lượng";
+         this.clChatLuong.Name = "clChatLuong";
+         this.clChatLuong.ReadOnly = true;
+         this.clChatLuong.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+         this.clChatLuong.Width = 163;
+         // 
+         // clThanhTien
+         // 
+         dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+         this.clThanhTien.DefaultCellStyle = dataGridViewCellStyle53;
+         this.clThanhTien.FillWeight = 317.2589F;
+         this.clThanhTien.Frozen = true;
+         this.clThanhTien.HeaderText = "Thành tiền";
+         this.clThanhTien.Name = "clThanhTien";
+         this.clThanhTien.ReadOnly = true;
+         this.clThanhTien.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+         this.clThanhTien.Width = 225;
+         // 
+         // clHuy
+         // 
+         this.clHuy.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+         this.clHuy.FillWeight = 45.68528F;
+         this.clHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+         this.clHuy.Frozen = true;
+         this.clHuy.HeaderText = "Hủy";
+         this.clHuy.Name = "clHuy";
+         this.clHuy.ReadOnly = true;
+         this.clHuy.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+         this.clHuy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+         this.clHuy.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.clHuy.Text = "Hủy";
+         // 
+         // lblDsHangCam
+         // 
+         this.lblDsHangCam.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.lblDsHangCam.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+         this.lblDsHangCam.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
+         this.lblDsHangCam.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.lblDsHangCam.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblDsHangCam.ForeColor = System.Drawing.Color.Black;
+         this.lblDsHangCam.Location = new System.Drawing.Point(10, 109);
+         this.lblDsHangCam.Name = "lblDsHangCam";
+         this.lblDsHangCam.Size = new System.Drawing.Size(237, 31);
+         this.lblDsHangCam.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.lblDsHangCam.TabIndex = 14;
+         this.lblDsHangCam.Text = "Danh sách hàng cầm";
+         // 
+         // bntThemHangCam
+         // 
+         this.bntThemHangCam.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+         this.bntThemHangCam.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+         this.bntThemHangCam.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.bntThemHangCam.FocusCuesEnabled = false;
+         this.bntThemHangCam.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.bntThemHangCam.HoverImage = global::PawnShopManager.Properties.Resources.Document_Add_02_48_hover;
+         this.bntThemHangCam.Image = global::PawnShopManager.Properties.Resources.Document_Add_02_48;
+         this.bntThemHangCam.Location = new System.Drawing.Point(914, 37);
+         this.bntThemHangCam.Name = "bntThemHangCam";
+         this.bntThemHangCam.Size = new System.Drawing.Size(259, 69);
+         this.bntThemHangCam.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.bntThemHangCam.TabIndex = 12;
+         this.bntThemHangCam.Text = "Thêm vào danh sách\r\nhàng cầm";
+         // 
+         // cboLoaiVang
+         // 
+         this.cboLoaiVang.AutoCompleteCustomSource.AddRange(new string[] {
+            "18k",
+            "24k",
+            "Vàng trắng"});
+         this.cboLoaiVang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+         this.cboLoaiVang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+         this.cboLoaiVang.DisplayMember = "Text";
+         this.cboLoaiVang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+         this.cboLoaiVang.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.cboLoaiVang.ForeColor = System.Drawing.Color.Black;
+         this.cboLoaiVang.FormattingEnabled = true;
+         this.cboLoaiVang.ItemHeight = 25;
+         this.cboLoaiVang.Items.AddRange(new object[] {
+            this.cboItem_18k,
+            this.cboItem_24k,
+            this.cboItem_VangTrang});
+         this.cboLoaiVang.Location = new System.Drawing.Point(198, 75);
+         this.cboLoaiVang.Name = "cboLoaiVang";
+         this.cboLoaiVang.Size = new System.Drawing.Size(178, 31);
+         this.cboLoaiVang.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.cboLoaiVang.TabIndex = 11;
+         // 
+         // cboItem_18k
+         // 
+         this.cboItem_18k.Text = "18k";
+         // 
+         // cboItem_24k
+         // 
+         this.cboItem_24k.Text = "24k";
+         // 
+         // cboItem_VangTrang
+         // 
+         this.cboItem_VangTrang.Text = "Vàng trắng";
+         // 
+         // lbl_2
+         // 
+         this.lbl_2.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.lbl_2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.lbl_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lbl_2.ForeColor = System.Drawing.Color.Black;
+         this.lbl_2.Location = new System.Drawing.Point(21, 75);
+         this.lbl_2.Name = "lbl_2";
+         this.lbl_2.Size = new System.Drawing.Size(157, 30);
+         this.lbl_2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.lbl_2.TabIndex = 10;
+         this.lbl_2.Text = "Loại vàng:";
+         // 
+         // txtTienCam_Vang
+         // 
+         this.txtTienCam_Vang.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.txtTienCam_Vang.Border.Class = "TextBoxBorder";
+         this.txtTienCam_Vang.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.txtTienCam_Vang.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.txtTienCam_Vang.ForeColor = System.Drawing.Color.Black;
+         this.txtTienCam_Vang.Location = new System.Drawing.Point(631, 74);
+         this.txtTienCam_Vang.Name = "txtTienCam_Vang";
+         this.txtTienCam_Vang.Size = new System.Drawing.Size(243, 31);
+         this.txtTienCam_Vang.TabIndex = 9;
+         // 
+         // lbl_4
+         // 
+         this.lbl_4.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.lbl_4.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+         this.lbl_4.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
+         this.lbl_4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.lbl_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lbl_4.ForeColor = System.Drawing.Color.Black;
+         this.lbl_4.Location = new System.Drawing.Point(454, 69);
+         this.lbl_4.Name = "lbl_4";
+         this.lbl_4.Size = new System.Drawing.Size(178, 39);
+         this.lbl_4.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.lbl_4.TabIndex = 8;
+         this.lbl_4.Text = "Tiền cầm:";
+         // 
+         // txtSoLuong
+         // 
+         this.txtSoLuong.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.txtSoLuong.Border.Class = "TextBoxBorder";
+         this.txtSoLuong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.txtSoLuong.ForeColor = System.Drawing.Color.Black;
+         this.txtSoLuong.Location = new System.Drawing.Point(631, 37);
+         this.txtSoLuong.Name = "txtSoLuong";
+         this.txtSoLuong.Size = new System.Drawing.Size(243, 31);
+         this.txtSoLuong.TabIndex = 7;
+         // 
+         // lbl_3
+         // 
+         this.lbl_3.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.lbl_3.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+         this.lbl_3.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
+         this.lbl_3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.lbl_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lbl_3.ForeColor = System.Drawing.Color.Black;
+         this.lbl_3.Location = new System.Drawing.Point(454, 32);
+         this.lbl_3.Name = "lbl_3";
+         this.lbl_3.Size = new System.Drawing.Size(178, 39);
+         this.lbl_3.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.lbl_3.TabIndex = 6;
+         this.lbl_3.Text = "Số lượng (chỉ):";
+         // 
+         // txtTenVatCam
+         // 
+         this.txtTenVatCam.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.txtTenVatCam.Border.Class = "TextBoxBorder";
+         this.txtTenVatCam.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.txtTenVatCam.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.txtTenVatCam.ForeColor = System.Drawing.Color.Black;
+         this.txtTenVatCam.Location = new System.Drawing.Point(198, 37);
+         this.txtTenVatCam.Name = "txtTenVatCam";
+         this.txtTenVatCam.Size = new System.Drawing.Size(178, 31);
+         this.txtTenVatCam.TabIndex = 5;
+         // 
+         // lbl_1
+         // 
+         this.lbl_1.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.lbl_1.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+         this.lbl_1.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
+         this.lbl_1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.lbl_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lbl_1.ForeColor = System.Drawing.Color.Black;
+         this.lbl_1.Location = new System.Drawing.Point(21, 32);
+         this.lbl_1.Name = "lbl_1";
+         this.lbl_1.Size = new System.Drawing.Size(178, 39);
+         this.lbl_1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.lbl_1.TabIndex = 4;
+         this.lbl_1.Text = "Tên vật cầm:";
+         // 
+         // chboxNhieuMon
+         // 
+         this.chboxNhieuMon.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.chboxNhieuMon.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.chboxNhieuMon.Checked = true;
+         this.chboxNhieuMon.CheckState = System.Windows.Forms.CheckState.Checked;
+         this.chboxNhieuMon.CheckValue = "Y";
+         this.chboxNhieuMon.FocusCuesEnabled = false;
+         this.chboxNhieuMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.chboxNhieuMon.ForeColor = System.Drawing.Color.Black;
+         this.chboxNhieuMon.Location = new System.Drawing.Point(357, 5);
+         this.chboxNhieuMon.Name = "chboxNhieuMon";
+         this.chboxNhieuMon.Size = new System.Drawing.Size(88, 23);
+         this.chboxNhieuMon.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.chboxNhieuMon.TabIndex = 3;
+         this.chboxNhieuMon.Text = "Nhiều món";
+         this.chboxNhieuMon.CheckedChanged += new System.EventHandler(this.chboxNhieuMon_CheckedChanged);
+         // 
+         // chboxMotMon
+         // 
+         this.chboxMotMon.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.chboxMotMon.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.chboxMotMon.FocusCuesEnabled = false;
+         this.chboxMotMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.chboxMotMon.ForeColor = System.Drawing.Color.Black;
+         this.chboxMotMon.Location = new System.Drawing.Point(227, 5);
+         this.chboxMotMon.Name = "chboxMotMon";
+         this.chboxMotMon.Size = new System.Drawing.Size(83, 23);
+         this.chboxMotMon.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.chboxMotMon.TabIndex = 2;
+         this.chboxMotMon.Text = "Một món";
+         this.chboxMotMon.CheckedChanged += new System.EventHandler(this.chboxMotMon_CheckedChanged);
+         // 
+         // labelX6
+         // 
+         this.labelX6.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.labelX6.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+         this.labelX6.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
+         this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.labelX6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.labelX6.ForeColor = System.Drawing.Color.Black;
+         this.labelX6.Location = new System.Drawing.Point(10, -6);
+         this.labelX6.Name = "labelX6";
+         this.labelX6.Size = new System.Drawing.Size(196, 36);
+         this.labelX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.labelX6.TabIndex = 1;
+         this.labelX6.Text = "Chi tiết hàng cầm";
+         // 
          // groupPanel2
          // 
-         this.groupPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+         this.groupPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
          this.groupPanel2.BackColor = System.Drawing.Color.White;
          this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
@@ -934,202 +1505,6 @@
          this.labelX1.TabIndex = 0;
          this.labelX1.Text = "Loại hàng cầm:";
          // 
-         // labelX6
-         // 
-         this.labelX6.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.labelX6.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.labelX6.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.labelX6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.labelX6.ForeColor = System.Drawing.Color.Black;
-         this.labelX6.Location = new System.Drawing.Point(10, -6);
-         this.labelX6.Name = "labelX6";
-         this.labelX6.Size = new System.Drawing.Size(196, 36);
-         this.labelX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.labelX6.TabIndex = 1;
-         this.labelX6.Text = "Chi tiết hàng cầm";
-         // 
-         // chboxMotMon
-         // 
-         this.chboxMotMon.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.chboxMotMon.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.chboxMotMon.FocusCuesEnabled = false;
-         this.chboxMotMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.chboxMotMon.ForeColor = System.Drawing.Color.Black;
-         this.chboxMotMon.Location = new System.Drawing.Point(227, 5);
-         this.chboxMotMon.Name = "chboxMotMon";
-         this.chboxMotMon.Size = new System.Drawing.Size(83, 23);
-         this.chboxMotMon.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.chboxMotMon.TabIndex = 2;
-         this.chboxMotMon.Text = "Một món";
-         this.chboxMotMon.CheckedChanged += new System.EventHandler(this.chboxMotMon_CheckedChanged);
-         // 
-         // chboxNhieuMon
-         // 
-         this.chboxNhieuMon.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.chboxNhieuMon.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.chboxNhieuMon.Checked = true;
-         this.chboxNhieuMon.CheckState = System.Windows.Forms.CheckState.Checked;
-         this.chboxNhieuMon.CheckValue = "Y";
-         this.chboxNhieuMon.FocusCuesEnabled = false;
-         this.chboxNhieuMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.chboxNhieuMon.ForeColor = System.Drawing.Color.Black;
-         this.chboxNhieuMon.Location = new System.Drawing.Point(357, 5);
-         this.chboxNhieuMon.Name = "chboxNhieuMon";
-         this.chboxNhieuMon.Size = new System.Drawing.Size(88, 23);
-         this.chboxNhieuMon.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.chboxNhieuMon.TabIndex = 3;
-         this.chboxNhieuMon.Text = "Nhiều món";
-         this.chboxNhieuMon.CheckedChanged += new System.EventHandler(this.chboxNhieuMon_CheckedChanged);
-         // 
-         // lbl_1
-         // 
-         this.lbl_1.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.lbl_1.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.lbl_1.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.lbl_1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.lbl_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lbl_1.ForeColor = System.Drawing.Color.Black;
-         this.lbl_1.Location = new System.Drawing.Point(21, 32);
-         this.lbl_1.Name = "lbl_1";
-         this.lbl_1.Size = new System.Drawing.Size(178, 39);
-         this.lbl_1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.lbl_1.TabIndex = 4;
-         this.lbl_1.Text = "Tên vật cầm:";
-         // 
-         // txtTenVatCam
-         // 
-         this.txtTenVatCam.BackColor = System.Drawing.Color.White;
-         // 
-         // 
-         // 
-         this.txtTenVatCam.Border.Class = "TextBoxBorder";
-         this.txtTenVatCam.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtTenVatCam.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtTenVatCam.ForeColor = System.Drawing.Color.Black;
-         this.txtTenVatCam.Location = new System.Drawing.Point(198, 37);
-         this.txtTenVatCam.Name = "txtTenVatCam";
-         this.txtTenVatCam.Size = new System.Drawing.Size(178, 31);
-         this.txtTenVatCam.TabIndex = 5;
-         // 
-         // lbl_3
-         // 
-         this.lbl_3.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.lbl_3.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.lbl_3.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.lbl_3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.lbl_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lbl_3.ForeColor = System.Drawing.Color.Black;
-         this.lbl_3.Location = new System.Drawing.Point(454, 32);
-         this.lbl_3.Name = "lbl_3";
-         this.lbl_3.Size = new System.Drawing.Size(178, 39);
-         this.lbl_3.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.lbl_3.TabIndex = 6;
-         this.lbl_3.Text = "Số lượng (chỉ):";
-         // 
-         // txtSoLuong
-         // 
-         this.txtSoLuong.BackColor = System.Drawing.Color.White;
-         // 
-         // 
-         // 
-         this.txtSoLuong.Border.Class = "TextBoxBorder";
-         this.txtSoLuong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtSoLuong.ForeColor = System.Drawing.Color.Black;
-         this.txtSoLuong.Location = new System.Drawing.Point(631, 37);
-         this.txtSoLuong.Name = "txtSoLuong";
-         this.txtSoLuong.Size = new System.Drawing.Size(243, 31);
-         this.txtSoLuong.TabIndex = 7;
-         // 
-         // lbl_4
-         // 
-         this.lbl_4.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.lbl_4.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.lbl_4.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.lbl_4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.lbl_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lbl_4.ForeColor = System.Drawing.Color.Black;
-         this.lbl_4.Location = new System.Drawing.Point(454, 69);
-         this.lbl_4.Name = "lbl_4";
-         this.lbl_4.Size = new System.Drawing.Size(178, 39);
-         this.lbl_4.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.lbl_4.TabIndex = 8;
-         this.lbl_4.Text = "Tiền cầm:";
-         // 
-         // txtTienCam_Vang
-         // 
-         this.txtTienCam_Vang.BackColor = System.Drawing.Color.White;
-         // 
-         // 
-         // 
-         this.txtTienCam_Vang.Border.Class = "TextBoxBorder";
-         this.txtTienCam_Vang.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtTienCam_Vang.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtTienCam_Vang.ForeColor = System.Drawing.Color.Black;
-         this.txtTienCam_Vang.Location = new System.Drawing.Point(631, 74);
-         this.txtTienCam_Vang.Name = "txtTienCam_Vang";
-         this.txtTienCam_Vang.Size = new System.Drawing.Size(243, 31);
-         this.txtTienCam_Vang.TabIndex = 9;
-         // 
-         // lbl_2
-         // 
-         this.lbl_2.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.lbl_2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.lbl_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lbl_2.ForeColor = System.Drawing.Color.Black;
-         this.lbl_2.Location = new System.Drawing.Point(21, 75);
-         this.lbl_2.Name = "lbl_2";
-         this.lbl_2.Size = new System.Drawing.Size(157, 30);
-         this.lbl_2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.lbl_2.TabIndex = 10;
-         this.lbl_2.Text = "Loại vàng:";
-         // 
-         // cboLoaiVang
-         // 
-         this.cboLoaiVang.AutoCompleteCustomSource.AddRange(new string[] {
-            "18k",
-            "24k",
-            "Vàng trắng"});
-         this.cboLoaiVang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-         this.cboLoaiVang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-         this.cboLoaiVang.DisplayMember = "Text";
-         this.cboLoaiVang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-         this.cboLoaiVang.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.cboLoaiVang.ForeColor = System.Drawing.Color.Black;
-         this.cboLoaiVang.FormattingEnabled = true;
-         this.cboLoaiVang.ItemHeight = 25;
-         this.cboLoaiVang.Items.AddRange(new object[] {
-            this.cboItem_18k,
-            this.cboItem_24k,
-            this.cboItem_VangTrang});
-         this.cboLoaiVang.Location = new System.Drawing.Point(198, 75);
-         this.cboLoaiVang.Name = "cboLoaiVang";
-         this.cboLoaiVang.Size = new System.Drawing.Size(178, 31);
-         this.cboLoaiVang.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.cboLoaiVang.TabIndex = 11;
-         // 
          // comboItem3
          // 
          this.comboItem3.Text = "Vàng trắng";
@@ -1141,381 +1516,6 @@
          // comboItem1
          // 
          this.comboItem1.Text = "18k";
-         // 
-         // bntThemHangCam
-         // 
-         this.bntThemHangCam.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-         this.bntThemHangCam.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-         this.bntThemHangCam.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.bntThemHangCam.FocusCuesEnabled = false;
-         this.bntThemHangCam.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.bntThemHangCam.HoverImage = global::PawnShopManager.Properties.Resources.Document_Add_02_48_hover;
-         this.bntThemHangCam.Image = global::PawnShopManager.Properties.Resources.Document_Add_02_48;
-         this.bntThemHangCam.Location = new System.Drawing.Point(914, 37);
-         this.bntThemHangCam.Name = "bntThemHangCam";
-         this.bntThemHangCam.Size = new System.Drawing.Size(259, 69);
-         this.bntThemHangCam.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.bntThemHangCam.TabIndex = 12;
-         this.bntThemHangCam.Text = "Thêm vào danh sách\r\nhàng cầm";
-         // 
-         // lblDsHangCam
-         // 
-         this.lblDsHangCam.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.lblDsHangCam.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.lblDsHangCam.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.lblDsHangCam.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.lblDsHangCam.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblDsHangCam.ForeColor = System.Drawing.Color.Black;
-         this.lblDsHangCam.Location = new System.Drawing.Point(10, 109);
-         this.lblDsHangCam.Name = "lblDsHangCam";
-         this.lblDsHangCam.Size = new System.Drawing.Size(237, 31);
-         this.lblDsHangCam.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.lblDsHangCam.TabIndex = 14;
-         this.lblDsHangCam.Text = "Danh sách hàng cầm";
-         // 
-         // clHuy
-         // 
-         this.clHuy.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-         this.clHuy.FillWeight = 45.68528F;
-         this.clHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-         this.clHuy.Frozen = true;
-         this.clHuy.HeaderText = "Hủy";
-         this.clHuy.Name = "clHuy";
-         this.clHuy.ReadOnly = true;
-         this.clHuy.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-         this.clHuy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-         this.clHuy.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.clHuy.Text = "Hủy";
-         // 
-         // clThanhTien
-         // 
-         dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-         this.clThanhTien.DefaultCellStyle = dataGridViewCellStyle17;
-         this.clThanhTien.FillWeight = 317.2589F;
-         this.clThanhTien.Frozen = true;
-         this.clThanhTien.HeaderText = "Thành tiền";
-         this.clThanhTien.Name = "clThanhTien";
-         this.clThanhTien.ReadOnly = true;
-         this.clThanhTien.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-         this.clThanhTien.Width = 225;
-         // 
-         // clChatLuong
-         // 
-         dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-         this.clChatLuong.DefaultCellStyle = dataGridViewCellStyle16;
-         this.clChatLuong.FillWeight = 45.68528F;
-         this.clChatLuong.Frozen = true;
-         this.clChatLuong.HeaderText = "Chất lượng";
-         this.clChatLuong.Name = "clChatLuong";
-         this.clChatLuong.ReadOnly = true;
-         this.clChatLuong.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-         this.clChatLuong.Width = 163;
-         // 
-         // clSoLuong
-         // 
-         dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-         this.clSoLuong.DefaultCellStyle = dataGridViewCellStyle15;
-         this.clSoLuong.FillWeight = 45.68528F;
-         this.clSoLuong.Frozen = true;
-         this.clSoLuong.HeaderText = "Số lượng (chỉ)";
-         this.clSoLuong.Name = "clSoLuong";
-         this.clSoLuong.ReadOnly = true;
-         this.clSoLuong.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-         this.clSoLuong.Width = 162;
-         // 
-         // clTenVatCam
-         // 
-         dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-         this.clTenVatCam.DefaultCellStyle = dataGridViewCellStyle14;
-         this.clTenVatCam.FillWeight = 45.68528F;
-         this.clTenVatCam.Frozen = true;
-         this.clTenVatCam.HeaderText = "Tên vật cầm";
-         this.clTenVatCam.Name = "clTenVatCam";
-         this.clTenVatCam.ReadOnly = true;
-         this.clTenVatCam.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-         this.clTenVatCam.Width = 162;
-         // 
-         // dataGridDsHangCam
-         // 
-         this.dataGridDsHangCam.AllowUserToAddRows = false;
-         this.dataGridDsHangCam.AllowUserToDeleteRows = false;
-         this.dataGridDsHangCam.BackgroundColor = System.Drawing.Color.White;
-         this.dataGridDsHangCam.BorderStyle = System.Windows.Forms.BorderStyle.None;
-         dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-         dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-         dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-         dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-         dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-         dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-         this.dataGridDsHangCam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
-         this.dataGridDsHangCam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-         this.dataGridDsHangCam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clTenVatCam,
-            this.clSoLuong,
-            this.clChatLuong,
-            this.clThanhTien,
-            this.clHuy});
-         dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-         dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-         dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-         dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-         dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
-         dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-         this.dataGridDsHangCam.DefaultCellStyle = dataGridViewCellStyle18;
-         this.dataGridDsHangCam.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-         this.dataGridDsHangCam.Location = new System.Drawing.Point(21, 141);
-         this.dataGridDsHangCam.MultiSelect = false;
-         this.dataGridDsHangCam.Name = "dataGridDsHangCam";
-         this.dataGridDsHangCam.ReadOnly = true;
-         this.dataGridDsHangCam.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-         this.dataGridDsHangCam.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Transparent;
-         this.dataGridDsHangCam.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(1);
-         this.dataGridDsHangCam.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-         this.dataGridDsHangCam.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-         this.dataGridDsHangCam.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-         this.dataGridDsHangCam.Size = new System.Drawing.Size(853, 94);
-         this.dataGridDsHangCam.TabIndex = 15;
-         // 
-         // lblTongTien_Vang1
-         // 
-         this.lblTongTien_Vang1.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.lblTongTien_Vang1.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.lblTongTien_Vang1.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.lblTongTien_Vang1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.lblTongTien_Vang1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblTongTien_Vang1.ForeColor = System.Drawing.Color.Black;
-         this.lblTongTien_Vang1.Location = new System.Drawing.Point(21, 233);
-         this.lblTongTien_Vang1.Name = "lblTongTien_Vang1";
-         this.lblTongTien_Vang1.Size = new System.Drawing.Size(192, 27);
-         this.lblTongTien_Vang1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.lblTongTien_Vang1.TabIndex = 16;
-         this.lblTongTien_Vang1.Text = "Tổng tiền cầm:";
-         // 
-         // lblTienChu_Vang
-         // 
-         this.lblTienChu_Vang.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.lblTienChu_Vang.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.lblTienChu_Vang.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.lblTienChu_Vang.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.lblTienChu_Vang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblTienChu_Vang.ForeColor = System.Drawing.Color.Black;
-         this.lblTienChu_Vang.Location = new System.Drawing.Point(21, 273);
-         this.lblTienChu_Vang.Name = "lblTienChu_Vang";
-         this.lblTienChu_Vang.Size = new System.Drawing.Size(192, 27);
-         this.lblTienChu_Vang.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.lblTienChu_Vang.TabIndex = 17;
-         this.lblTienChu_Vang.Text = "Số tiền bằng chữ:";
-         // 
-         // lblTongTien_Vang2
-         // 
-         this.lblTongTien_Vang2.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.lblTongTien_Vang2.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.lblTongTien_Vang2.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.lblTongTien_Vang2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.lblTongTien_Vang2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-         this.lblTongTien_Vang2.ForeColor = System.Drawing.Color.Black;
-         this.lblTongTien_Vang2.Location = new System.Drawing.Point(213, 233);
-         this.lblTongTien_Vang2.Name = "lblTongTien_Vang2";
-         this.lblTongTien_Vang2.Size = new System.Drawing.Size(386, 27);
-         this.lblTongTien_Vang2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.lblTongTien_Vang2.TabIndex = 18;
-         this.lblTongTien_Vang2.Text = "1,000,000";
-         // 
-         // txtTienChu_Vang
-         // 
-         this.txtTienChu_Vang.BackColor = System.Drawing.Color.White;
-         // 
-         // 
-         // 
-         this.txtTienChu_Vang.Border.Class = "TextBoxBorder";
-         this.txtTienChu_Vang.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtTienChu_Vang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-         this.txtTienChu_Vang.ForeColor = System.Drawing.Color.Red;
-         this.txtTienChu_Vang.Location = new System.Drawing.Point(213, 265);
-         this.txtTienChu_Vang.Name = "txtTienChu_Vang";
-         this.txtTienChu_Vang.Size = new System.Drawing.Size(661, 35);
-         this.txtTienChu_Vang.TabIndex = 19;
-         this.txtTienChu_Vang.Text = "Một triệu đồng";
-         // 
-         // txtChatLuong
-         // 
-         this.txtChatLuong.BackColor = System.Drawing.Color.White;
-         // 
-         // 
-         // 
-         this.txtChatLuong.Border.Class = "TextBoxBorder";
-         this.txtChatLuong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtChatLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtChatLuong.ForeColor = System.Drawing.Color.Black;
-         this.txtChatLuong.Location = new System.Drawing.Point(631, 74);
-         this.txtChatLuong.Name = "txtChatLuong";
-         this.txtChatLuong.Size = new System.Drawing.Size(243, 31);
-         this.txtChatLuong.TabIndex = 23;
-         this.txtChatLuong.Visible = false;
-         // 
-         // txtLoaiXe
-         // 
-         this.txtLoaiXe.AutoCompleteCustomSource.AddRange(new string[] {
-            "Air Blade",
-            "Nouvou",
-            "Dylan",
-            "Shark",
-            "Click",
-            "Dream",
-            "Future",
-            "Future Neo",
-            "Honda",
-            "Piaggio",
-            "SH",
-            "SH 150i"});
-         this.txtLoaiXe.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-         this.txtLoaiXe.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-         this.txtLoaiXe.BackColor = System.Drawing.Color.White;
-         // 
-         // 
-         // 
-         this.txtLoaiXe.Border.Class = "TextBoxBorder";
-         this.txtLoaiXe.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtLoaiXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtLoaiXe.ForeColor = System.Drawing.Color.Black;
-         this.txtLoaiXe.Location = new System.Drawing.Point(631, 37);
-         this.txtLoaiXe.Name = "txtLoaiXe";
-         this.txtLoaiXe.Size = new System.Drawing.Size(243, 31);
-         this.txtLoaiXe.TabIndex = 22;
-         this.txtLoaiXe.Visible = false;
-         // 
-         // txtBienSoXe
-         // 
-         this.txtBienSoXe.BackColor = System.Drawing.Color.White;
-         // 
-         // 
-         // 
-         this.txtBienSoXe.BackgroundStyle.Class = "TextBoxBorder";
-         this.txtBienSoXe.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtBienSoXe.ButtonClear.Visible = true;
-         this.txtBienSoXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-         this.txtBienSoXe.ForeColor = System.Drawing.Color.Black;
-         this.txtBienSoXe.Location = new System.Drawing.Point(198, 38);
-         this.txtBienSoXe.Mask = "CCCC - 00000";
-         this.txtBienSoXe.Name = "txtBienSoXe";
-         this.txtBienSoXe.Size = new System.Drawing.Size(178, 31);
-         this.txtBienSoXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.txtBienSoXe.TabIndex = 24;
-         this.txtBienSoXe.Text = "";
-         this.txtBienSoXe.Visible = false;
-         // 
-         // txtNhanSoXe
-         // 
-         this.txtNhanSoXe.BackColor = System.Drawing.Color.White;
-         // 
-         // 
-         // 
-         this.txtNhanSoXe.Border.Class = "TextBoxBorder";
-         this.txtNhanSoXe.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtNhanSoXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtNhanSoXe.ForeColor = System.Drawing.Color.Black;
-         this.txtNhanSoXe.Location = new System.Drawing.Point(198, 74);
-         this.txtNhanSoXe.Name = "txtNhanSoXe";
-         this.txtNhanSoXe.Size = new System.Drawing.Size(178, 31);
-         this.txtNhanSoXe.TabIndex = 25;
-         this.txtNhanSoXe.Visible = false;
-         // 
-         // cboItem_18k
-         // 
-         this.cboItem_18k.Text = "18k";
-         // 
-         // cboItem_24k
-         // 
-         this.cboItem_24k.Text = "24k";
-         // 
-         // cboItem_VangTrang
-         // 
-         this.cboItem_VangTrang.Text = "Vàng trắng";
-         // 
-         // lblTienCam_Xe
-         // 
-         this.lblTienCam_Xe.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.lblTienCam_Xe.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.lblTienCam_Xe.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.lblTienCam_Xe.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.lblTienCam_Xe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblTienCam_Xe.ForeColor = System.Drawing.Color.Black;
-         this.lblTienCam_Xe.Location = new System.Drawing.Point(21, 141);
-         this.lblTienCam_Xe.Name = "lblTienCam_Xe";
-         this.lblTienCam_Xe.Size = new System.Drawing.Size(171, 27);
-         this.lblTienCam_Xe.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.lblTienCam_Xe.TabIndex = 26;
-         this.lblTienCam_Xe.Text = "Tiền cầm:";
-         this.lblTienCam_Xe.Visible = false;
-         // 
-         // txtTienCam_Xe
-         // 
-         this.txtTienCam_Xe.BackColor = System.Drawing.Color.Red;
-         // 
-         // 
-         // 
-         this.txtTienCam_Xe.Border.Class = "TextBoxBorder";
-         this.txtTienCam_Xe.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtTienCam_Xe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-         this.txtTienCam_Xe.ForeColor = System.Drawing.Color.White;
-         this.txtTienCam_Xe.Location = new System.Drawing.Point(213, 131);
-         this.txtTienCam_Xe.Name = "txtTienCam_Xe";
-         this.txtTienCam_Xe.Size = new System.Drawing.Size(386, 35);
-         this.txtTienCam_Xe.TabIndex = 27;
-         this.txtTienCam_Xe.Visible = false;
-         // 
-         // lblTienChu_Xe
-         // 
-         this.lblTienChu_Xe.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.lblTienChu_Xe.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.lblTienChu_Xe.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.lblTienChu_Xe.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.lblTienChu_Xe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblTienChu_Xe.ForeColor = System.Drawing.Color.Black;
-         this.lblTienChu_Xe.Location = new System.Drawing.Point(21, 174);
-         this.lblTienChu_Xe.Name = "lblTienChu_Xe";
-         this.lblTienChu_Xe.Size = new System.Drawing.Size(192, 27);
-         this.lblTienChu_Xe.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.lblTienChu_Xe.TabIndex = 28;
-         this.lblTienChu_Xe.Text = "Số tiền bằng chữ:";
-         this.lblTienChu_Xe.Visible = false;
-         // 
-         // txtTienChu_Xe
-         // 
-         this.txtTienChu_Xe.BackColor = System.Drawing.Color.White;
-         // 
-         // 
-         // 
-         this.txtTienChu_Xe.Border.Class = "TextBoxBorder";
-         this.txtTienChu_Xe.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtTienChu_Xe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-         this.txtTienChu_Xe.ForeColor = System.Drawing.Color.Red;
-         this.txtTienChu_Xe.Location = new System.Drawing.Point(213, 172);
-         this.txtTienChu_Xe.Name = "txtTienChu_Xe";
-         this.txtTienChu_Xe.Size = new System.Drawing.Size(661, 35);
-         this.txtTienChu_Xe.TabIndex = 29;
-         this.txtTienChu_Xe.Text = "Một triệu đồng";
-         this.txtTienChu_Xe.Visible = false;
          // 
          // CamDo
          // 
@@ -1540,9 +1540,9 @@
          ((System.ComponentModel.ISupportInitialize)(this.txtLaiSuatThoaThuan)).EndInit();
          ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_NgayCam)).EndInit();
          this.groupVang.ResumeLayout(false);
+         ((System.ComponentModel.ISupportInitialize)(this.dataGridDsHangCam)).EndInit();
          this.groupPanel2.ResumeLayout(false);
          this.groupPanel1.ResumeLayout(false);
-         ((System.ComponentModel.ISupportInitialize)(this.dataGridDsHangCam)).EndInit();
          this.ResumeLayout(false);
 
       }
