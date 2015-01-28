@@ -30,5 +30,10 @@ namespace PawnShopManager.GUI
       {
          this.Close();
       }
+
+      private void labelX1_Click(object sender, EventArgs e)
+      {
+
+      }
    }
 }
