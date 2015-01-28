@@ -215,6 +215,7 @@
     <Content Include="Images\normal\Save-48.png" />
     <Content Include="Images\normal\User-128.png" />
     <Content Include="Images\normal\User-32.png" />
+    <Content Include="Images\rec-white-icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

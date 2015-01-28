@@ -229,6 +229,9 @@
   <data name="Printer_48_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\hover\printer-48 hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rec_white_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\rec-white-icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Save_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\normal\save-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

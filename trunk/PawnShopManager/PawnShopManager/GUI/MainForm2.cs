@@ -32,10 +32,9 @@ namespace PawnShopManager.GUI
 
       private void MainForm2_Load(object sender, EventArgs e)
       {
+         openChild(enumButtonAction.bntCamDo);
          SESSION.Add("Action", enumButtonAction.bntCamDo); //luu session, luu nut nao dang dc active
          bntCamDo.Image = Properties.Resources.Money_Bag_48_active;
-
-         openChild(enumButtonAction.bntCamDo);
       }
 
       private void bntCamDo_MouseHover(object sender, EventArgs e)
@@ -113,9 +112,9 @@ namespace PawnShopManager.GUI
       }
       private void bntCamDo_Click(object sender, EventArgs e)
       {
-         SESSION["Action"] = enumButtonAction.bntCamDo;
-         activeButton(bntCamDo);
          openChild(enumButtonAction.bntCamDo);
+         activeButton(bntCamDo);
+         SESSION["Action"] = enumButtonAction.bntCamDo;
       }
 
       public enum enumButtonAction
@@ -125,8 +124,8 @@ namespace PawnShopManager.GUI
 
       private void bntQlHangCam_Click(object sender, EventArgs e)
       {
-         SESSION["Action"] = enumButtonAction.bntQlHangCam;
          activeButton(bntQlHangCam);
+         SESSION["Action"] = enumButtonAction.bntQlHangCam;
       }
 
       private void bntThongKe_Click(object sender, EventArgs e)
@@ -136,10 +135,10 @@ namespace PawnShopManager.GUI
       }
 
       private void bntKiemHang_Click(object sender, EventArgs e)
-      {
-         SESSION["Action"] = enumButtonAction.bntKiemHang;
+      {         
          activeButton(bntKiemHang);
          openChild(enumButtonAction.bntKiemHang);
+         SESSION["Action"] = enumButtonAction.bntKiemHang;
       }
 
       private void bntThuChi_Click(object sender, EventArgs e)
@@ -225,11 +224,14 @@ namespace PawnShopManager.GUI
 
       public void openChild(enumButtonAction bntAction)
       {
+         if (SESSION["Action"] != null && SESSION["Action"].Equals(bntAction))
+         {
+            return;
+         }
          if (child != null)
          {
             child.Hide();
          }
-         //this.WindowState = FormWindowState.Normal;
          switch (bntAction)
          {
             case enumButtonAction.bntCamDo:
@@ -252,11 +254,10 @@ namespace PawnShopManager.GUI
                }
                kiemHangForm.Show();
                kiemHangForm.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
+               kiemHangForm.WindowState = FormWindowState.Maximized;
                child = kiemHangForm;
                break;
          }
-         
-        //this.WindowState = FormWindowState.Maximized;
       }
       #endregion
    }
