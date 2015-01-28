@@ -45,46 +45,6 @@ namespace PawnShopManager.GUI.BODY
          }
       }
 
-      private void bntLuu_MouseHover(object sender, EventArgs e)
-      {
-         bntLuu.Image = Properties.Resources.Save_48_hover;
-      }
-
-      private void bntLuu_MouseLeave(object sender, EventArgs e)
-      {
-         bntLuu.Image = Properties.Resources.Save_48;
-      }
-
-      private void bntIn_MouseHover(object sender, EventArgs e)
-      {
-         bntIn.Image = Properties.Resources.Printer_48_hover;
-      }
-
-      private void bntIn_MouseLeave(object sender, EventArgs e)
-      {
-         bntIn.Image = Properties.Resources.Printer_48;
-      }
-
-      private void bntVietLai_MouseHover(object sender, EventArgs e)
-      {
-         bntVietLai.Image = Properties.Resources.Document_Delete_02_48_hover;
-      }
-
-      private void bntVietLai_MouseLeave(object sender, EventArgs e)
-      {
-         bntVietLai.Image = Properties.Resources.Document_Delete_02_48;
-      }
-
-      private void bntThemBienNhanMoi_MouseHover(object sender, EventArgs e)
-      {
-         bntThemBienNhanMoi.Image = Properties.Resources.Add_New_48_hover;
-      }
-
-      private void bntThemBienNhanMoi_MouseLeave(object sender, EventArgs e)
-      {
-         bntThemBienNhanMoi.Image = Properties.Resources.Add_New_48;
-      }
-
       private void cboLoaiHang_SelectedIndexChanged(object sender, EventArgs e)
       {
          if (cboLoaiHang.SelectedIndex == 0)
@@ -164,6 +124,48 @@ namespace PawnShopManager.GUI.BODY
          lblTienCam_Xe.Visible = true;
          lblTienChu_Xe.Visible = true;
          txtTienChu_Xe.Visible = true;
+      }
+
+      private void txtCMND_MouseEnter(object sender, EventArgs e)
+      {
+         if (txtCMND.SelectionStart > txtCMND.Text.Length)
+         {
+            txtCMND.SelectionStart = txtCMND.Text.Length;
+            txtCMND.Focus();
+         }
+      }
+
+      private void txtBienSoXe_MouseEnter(object sender, EventArgs e)
+      {
+         string[] bs = txtBienSoXe.Text.Split('-');
+         if (bs[0].Trim().Length < 4 && txtBienSoXe.SelectionStart > 4)
+         {
+            txtBienSoXe.SelectionStart = bs[0].Trim().Length;
+            txtBienSoXe.Focus();
+         }else{
+            if (bs[1].Trim().Length < 5 && txtBienSoXe.SelectionStart > txtBienSoXe.Text.Length)
+            {
+               txtBienSoXe.SelectionStart = bs[1].Trim().Length + 7;
+               txtBienSoXe.Focus();
+            }
+         }
+      }
+
+      private void txtDienThoai_MouseEnter(object sender, EventArgs e)
+      {
+         if (txtDienThoai.SelectionStart > txtDienThoai.Text.Length)
+         {
+            txtDienThoai.SelectionStart = txtDienThoai.Text.Length;
+            txtDienThoai.Focus();
+         }
+      }
+
+      private void bntThemHangCam_Click(object sender, EventArgs e)
+      {
+         if (cboLoaiVang.SelectedItem != null)
+         {
+            MessageBox.Show(cboLoaiVang.SelectedItem.ToString());
+         }
       }
 
    }
