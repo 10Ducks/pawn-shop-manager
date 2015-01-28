@@ -56,10 +56,13 @@
 			<column name="delete_flag" type="bit" length="1" decimal="0" jt="-7" >
 				<defo>0</defo>
 			</column>
+			<column name="chuoc_tanggiam" type="float" jt="8" >
+				<comment><![CDATA[Tiền tăng giảm do chủ tiệm quyết định]]></comment>
+			</column>
 			<index name="Pk_tbl_chuoc" unique="PRIMARY_KEY" >
 				<column name="chuoc_id" />
 			</index>
-			<index name="idx_tbl_chuoc" unique="NORMAL" >
+			<index name="idx_tbl_chuoc" unique="UNIQUE" >
 				<column name="hd_id" />
 			</index>
 			<fk name="Fk_tbl_chuoc" to_schema="dbo" to_table="tbl_Hop_Dong" delete_action="cascade" update_action="cascade" >
@@ -126,45 +129,25 @@ chưa thanh toán
 				<defo>0</defo>
 				<comment><![CDATA[Báo mất hợp đồng của khách hàng]]></comment>
 			</column>
-			<column name="hd_tanggiam" type="float" length="53" decimal="0" jt="8" >
-				<comment><![CDATA[Tăng giảm giá trị của hợp đồng do chủ quyết định]]></comment>
-			</column>
-			<column name="hd_tong_giatri" type="float" length="53" decimal="0" jt="8" >
+			<column name="hd_tien_cam" type="float" length="53" decimal="0" jt="8" >
 				<comment><![CDATA[tổng giá trị của hợp đồng]]></comment>
 			</column>
-			<column name="kh_id" type="varchar" length="20" decimal="0" jt="12" >
+			<column name="hd_kh_CMND" type="varchar" length="20" decimal="0" jt="12" >
 				<comment><![CDATA[hợp đồng của khách hàng nào..]]></comment>
 			</column>
 			<column name="delete_flag" type="bit" length="1" decimal="0" jt="-7" mandatory="y" >
 				<defo>0</defo>
 			</column>
+			<column name="hd_kh_Ten" type="nvarchar" length="50" jt="12" mandatory="y" />
+			<column name="hd_kh_DienThoai" type="varchar" length="15" jt="12" />
+			<column name="hd_kh_Diachi" type="nvarchar(max)" jt="12" />
+			<column name="thanhli_id" type="int" jt="4" />
 			<index name="Pk_tbl_Hop_Dong" unique="PRIMARY_KEY" >
 				<column name="hd_id" />
 			</index>
 			<index name="Pk_tbl_Hop_Dong_0" unique="UNIQUE" >
-				<column name="kh_id" />
+				<column name="thanhli_id" />
 			</index>
-		</table>
-		<table name="tbl_Khach_Hang" >
-			<comment><![CDATA[Bảng khách hàng]]></comment>
-			<column name="kh_CMND" type="varchar" length="20" decimal="0" jt="12" mandatory="y" >
-				<comment><![CDATA[Chứng minh nhân dân của khách hàng]]></comment>
-			</column>
-			<column name="kh_Ten" type="nvarchar" length="50" decimal="0" jt="12" mandatory="y" >
-				<comment><![CDATA[Tên của Khách Hàng]]></comment>
-			</column>
-			<column name="kh_DienThoai" type="varchar" length="20" decimal="0" jt="12" >
-				<comment><![CDATA[Số điện thoại của Khách hàng]]></comment>
-			</column>
-			<column name="kh_DiaChi" type="nvarchar" length="200" decimal="0" jt="12" >
-				<comment><![CDATA[Địa chỉ của khách hàng]]></comment>
-			</column>
-			<index name="Pk_tbl_Khach_Hang" unique="PRIMARY_KEY" >
-				<column name="kh_CMND" />
-			</index>
-			<fk name="Fk_tbl_Khach_Hang" to_schema="dbo" to_table="tbl_Hop_Dong" delete_action="cascade" update_action="cascade" >
-				<fk_column name="kh_CMND" pk="kh_id" />
-			</fk>
 		</table>
 		<table name="tbl_Loai_Hang" >
 			<comment><![CDATA[Loại hàng hóa, vd: vàng, xe]]></comment>
@@ -179,6 +162,25 @@ chưa thanh toán
 				<fk_column name="loaihang_id" pk="loaihang_id" />
 			</fk>
 		</table>
+		<table name="tbl_Thanh_Ly" >
+			<comment><![CDATA[Table lưu thông tin thanh lí của hàng]]></comment>
+			<column name="thanhly_id" type="int" jt="4" mandatory="y" autoincrement="y" >
+				<comment><![CDATA[Mã thanh lý]]></comment>
+			</column>
+			<column name="thanhly_ngay" type="date" jt="91" mandatory="y" >
+				<defo>getdate()</defo>
+				<comment><![CDATA[Ngày thanh lý]]></comment>
+			</column>
+			<column name="thanhly_tien" type="money" jt="3" mandatory="y" >
+				<comment><![CDATA[Số tiền thanh lý]]></comment>
+			</column>
+			<index name="Pk_tbl_Thanh_Ly" unique="PRIMARY_KEY" >
+				<column name="thanhly_id" />
+			</index>
+			<fk name="fk_tbl_thanh_ly_tbl_hop_dong" to_schema="dbo" to_table="tbl_Hop_Dong" >
+				<fk_column name="thanhly_id" pk="thanhli_id" />
+			</fk>
+		</table>
 		<table name="tbl_Them_Tien" >
 			<comment><![CDATA[Bảng lấy thêm tiền ]]></comment>
 			<column name="them_id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
@@ -188,7 +190,7 @@ chưa thanh toán
 			</column>
 			<column name="them_tienlai" type="float" length="53" decimal="0" jt="8" />
 			<column name="them_tien" type="float" length="53" decimal="0" jt="8" />
-			<column name="tien_trangthai" type="int" length="10" decimal="0" jt="4" />
+			<column name="them_hinhthuc_tralai" type="int" length="10" decimal="0" jt="4" />
 			<column name="delete_flag" type="bit" length="1" decimal="0" jt="-7" >
 				<defo>0</defo>
 			</column>
@@ -218,7 +220,7 @@ chưa thanh toán
 				<comment><![CDATA[Số tiền thu chi
 ]]></comment>
 			</column>
-			<column name="tc_note" type="text" length="600" jt="-1" >
+			<column name="tc_note" type="nvarchar(max)" jt="12" >
 				<comment><![CDATA[Ghi chú]]></comment>
 			</column>
 			<index name="Pk_tbl_Thu_Chi" unique="PRIMARY_KEY" >
@@ -251,18 +253,23 @@ chưa thanh toán
 				<fk_column name="hd_id" pk="hd_id" />
 			</fk>
 		</table>
+		<procedure name="Thêm Giá Trị" id="Procedure5414769" isSystem="false" >
+			<string><![CDATA[Thêm giá trị vào bảng admin
+
+INSERT INTO tbl_Admin(Admin_Id,Admin_Password) VALUES('Admin','Admin123')]]></string>
+		</procedure>
 	</schema>
-	<connector name="SqlServer" database="SqlServer" driver_class="net.sourceforge.jtds.jdbc.Driver" driver_jar="jtds-1.3.1.jar" host="localhost" port="1433" instance="PawnShop" user="nguyenta.tran" schema_mapping="" />
-	<layout id="Layout5550631" name="dbo" show_relation_columns="y" >
-		<entity schema="dbo" name="tbl_Hop_Dong" color="f5d8b3" x="840" y="435" />
-		<entity schema="dbo" name="tbl_Chi_Tiet_Hop_Dong" color="f5d8b3" x="195" y="105" />
+	<connector name="SqlServer" database="SqlServer" driver_class="net.sourceforge.jtds.jdbc.Driver" driver_jar="jtds-1.3.1.jar" host="localhost" port="1433" instance="PawnShop" user="nguyenta.tran" passwd="NzQxMjEzMTE=" schema_mapping="" />
+	<layout id="Layout5550631" name="dbo" joined_routing="y" show_relation_columns="y" >
 		<entity schema="dbo" name="tbl_Hang_Hoa" color="bef5b3" x="45" y="135" />
-		<entity schema="dbo" name="tbl_Them_Tien" color="bef5b3" x="900" y="615" />
-		<entity schema="dbo" name="tbl_Chuoc_Hang" color="f5d8b3" x="600" y="315" />
-		<entity schema="dbo" name="tbl_Tra_Lai_Truoc" color="f5d8b3" x="645" y="645" />
-		<entity schema="dbo" name="tbl_Khach_Hang" color="f5d8b3" x="960" y="255" />
 		<entity schema="dbo" name="tbl_Admin" color="bef5b3" x="465" y="45" />
 		<entity schema="dbo" name="tbl_Loai_Hang" color="f5d8b3" x="60" y="420" />
+		<entity schema="dbo" name="tbl_Chi_Tiet_Hop_Dong" color="f5d8b3" x="270" y="120" />
+		<entity schema="dbo" name="tbl_Tra_Lai_Truoc" color="f5d8b3" x="465" y="630" />
 		<entity schema="dbo" name="tbl_Thu_Chi" color="b2cdf7" x="630" y="45" />
+		<entity schema="dbo" name="tbl_Them_Tien" color="bef5b3" x="900" y="615" />
+		<entity schema="dbo" name="tbl_Chuoc_Hang" color="f5d8b3" x="375" y="420" />
+		<entity schema="dbo" name="tbl_Hop_Dong" color="f5d8b3" x="720" y="240" />
+		<entity schema="dbo" name="tbl_Thanh_Ly" color="b2cdf7" x="855" y="495" />
 	</layout>
 </project>
