@@ -36,11 +36,15 @@
          System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
          System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CamDo));
          this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+         this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+         this.txtDienThoai = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
+         this.txtCMND = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
+         this.labelX5 = new DevComponents.DotNetBar.LabelX();
+         this.textBoxX_DiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
+         this.labelX4 = new DevComponents.DotNetBar.LabelX();
+         this.labelX3 = new DevComponents.DotNetBar.LabelX();
+         this.labelX2 = new DevComponents.DotNetBar.LabelX();
          this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
-         this.bntThemBienNhanMoi = new DevComponents.DotNetBar.LabelX();
-         this.bntVietLai = new DevComponents.DotNetBar.LabelX();
-         this.bntIn = new DevComponents.DotNetBar.LabelX();
-         this.bntLuu = new DevComponents.DotNetBar.LabelX();
          this.labelX21 = new DevComponents.DotNetBar.LabelX();
          this.labelX20 = new DevComponents.DotNetBar.LabelX();
          this.txtThoiHanQuaHan = new DevComponents.Editors.IntegerInput();
@@ -48,10 +52,8 @@
          this.labelX19 = new DevComponents.DotNetBar.LabelX();
          this.labelX18 = new DevComponents.DotNetBar.LabelX();
          this.labelX16 = new DevComponents.DotNetBar.LabelX();
-         this.txtLaiSuatQuaHan = new DevComponents.Editors.DoubleInput();
          this.labelX17 = new DevComponents.DotNetBar.LabelX();
          this.labelX15 = new DevComponents.DotNetBar.LabelX();
-         this.txtLaiSuatThoaThuan = new DevComponents.Editors.DoubleInput();
          this.labelX14 = new DevComponents.DotNetBar.LabelX();
          this.labelX13 = new DevComponents.DotNetBar.LabelX();
          this.dateTimeInput_NgayCam = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
@@ -100,20 +102,22 @@
          this.comboItem3 = new DevComponents.Editors.ComboItem();
          this.comboItem2 = new DevComponents.Editors.ComboItem();
          this.comboItem1 = new DevComponents.Editors.ComboItem();
-         this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-         this.txtDienThoai = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
-         this.txtCMND = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
-         this.labelX5 = new DevComponents.DotNetBar.LabelX();
-         this.textBoxX_DiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
-         this.labelX4 = new DevComponents.DotNetBar.LabelX();
-         this.labelX3 = new DevComponents.DotNetBar.LabelX();
-         this.labelX2 = new DevComponents.DotNetBar.LabelX();
+         this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+         this.comboBoxEx2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+         this.comboItem4 = new DevComponents.Editors.ComboItem();
+         this.comboItem5 = new DevComponents.Editors.ComboItem();
+         this.comboItem6 = new DevComponents.Editors.ComboItem();
+         this.comboItem7 = new DevComponents.Editors.ComboItem();
+         this.comboItem8 = new DevComponents.Editors.ComboItem();
+         this.comboItem9 = new DevComponents.Editors.ComboItem();
+         this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+         this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+         this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
+         this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
          this.panelEx1.SuspendLayout();
          this.groupPanel4.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.txtThoiHanQuaHan)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.txtThoiHanThoaThuan)).BeginInit();
-         ((System.ComponentModel.ISupportInitialize)(this.txtLaiSuatQuaHan)).BeginInit();
-         ((System.ComponentModel.ISupportInitialize)(this.txtLaiSuatThoaThuan)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_NgayCam)).BeginInit();
          this.groupVang.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.dataGridDsHangCam)).BeginInit();
@@ -147,16 +151,163 @@
          this.panelEx1.Style.GradientAngle = 90;
          this.panelEx1.TabIndex = 10;
          // 
+         // textBoxX2
+         // 
+         this.textBoxX2.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.textBoxX2.Border.Class = "TextBoxBorder";
+         this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.textBoxX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.textBoxX2.ForeColor = System.Drawing.Color.Black;
+         this.textBoxX2.Location = new System.Drawing.Point(197, 63);
+         this.textBoxX2.Name = "textBoxX2";
+         this.textBoxX2.Size = new System.Drawing.Size(185, 31);
+         this.textBoxX2.TabIndex = 18;
+         // 
+         // txtDienThoai
+         // 
+         this.txtDienThoai.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.txtDienThoai.BackgroundStyle.Class = "TextBoxBorder";
+         this.txtDienThoai.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.txtDienThoai.ButtonClear.Visible = true;
+         this.txtDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.txtDienThoai.ForeColor = System.Drawing.Color.Black;
+         this.txtDienThoai.Location = new System.Drawing.Point(803, 63);
+         this.txtDienThoai.Mask = "000000000000";
+         this.txtDienThoai.Name = "txtDienThoai";
+         this.txtDienThoai.Size = new System.Drawing.Size(194, 31);
+         this.txtDienThoai.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.txtDienThoai.TabIndex = 17;
+         this.txtDienThoai.Text = "";
+         this.txtDienThoai.MouseEnter += new System.EventHandler(this.txtDienThoai_MouseEnter);
+         // 
+         // txtCMND
+         // 
+         this.txtCMND.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.txtCMND.BackgroundStyle.Class = "TextBoxBorder";
+         this.txtCMND.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.txtCMND.ButtonClear.Visible = true;
+         this.txtCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.txtCMND.ForeColor = System.Drawing.Color.Black;
+         this.txtCMND.Location = new System.Drawing.Point(494, 63);
+         this.txtCMND.Mask = "0000000000";
+         this.txtCMND.Name = "txtCMND";
+         this.txtCMND.ResetOnSpace = false;
+         this.txtCMND.Size = new System.Drawing.Size(156, 31);
+         this.txtCMND.SkipLiterals = false;
+         this.txtCMND.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.txtCMND.TabIndex = 16;
+         this.txtCMND.Text = "";
+         this.txtCMND.MouseEnter += new System.EventHandler(this.txtCMND_MouseEnter);
+         // 
+         // labelX5
+         // 
+         this.labelX5.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.labelX5.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+         this.labelX5.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
+         this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.labelX5.ForeColor = System.Drawing.Color.Black;
+         this.labelX5.Location = new System.Drawing.Point(688, 63);
+         this.labelX5.Name = "labelX5";
+         this.labelX5.Size = new System.Drawing.Size(116, 28);
+         this.labelX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.labelX5.TabIndex = 15;
+         this.labelX5.Text = "Điện thoại:";
+         // 
+         // textBoxX_DiaChi
+         // 
+         this.textBoxX_DiaChi.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.textBoxX_DiaChi.Border.Class = "TextBoxBorder";
+         this.textBoxX_DiaChi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.textBoxX_DiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.textBoxX_DiaChi.ForeColor = System.Drawing.Color.Black;
+         this.textBoxX_DiaChi.Location = new System.Drawing.Point(494, 103);
+         this.textBoxX_DiaChi.Name = "textBoxX_DiaChi";
+         this.textBoxX_DiaChi.Size = new System.Drawing.Size(503, 31);
+         this.textBoxX_DiaChi.TabIndex = 14;
+         // 
+         // labelX4
+         // 
+         this.labelX4.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.labelX4.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+         this.labelX4.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
+         this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.labelX4.ForeColor = System.Drawing.Color.Black;
+         this.labelX4.Location = new System.Drawing.Point(411, 103);
+         this.labelX4.Name = "labelX4";
+         this.labelX4.Size = new System.Drawing.Size(87, 28);
+         this.labelX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.labelX4.TabIndex = 13;
+         this.labelX4.Text = "Địa chỉ:";
+         // 
+         // labelX3
+         // 
+         this.labelX3.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.labelX3.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+         this.labelX3.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
+         this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.labelX3.ForeColor = System.Drawing.Color.Black;
+         this.labelX3.Location = new System.Drawing.Point(411, 66);
+         this.labelX3.Name = "labelX3";
+         this.labelX3.Size = new System.Drawing.Size(83, 23);
+         this.labelX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.labelX3.TabIndex = 12;
+         this.labelX3.Text = "CMND:";
+         // 
+         // labelX2
+         // 
+         this.labelX2.BackColor = System.Drawing.Color.Transparent;
+         // 
+         // 
+         // 
+         this.labelX2.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+         this.labelX2.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
+         this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.labelX2.ForeColor = System.Drawing.Color.Black;
+         this.labelX2.Location = new System.Drawing.Point(20, 61);
+         this.labelX2.Name = "labelX2";
+         this.labelX2.Size = new System.Drawing.Size(178, 30);
+         this.labelX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.labelX2.TabIndex = 11;
+         this.labelX2.Text = "Họ tên người cầm:";
+         // 
          // groupPanel4
          // 
-         this.groupPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+         this.groupPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
          this.groupPanel4.BackColor = System.Drawing.Color.White;
          this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.groupPanel4.Controls.Add(this.bntThemBienNhanMoi);
-         this.groupPanel4.Controls.Add(this.bntVietLai);
-         this.groupPanel4.Controls.Add(this.bntIn);
-         this.groupPanel4.Controls.Add(this.bntLuu);
+         this.groupPanel4.Controls.Add(this.buttonX4);
+         this.groupPanel4.Controls.Add(this.buttonX3);
+         this.groupPanel4.Controls.Add(this.buttonX2);
+         this.groupPanel4.Controls.Add(this.buttonX1);
+         this.groupPanel4.Controls.Add(this.comboBoxEx2);
+         this.groupPanel4.Controls.Add(this.comboBoxEx1);
          this.groupPanel4.Controls.Add(this.labelX21);
          this.groupPanel4.Controls.Add(this.labelX20);
          this.groupPanel4.Controls.Add(this.txtThoiHanQuaHan);
@@ -164,10 +315,8 @@
          this.groupPanel4.Controls.Add(this.labelX19);
          this.groupPanel4.Controls.Add(this.labelX18);
          this.groupPanel4.Controls.Add(this.labelX16);
-         this.groupPanel4.Controls.Add(this.txtLaiSuatQuaHan);
          this.groupPanel4.Controls.Add(this.labelX17);
          this.groupPanel4.Controls.Add(this.labelX15);
-         this.groupPanel4.Controls.Add(this.txtLaiSuatThoaThuan);
          this.groupPanel4.Controls.Add(this.labelX14);
          this.groupPanel4.Controls.Add(this.labelX13);
          this.groupPanel4.Controls.Add(this.dateTimeInput_NgayCam);
@@ -205,94 +354,6 @@
          this.groupPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
          this.groupPanel4.TabIndex = 3;
          // 
-         // bntThemBienNhanMoi
-         // 
-         this.bntThemBienNhanMoi.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.bntThemBienNhanMoi.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.bntThemBienNhanMoi.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.bntThemBienNhanMoi.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.bntThemBienNhanMoi.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.bntThemBienNhanMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.bntThemBienNhanMoi.ForeColor = System.Drawing.Color.Black;
-         this.bntThemBienNhanMoi.Image = global::PawnShopManager.Properties.Resources.Add_New_48;
-         this.bntThemBienNhanMoi.Location = new System.Drawing.Point(551, 101);
-         this.bntThemBienNhanMoi.Name = "bntThemBienNhanMoi";
-         this.bntThemBienNhanMoi.Size = new System.Drawing.Size(314, 36);
-         this.bntThemBienNhanMoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.bntThemBienNhanMoi.TabIndex = 20;
-         this.bntThemBienNhanMoi.Text = "THÊM BIÊN NHẬN MỚI";
-         this.bntThemBienNhanMoi.MouseLeave += new System.EventHandler(this.bntThemBienNhanMoi_MouseLeave);
-         this.bntThemBienNhanMoi.MouseHover += new System.EventHandler(this.bntThemBienNhanMoi_MouseHover);
-         // 
-         // bntVietLai
-         // 
-         this.bntVietLai.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.bntVietLai.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.bntVietLai.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.bntVietLai.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.bntVietLai.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.bntVietLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.bntVietLai.ForeColor = System.Drawing.Color.Black;
-         this.bntVietLai.Image = global::PawnShopManager.Properties.Resources.Document_Delete_02_48;
-         this.bntVietLai.Location = new System.Drawing.Point(653, 59);
-         this.bntVietLai.Name = "bntVietLai";
-         this.bntVietLai.Size = new System.Drawing.Size(155, 36);
-         this.bntVietLai.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.bntVietLai.TabIndex = 19;
-         this.bntVietLai.Text = "VIẾT LẠI";
-         this.bntVietLai.MouseLeave += new System.EventHandler(this.bntVietLai_MouseLeave);
-         this.bntVietLai.MouseHover += new System.EventHandler(this.bntVietLai_MouseHover);
-         // 
-         // bntIn
-         // 
-         this.bntIn.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.bntIn.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.bntIn.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.bntIn.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.bntIn.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.bntIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.bntIn.ForeColor = System.Drawing.Color.Black;
-         this.bntIn.Image = global::PawnShopManager.Properties.Resources.Printer_48;
-         this.bntIn.Location = new System.Drawing.Point(775, 17);
-         this.bntIn.Name = "bntIn";
-         this.bntIn.Size = new System.Drawing.Size(90, 36);
-         this.bntIn.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.bntIn.TabIndex = 18;
-         this.bntIn.Text = "IN";
-         this.bntIn.MouseLeave += new System.EventHandler(this.bntIn_MouseLeave);
-         this.bntIn.MouseHover += new System.EventHandler(this.bntIn_MouseHover);
-         // 
-         // bntLuu
-         // 
-         this.bntLuu.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.bntLuu.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.bntLuu.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.bntLuu.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.bntLuu.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.bntLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.bntLuu.ForeColor = System.Drawing.Color.Black;
-         this.bntLuu.Image = global::PawnShopManager.Properties.Resources.Save_48;
-         this.bntLuu.Location = new System.Drawing.Point(551, 17);
-         this.bntLuu.Name = "bntLuu";
-         this.bntLuu.Size = new System.Drawing.Size(106, 36);
-         this.bntLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.bntLuu.TabIndex = 17;
-         this.bntLuu.Text = "LƯU";
-         this.bntLuu.MouseLeave += new System.EventHandler(this.bntLuu_MouseLeave);
-         this.bntLuu.MouseHover += new System.EventHandler(this.bntLuu_MouseHover);
-         // 
          // labelX21
          // 
          this.labelX21.BackColor = System.Drawing.Color.White;
@@ -300,7 +361,7 @@
          // 
          // 
          this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.labelX21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.labelX21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
          this.labelX21.ForeColor = System.Drawing.Color.Black;
          this.labelX21.Location = new System.Drawing.Point(424, 80);
          this.labelX21.Name = "labelX21";
@@ -315,7 +376,7 @@
          // 
          // 
          this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.labelX20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.labelX20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
          this.labelX20.ForeColor = System.Drawing.Color.Black;
          this.labelX20.Location = new System.Drawing.Point(424, 58);
          this.labelX20.Name = "labelX20";
@@ -368,11 +429,11 @@
          // 
          // 
          this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.labelX19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.labelX19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
          this.labelX19.ForeColor = System.Drawing.Color.Black;
-         this.labelX19.Location = new System.Drawing.Point(298, 83);
+         this.labelX19.Location = new System.Drawing.Point(289, 83);
          this.labelX19.Name = "labelX19";
-         this.labelX19.Size = new System.Drawing.Size(55, 23);
+         this.labelX19.Size = new System.Drawing.Size(64, 23);
          this.labelX19.TabIndex = 12;
          this.labelX19.Text = "Thời hạn:";
          // 
@@ -383,11 +444,11 @@
          // 
          // 
          this.labelX18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.labelX18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.labelX18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
          this.labelX18.ForeColor = System.Drawing.Color.Black;
-         this.labelX18.Location = new System.Drawing.Point(298, 55);
+         this.labelX18.Location = new System.Drawing.Point(289, 55);
          this.labelX18.Name = "labelX18";
-         this.labelX18.Size = new System.Drawing.Size(55, 23);
+         this.labelX18.Size = new System.Drawing.Size(64, 23);
          this.labelX18.TabIndex = 11;
          this.labelX18.Text = "Thời hạn:";
          // 
@@ -398,35 +459,13 @@
          // 
          // 
          this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.labelX16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.labelX16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
          this.labelX16.ForeColor = System.Drawing.Color.Black;
          this.labelX16.Location = new System.Drawing.Point(182, 83);
          this.labelX16.Name = "labelX16";
          this.labelX16.Size = new System.Drawing.Size(65, 23);
          this.labelX16.TabIndex = 10;
          this.labelX16.Text = "% / tháng";
-         // 
-         // txtLaiSuatQuaHan
-         // 
-         this.txtLaiSuatQuaHan.BackColor = System.Drawing.Color.White;
-         // 
-         // 
-         // 
-         this.txtLaiSuatQuaHan.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.txtLaiSuatQuaHan.BackgroundStyle.Class = "DateTimeInputBackground";
-         this.txtLaiSuatQuaHan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtLaiSuatQuaHan.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-         this.txtLaiSuatQuaHan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtLaiSuatQuaHan.ForeColor = System.Drawing.Color.Black;
-         this.txtLaiSuatQuaHan.Increment = 0.1D;
-         this.txtLaiSuatQuaHan.Location = new System.Drawing.Point(122, 84);
-         this.txtLaiSuatQuaHan.MaxValue = 5D;
-         this.txtLaiSuatQuaHan.MinValue = 2D;
-         this.txtLaiSuatQuaHan.Name = "txtLaiSuatQuaHan";
-         this.txtLaiSuatQuaHan.ShowUpDown = true;
-         this.txtLaiSuatQuaHan.Size = new System.Drawing.Size(56, 22);
-         this.txtLaiSuatQuaHan.TabIndex = 9;
-         this.txtLaiSuatQuaHan.Value = 2D;
          // 
          // labelX17
          // 
@@ -435,7 +474,7 @@
          // 
          // 
          this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.labelX17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.labelX17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
          this.labelX17.ForeColor = System.Drawing.Color.Black;
          this.labelX17.Location = new System.Drawing.Point(10, 84);
          this.labelX17.Name = "labelX17";
@@ -450,35 +489,13 @@
          // 
          // 
          this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.labelX15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.labelX15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
          this.labelX15.ForeColor = System.Drawing.Color.Black;
          this.labelX15.Location = new System.Drawing.Point(182, 54);
          this.labelX15.Name = "labelX15";
          this.labelX15.Size = new System.Drawing.Size(65, 23);
          this.labelX15.TabIndex = 7;
          this.labelX15.Text = "% / tháng";
-         // 
-         // txtLaiSuatThoaThuan
-         // 
-         this.txtLaiSuatThoaThuan.BackColor = System.Drawing.Color.White;
-         // 
-         // 
-         // 
-         this.txtLaiSuatThoaThuan.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.txtLaiSuatThoaThuan.BackgroundStyle.Class = "DateTimeInputBackground";
-         this.txtLaiSuatThoaThuan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtLaiSuatThoaThuan.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-         this.txtLaiSuatThoaThuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtLaiSuatThoaThuan.ForeColor = System.Drawing.Color.Black;
-         this.txtLaiSuatThoaThuan.Increment = 0.1D;
-         this.txtLaiSuatThoaThuan.Location = new System.Drawing.Point(122, 55);
-         this.txtLaiSuatThoaThuan.MaxValue = 3.5D;
-         this.txtLaiSuatThoaThuan.MinValue = 1D;
-         this.txtLaiSuatThoaThuan.Name = "txtLaiSuatThoaThuan";
-         this.txtLaiSuatThoaThuan.ShowUpDown = true;
-         this.txtLaiSuatThoaThuan.Size = new System.Drawing.Size(56, 22);
-         this.txtLaiSuatThoaThuan.TabIndex = 6;
-         this.txtLaiSuatThoaThuan.Value = 1D;
          // 
          // labelX14
          // 
@@ -487,7 +504,7 @@
          // 
          // 
          this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.labelX14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.labelX14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
          this.labelX14.ForeColor = System.Drawing.Color.Black;
          this.labelX14.Location = new System.Drawing.Point(10, 55);
          this.labelX14.Name = "labelX14";
@@ -752,6 +769,7 @@
          this.txtBienSoXe.TabIndex = 24;
          this.txtBienSoXe.Text = "";
          this.txtBienSoXe.Visible = false;
+         this.txtBienSoXe.MouseEnter += new System.EventHandler(this.txtBienSoXe_MouseEnter);
          // 
          // txtChatLuong
          // 
@@ -802,6 +820,8 @@
          // 
          // txtTienChu_Vang
          // 
+         this.txtTienChu_Vang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
          this.txtTienChu_Vang.BackColor = System.Drawing.Color.White;
          // 
          // 
@@ -818,6 +838,8 @@
          // 
          // lblTongTien_Vang2
          // 
+         this.lblTongTien_Vang2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
          this.lblTongTien_Vang2.BackColor = System.Drawing.Color.Transparent;
          // 
          // 
@@ -836,6 +858,8 @@
          // 
          // lblTienChu_Vang
          // 
+         this.lblTienChu_Vang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
          this.lblTienChu_Vang.BackColor = System.Drawing.Color.Transparent;
          // 
          // 
@@ -854,6 +878,8 @@
          // 
          // lblTongTien_Vang1
          // 
+         this.lblTongTien_Vang1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
          this.lblTongTien_Vang1.BackColor = System.Drawing.Color.Transparent;
          // 
          // 
@@ -1008,6 +1034,7 @@
          this.bntThemHangCam.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
          this.bntThemHangCam.TabIndex = 12;
          this.bntThemHangCam.Text = "Thêm vào danh sách\r\nhàng cầm";
+         this.bntThemHangCam.Click += new System.EventHandler(this.bntThemHangCam_Click);
          // 
          // cboLoaiVang
          // 
@@ -1334,145 +1361,129 @@
          // 
          this.comboItem1.Text = "18k";
          // 
-         // textBoxX2
+         // comboBoxEx1
          // 
-         this.textBoxX2.BackColor = System.Drawing.Color.White;
+         this.comboBoxEx1.DisplayMember = "Text";
+         this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+         this.comboBoxEx1.FormattingEnabled = true;
+         this.comboBoxEx1.ItemHeight = 14;
+         this.comboBoxEx1.Items.AddRange(new object[] {
+            this.comboItem4,
+            this.comboItem5,
+            this.comboItem6});
+         this.comboBoxEx1.Location = new System.Drawing.Point(125, 55);
+         this.comboBoxEx1.Name = "comboBoxEx1";
+         this.comboBoxEx1.Size = new System.Drawing.Size(50, 20);
+         this.comboBoxEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+         this.comboBoxEx1.TabIndex = 21;
          // 
+         // comboBoxEx2
          // 
+         this.comboBoxEx2.DisplayMember = "Text";
+         this.comboBoxEx2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+         this.comboBoxEx2.FormattingEnabled = true;
+         this.comboBoxEx2.ItemHeight = 14;
+         this.comboBoxEx2.Items.AddRange(new object[] {
+            this.comboItem7,
+            this.comboItem8,
+            this.comboItem9});
+         this.comboBoxEx2.Location = new System.Drawing.Point(125, 84);
+         this.comboBoxEx2.Name = "comboBoxEx2";
+         this.comboBoxEx2.Size = new System.Drawing.Size(50, 20);
+         this.comboBoxEx2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+         this.comboBoxEx2.TabIndex = 22;
          // 
-         this.textBoxX2.Border.Class = "TextBoxBorder";
-         this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.textBoxX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.textBoxX2.ForeColor = System.Drawing.Color.Black;
-         this.textBoxX2.Location = new System.Drawing.Point(197, 63);
-         this.textBoxX2.Name = "textBoxX2";
-         this.textBoxX2.Size = new System.Drawing.Size(185, 31);
-         this.textBoxX2.TabIndex = 18;
+         // comboItem4
          // 
-         // txtDienThoai
+         this.comboItem4.Text = "1";
          // 
-         this.txtDienThoai.BackColor = System.Drawing.Color.White;
+         // comboItem5
          // 
+         this.comboItem5.Text = "2";
          // 
+         // comboItem6
          // 
-         this.txtDienThoai.BackgroundStyle.Class = "TextBoxBorder";
-         this.txtDienThoai.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtDienThoai.ButtonClear.Visible = true;
-         this.txtDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtDienThoai.ForeColor = System.Drawing.Color.Black;
-         this.txtDienThoai.Location = new System.Drawing.Point(803, 63);
-         this.txtDienThoai.Mask = "000000000000";
-         this.txtDienThoai.Name = "txtDienThoai";
-         this.txtDienThoai.Size = new System.Drawing.Size(194, 31);
-         this.txtDienThoai.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.txtDienThoai.TabIndex = 17;
-         this.txtDienThoai.Text = "";
+         this.comboItem6.Text = "3";
          // 
-         // txtCMND
+         // comboItem7
          // 
-         this.txtCMND.BackColor = System.Drawing.Color.White;
+         this.comboItem7.Text = "1";
          // 
+         // comboItem8
          // 
+         this.comboItem8.Text = "2";
          // 
-         this.txtCMND.BackgroundStyle.Class = "TextBoxBorder";
-         this.txtCMND.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtCMND.ButtonClear.Visible = true;
-         this.txtCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.txtCMND.ForeColor = System.Drawing.Color.Black;
-         this.txtCMND.Location = new System.Drawing.Point(494, 63);
-         this.txtCMND.Mask = "0000000000";
-         this.txtCMND.Name = "txtCMND";
-         this.txtCMND.Size = new System.Drawing.Size(156, 31);
-         this.txtCMND.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.txtCMND.TabIndex = 16;
-         this.txtCMND.Text = "";
+         // comboItem9
          // 
-         // labelX5
+         this.comboItem9.Text = "3";
          // 
-         this.labelX5.BackColor = System.Drawing.Color.Transparent;
+         // buttonX1
          // 
+         this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+         this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+         this.buttonX1.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.buttonX1.FocusCuesEnabled = false;
+         this.buttonX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.buttonX1.HoverImage = global::PawnShopManager.Properties.Resources.Save_48_hover;
+         this.buttonX1.Image = global::PawnShopManager.Properties.Resources.Save_48;
+         this.buttonX1.Location = new System.Drawing.Point(635, 8);
+         this.buttonX1.Name = "buttonX1";
+         this.buttonX1.Size = new System.Drawing.Size(154, 44);
+         this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.buttonX1.TabIndex = 23;
+         this.buttonX1.Text = "LƯU";
+         this.buttonX1.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
          // 
+         // buttonX2
          // 
-         this.labelX5.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.labelX5.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.labelX5.ForeColor = System.Drawing.Color.Black;
-         this.labelX5.Location = new System.Drawing.Point(688, 63);
-         this.labelX5.Name = "labelX5";
-         this.labelX5.Size = new System.Drawing.Size(116, 28);
-         this.labelX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.labelX5.TabIndex = 15;
-         this.labelX5.Text = "Điện thoại:";
+         this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+         this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+         this.buttonX2.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.buttonX2.FocusCuesEnabled = false;
+         this.buttonX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.buttonX2.HoverImage = global::PawnShopManager.Properties.Resources.Printer_48_hover;
+         this.buttonX2.Image = global::PawnShopManager.Properties.Resources.Printer_48;
+         this.buttonX2.Location = new System.Drawing.Point(824, 10);
+         this.buttonX2.Name = "buttonX2";
+         this.buttonX2.Size = new System.Drawing.Size(154, 44);
+         this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.buttonX2.TabIndex = 24;
+         this.buttonX2.Text = "IN";
+         this.buttonX2.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
          // 
-         // textBoxX_DiaChi
+         // buttonX3
          // 
-         this.textBoxX_DiaChi.BackColor = System.Drawing.Color.White;
+         this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+         this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+         this.buttonX3.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.buttonX3.FocusCuesEnabled = false;
+         this.buttonX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.buttonX3.HoverImage = global::PawnShopManager.Properties.Resources.Document_Delete_02_48_hover;
+         this.buttonX3.Image = global::PawnShopManager.Properties.Resources.Document_Delete_02_48;
+         this.buttonX3.Location = new System.Drawing.Point(717, 60);
+         this.buttonX3.Name = "buttonX3";
+         this.buttonX3.Size = new System.Drawing.Size(154, 44);
+         this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.buttonX3.TabIndex = 25;
+         this.buttonX3.Text = "VIẾT LẠI";
+         this.buttonX3.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
          // 
+         // buttonX4
          // 
-         // 
-         this.textBoxX_DiaChi.Border.Class = "TextBoxBorder";
-         this.textBoxX_DiaChi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.textBoxX_DiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.textBoxX_DiaChi.ForeColor = System.Drawing.Color.Black;
-         this.textBoxX_DiaChi.Location = new System.Drawing.Point(494, 103);
-         this.textBoxX_DiaChi.Name = "textBoxX_DiaChi";
-         this.textBoxX_DiaChi.Size = new System.Drawing.Size(503, 31);
-         this.textBoxX_DiaChi.TabIndex = 14;
-         // 
-         // labelX4
-         // 
-         this.labelX4.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.labelX4.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.labelX4.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.labelX4.ForeColor = System.Drawing.Color.Black;
-         this.labelX4.Location = new System.Drawing.Point(411, 103);
-         this.labelX4.Name = "labelX4";
-         this.labelX4.Size = new System.Drawing.Size(87, 28);
-         this.labelX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.labelX4.TabIndex = 13;
-         this.labelX4.Text = "Địa chỉ:";
-         // 
-         // labelX3
-         // 
-         this.labelX3.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.labelX3.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.labelX3.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.labelX3.ForeColor = System.Drawing.Color.Black;
-         this.labelX3.Location = new System.Drawing.Point(411, 66);
-         this.labelX3.Name = "labelX3";
-         this.labelX3.Size = new System.Drawing.Size(83, 23);
-         this.labelX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.labelX3.TabIndex = 12;
-         this.labelX3.Text = "CMND:";
-         // 
-         // labelX2
-         // 
-         this.labelX2.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.labelX2.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.labelX2.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.labelX2.ForeColor = System.Drawing.Color.Black;
-         this.labelX2.Location = new System.Drawing.Point(20, 61);
-         this.labelX2.Name = "labelX2";
-         this.labelX2.Size = new System.Drawing.Size(178, 30);
-         this.labelX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.labelX2.TabIndex = 11;
-         this.labelX2.Text = "Họ tên người cầm:";
+         this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+         this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+         this.buttonX4.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.buttonX4.FocusCuesEnabled = false;
+         this.buttonX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.buttonX4.HoverImage = global::PawnShopManager.Properties.Resources.Add_New_48_hover;
+         this.buttonX4.Image = global::PawnShopManager.Properties.Resources.Add_New_48;
+         this.buttonX4.Location = new System.Drawing.Point(635, 111);
+         this.buttonX4.Name = "buttonX4";
+         this.buttonX4.Size = new System.Drawing.Size(343, 44);
+         this.buttonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.buttonX4.TabIndex = 26;
+         this.buttonX4.Text = "VIẾT THÊM BIÊN NHẬN MỚI";
+         this.buttonX4.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
          // 
          // CamDo
          // 
@@ -1496,8 +1507,6 @@
          this.groupPanel4.ResumeLayout(false);
          ((System.ComponentModel.ISupportInitialize)(this.txtThoiHanQuaHan)).EndInit();
          ((System.ComponentModel.ISupportInitialize)(this.txtThoiHanThoaThuan)).EndInit();
-         ((System.ComponentModel.ISupportInitialize)(this.txtLaiSuatQuaHan)).EndInit();
-         ((System.ComponentModel.ISupportInitialize)(this.txtLaiSuatThoaThuan)).EndInit();
          ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_NgayCam)).EndInit();
          this.groupVang.ResumeLayout(false);
          ((System.ComponentModel.ISupportInitialize)(this.dataGridDsHangCam)).EndInit();
@@ -1519,11 +1528,9 @@
       private DevComponents.DotNetBar.LabelX labelX13;
       private DevComponents.Editors.DateTimeAdv.DateTimeInput dateTimeInput_NgayCam;
       private DevComponents.DotNetBar.LabelX labelX12;
-      private DevComponents.Editors.DoubleInput txtLaiSuatThoaThuan;
       private DevComponents.DotNetBar.LabelX labelX14;
       private DevComponents.DotNetBar.LabelX labelX15;
       private DevComponents.DotNetBar.LabelX labelX16;
-      private DevComponents.Editors.DoubleInput txtLaiSuatQuaHan;
       private DevComponents.DotNetBar.LabelX labelX17;
       private DevComponents.DotNetBar.LabelX labelX21;
       private DevComponents.DotNetBar.LabelX labelX20;
@@ -1531,10 +1538,6 @@
       private DevComponents.Editors.IntegerInput txtThoiHanThoaThuan;
       private DevComponents.DotNetBar.LabelX labelX19;
       private DevComponents.DotNetBar.LabelX labelX18;
-      private DevComponents.DotNetBar.LabelX bntThemBienNhanMoi;
-      private DevComponents.DotNetBar.LabelX bntVietLai;
-      private DevComponents.DotNetBar.LabelX bntIn;
-      private DevComponents.DotNetBar.LabelX bntLuu;
       public DevComponents.DotNetBar.Controls.ComboBoxEx cboLoaiHang;
       private DevComponents.DotNetBar.Controls.TextBoxX txtChatLuong;
       private DevComponents.DotNetBar.Controls.TextBoxX txtLoaiXe;
@@ -1581,6 +1584,18 @@
       private DevComponents.DotNetBar.LabelX labelX4;
       private DevComponents.DotNetBar.LabelX labelX3;
       private DevComponents.DotNetBar.LabelX labelX2;
+      private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx2;
+      private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx1;
+      private DevComponents.Editors.ComboItem comboItem7;
+      private DevComponents.Editors.ComboItem comboItem8;
+      private DevComponents.Editors.ComboItem comboItem9;
+      private DevComponents.Editors.ComboItem comboItem4;
+      private DevComponents.Editors.ComboItem comboItem5;
+      private DevComponents.Editors.ComboItem comboItem6;
+      private DevComponents.DotNetBar.ButtonX buttonX4;
+      private DevComponents.DotNetBar.ButtonX buttonX3;
+      private DevComponents.DotNetBar.ButtonX buttonX2;
+      private DevComponents.DotNetBar.ButtonX buttonX1;
 
    }
 }

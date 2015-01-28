@@ -301,7 +301,7 @@
          this.lblPadding.Name = "lblPadding";
          this.lblPadding.PaddingBottom = 5;
          this.lblPadding.PaddingLeft = 300;
-         this.lblPadding.PaddingRight = 300;
+         this.lblPadding.PaddingRight = 330;
          this.lblPadding.PaddingTop = 5;
          // 
          // bntThoat

@@ -19,6 +19,7 @@ namespace PawnShopManager.GUI
       private CamDo camDoForm = null;
       private KiemHang kiemHangForm = null;
       private Hashtable SESSION = new Hashtable();
+
       public MainForm2()
       {
          InitializeComponent();
@@ -35,6 +36,8 @@ namespace PawnShopManager.GUI
          openChild(enumButtonAction.bntCamDo);
          SESSION.Add("Action", enumButtonAction.bntCamDo); //luu session, luu nut nao dang dc active
          bntCamDo.Image = Properties.Resources.Money_Bag_48_active;
+         int w1 = Screen.PrimaryScreen.WorkingArea.Width;         
+         lblPadding.PaddingRight += (w1 - 1300)/2;
       }
 
       private void bntCamDo_MouseHover(object sender, EventArgs e)
@@ -252,6 +255,7 @@ namespace PawnShopManager.GUI
                   kiemHangForm = new KiemHang();
                   kiemHangForm.MdiParent = this;
                }
+               kiemHangForm.WindowState = FormWindowState.Normal;
                kiemHangForm.Show();
                kiemHangForm.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
                kiemHangForm.WindowState = FormWindowState.Maximized;
@@ -260,5 +264,6 @@ namespace PawnShopManager.GUI
          }
       }
       #endregion
+
    }
 }
