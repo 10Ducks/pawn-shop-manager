@@ -45,6 +45,18 @@
          this.labelX3 = new DevComponents.DotNetBar.LabelX();
          this.labelX2 = new DevComponents.DotNetBar.LabelX();
          this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
+         this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
+         this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
+         this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+         this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+         this.comboBoxEx2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+         this.comboItem7 = new DevComponents.Editors.ComboItem();
+         this.comboItem8 = new DevComponents.Editors.ComboItem();
+         this.comboItem9 = new DevComponents.Editors.ComboItem();
+         this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+         this.comboItem4 = new DevComponents.Editors.ComboItem();
+         this.comboItem5 = new DevComponents.Editors.ComboItem();
+         this.comboItem6 = new DevComponents.Editors.ComboItem();
          this.labelX21 = new DevComponents.DotNetBar.LabelX();
          this.labelX20 = new DevComponents.DotNetBar.LabelX();
          this.txtThoiHanQuaHan = new DevComponents.Editors.IntegerInput();
@@ -102,18 +114,6 @@
          this.comboItem3 = new DevComponents.Editors.ComboItem();
          this.comboItem2 = new DevComponents.Editors.ComboItem();
          this.comboItem1 = new DevComponents.Editors.ComboItem();
-         this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-         this.comboBoxEx2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-         this.comboItem4 = new DevComponents.Editors.ComboItem();
-         this.comboItem5 = new DevComponents.Editors.ComboItem();
-         this.comboItem6 = new DevComponents.Editors.ComboItem();
-         this.comboItem7 = new DevComponents.Editors.ComboItem();
-         this.comboItem8 = new DevComponents.Editors.ComboItem();
-         this.comboItem9 = new DevComponents.Editors.ComboItem();
-         this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-         this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-         this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
-         this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
          this.panelEx1.SuspendLayout();
          this.groupPanel4.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.txtThoiHanQuaHan)).BeginInit();
@@ -297,8 +297,7 @@
          // 
          // groupPanel4
          // 
-         this.groupPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+         this.groupPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
          this.groupPanel4.BackColor = System.Drawing.Color.White;
          this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
@@ -353,6 +352,132 @@
          // 
          this.groupPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
          this.groupPanel4.TabIndex = 3;
+         // 
+         // buttonX4
+         // 
+         this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+         this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+         this.buttonX4.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.buttonX4.FocusCuesEnabled = false;
+         this.buttonX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.buttonX4.HoverImage = global::PawnShopManager.Properties.Resources.Add_New_48_hover;
+         this.buttonX4.Image = global::PawnShopManager.Properties.Resources.Add_New_48;
+         this.buttonX4.Location = new System.Drawing.Point(635, 106);
+         this.buttonX4.Name = "buttonX4";
+         this.buttonX4.Size = new System.Drawing.Size(343, 44);
+         this.buttonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.buttonX4.TabIndex = 26;
+         this.buttonX4.Text = "VIẾT THÊM BIÊN NHẬN MỚI";
+         this.buttonX4.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+         // 
+         // buttonX3
+         // 
+         this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+         this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+         this.buttonX3.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.buttonX3.FocusCuesEnabled = false;
+         this.buttonX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.buttonX3.HoverImage = global::PawnShopManager.Properties.Resources.Document_Delete_02_48_hover;
+         this.buttonX3.Image = global::PawnShopManager.Properties.Resources.Document_Delete_02_48;
+         this.buttonX3.Location = new System.Drawing.Point(717, 58);
+         this.buttonX3.Name = "buttonX3";
+         this.buttonX3.Size = new System.Drawing.Size(154, 44);
+         this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.buttonX3.TabIndex = 25;
+         this.buttonX3.Text = "VIẾT LẠI";
+         this.buttonX3.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+         // 
+         // buttonX2
+         // 
+         this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+         this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+         this.buttonX2.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.buttonX2.FocusCuesEnabled = false;
+         this.buttonX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.buttonX2.HoverImage = global::PawnShopManager.Properties.Resources.Printer_48_hover;
+         this.buttonX2.Image = global::PawnShopManager.Properties.Resources.Printer_48;
+         this.buttonX2.Location = new System.Drawing.Point(824, 10);
+         this.buttonX2.Name = "buttonX2";
+         this.buttonX2.Size = new System.Drawing.Size(154, 44);
+         this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.buttonX2.TabIndex = 24;
+         this.buttonX2.Text = "IN";
+         this.buttonX2.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+         // 
+         // buttonX1
+         // 
+         this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+         this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+         this.buttonX1.Cursor = System.Windows.Forms.Cursors.Hand;
+         this.buttonX1.FocusCuesEnabled = false;
+         this.buttonX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.buttonX1.HoverImage = global::PawnShopManager.Properties.Resources.Save_48_hover;
+         this.buttonX1.Image = global::PawnShopManager.Properties.Resources.Save_48;
+         this.buttonX1.Location = new System.Drawing.Point(635, 8);
+         this.buttonX1.Name = "buttonX1";
+         this.buttonX1.Size = new System.Drawing.Size(154, 44);
+         this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.buttonX1.TabIndex = 23;
+         this.buttonX1.Text = "LƯU";
+         this.buttonX1.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
+         // 
+         // comboBoxEx2
+         // 
+         this.comboBoxEx2.DisplayMember = "Text";
+         this.comboBoxEx2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+         this.comboBoxEx2.ForeColor = System.Drawing.Color.Black;
+         this.comboBoxEx2.FormattingEnabled = true;
+         this.comboBoxEx2.ItemHeight = 14;
+         this.comboBoxEx2.Items.AddRange(new object[] {
+            this.comboItem7,
+            this.comboItem8,
+            this.comboItem9});
+         this.comboBoxEx2.Location = new System.Drawing.Point(125, 84);
+         this.comboBoxEx2.Name = "comboBoxEx2";
+         this.comboBoxEx2.Size = new System.Drawing.Size(50, 20);
+         this.comboBoxEx2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+         this.comboBoxEx2.TabIndex = 22;
+         // 
+         // comboItem7
+         // 
+         this.comboItem7.Text = "1";
+         // 
+         // comboItem8
+         // 
+         this.comboItem8.Text = "2";
+         // 
+         // comboItem9
+         // 
+         this.comboItem9.Text = "3";
+         // 
+         // comboBoxEx1
+         // 
+         this.comboBoxEx1.DisplayMember = "Text";
+         this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+         this.comboBoxEx1.ForeColor = System.Drawing.Color.Black;
+         this.comboBoxEx1.FormattingEnabled = true;
+         this.comboBoxEx1.ItemHeight = 14;
+         this.comboBoxEx1.Items.AddRange(new object[] {
+            this.comboItem4,
+            this.comboItem5,
+            this.comboItem6});
+         this.comboBoxEx1.Location = new System.Drawing.Point(125, 55);
+         this.comboBoxEx1.Name = "comboBoxEx1";
+         this.comboBoxEx1.Size = new System.Drawing.Size(50, 20);
+         this.comboBoxEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+         this.comboBoxEx1.TabIndex = 21;
+         // 
+         // comboItem4
+         // 
+         this.comboItem4.Text = "1";
+         // 
+         // comboItem5
+         // 
+         this.comboItem5.Text = "2";
+         // 
+         // comboItem6
+         // 
+         this.comboItem6.Text = "3";
          // 
          // labelX21
          // 
@@ -600,7 +725,8 @@
          // 
          // groupVang
          // 
-         this.groupVang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+         this.groupVang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
          this.groupVang.BackColor = System.Drawing.Color.White;
          this.groupVang.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
@@ -900,6 +1026,8 @@
          // 
          this.dataGridDsHangCam.AllowUserToAddRows = false;
          this.dataGridDsHangCam.AllowUserToDeleteRows = false;
+         this.dataGridDsHangCam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
          this.dataGridDsHangCam.BackgroundColor = System.Drawing.Color.White;
          this.dataGridDsHangCam.BorderStyle = System.Windows.Forms.BorderStyle.None;
          dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -1360,130 +1488,6 @@
          // comboItem1
          // 
          this.comboItem1.Text = "18k";
-         // 
-         // comboBoxEx1
-         // 
-         this.comboBoxEx1.DisplayMember = "Text";
-         this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-         this.comboBoxEx1.FormattingEnabled = true;
-         this.comboBoxEx1.ItemHeight = 14;
-         this.comboBoxEx1.Items.AddRange(new object[] {
-            this.comboItem4,
-            this.comboItem5,
-            this.comboItem6});
-         this.comboBoxEx1.Location = new System.Drawing.Point(125, 55);
-         this.comboBoxEx1.Name = "comboBoxEx1";
-         this.comboBoxEx1.Size = new System.Drawing.Size(50, 20);
-         this.comboBoxEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-         this.comboBoxEx1.TabIndex = 21;
-         // 
-         // comboBoxEx2
-         // 
-         this.comboBoxEx2.DisplayMember = "Text";
-         this.comboBoxEx2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-         this.comboBoxEx2.FormattingEnabled = true;
-         this.comboBoxEx2.ItemHeight = 14;
-         this.comboBoxEx2.Items.AddRange(new object[] {
-            this.comboItem7,
-            this.comboItem8,
-            this.comboItem9});
-         this.comboBoxEx2.Location = new System.Drawing.Point(125, 84);
-         this.comboBoxEx2.Name = "comboBoxEx2";
-         this.comboBoxEx2.Size = new System.Drawing.Size(50, 20);
-         this.comboBoxEx2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-         this.comboBoxEx2.TabIndex = 22;
-         // 
-         // comboItem4
-         // 
-         this.comboItem4.Text = "1";
-         // 
-         // comboItem5
-         // 
-         this.comboItem5.Text = "2";
-         // 
-         // comboItem6
-         // 
-         this.comboItem6.Text = "3";
-         // 
-         // comboItem7
-         // 
-         this.comboItem7.Text = "1";
-         // 
-         // comboItem8
-         // 
-         this.comboItem8.Text = "2";
-         // 
-         // comboItem9
-         // 
-         this.comboItem9.Text = "3";
-         // 
-         // buttonX1
-         // 
-         this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-         this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-         this.buttonX1.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.buttonX1.FocusCuesEnabled = false;
-         this.buttonX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.buttonX1.HoverImage = global::PawnShopManager.Properties.Resources.Save_48_hover;
-         this.buttonX1.Image = global::PawnShopManager.Properties.Resources.Save_48;
-         this.buttonX1.Location = new System.Drawing.Point(635, 8);
-         this.buttonX1.Name = "buttonX1";
-         this.buttonX1.Size = new System.Drawing.Size(154, 44);
-         this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.buttonX1.TabIndex = 23;
-         this.buttonX1.Text = "LƯU";
-         this.buttonX1.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
-         // 
-         // buttonX2
-         // 
-         this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-         this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-         this.buttonX2.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.buttonX2.FocusCuesEnabled = false;
-         this.buttonX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.buttonX2.HoverImage = global::PawnShopManager.Properties.Resources.Printer_48_hover;
-         this.buttonX2.Image = global::PawnShopManager.Properties.Resources.Printer_48;
-         this.buttonX2.Location = new System.Drawing.Point(824, 10);
-         this.buttonX2.Name = "buttonX2";
-         this.buttonX2.Size = new System.Drawing.Size(154, 44);
-         this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.buttonX2.TabIndex = 24;
-         this.buttonX2.Text = "IN";
-         this.buttonX2.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
-         // 
-         // buttonX3
-         // 
-         this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-         this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-         this.buttonX3.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.buttonX3.FocusCuesEnabled = false;
-         this.buttonX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.buttonX3.HoverImage = global::PawnShopManager.Properties.Resources.Document_Delete_02_48_hover;
-         this.buttonX3.Image = global::PawnShopManager.Properties.Resources.Document_Delete_02_48;
-         this.buttonX3.Location = new System.Drawing.Point(717, 60);
-         this.buttonX3.Name = "buttonX3";
-         this.buttonX3.Size = new System.Drawing.Size(154, 44);
-         this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.buttonX3.TabIndex = 25;
-         this.buttonX3.Text = "VIẾT LẠI";
-         this.buttonX3.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
-         // 
-         // buttonX4
-         // 
-         this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-         this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-         this.buttonX4.Cursor = System.Windows.Forms.Cursors.Hand;
-         this.buttonX4.FocusCuesEnabled = false;
-         this.buttonX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.buttonX4.HoverImage = global::PawnShopManager.Properties.Resources.Add_New_48_hover;
-         this.buttonX4.Image = global::PawnShopManager.Properties.Resources.Add_New_48;
-         this.buttonX4.Location = new System.Drawing.Point(635, 111);
-         this.buttonX4.Name = "buttonX4";
-         this.buttonX4.Size = new System.Drawing.Size(343, 44);
-         this.buttonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.buttonX4.TabIndex = 26;
-         this.buttonX4.Text = "VIẾT THÊM BIÊN NHẬN MỚI";
-         this.buttonX4.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left;
          // 
          // CamDo
          // 
