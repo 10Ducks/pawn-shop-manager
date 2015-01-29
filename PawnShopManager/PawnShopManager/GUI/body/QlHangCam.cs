@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace PawnShopManager.GUI.BODY
 {
-   public partial class KiemHang : DevComponents.DotNetBar.Metro.MetroForm
+   public partial class QlHangCam : DevComponents.DotNetBar.Metro.MetroForm
    {
-      public KiemHang()
+      public QlHangCam()
       {
          InitializeComponent();
-      }
-
-      private void KiemHang_Load(object sender, EventArgs e)
-      {
-
       }
    }
 }

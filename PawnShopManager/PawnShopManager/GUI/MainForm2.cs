@@ -18,6 +18,7 @@ namespace PawnShopManager.GUI
       public DevComponents.DotNetBar.Metro.MetroForm child = null;
       private CamDo camDoForm = null;
       private KiemHang kiemHangForm = null;
+      private QlHangCam qlHangCam = null;
       private Hashtable SESSION = new Hashtable();
 
       public MainForm2()
@@ -127,6 +128,7 @@ namespace PawnShopManager.GUI
 
       private void bntQlHangCam_Click(object sender, EventArgs e)
       {
+         openChild(enumButtonAction.bntQlHangCam);
          activeButton(bntQlHangCam);
          SESSION["Action"] = enumButtonAction.bntQlHangCam;
       }
@@ -241,13 +243,14 @@ namespace PawnShopManager.GUI
                if (camDoForm == null)
                {
                   camDoForm = new CamDo();
-                  camDoForm.parent = this;
-                  camDoForm.MdiParent = this;
+                  
                }
+               camDoForm.parent = this;
+               camDoForm.MdiParent = this;
                camDoForm.Show();
                camDoForm.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
                child = camDoForm;
-
+     
                break;
             case enumButtonAction.bntKiemHang:
                if (kiemHangForm == null)
@@ -260,6 +263,18 @@ namespace PawnShopManager.GUI
                kiemHangForm.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
                kiemHangForm.WindowState = FormWindowState.Maximized;
                child = kiemHangForm;
+               break;
+            case enumButtonAction.bntQlHangCam:
+               if (qlHangCam == null)
+               {
+                  qlHangCam = new QlHangCam();
+                  qlHangCam.MdiParent = this;
+               }
+               qlHangCam.WindowState = FormWindowState.Normal;
+               qlHangCam.Show();
+               qlHangCam.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
+               qlHangCam.WindowState = FormWindowState.Maximized;
+               child = qlHangCam;
                break;
          }
       }
