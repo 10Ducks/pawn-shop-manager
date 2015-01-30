@@ -207,6 +207,7 @@
     <Content Include="Images\hover\Delete-48 hover.png" />
     <Content Include="Images\hover\Document-Add-02-48 hover.png" />
     <Content Include="Images\hover\Document-Delete-02-48 hover.png" />
+    <Content Include="Images\hover\Document-Edit-48 hover.png" />
     <Content Include="Images\hover\Dollar-48 hover.png" />
     <Content Include="Images\hover\Printer-48 hover.png" />
     <Content Include="Images\hover\Save-48 hover.png" />
@@ -215,6 +216,7 @@
     <Content Include="Images\normal\Delete-48.png" />
     <Content Include="Images\normal\Document-Add-02-48.png" />
     <Content Include="Images\normal\Document-Delete-02-48.png" />
+    <Content Include="Images\normal\Document-Edit-48.png" />
     <Content Include="Images\normal\Login-02-32.png" />
     <Content Include="Images\hover\Money-Bag-48 hover.png" />
     <Content Include="Images\Money-Gold-32.ico" />
