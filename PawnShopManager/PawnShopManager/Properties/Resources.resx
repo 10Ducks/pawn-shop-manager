@@ -265,4 +265,10 @@
   <data name="Book_Open_48_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\hover\book-open-48 hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Document_Edit_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\normal\document-edit-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Document_Edit_48_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\hover\document-edit-48 hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

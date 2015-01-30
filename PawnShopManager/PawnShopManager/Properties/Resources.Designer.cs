@@ -253,6 +253,26 @@ namespace PawnShopManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Document_Edit_48 {
+            get {
+                object obj = ResourceManager.GetObject("Document_Edit_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Document_Edit_48_hover {
+            get {
+                object obj = ResourceManager.GetObject("Document_Edit_48_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dollar_128 {
             get {
                 object obj = ResourceManager.GetObject("Dollar_128", resourceCulture);
