@@ -16,3 +16,7 @@ Part 3: https://www.youtube.com/watch?v=TD5GlRJKiSE&feature=youtu.be
 Part 4: https://www.youtube.com/watch?v=Vjy7dKoLjo4&feature=youtu.be
 Part 5: https://www.youtube.com/watch?v=yiakt8qQoAg&feature=youtu.be
 Part 6: https://www.youtube.com/watch?v=3HKB0NJ0gvU&feature=youtu.be
+
+pattern design for database
+datetime:	timestamp:from='01.01.2008 00:00:00 000';to='31.12.2015 00:00:00 000';
+lãi suất:	int:from=100000;to=10000000;format=####################.;

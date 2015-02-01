@@ -171,16 +171,9 @@ chưa thanh toán
 			<column name="thanhly_tien" type="float" jt="8" mandatory="y" regexp="int:from=100000;to=10000000;" >
 				<comment><![CDATA[Số tiền thanh lý]]></comment>
 			</column>
-			<column name="hd_id" type="int" jt="4" />
 			<index name="Pk_tbl_Thanh_Ly" unique="PRIMARY_KEY" >
 				<column name="thanhly_id" />
 			</index>
-			<index name="idx_tbl_Thanh_Ly" unique="NORMAL" >
-				<column name="hd_id" />
-			</index>
-			<fk name="Fk_tbl_Thanh_Ly" to_schema="dbo" to_table="tbl_Hop_Dong" >
-				<fk_column name="hd_id" pk="hd_id" />
-			</fk>
 		</table>
 		<table name="tbl_Them_Tien" generator_rows="150" >
 			<comment><![CDATA[Bảng lấy thêm tiền ]]></comment>
@@ -263,9 +256,9 @@ chưa thanh toán
 		<entity schema="dbo" name="tbl_Hang_Hoa" color="bef5b3" x="45" y="135" />
 		<entity schema="dbo" name="tbl_Chi_Tiet_Hop_Dong" color="f5d8b3" x="270" y="120" />
 		<entity schema="dbo" name="tbl_Tra_Lai_Truoc" color="f5d8b3" x="465" y="390" />
-		<entity schema="dbo" name="tbl_Hop_Dong" color="f5d8b3" x="660" y="210" />
-		<entity schema="dbo" name="tbl_Them_Tien" color="bef5b3" x="615" y="525" />
-		<entity schema="dbo" name="tbl_Chuoc_Hang" color="f5d8b3" x="210" y="375" />
 		<entity schema="dbo" name="tbl_Thanh_Ly" color="b2cdf7" x="900" y="330" />
+		<entity schema="dbo" name="tbl_Them_Tien" color="bef5b3" x="585" y="510" />
+		<entity schema="dbo" name="tbl_Chuoc_Hang" color="f5d8b3" x="180" y="360" />
+		<entity schema="dbo" name="tbl_Hop_Dong" color="f5d8b3" x="660" y="210" />
 	</layout>
 </project>
