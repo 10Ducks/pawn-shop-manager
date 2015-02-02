@@ -54,6 +54,16 @@
     <Compile Include="Controller\SystemError.cs" />
     <Compile Include="Dao\BaseDao.cs" />
     <Compile Include="Dao\DbProviderFactory.cs" />
+    <Compile Include="Entity\Admin.cs" />
+    <Compile Include="Entity\ChiTietHD.cs" />
+    <Compile Include="Entity\ChuocHang.cs" />
+    <Compile Include="Entity\HangHoa.cs" />
+    <Compile Include="Entity\HopDong.cs" />
+    <Compile Include="Entity\LoaiHang.cs" />
+    <Compile Include="Entity\ThanhLy.cs" />
+    <Compile Include="Entity\ThemTien.cs" />
+    <Compile Include="Entity\ThuChi.cs" />
+    <Compile Include="Entity\TraLaiTruoc.cs" />
     <Compile Include="GUI\BODY\CamDo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,7 +150,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dto\" />
-    <Folder Include="Entity\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\normal\Clock-01-128.png" />

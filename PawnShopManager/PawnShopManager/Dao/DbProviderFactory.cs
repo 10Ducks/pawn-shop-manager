@@ -48,7 +48,7 @@ namespace PawnShopManager.Dao
          }
          catch (SqlException e)
          {
-            //ToDo
+            Console.WriteLine(e.Message);
          }
       }
 
