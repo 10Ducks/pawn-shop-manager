@@ -177,7 +177,7 @@ chưa thanh toán
 			<index name="Pk_tbl_Thanh_Ly" unique="PRIMARY_KEY" >
 				<column name="thanhly_id" />
 			</index>
-			<index name="idx_tbl_Thanh_Ly" unique="NORMAL" >
+			<index name="idx_tbl_Thanh_Ly" unique="UNIQUE" >
 				<column name="hd_id" />
 			</index>
 			<fk name="Fk_tbl_Thanh_Ly" to_schema="dbo" to_table="tbl_Hop_Dong" >
@@ -267,7 +267,12 @@ chưa thanh toán
 		<entity schema="dbo" name="tbl_Tra_Lai_Truoc" color="f5d8b3" x="465" y="390" />
 		<entity schema="dbo" name="tbl_Them_Tien" color="bef5b3" x="615" y="525" />
 		<entity schema="dbo" name="tbl_Chuoc_Hang" color="f5d8b3" x="210" y="375" />
-		<entity schema="dbo" name="tbl_Thanh_Ly" color="b2cdf7" x="900" y="330" />
 		<entity schema="dbo" name="tbl_Hop_Dong" color="f5d8b3" x="660" y="210" />
+		<entity schema="dbo" name="tbl_Thanh_Ly" color="b2cdf7" x="870" y="270" />
+		<script name="Sql" id="SQL6386313" >
+			<string><![CDATA[select *
+from tbl_Thanh_Ly
+]]></string>
+		</script>
 	</layout>
 </project>
