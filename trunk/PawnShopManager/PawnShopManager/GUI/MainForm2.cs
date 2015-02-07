@@ -19,6 +19,8 @@ namespace PawnShopManager.GUI
       private CamDo camDoForm = null;
       private KiemHang kiemHangForm = null;
       private QlHangCam qlHangCam = null;
+      private ThuChi thuchiForm = null;
+      private TimKiem timForm = null;
       private Hashtable SESSION = new Hashtable();
 
       public MainForm2()
@@ -37,6 +39,7 @@ namespace PawnShopManager.GUI
          openChild(enumButtonAction.bntCamDo);
          SESSION.Add("Action", enumButtonAction.bntCamDo); //luu session, luu nut nao dang dc active
          bntCamDo.Image = Properties.Resources.Money_Bag_48_active;
+
          int w1 = Screen.PrimaryScreen.WorkingArea.Width;         
          lblPadding.PaddingRight += (w1 - 1300)/2;
       }
@@ -148,14 +151,17 @@ namespace PawnShopManager.GUI
 
       private void bntThuChi_Click(object sender, EventArgs e)
       {
-         SESSION["Action"] = enumButtonAction.bntThuChi;
          activeButton(bntThuChi);
+         openChild(enumButtonAction.bntThuChi);
+         SESSION["Action"] = enumButtonAction.bntThuChi;
       }
 
       private void bntTimKiem_Click(object sender, EventArgs e)
       {
-         SESSION["Action"] = enumButtonAction.bntTimKiem;
+         openChild(enumButtonAction.bntTimKiem);
          activeButton(bntTimKiem);
+         SESSION["Action"] = enumButtonAction.bntTimKiem;
+         
       }
       private void bntThoat_MouseLeave(object sender, EventArgs e)
       {
@@ -249,6 +255,7 @@ namespace PawnShopManager.GUI
                camDoForm.MdiParent = this;
                camDoForm.Show();
                camDoForm.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
+               camDoForm.Dock = DockStyle.Fill;
                child = camDoForm;
      
                break;
@@ -261,8 +268,20 @@ namespace PawnShopManager.GUI
                kiemHangForm.WindowState = FormWindowState.Normal;
                kiemHangForm.Show();
                kiemHangForm.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
-               kiemHangForm.WindowState = FormWindowState.Maximized;
+               kiemHangForm.Dock = DockStyle.Fill;
                child = kiemHangForm;
+               break;
+            case enumButtonAction.bntThuChi:
+               if (thuchiForm == null)
+               {
+                   thuchiForm = new ThuChi();
+                   thuchiForm.MdiParent = this;
+               }
+               thuchiForm.WindowState = FormWindowState.Normal;
+               thuchiForm.Show();
+               thuchiForm.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
+               thuchiForm.Dock = DockStyle.Fill;
+               child = thuchiForm;
                break;
             case enumButtonAction.bntQlHangCam:
                if (qlHangCam == null)
@@ -273,8 +292,21 @@ namespace PawnShopManager.GUI
                qlHangCam.WindowState = FormWindowState.Normal;
                qlHangCam.Show();
                qlHangCam.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
-               qlHangCam.WindowState = FormWindowState.Maximized;
+               qlHangCam.Dock = DockStyle.Fill;
                child = qlHangCam;
+               break;
+            case enumButtonAction.bntTimKiem:
+               if (timForm == null)
+               {
+                   timForm = new TimKiem();
+                   timForm.MdiParent = this;
+               }
+               timForm.WindowState = FormWindowState.Normal;
+               timForm.Show();
+               timForm.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
+               timForm.Dock = DockStyle.Fill;
+               timForm.ControlBox = false; 
+               child = timForm;
                break;
          }
       }

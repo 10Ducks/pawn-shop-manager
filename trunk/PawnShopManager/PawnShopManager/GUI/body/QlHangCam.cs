@@ -16,5 +16,10 @@ namespace PawnShopManager.GUI.BODY
       {
          InitializeComponent();
       }
+
+      private void QlHangCam_Load(object sender, EventArgs e)
+      {
+
+      }
    }
 }
