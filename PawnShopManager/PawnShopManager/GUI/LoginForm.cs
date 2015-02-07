@@ -35,5 +35,10 @@ namespace PawnShopManager.GUI
       {
 
       }
+
+      private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+      {
+
+      }
    }
 }

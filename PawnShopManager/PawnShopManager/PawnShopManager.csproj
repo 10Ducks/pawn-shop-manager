@@ -70,6 +70,12 @@
     <Compile Include="GUI\BODY\CamDo.Designer.cs">
       <DependentUpon>CamDo.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\BODY\TimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BODY\TimKiem.Designer.cs">
+      <DependentUpon>TimKiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\BODY\KiemHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="GUI\BODY\QlHangCam.Designer.cs">
       <DependentUpon>QlHangCam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BODY\ThuChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BODY\ThuChi.Designer.cs">
+      <DependentUpon>ThuChi.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\LoginForm.cs">
       <SubType>Form</SubType>
@@ -115,6 +127,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BODY\QlHangCam.resx">
       <DependentUpon>QlHangCam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BODY\ThuChi.resx">
+      <DependentUpon>ThuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BODY\TimKiem.resx">
+      <DependentUpon>TimKiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
