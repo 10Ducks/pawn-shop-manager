@@ -25,7 +25,10 @@ namespace PawnShopManager.Dao
       /** Count */
       public static readonly String COUNT = "count";
    
-
-    
+      public static readonly String SELECT = " SELECT ";
+      public static readonly String FROM = " FROM ";
+      public static readonly String UPDATE = " UPDATE ";
+      public static readonly String DELETE = " DELETE ";
+      public static readonly String WHERE = " WHERE ";
    }
 }

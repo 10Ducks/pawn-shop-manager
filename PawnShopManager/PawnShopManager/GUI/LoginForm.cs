@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PawnShopManager.Entity;
+using PawnShopManager.Controller;
 
 namespace PawnShopManager.GUI
 {
@@ -19,6 +21,14 @@ namespace PawnShopManager.GUI
 
       private void buttonX1_Click(object sender, EventArgs e)
       {
+         string id = txtID.Text.Trim();
+         string pass = txtPass.Text;
+         List<Admin> ds = Controller.Controller.getInstance().getLogin(id, pass);
+         if(ds == null || ds.Count == 0){
+            MessageBox.Show("NGU");
+            return;
+         }
+
          MainForm2 mainForm = new MainForm2();
          mainForm.parent = this;         
          mainForm.Show();
