@@ -20,3 +20,4 @@ Part 6: https://www.youtube.com/watch?v=3HKB0NJ0gvU&feature=youtu.be
 pattern design for database
 datetime:	timestamp:from='01.01.2008 00:00:00 000';to='31.12.2015 00:00:00 000';
 lãi suất:	int:from=100000;to=10000000;format=####################.;
+biến số xe: [A-Z0-9]{2} [0-9]{2} - [0-9]{5}

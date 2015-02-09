@@ -9,13 +9,13 @@ namespace PawnShopManager.Dao
 {
    class DbProviderFactory
    {
-      public string connectString = System.Configuration.ConfigurationManager.ConnectionStrings["strCon"].ConnectionString;
+      private string connectString = System.Configuration.ConfigurationManager.ConnectionStrings["strCon"].ConnectionString;
       private static DbProviderFactory dbProviderFactory = null;
-      private SqlConnection conn;
+      public SqlConnection conn;
 
       private DbProviderFactory() {}
 
-      public static DbProviderFactory getInstall()
+      public static DbProviderFactory getInstance()
       {
          if (dbProviderFactory == null)
          {
@@ -24,7 +24,7 @@ namespace PawnShopManager.Dao
          return dbProviderFactory;
       }  
 
-      private SqlConnection connectDB()
+      public SqlConnection connectDB()
       {
          conn = new SqlConnection(connectString);
          conn.Open();
@@ -37,13 +37,14 @@ namespace PawnShopManager.Dao
      * @param dbConnection Connection to DB
      *
      */
-      private void closeConnection(SqlConnection dbConnection)
+      public void closeConnection()
       {
          try
          {
-            if (dbConnection != null)
+            if (conn != null)
             {
-               dbConnection.Close();
+               conn.Close();
+               Console.WriteLine("Dong ket noi.");
             }
          }
          catch (SqlException e)

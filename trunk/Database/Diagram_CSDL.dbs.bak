@@ -12,104 +12,77 @@
 				<column name="Admin_Id" />
 			</index>
 		</table>
-		<table name="tbl_Chi_Tiet_Hop_Dong" generator_rows="400" >
-			<comment><![CDATA[chi tiết hợp đồng]]></comment>
-			<column name="cthd_id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" >
+		<table name="tbl_Chi_Tiet_Hang_Cam" generator_rows="400" >
+			<comment><![CDATA[chi tiết hàng cầm của hợp đồng
+1 hợp đồng có thể cầm nhiều món]]></comment>
+			<column name="cthc_id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" >
 				<comment><![CDATA[id của chi tiết hợp đồng]]></comment>
 			</column>
 			<column name="hd_id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="hang_id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="cthd_soluong" type="int" length="10" decimal="0" jt="4" regexp="sequence:from=1;step=20;" regexp_nulls="0" />
-			<column name="cthd_giatri" type="float" length="53" decimal="0" jt="8" regexp="[0-9]{7}" regexp_nulls="0" />
-			<column name="cthd_lai_thoathuan" type="float" length="53" decimal="0" jt="8" regexp="[0-9]{5}" regexp_nulls="0" />
-			<column name="cthd_lai_quahan" type="float" length="53" decimal="0" jt="8" regexp="[0-9]{5}" regexp_nulls="0" />
+			<column name="cthc_ten_hang_cam" type="nvarchar" length="50" jt="12" mandatory="y" >
+				<comment><![CDATA[tên của món hàng được cầm]]></comment>
+			</column>
+			<column name="cthc_soluong" type="int" length="10" decimal="0" jt="4" regexp="sequence:from=1;step=20;" regexp_nulls="0" >
+				<defo>1</defo>
+				<comment><![CDATA[số lượng của món hàng cầm]]></comment>
+			</column>
+			<column name="cthc_giatri" type="float" length="53" decimal="0" jt="8" regexp="[0-9]{7}" regexp_nulls="0" >
+				<defo>0</defo>
+				<comment><![CDATA[giá trị của món hàng, cái này tùy ý]]></comment>
+			</column>
+			<column name="loai_id" type="int" jt="4" mandatory="y" >
+				<comment><![CDATA[khóa ngoại với bảng loại hàng (xe hay vàng)]]></comment>
+			</column>
 			<column name="delete_flag" type="bit" length="1" decimal="0" jt="-7" mandatory="y" >
 				<defo>0</defo>
 			</column>
 			<index name="Pk_tbl_chitiet_hopdong" unique="PRIMARY_KEY" >
-				<column name="cthd_id" />
+				<column name="cthc_id" />
 			</index>
 			<index name="idx_tbl_chitiet_hopdong" unique="NORMAL" >
 				<column name="hd_id" />
 			</index>
-			<index name="idx_tbl_Chi_Tiet_Hop_Dong" unique="NORMAL" >
-				<column name="hang_id" />
+			<index name="idx_tbl_Chi_Tiet_Hang_Cam" unique="NORMAL" >
+				<column name="loai_id" />
 			</index>
 			<fk name="Fk_tbl_chitiet_hopdong" to_schema="dbo" to_table="tbl_Hop_Dong" delete_action="cascade" update_action="cascade" >
 				<fk_column name="hd_id" pk="hd_id" />
 			</fk>
-			<fk name="Fk_tbl_Chi_Tiet_Hop_Dong" to_schema="dbo" to_table="tbl_Hang_Hoa" >
-				<fk_column name="hang_id" pk="hang_id" />
+			<fk name="Fk_tbl_Chi_Tiet_Hang_Cam" to_schema="dbo" to_table="tbl_Loai_Hang" >
+				<fk_column name="loai_id" pk="loaihang_id" />
 			</fk>
 		</table>
 		<table name="tbl_Chuoc_Hang" generator_rows="400" >
 			<comment><![CDATA[bảng chuộc]]></comment>
 			<column name="chuoc_id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
 			<column name="hd_id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="chuoc_ngaytao" type="datetime" length="23" decimal="3" jt="93" regexp_nulls="0" />
+			<column name="chuoc_ngaytao" type="date" jt="91" regexp_nulls="0" />
 			<column name="chuoc_songay" type="int" length="10" decimal="0" jt="4" regexp="sequence:from=1;step=59;" regexp_nulls="0" >
 				<comment><![CDATA[Số ngày kể từ ngày cầm]]></comment>
 			</column>
-			<column name="chuoc_tienlai_thoathuan" type="float" length="53" decimal="0" jt="8" regexp="[0-9]{5}" regexp_nulls="0" />
-			<column name="chuoc_tienlai_quahan" type="float" length="53" decimal="0" jt="8" regexp="[0-9]{5}" regexp_nulls="0" />
-			<column name="chuoc_tongtien" type="float" length="53" decimal="0" jt="8" regexp="[0-9]{5}" regexp_nulls="0" />
-			<column name="delete_flag" type="bit" length="1" decimal="0" jt="-7" regexp_nulls="0" >
-				<defo>0</defo>
+			<column name="chuoc_tienlai_thoathuan" type="float" length="53" decimal="0" jt="8" regexp="[0-9]{5}" regexp_nulls="0" >
+				<comment><![CDATA[Tiền lãi thỏa thuận phải trả]]></comment>
+			</column>
+			<column name="chuoc_tienlai_quahan" type="float" length="53" decimal="0" jt="8" regexp="[0-9]{5}" regexp_nulls="0" >
+				<comment><![CDATA[tiền lãi quá hạn phải trả (nếu có)]]></comment>
+			</column>
+			<column name="chuoc_tongtien" type="float" length="53" decimal="0" jt="8" regexp="[0-9]{5}" regexp_nulls="0" >
+				<comment><![CDATA[Tổng tiền phải trả, sau khi tình tổng tiền lãi, tiền cầm, tiền tăng giảm]]></comment>
 			</column>
 			<column name="chuoc_tanggiam" type="float" jt="8" regexp="[0-9]{4}" regexp_nulls="0" >
 				<comment><![CDATA[Tiền tăng giảm do chủ tiệm quyết định]]></comment>
 			</column>
+			<column name="delete_flag" type="bit" length="1" decimal="0" jt="-7" regexp_nulls="0" >
+				<defo>0</defo>
+			</column>
 			<index name="Pk_tbl_chuoc" unique="PRIMARY_KEY" >
 				<column name="chuoc_id" />
 			</index>
-			<index name="idx_tbl_Chuoc_Hang" unique="NORMAL" >
+			<index name="idx_tbl_Chuoc_Hang" unique="UNIQUE" >
 				<column name="hd_id" />
 			</index>
 			<fk name="Fk_tbl_Chuoc_Hang" to_schema="dbo" to_table="tbl_Hop_Dong" >
 				<fk_column name="hd_id" pk="hd_id" />
-			</fk>
-		</table>
-		<table name="tbl_Hang_Hoa" generator_rows="200" >
-			<comment><![CDATA[các mặt hàng được cầm, vàng, xe ...]]></comment>
-			<column name="hang_id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" >
-				<comment><![CDATA[Id của mặt hàng]]></comment>
-			</column>
-			<column name="hang_ten" type="nvarchar" length="100" decimal="0" jt="12" mandatory="y" regexp="(Dairy|Beverages|Confections|Seafood|Meat|Poultry|Grain|Cereals|Produce|Shell fish|Snails)" >
-				<comment><![CDATA[Tên của mặt hàng]]></comment>
-			</column>
-			<column name="hang_soluong" type="int" length="10" decimal="0" jt="4" regexp="int:from=1;to=10;" regexp_nulls="0" >
-				<comment><![CDATA[Số lượng của mặt hàng, vd: chỉ (vàng) ...]]></comment>
-			</column>
-			<column name="hang_giatri" type="float" length="53" decimal="0" jt="8" regexp="[0-9]{7}" regexp_nulls="0" >
-				<comment><![CDATA[Giá trị của mặt hàng]]></comment>
-			</column>
-			<column name="hang_giatri_that" type="float" length="53" decimal="0" jt="8" regexp="[0-9]{7}" regexp_nulls="0" >
-				<comment><![CDATA[giá trị thực tế của món hang
-]]></comment>
-			</column>
-			<column name="xe_bienso" type="varchar" length="20" decimal="0" jt="12" regexp="[0-9]{2} [A-Z]{1}[0-9]{1} - [0-9]{5}" regexp_nulls="0" >
-				<comment><![CDATA[Nếu hàng là xe thì có biển số]]></comment>
-			</column>
-			<column name="xe_loaixe" type="varchar" length="100" decimal="0" jt="12" regexp="(Air Blaze|Suzuki|Honda|Dream|Wave Tàu|Future|Dylan|Atila|Vespa|Piaggio|PCX|SH i150|Exiter|Future Neo)" regexp_nulls="0" >
-				<comment><![CDATA[Loại xe: AB, Nouvou ...]]></comment>
-			</column>
-			<column name="hang_chatluong" type="nvarchar" length="50" decimal="0" jt="12" regexp="(Cũ|Mới|Gần mới|Còn zin|Như cớt|Trash|Vứt|Tá ngu)" regexp_nulls="0" >
-				<comment><![CDATA[Chất lượng của món hàng]]></comment>
-			</column>
-			<column name="loaihang_id" type="int" length="10" decimal="0" jt="4" regexp_nulls="0" >
-				<comment><![CDATA[Loại của hàng cầm]]></comment>
-			</column>
-			<column name="delete_flag" type="bit" length="1" decimal="0" jt="-7" mandatory="y" >
-				<defo>0</defo>
-			</column>
-			<index name="Pk_tbl_Loai_Hang" unique="PRIMARY_KEY" >
-				<column name="hang_id" />
-			</index>
-			<index name="idx_tbl_Hang_Hoa" unique="NORMAL" >
-				<column name="loaihang_id" />
-			</index>
-			<fk name="Fk_tbl_Hang_Hoa" to_schema="dbo" to_table="tbl_Loai_Hang" >
-				<fk_column name="loaihang_id" pk="loaihang_id" />
 			</fk>
 		</table>
 		<table name="tbl_Hop_Dong" generator_rows="800" >
@@ -120,13 +93,14 @@
 			<column name="hd_maBN" type="int" length="10" decimal="0" jt="4" mandatory="y" regexp="int:from=1;to=10000;format=##########.;" >
 				<comment><![CDATA[mã biên nhận tùy thuộc vào năm]]></comment>
 			</column>
-			<column name="hd_ngaytao" type="datetime" length="23" decimal="3" jt="93" mandatory="y" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;31.12.2015 00:00:00 000&#039;;" >
+			<column name="hd_ngaytao" type="date" jt="91" mandatory="y" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;31.12.2015 00:00:00 000&#039;;" >
 				<comment><![CDATA[Thời gian tạo hợp đồng]]></comment>
 			</column>
 			<column name="hd_trangthai" type="int" length="10" decimal="0" jt="4" regexp="int:from=1;to=5;format=##########.;" regexp_nulls="0" >
 				<comment><![CDATA[trạng thái của hợp đồng
-chưa thanh toán
-đã thanh toán (chuộc)]]></comment>
+0: chưa thanh toán
+1: đã thanh toán (chuộc)
+2: đã thanh lý]]></comment>
 			</column>
 			<column name="hd_baomat" type="bit" length="1" decimal="0" jt="-7" regexp_nulls="0" >
 				<defo>0</defo>
@@ -135,15 +109,29 @@ chưa thanh toán
 			<column name="hd_tien_cam" type="float" length="53" decimal="0" jt="8" regexp="[0-9]{7}" regexp_nulls="0" >
 				<comment><![CDATA[tổng giá trị của hợp đồng]]></comment>
 			</column>
+			<column name="hd_LaiSuat_ThoaThuan" type="float" jt="8" >
+				<defo>1</defo>
+				<comment><![CDATA[lãi suất thỏa thuận]]></comment>
+			</column>
+			<column name="hd_LaiSuat_QuaHan" type="float" jt="8" >
+				<defo>1</defo>
+				<comment><![CDATA[lãi suất quá hạn]]></comment>
+			</column>
 			<column name="hd_kh_CMND" type="varchar" length="20" decimal="0" jt="12" regexp="[0-9]{9}" regexp_nulls="0" >
 				<comment><![CDATA[hợp đồng của khách hàng nào..]]></comment>
+			</column>
+			<column name="hd_kh_Ten" type="nvarchar" length="50" jt="12" mandatory="y" regexp="($First Name) ($Last Name)" >
+				<comment><![CDATA[tên của khách hàng đi cầm đồ]]></comment>
+			</column>
+			<column name="hd_kh_DienThoai" type="varchar" length="15" jt="12" regexp="((\([0-9]{3}\) )|([0-9]{3}-))[0-9]{3}-[0-9]{4}" regexp_nulls="0" >
+				<comment><![CDATA[điện thoại của khách hàng]]></comment>
+			</column>
+			<column name="hd_kh_Diachi" type="nvarchar(max)" jt="12" regexp="[a-z]{4,8}([0-9]{0,3}|.[a-z]{4,10})@([a-z]{4,9}.)?([a-z-]{6}).(org|com|net)" regexp_nulls="0" >
+				<comment><![CDATA[địa chỉ của khách hàng]]></comment>
 			</column>
 			<column name="delete_flag" type="bit" length="1" decimal="0" jt="-7" mandatory="y" >
 				<defo>0</defo>
 			</column>
-			<column name="hd_kh_Ten" type="nvarchar" length="50" jt="12" mandatory="y" regexp="($First Name) ($Last Name)" />
-			<column name="hd_kh_DienThoai" type="varchar" length="15" jt="12" regexp="((\([0-9]{3}\) )|([0-9]{3}-))[0-9]{3}-[0-9]{4}" regexp_nulls="0" />
-			<column name="hd_kh_Diachi" type="nvarchar(max)" jt="12" regexp="[a-z]{4,8}([0-9]{0,3}|.[a-z]{4,10})@([a-z]{4,9}.)?([a-z-]{6}).(org|com|net)" regexp_nulls="0" />
 			<index name="Pk_tbl_Hop_Dong" unique="PRIMARY_KEY" >
 				<column name="hd_id" />
 			</index>
@@ -166,18 +154,24 @@ chưa thanh toán
 			<column name="thanhly_id" type="int" jt="4" mandatory="y" autoincrement="y" >
 				<comment><![CDATA[Mã thanh lý]]></comment>
 			</column>
-			<column name="thanhly_ngay" type="datetime" length="23" decimal="3" jt="93" mandatory="y" regexp="date:from=&#039;01.01.2008&#039;;to=&#039;31.12.2015&#039;;" >
+			<column name="thanhly_ngay" type="date" jt="91" mandatory="y" regexp="date:from=&#039;01.01.2008&#039;;to=&#039;31.12.2015&#039;;" >
 				<defo>getdate()</defo>
 				<comment><![CDATA[Ngày thanh lý]]></comment>
 			</column>
 			<column name="thanhly_tien" type="float" jt="8" mandatory="y" regexp="int:from=100000;to=10000000;" >
 				<comment><![CDATA[Số tiền thanh lý]]></comment>
 			</column>
-			<column name="hd_id" type="int" jt="4" regexp_nulls="0" />
+			<column name="hd_id" type="int" jt="4" regexp_nulls="0" >
+				<comment><![CDATA[khóa ngoại với bảng hợp đồng, thể hiện thanh lý hợp đồng nào]]></comment>
+			</column>
+			<column name="delete_flag" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+				<comment><![CDATA[cờ xóa]]></comment>
+			</column>
 			<index name="Pk_tbl_Thanh_Ly" unique="PRIMARY_KEY" >
 				<column name="thanhly_id" />
 			</index>
-			<index name="idx_tbl_Thanh_Ly" unique="NORMAL" >
+			<index name="idx_tbl_Thanh_Ly" unique="UNIQUE" >
 				<column name="hd_id" />
 			</index>
 			<fk name="Fk_tbl_Thanh_Ly" to_schema="dbo" to_table="tbl_Hop_Dong" >
@@ -188,12 +182,18 @@ chưa thanh toán
 			<comment><![CDATA[Bảng lấy thêm tiền ]]></comment>
 			<column name="them_id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
 			<column name="hd_id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="them_ngaytao" type="datetime" length="23" decimal="3" jt="93" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;31.12.2015 00:00:00 000&#039;;" regexp_nulls="0" >
+			<column name="them_ngaytao" type="date" jt="91" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;31.12.2015 00:00:00 000&#039;;" regexp_nulls="0" >
+				<defo>getdate()</defo>
 				<comment><![CDATA[ngày lấy thêm tiền]]></comment>
 			</column>
 			<column name="them_tienlai" type="float" length="53" decimal="0" jt="8" regexp="[0-9]{5}" regexp_nulls="0" />
 			<column name="them_tien" type="float" length="53" decimal="0" jt="8" regexp="[0-9]{5}" regexp_nulls="0" />
-			<column name="them_hinhthuc_tralai" type="int" length="10" decimal="0" jt="4" regexp="sequence:from=1;step=3;" regexp_nulls="0" />
+			<column name="them_hinhthuc_tralai" type="int" length="10" decimal="0" jt="4" regexp="sequence:from=1;step=3;" regexp_nulls="0" >
+				<defo>1</defo>
+				<comment><![CDATA[Hình thức trả lãi
+0: trả lãi trước
+1: trả lãi sau]]></comment>
+			</column>
 			<column name="delete_flag" type="bit" length="1" decimal="0" jt="-7" regexp_nulls="0" >
 				<defo>0</defo>
 			</column>
@@ -208,14 +208,21 @@ chưa thanh toán
 			</fk>
 		</table>
 		<table name="tbl_Thu_Chi" generator_rows="100" >
-			<comment><![CDATA[Bảng lưu thông tin thu chi]]></comment>
+			<comment><![CDATA[Bảng lưu thông tin thu chi, tương đương với nhật ký hoạt động của cửa hàng
+]]></comment>
 			<column name="tc_id" type="int" jt="4" mandatory="y" autoincrement="y" >
 				<comment><![CDATA[Mã thu chi]]></comment>
 			</column>
 			<column name="tc_loai" type="int" jt="4" mandatory="y" regexp="int:from=1;to=10;" >
-				<comment><![CDATA[Loại thu hoặc chi]]></comment>
+				<comment><![CDATA[Loại của hợp đồng
+0: thêm mới (chi)
+1: chuộc (thu)
+2: thanh lý (thu)]]></comment>
 			</column>
-			<column name="tc_ngaytao" type="datetime" length="23" decimal="3" jt="93" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;31.12.2015 00:00:00 000&#039;;" regexp_nulls="0" >
+			<column name="hd_id" type="int" jt="4" mandatory="y" >
+				<comment><![CDATA[hợp đồng nào được thêm mới hoặc chuộc hoặc thanh lý]]></comment>
+			</column>
+			<column name="tc_ngaytao" type="date" jt="91" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;31.12.2015 00:00:00 000&#039;;" regexp_nulls="0" >
 				<defo>getdate()</defo>
 				<comment><![CDATA[Ngày thu chi]]></comment>
 			</column>
@@ -229,12 +236,18 @@ chưa thanh toán
 			<index name="Pk_tbl_Thu_Chi" unique="PRIMARY_KEY" >
 				<column name="tc_id" />
 			</index>
+			<index name="idx_tbl_Thu_Chi" unique="NORMAL" >
+				<column name="hd_id" />
+			</index>
+			<fk name="Fk_tbl_Thu_Chi" to_schema="dbo" to_table="tbl_Hop_Dong" >
+				<fk_column name="hd_id" pk="hd_id" />
+			</fk>
 		</table>
 		<table name="tbl_Tra_Lai_Truoc" generator_rows="400" >
 			<comment><![CDATA[Bảng trả lãi trước]]></comment>
 			<column name="tralai_id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
 			<column name="hd_id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="tralai_ngaytao" type="datetime" length="23" decimal="3" jt="93" mandatory="y" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;31.12.2015 00:00:00 000&#039;;" >
+			<column name="tralai_ngaytao" type="date" jt="91" mandatory="y" regexp="timestamp:from=&#039;01.01.2008 00:00:00 000&#039;;to=&#039;31.12.2015 00:00:00 000&#039;;" >
 				<comment><![CDATA[thời gian trả lãi]]></comment>
 			</column>
 			<column name="tralai_so_ngay" type="int" length="10" decimal="0" jt="4" regexp="sequence:from=1;step=59;" regexp_nulls="0" >
@@ -256,18 +269,257 @@ chưa thanh toán
 				<fk_column name="hd_id" pk="hd_id" />
 			</fk>
 		</table>
+		<procedure name="getLogin" id="Procedure6706699" isSystem="false" >
+			<string><![CDATA[CREATE PROC getLogin(@ID varchar(50), @PASS varchar(256))
+AS
+BEGIN
+	SELECT *
+	FROM tbl_Admin
+	WHERE Admin_Id = @ID
+	AND Admin_Password = @PASS
+END]]></string>
+		</procedure>
+		<procedure name="layHD_Nam" id="Procedure6706699" isSystem="false" >
+			<string><![CDATA[CREATE PROC layHD_Nam(@Nam int)
+AS
+BEGIN
+	SELECT *
+	FROM tbl_Hop_Dong
+	WHERE YEAR(hd_ngaytao) = @Nam
+	  AND delete_flag = 0
+END]]></string>
+		</procedure>
+		<procedure name="layHD_Ngay" id="Procedure6706699" isSystem="false" >
+			<string><![CDATA[CREATE PROC layHD_Ngay(@Date datetime)
+AS
+BEGIN
+	SELECT *
+	FROM tbl_Hop_Dong
+	WHERE CONVERT(VARCHAR(10),hd_ngaytao, 20) = @Date
+	  AND delete_flag = 0
+END]]></string>
+		</procedure>
+		<procedure name="layHD_ThangNam" id="Procedure6706699" isSystem="false" >
+			<string><![CDATA[CREATE PROC layHD_ThangNam(@Thang int, @Nam int)
+AS
+BEGIN
+	SELECT *
+	FROM tbl_Hop_Dong
+	WHERE MONTH(hd_ngaytao) = @Thang
+	  AND YEAR(hd_ngaytao) = @Nam
+	  AND delete_flag = 0
+END]]></string>
+		</procedure>
+		<procedure name="layMaBN_Max" id="Procedure6706699" isSystem="false" >
+			<string><![CDATA[CREATE PROC layMaBN_Max
+AS
+BEGIN
+	select top 1 hd_maBN
+	from tbl_Hop_Dong
+	where year(hd_ngaytao) = YEAR(GETDATE())
+	  and delete_flag = 0
+	order by hd_maBN desc
+END
+]]></string>
+		</procedure>
+		<procedure name="thongKe_DaChuoc_Nam" id="Procedure6706699" isSystem="false" >
+			<string><![CDATA[CREATE PROC thongKe_DaChuoc_Nam(@Nam int)
+AS
+BEGIN
+	select
+		hd.hd_maBN as 'maHD',
+		hd.hd_kh_Ten as 'tenKH',
+		loai.loaihang_ten as 'loaiHang',
+		hang.hang_ten as 'tenMatHang',
+		hang.hang_chatluong as 'chatLuong',
+		hang.xe_bienso as 'bienSo',
+		hang.xe_loaixe as 'loaiXe',
+		hd.hd_tien_cam as 'tienCam',
+		CONVERT(VARCHAR(10),hd.hd_ngaytao, 3) as 'ngayCam',
+		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 3) as 'ngayHetHan',
+		Datediff(day, hd.hd_ngaytao, GETDATE()) as 'soNgayCam'
+	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hop_Dong cthd, tbl_Hang_Hoa hang, tbl_Loai_Hang loai
+	where hd.hd_id = cthd.hd_id
+	  and cthd.hang_id = hang.hang_id
+	  and loai.loaihang_id = hang.loaihang_id
+	  and hd.hd_trangthai = 1 --1: chuoc, 2:thanh ly
+		
+	  and YEAR(hd.hd_ngaytao) = @Nam
+	  
+	  --check delete
+	  and hd.delete_flag = 0
+	  and cthd.delete_flag = 0
+	  and hang.delete_flag = 0
+END]]></string>
+		</procedure>
+		<procedure name="thongKe_DaChuoc_Ngay" id="Procedure6706699" isSystem="false" >
+			<string><![CDATA[CREATE PROC thongKe_DaChuoc_Ngay(@Ngay int, @Thang int, @Nam int)
+AS
+BEGIN
+	select
+		hd.hd_maBN as 'maHD',
+		hd.hd_kh_Ten as 'tenKH',
+		loai.loaihang_ten as 'loaiHang',
+		hang.hang_ten as 'tenMatHang',
+		hang.hang_chatluong as 'chatLuong',
+		hang.xe_bienso as 'bienSo',
+		hang.xe_loaixe as 'loaiXe',
+		hd.hd_tien_cam as 'tienCam',
+		CONVERT(VARCHAR(10),hd.hd_ngaytao, 3) as 'ngayCam',
+		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 3) as 'ngayHetHan',
+		Datediff(day, hd.hd_ngaytao, GETDATE()) as 'soNgayCam'
+	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hop_Dong cthd, tbl_Hang_Hoa hang, tbl_Loai_Hang loai
+	where hd.hd_id = cthd.hd_id
+	  and cthd.hang_id = hang.hang_id
+	  and loai.loaihang_id = hang.loaihang_id
+	  and hd.hd_trangthai = 1 --1: chuoc, 2:thanh ly
+		
+	  and DAY(hd.hd_ngaytao) = @Ngay
+	  and MONTH(hd.hd_ngaytao) = @Thang
+	  and YEAR(hd.hd_ngaytao) = @Nam
+	  
+	  --check delete
+	  and hd.delete_flag = 0
+	  and cthd.delete_flag = 0
+	  and hang.delete_flag = 0
+END]]></string>
+		</procedure>
+		<procedure name="thongKe_DaChuoc_Thang" id="Procedure6706699" isSystem="false" >
+			<string><![CDATA[CREATE PROC thongKe_DaChuoc_Thang(@Thang int, @Nam int)
+AS
+BEGIN
+	select
+		hd.hd_maBN as 'maHD',
+		hd.hd_kh_Ten as 'tenKH',
+		loai.loaihang_ten as 'loaiHang',
+		hang.hang_ten as 'tenMatHang',
+		hang.hang_chatluong as 'chatLuong',
+		hang.xe_bienso as 'bienSo',
+		hang.xe_loaixe as 'loaiXe',
+		hd.hd_tien_cam as 'tienCam',
+		CONVERT(VARCHAR(10),hd.hd_ngaytao, 3) as 'ngayCam',
+		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 3) as 'ngayHetHan',
+		Datediff(day, hd.hd_ngaytao, GETDATE()) as 'soNgayCam'
+	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hop_Dong cthd, tbl_Hang_Hoa hang, tbl_Loai_Hang loai
+	where hd.hd_id = cthd.hd_id
+	  and cthd.hang_id = hang.hang_id
+	  and loai.loaihang_id = hang.loaihang_id
+	  and hd.hd_trangthai = 1 --1: chuoc, 2:thanh ly
+		
+	  and MONTH(hd.hd_ngaytao) = @Thang
+	  and YEAR(hd.hd_ngaytao) = @Nam
+	  
+	  --check delete
+	  and hd.delete_flag = 0
+	  and cthd.delete_flag = 0
+	  and hang.delete_flag = 0
+END]]></string>
+		</procedure>
+		<procedure name="thongKe_HangTon_Nam" id="Procedure6706699" isSystem="false" >
+			<string><![CDATA[--thống kê hàng tồn theo năm
+CREATE PROC thongKe_HangTon_Nam(@Nam int)
+AS
+BEGIN
+	select
+		hd.hd_maBN as 'maHD',
+		hd.hd_kh_Ten as 'tenKH',
+		loai.loaihang_ten as 'loaiHang',
+		hang.hang_ten as 'tenMatHang',
+		hang.hang_chatluong as 'chatLuong',
+		hang.xe_bienso as 'bienSo',
+		hang.xe_loaixe as 'loaiXe',
+		hd.hd_tien_cam as 'tienCam',
+		CONVERT(VARCHAR(10),hd.hd_ngaytao, 3) as 'ngayCam',
+		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 3) as 'ngayHetHan',
+		Datediff(day, hd.hd_ngaytao, GETDATE()) as 'soNgayCam'
+	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hop_Dong cthd, tbl_Hang_Hoa hang, tbl_Loai_Hang loai
+	where hd.hd_id = cthd.hd_id
+	  and cthd.hang_id = hang.hang_id
+	  and loai.loaihang_id = hang.loaihang_id
+	  and hd.hd_trangthai = 0
+		
+	  and YEAR(hd.hd_ngaytao) = @Nam
+	  
+	  --check delete
+	  and hd.delete_flag = 0
+	  and cthd.delete_flag = 0
+	  and hang.delete_flag = 0
+END]]></string>
+		</procedure>
+		<procedure name="thongKe_HangTon_Ngay" id="Procedure6706699" isSystem="false" >
+			<string><![CDATA[CREATE PROC thongKe_HangTon_Ngay(@Ngay int, @Thang int, @Nam int)
+AS
+BEGIN
+	select
+		hd.hd_maBN as 'maHD',
+		hd.hd_kh_Ten as 'tenKH',
+		loai.loaihang_ten as 'loaiHang',
+		hang.hang_ten as 'tenMatHang',
+		hang.hang_chatluong as 'chatLuong',
+		hang.xe_bienso as 'bienSo',
+		hang.xe_loaixe as 'loaiXe',
+		hd.hd_tien_cam as 'tienCam',
+		CONVERT(VARCHAR(10),hd.hd_ngaytao, 3) as 'ngayCam',
+		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 3) as 'ngayHetHan',
+		Datediff(day, hd.hd_ngaytao, GETDATE()) as 'soNgayCam'
+	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hop_Dong cthd, tbl_Hang_Hoa hang, tbl_Loai_Hang loai
+	where hd.hd_id = cthd.hd_id
+	  and cthd.hang_id = hang.hang_id
+	  and loai.loaihang_id = hang.loaihang_id
+	  and hd.hd_trangthai = 0
+		
+	  and DAY(hd.hd_ngaytao) = @Ngay
+	  and MONTH(hd.hd_ngaytao) = @Thang
+	  and YEAR(hd.hd_ngaytao) = @Nam
+	  
+	  --check delete
+	  and hd.delete_flag = 0
+	  and cthd.delete_flag = 0
+	  and hang.delete_flag = 0
+END]]></string>
+		</procedure>
+		<procedure name="thongKe_HangTon_Thang" id="Procedure6706699" isSystem="false" >
+			<string><![CDATA[CREATE PROC thongKe_HangTon_Thang(@Thang int, @Nam int)
+AS
+BEGIN
+	select
+		hd.hd_maBN as 'maHD',
+		hd.hd_kh_Ten as 'tenKH',
+		loai.loaihang_ten as 'loaiHang',
+		hang.hang_ten as 'tenMatHang',
+		hang.hang_chatluong as 'chatLuong',
+		hang.xe_bienso as 'bienSo',
+		hang.xe_loaixe as 'loaiXe',
+		hd.hd_tien_cam as 'tienCam',
+		CONVERT(VARCHAR(10),hd.hd_ngaytao, 3) as 'ngayCam',
+		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 3) as 'ngayHetHan',
+		Datediff(day, hd.hd_ngaytao, GETDATE()) as 'soNgayCam'
+	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hop_Dong cthd, tbl_Hang_Hoa hang, tbl_Loai_Hang loai
+	where hd.hd_id = cthd.hd_id
+	  and cthd.hang_id = hang.hang_id
+	  and loai.loaihang_id = hang.loaihang_id
+	  and hd.hd_trangthai = 0
+		
+	  and MONTH(hd.hd_ngaytao) = @Thang
+	  and YEAR(hd.hd_ngaytao) = @Nam
+	  
+	  --check delete
+	  and hd.delete_flag = 0
+	  and cthd.delete_flag = 0
+	  and hang.delete_flag = 0
+END]]></string>
+		</procedure>
 	</schema>
 	<connector name="SqlServer" database="SqlServer" driver_class="net.sourceforge.jtds.jdbc.Driver" driver_jar="jtds-1.3.1.jar" host="localhost" port="1433" instance="PawnShop" user="sa" schema_mapping="" />
 	<layout id="Layout5550631" name="dbo" joined_routing="y" show_relation_columns="y" >
-		<entity schema="dbo" name="tbl_Admin" color="bef5b3" x="465" y="45" />
-		<entity schema="dbo" name="tbl_Thu_Chi" color="b2cdf7" x="630" y="45" />
-		<entity schema="dbo" name="tbl_Loai_Hang" color="f5d8b3" x="60" y="420" />
-		<entity schema="dbo" name="tbl_Hang_Hoa" color="bef5b3" x="45" y="135" />
-		<entity schema="dbo" name="tbl_Chi_Tiet_Hop_Dong" color="f5d8b3" x="270" y="120" />
-		<entity schema="dbo" name="tbl_Tra_Lai_Truoc" color="f5d8b3" x="465" y="390" />
-		<entity schema="dbo" name="tbl_Them_Tien" color="bef5b3" x="615" y="525" />
-		<entity schema="dbo" name="tbl_Chuoc_Hang" color="f5d8b3" x="210" y="375" />
-		<entity schema="dbo" name="tbl_Thanh_Ly" color="b2cdf7" x="900" y="330" />
-		<entity schema="dbo" name="tbl_Hop_Dong" color="f5d8b3" x="660" y="210" />
+		<entity schema="dbo" name="tbl_Admin" color="bef5b3" x="450" y="240" />
+		<entity schema="dbo" name="tbl_Chi_Tiet_Hang_Cam" color="f5d8b3" x="255" y="240" />
+		<entity schema="dbo" name="tbl_Them_Tien" color="bef5b3" x="630" y="240" />
+		<entity schema="dbo" name="tbl_Thanh_Ly" color="b2cdf7" x="450" y="60" />
+		<entity schema="dbo" name="tbl_Loai_Hang" color="f5d8b3" x="630" y="105" />
+		<entity schema="dbo" name="tbl_Thu_Chi" color="b2cdf7" x="300" y="45" />
+		<entity schema="dbo" name="tbl_Hop_Dong" color="f5d8b3" x="45" y="240" />
+		<entity schema="dbo" name="tbl_Chuoc_Hang" color="f5d8b3" x="450" y="450" />
+		<entity schema="dbo" name="tbl_Tra_Lai_Truoc" color="f5d8b3" x="90" y="45" />
 	</layout>
 </project>

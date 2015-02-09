@@ -60,5 +60,6 @@ namespace PawnShopManager.Util
          }
          return false;
       }
+
    }
 }

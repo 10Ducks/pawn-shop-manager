@@ -4,11 +4,11 @@ namespace PawnShopManager.Entity
 {
    class ThemTien
    {
-      public Int32 them_Id;
-      public Int32 hd_Id;
-      public String them_NgayTao;
-      public float them_TienLai;
-      public float them_Tien;
-      public Int16 them_HinhThuc_TraLai;
+      public Int32 them_Id { get; set; }
+      public Int32 hd_Id { get; set; }
+      public String them_NgayTao { get; set; }
+      public float them_TienLai { get; set; }
+      public float them_Tien { get; set; }
+      public Int16 them_HinhThuc_TraLai { get; set; }
    }
 }

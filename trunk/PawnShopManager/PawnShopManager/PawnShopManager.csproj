@@ -50,8 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\Controller.cs" />
     <Compile Include="Controller\Result.cs" />
     <Compile Include="Controller\SystemError.cs" />
+    <Compile Include="Dao\AdminDAO.cs" />
     <Compile Include="Dao\BaseDao.cs" />
     <Compile Include="Dao\DbProviderFactory.cs" />
     <Compile Include="Entity\Admin.cs" />
