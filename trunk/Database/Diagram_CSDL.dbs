@@ -110,9 +110,9 @@
 			</column>
 			<column name="hd_trangthai" type="int" length="10" decimal="0" jt="4" regexp="int:from=1;to=3;format=#.;" regexp_nulls="0" >
 				<comment><![CDATA[trạng thái của hợp đồng
-0: chưa thanh toán
-1: đã thanh toán (chuộc)
-2: đã thanh lý]]></comment>
+1: chưa thanh toán
+2: đã thanh toán (chuộc)
+3: đã thanh lý]]></comment>
 			</column>
 			<column name="hd_baomat" type="bit" length="1" decimal="0" jt="-7" regexp_nulls="0" >
 				<defo>0</defo>
@@ -236,9 +236,10 @@
 2: chuộc (thu)
 3: thanh lý (thu)
 4: trả lãi trước (thu)
-5: thêm tiền (chi)]]></comment>
+5: thêm tiền (chi)
+6: khác]]></comment>
 			</column>
-			<column name="hd_id" type="int" jt="4" mandatory="y" >
+			<column name="hd_id" type="int" jt="4" >
 				<comment><![CDATA[hợp đồng nào được thêm mới hoặc chuộc hoặc thanh lý]]></comment>
 			</column>
 			<column name="tc_ngaytao" type="date" jt="91" regexp="date:from=&#039;01.01.2014&#039;;to=&#039;31.12.2015&#039;;" regexp_nulls="0" >
@@ -255,12 +256,6 @@
 			<index name="Pk_tbl_Thu_Chi" unique="PRIMARY_KEY" >
 				<column name="tc_id" />
 			</index>
-			<index name="idx_tbl_Thu_Chi" unique="NORMAL" >
-				<column name="hd_id" />
-			</index>
-			<fk name="Fk_tbl_Thu_Chi" to_schema="dbo" to_table="tbl_Hop_Dong" >
-				<fk_column name="hd_id" pk="hd_id" />
-			</fk>
 		</table>
 		<table name="tbl_Tra_Lai_Truoc" generator_rows="200" >
 			<comment><![CDATA[Bảng trả lãi trước]]></comment>
@@ -532,13 +527,13 @@ END]]></string>
 	<connector name="SqlServer" database="SqlServer" driver_class="net.sourceforge.jtds.jdbc.Driver" driver_jar="jtds-1.3.1.jar" host="localhost" port="1433" instance="PawnShop" user="sa" schema_mapping="" />
 	<layout id="Layout5550631" name="dbo" joined_routing="y" show_relation_columns="y" >
 		<entity schema="dbo" name="tbl_Admin" color="bef5b3" x="450" y="240" />
-		<entity schema="dbo" name="tbl_Hop_Dong" color="f5d8b3" x="45" y="240" />
 		<entity schema="dbo" name="tbl_Chuoc_Hang" color="f5d8b3" x="450" y="450" />
 		<entity schema="dbo" name="tbl_Tra_Lai_Truoc" color="f5d8b3" x="90" y="45" />
 		<entity schema="dbo" name="tbl_Them_Tien" color="bef5b3" x="630" y="240" />
-		<entity schema="dbo" name="tbl_Thanh_Ly" color="b2cdf7" x="450" y="60" />
-		<entity schema="dbo" name="tbl_Thu_Chi" color="b2cdf7" x="300" y="45" />
 		<entity schema="dbo" name="tbl_Loai_Hang" color="f5d8b3" x="630" y="105" />
 		<entity schema="dbo" name="tbl_Chi_Tiet_Hang_Cam" color="f5d8b3" x="255" y="240" />
+		<entity schema="dbo" name="tbl_Hop_Dong" color="f5d8b3" x="45" y="240" />
+		<entity schema="dbo" name="tbl_Thanh_Ly" color="b2cdf7" x="450" y="60" />
+		<entity schema="dbo" name="tbl_Thu_Chi" color="b2cdf7" x="300" y="45" />
 	</layout>
 </project>
