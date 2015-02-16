@@ -47,7 +47,7 @@ namespace PawnShopManager.Dao
             TkChuocDto tkChuocDto = new TkChuocDto();
             tkChuocDto.maHD = reader.GetInt32(0);
             tkChuocDto.tenKH = reader.GetString(1);
-            tkChuocDto.loaiHang = reader.GetString(2);
+            tkChuocDto.loaiHang = reader.GetInt32(2).ToString();
             tkChuocDto.tenMatHang = reader.GetString(3);
             tkChuocDto.chatLuong = reader.GetString(4);
             tkChuocDto.bienSo = reader.GetString(5);
