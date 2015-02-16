@@ -147,9 +147,6 @@
 			<index name="Pk_tbl_Hop_Dong" unique="PRIMARY_KEY" >
 				<column name="hd_id" />
 			</index>
-			<index name="Idx_tbl_Hop_Dong" unique="UNIQUE" >
-				<column name="hd_maBN" />
-			</index>
 		</table>
 		<table name="tbl_Loai_Hang" generator_rows="2" >
 			<comment><![CDATA[Loại hàng hóa
@@ -256,12 +253,6 @@
 			<index name="Pk_tbl_Thu_Chi" unique="PRIMARY_KEY" >
 				<column name="tc_id" />
 			</index>
-			<index name="idx_tbl_Thu_Chi" unique="NORMAL" >
-				<column name="hd_id" />
-			</index>
-			<fk name="Fk_tbl_Thu_Chi" to_schema="dbo" to_table="tbl_Hop_Dong" >
-				<fk_column name="hd_id" pk="hd_id" />
-			</fk>
 		</table>
 		<table name="tbl_Tra_Lai_Truoc" generator_rows="200" >
 			<comment><![CDATA[Bảng trả lãi trước]]></comment>
@@ -538,8 +529,8 @@ END]]></string>
 		<entity schema="dbo" name="tbl_Them_Tien" color="bef5b3" x="630" y="240" />
 		<entity schema="dbo" name="tbl_Loai_Hang" color="f5d8b3" x="630" y="105" />
 		<entity schema="dbo" name="tbl_Chi_Tiet_Hang_Cam" color="f5d8b3" x="255" y="240" />
-		<entity schema="dbo" name="tbl_Hop_Dong" color="f5d8b3" x="45" y="240" />
 		<entity schema="dbo" name="tbl_Thanh_Ly" color="b2cdf7" x="450" y="60" />
 		<entity schema="dbo" name="tbl_Thu_Chi" color="b2cdf7" x="300" y="45" />
+		<entity schema="dbo" name="tbl_Hop_Dong" color="f5d8b3" x="45" y="240" />
 	</layout>
 </project>

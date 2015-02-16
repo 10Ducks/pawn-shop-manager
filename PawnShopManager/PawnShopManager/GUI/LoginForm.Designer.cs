@@ -57,6 +57,7 @@
          this.txtID.Name = "txtID";
          this.txtID.Size = new System.Drawing.Size(331, 26);
          this.txtID.TabIndex = 0;
+         this.txtID.Text = "admin";
          // 
          // labelX1
          // 
@@ -129,6 +130,7 @@
          this.txtPass.Name = "txtPass";
          this.txtPass.Size = new System.Drawing.Size(331, 26);
          this.txtPass.TabIndex = 3;
+         this.txtPass.Text = "123";
          // 
          // buttonX2
          // 

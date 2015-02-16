@@ -6,7 +6,7 @@ namespace PawnShopManager.Entity
    {
       public Int32 thanhly_Id { get; set; }
       public String thanhly_Ngay { get; set; }
-      public float thanhly_Tien { get; set; }
+      public Double thanhly_Tien { get; set; }
       public Int32 hd_Id { get; set; }
    }
 }

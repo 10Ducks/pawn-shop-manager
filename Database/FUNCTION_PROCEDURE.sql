@@ -359,18 +359,16 @@ BEGIN
 		tc.tc_ngaytao	as	'ngayTao',
 		tc.tc_tien		as	'tien',
 		tc.tc_note		as	'ghiChu',
-		tc.hd_id	as	'hopDongId',
-		hd.hd_maBN	as	'maBN'
-	from tbl_Thu_Chi tc, tbl_Hop_Dong hd
-	where tc.hd_id = hd.hd_id
-	  and DAY(tc.tc_ngaytao) = @Ngay
+		tc.hd_id	as	'hopDongId'
+	from tbl_Thu_Chi tc
+	where DAY(tc.tc_ngaytao) = @Ngay
 	  and MONTH(tc.tc_ngaytao) = @Thang
 	  and YEAR(tc.tc_ngaytao) = @Nam
 END
 exec thongKe_Thu_Ngay 11, 11, 2015
 
 --thống kê thu theo tháng
-CREATE PROC thongKe_Thu_Thang(@Thang int, @Nam int)
+ALTER PROC thongKe_Thu_Thang(@Thang int, @Nam int)
 AS
 BEGIN
 	select
@@ -378,17 +376,15 @@ BEGIN
 		tc.tc_ngaytao	as	'ngayTao',
 		tc.tc_tien		as	'tien',
 		tc.tc_note		as	'ghiChu',
-		tc.hd_id	as	'hopDongId',
-		hd.hd_maBN	as	'maBN'
-	from tbl_Thu_Chi tc, tbl_Hop_Dong hd
-	where tc.hd_id = hd.hd_id
-	  and MONTH(tc.tc_ngaytao) = @Thang
+		tc.hd_id	as	'hopDongId'
+	from tbl_Thu_Chi tc
+	where MONTH(tc.tc_ngaytao) = @Thang
 	  and YEAR(tc.tc_ngaytao) = @Nam
 END
 exec thongKe_Thu_Thang  11, 2015
 
 --thống kê thu theo năm
-CREATE PROC thongKe_Thu_Nam(@Nam int)
+ALTER PROC thongKe_Thu_Nam(@Nam int)
 AS
 BEGIN
 	select
@@ -396,15 +392,34 @@ BEGIN
 		tc.tc_ngaytao	as	'ngayTao',
 		tc.tc_tien		as	'tien',
 		tc.tc_note		as	'ghiChu',
-		tc.hd_id	as	'hopDongId',
-		hd.hd_maBN	as	'maBN'
-	from tbl_Thu_Chi tc, tbl_Hop_Dong hd
-	where tc.hd_id = hd.hd_id
-	  and YEAR(tc.tc_ngaytao) = @Nam
+		tc.hd_id	as	'hopDongId'
+	from tbl_Thu_Chi tc
+	where YEAR(tc.tc_ngaytao) = @Nam
 END
 exec thongKe_Thu_Nam  2015
 
+--Tìm mã biên nhận (trong năm)
+CREATE PROC timMaBN(@MaBN int)
+AS
+BEGIN
+	select
+		hd.hd_kh_Ten as 'tenKH',
+		hd.hd_kh_CMND as 'CMND',
+		lh.loaihang_ten as 'loaiHang'
+	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hang_Cam cthc, tbl_Loai_Hang lh
+END
+
+-----------------------------------------------------------------------------------------
+
+
 --test
+
+select *
+from tbl_Hop_Dong hd
+--where hd.hd_maBN = 7310
+where Coalesce(hd.hd_maBN,hd.hd_maBN)= Isnull(7310, 7310)
+
+select ISNULL(null, 10)
 
 select *
 from tbl_Hop_Dong hd
@@ -450,9 +465,9 @@ set
 	tbl_Chuoc_Hang.chuoc_tongtien = 
 		case 
 			when tbl_Chuoc_Hang.chuoc_songay > 60 then
-				tbl_Chuoc_Hang.chuoc_tanggiam + tbl_Chuoc_Hang.chuoc_tienlai_quahan + tbl_Hop_Dong.hd_tien_cam
+				tbl_Chuoc_Hang.chuoc_tanggiam + tbl_Chuoc_Hang.chuoc_tienlai_quahan + tbl_Hop_Dong.hd_tien_cam - (select sum(tl.tralai_tien) from tbl_Tra_Lai_Truoc tl where tl.hd_id = tbl_Hop_Dong.hd_id)
 			else
-				tbl_Chuoc_Hang.chuoc_tanggiam + tbl_Chuoc_Hang.chuoc_tienlai_thoathuan + tbl_Hop_Dong.hd_tien_cam
+				tbl_Chuoc_Hang.chuoc_tanggiam + tbl_Chuoc_Hang.chuoc_tienlai_thoathuan + tbl_Hop_Dong.hd_tien_cam - (select sum(tl.tralai_tien) from tbl_Tra_Lai_Truoc tl where tl.hd_id = tbl_Hop_Dong.hd_id)
 		end
 from tbl_Hop_Dong
 where tbl_Hop_Dong.hd_id = tbl_Chuoc_Hang.hd_id
