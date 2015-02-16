@@ -55,11 +55,12 @@
     <Compile Include="Controller\SystemError.cs" />
     <Compile Include="Dao\AdminDAO.cs" />
     <Compile Include="Dao\BaseDao.cs" />
+    <Compile Include="Dao\ChuocHangDAO.cs" />
     <Compile Include="Dao\DbProviderFactory.cs" />
+    <Compile Include="Dto\TkChuocDto.cs" />
     <Compile Include="Entity\Admin.cs" />
-    <Compile Include="Entity\ChiTietHD.cs" />
+    <Compile Include="Entity\ChiTietHangCam.cs" />
     <Compile Include="Entity\ChuocHang.cs" />
-    <Compile Include="Entity\HangHoa.cs" />
     <Compile Include="Entity\HopDong.cs" />
     <Compile Include="Entity\LoaiHang.cs" />
     <Compile Include="Entity\ThanhLy.cs" />
@@ -168,9 +169,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dto\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Images\normal\Clock-01-128.png" />
   </ItemGroup>
