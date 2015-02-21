@@ -339,15 +339,16 @@ BEGIN
 	select
 		hd.hd_maBN as 'maHD',
 		hd.hd_kh_Ten as 'tenKH',
-		loai.loaihang_ten as 'loaiHang',
+		cthc.loai_id as 'loaiHang',
 		cthc.cthc_ten_hang_cam as 'tenMatHang',
 		cthc.cthc_chatluong as 'chatLuong',
 		cthc.cthc_BienSoXe as 'bienSo',
 		cthc.cthc_loaixe as 'loaiXe',
 		hd.hd_tien_cam as 'tienCam',
-		CONVERT(VARCHAR(10),hd.hd_ngaytao, 3) as 'ngayCam',
-		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 3) as 'ngayHetHan',
-		Datediff(day, chuoc.chuoc_ngaytao, hd.hd_ngaytao) as 'soNgayCam'
+		CONVERT(VARCHAR(10),hd.hd_ngaytao, 103) as 'ngayCam',
+		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 103) as 'ngayHetHan',
+		Datediff(day, hd.hd_ngaytao, chuoc.chuoc_ngaytao) as 'soNgayCam',
+		cthc.cthc_soluong as 'soLuong'
 	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hang_Cam cthc, tbl_Loai_Hang loai, tbl_Chuoc_Hang chuoc
 	where hd.hd_id = cthc.hd_id	  
 	  and loai.loaihang_id = cthc.loai_id
@@ -360,8 +361,7 @@ BEGIN
 		 
 	  and YEAR(hd.hd_ngaytao) = @Nam
 	ORDER BY hd.hd_maBN	  
-END
-]]></string>
+END]]></string>
 		</procedure>
 		<procedure name="thongKe_DaChuoc_Ngay" id="Procedure6706699" isSystem="false" >
 			<string><![CDATA[CREATE PROC thongKe_DaChuoc_Ngay(@Ngay int, @Thang int, @Nam int)
@@ -370,19 +370,20 @@ BEGIN
 	select
 		hd.hd_maBN as 'maHD',
 		hd.hd_kh_Ten as 'tenKH',
-		loai.loaihang_ten as 'loaiHang',
+		cthc.loai_id as 'loaiHang',
 		cthc.cthc_ten_hang_cam as 'tenMatHang',
 		cthc.cthc_chatluong as 'chatLuong',
 		cthc.cthc_BienSoXe as 'bienSo',
 		cthc.cthc_loaixe as 'loaiXe',
 		hd.hd_tien_cam as 'tienCam',
-		CONVERT(VARCHAR(10),hd.hd_ngaytao, 3) as 'ngayCam',
-		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 3) as 'ngayHetHan',
-		Datediff(day, chuoc.chuoc_ngaytao, hd.hd_ngaytao) as 'soNgayCam'
+		CONVERT(VARCHAR(10),hd.hd_ngaytao, 103) as 'ngayCam',
+		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 103) as 'ngayHetHan',
+		Datediff(day, hd.hd_ngaytao, chuoc.chuoc_ngaytao) as 'soNgayCam',
+		cthc.cthc_soluong as 'soLuong'
 	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hang_Cam cthc, tbl_Loai_Hang loai, tbl_Chuoc_Hang chuoc
-	where hd.hd_id = cthc.hd_id
-	  and chuoc.hd_id = hd.hd_id	  
+	where hd.hd_id = cthc.hd_id	  
 	  and loai.loaihang_id = cthc.loai_id
+	  and chuoc.hd_id = hd.hd_id
 	  and hd.hd_trangthai = 2 --2: đã chuộc
 	  --check delete
 	  and hd.delete_flag = 0
@@ -402,15 +403,16 @@ BEGIN
 	select
 		hd.hd_maBN as 'maHD',
 		hd.hd_kh_Ten as 'tenKH',
-		loai.loaihang_ten as 'loaiHang',
+		cthc.loai_id as 'loaiHang',
 		cthc.cthc_ten_hang_cam as 'tenMatHang',
 		cthc.cthc_chatluong as 'chatLuong',
 		cthc.cthc_BienSoXe as 'bienSo',
 		cthc.cthc_loaixe as 'loaiXe',
 		hd.hd_tien_cam as 'tienCam',
-		CONVERT(VARCHAR(10),hd.hd_ngaytao, 3) as 'ngayCam',
-		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 3) as 'ngayHetHan',
-		Datediff(day, chuoc.chuoc_ngaytao, hd.hd_ngaytao) as 'soNgayCam'
+		CONVERT(VARCHAR(10),hd.hd_ngaytao, 103) as 'ngayCam',
+		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 103) as 'ngayHetHan',
+		Datediff(day, hd.hd_ngaytao, chuoc.chuoc_ngaytao) as 'soNgayCam',
+		cthc.cthc_soluong as 'soLuong'
 	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hang_Cam cthc, tbl_Loai_Hang loai, tbl_Chuoc_Hang chuoc
 	where hd.hd_id = cthc.hd_id	  
 	  and loai.loaihang_id = cthc.loai_id
@@ -511,146 +513,6 @@ BEGIN
 	  and MONTH(hd.hd_ngaytao) = @Thang
 	  and YEAR(hd.hd_ngaytao) = @Nam
 	ORDER BY hd.hd_maBN
-END]]></string>
-		</procedure>
-		<procedure name="thongKe_ThanhLy_Nam" id="Procedure5540685" isSystem="false" >
-			<string><![CDATA[CREATE PROC thongKe_ThanhLy_Nam(@Nam int)
-AS
-BEGIN
-	select
-		hd.hd_maBN as 'maHD',
-		hd.hd_kh_Ten as 'tenKH',
-		loai.loaihang_ten as 'loaiHang',
-		cthc.cthc_ten_hang_cam as 'tenMatHang',
-		cthc.cthc_chatluong as 'chatLuong',
-		cthc.cthc_BienSoXe as 'bienSo',
-		cthc.cthc_loaixe as 'loaiXe',
-		hd.hd_tien_cam as 'tienCam',
-		CONVERT(VARCHAR(10),hd.hd_ngaytao, 3) as 'ngayCam',
-		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 3) as 'ngayHetHan'
-		
-	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hang_Cam cthc, tbl_Loai_Hang loai, tbl_Thanh_Ly tl
-	where hd.hd_id = cthc.hd_id
-	  and tl.hd_id = hd.hd_id	  
-	  and loai.loaihang_id = cthc.loai_id
-	  and hd.hd_trangthai = 3 --3: đã thanh lý
-	  --check delete
-	  and hd.delete_flag = 0
-	  and cthc.delete_flag = 0
-	  and tl.delete_flag = 0
-		 
-	  and YEAR(hd.hd_ngaytao) = @Nam
-	ORDER BY hd.hd_maBN	  
-END]]></string>
-		</procedure>
-		<procedure name="thongKe_ThanhLy_Ngay" id="Procedure5540717" isSystem="false" >
-			<string><![CDATA[--thống kê hàng đã thanh lý theo ngày
-CREATE PROC thongKe_ThanhLy_Ngay(@Ngay int, @Thang int, @Nam int)
-AS
-BEGIN
-	select
-		hd.hd_maBN as 'maHD',
-		hd.hd_kh_Ten as 'tenKH',
-		loai.loaihang_ten as 'loaiHang',
-		cthc.cthc_ten_hang_cam as 'tenMatHang',
-		cthc.cthc_chatluong as 'chatLuong',
-		cthc.cthc_BienSoXe as 'bienSo',
-		cthc.cthc_loaixe as 'loaiXe',
-		hd.hd_tien_cam as 'tienCam',
-		CONVERT(VARCHAR(10),hd.hd_ngaytao, 3) as 'ngayCam',
-		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 3) as 'ngayHetHan'
-		
-	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hang_Cam cthc, tbl_Loai_Hang loai, tbl_Thanh_Ly tl
-	where hd.hd_id = cthc.hd_id
-	  and tl.hd_id = hd.hd_id	  
-	  and loai.loaihang_id = cthc.loai_id
-	  and hd.hd_trangthai = 3 --3: đã thanh lý
-	  --check delete
-	  and hd.delete_flag = 0
-	  and cthc.delete_flag = 0
-	  and tl.delete_flag = 0
-		 
-	  and DAY(hd.hd_ngaytao) = @Ngay
-	  and MONTH(hd.hd_ngaytao) = @Thang
-	  and YEAR(hd.hd_ngaytao) = @Nam
-	ORDER BY hd.hd_maBN	  
-END]]></string>
-		</procedure>
-		<procedure name="thongKe_ThanhLy_Thang" id="Procedure5540717" isSystem="false" >
-			<string><![CDATA[--thống kê hàng đã thanh lý theo tháng
-CREATE PROC thongKe_ThanhLy_Thang(@Thang int, @Nam int)
-AS
-BEGIN
-	select
-		hd.hd_maBN as 'maHD',
-		hd.hd_kh_Ten as 'tenKH',
-		loai.loaihang_ten as 'loaiHang',
-		cthc.cthc_ten_hang_cam as 'tenMatHang',
-		cthc.cthc_chatluong as 'chatLuong',
-		cthc.cthc_BienSoXe as 'bienSo',
-		cthc.cthc_loaixe as 'loaiXe',
-		hd.hd_tien_cam as 'tienCam',
-		CONVERT(VARCHAR(10),hd.hd_ngaytao, 3) as 'ngayCam',
-		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 3) as 'ngayHetHan'
-		
-	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hang_Cam cthc, tbl_Loai_Hang loai, tbl_Thanh_Ly tl
-	where hd.hd_id = cthc.hd_id
-	  and tl.hd_id = hd.hd_id	  
-	  and loai.loaihang_id = cthc.loai_id
-	  and hd.hd_trangthai = 3 --3: đã thanh lý
-	  --check delete
-	  and hd.delete_flag = 0
-	  and cthc.delete_flag = 0
-	  and tl.delete_flag = 0
-		 
-	  and MONTH(hd.hd_ngaytao) = @Thang
-	  and YEAR(hd.hd_ngaytao) = @Nam
-	ORDER BY hd.hd_maBN	  
-END]]></string>
-		</procedure>
-		<procedure name="thongKe_Thu_Nam" id="Procedure5540717" isSystem="false" >
-			<string><![CDATA[CREATE PROC thongKe_Thu_Nam(@Nam int)
-AS
-BEGIN
-	select
-		tc.tc_loai		as	'loaiHinhThuc',
-		tc.tc_ngaytao	as	'ngayTao',
-		tc.tc_tien		as	'tien',
-		tc.tc_note		as	'ghiChu',
-		tc.hd_id	as	'hopDongId'
-	from tbl_Thu_Chi tc
-	where YEAR(tc.tc_ngaytao) = @Nam
-END]]></string>
-		</procedure>
-		<procedure name="thongKe_Thu_Ngay" id="Procedure5540727" isSystem="false" >
-			<string><![CDATA[CREATE PROC thongKe_Thu_Ngay(@Ngay int, @Thang int, @Nam int)
-AS
-BEGIN
-	select
-		tc.tc_loai		as	'loaiHinhThuc',
-		tc.tc_ngaytao	as	'ngayTao',
-		tc.tc_tien		as	'tien',
-		tc.tc_note		as	'ghiChu',
-		tc.hd_id	as	'hopDongId'
-	from tbl_Thu_Chi tc
-	where DAY(tc.tc_ngaytao) = @Ngay
-	  and MONTH(tc.tc_ngaytao) = @Thang
-	  and YEAR(tc.tc_ngaytao) = @Nam
-END]]></string>
-		</procedure>
-		<procedure name="thongKe_Thu_Thang" id="Procedure5540727" isSystem="false" >
-			<string><![CDATA[CREATE PROC thongKe_Thu_Thang(@Thang int, @Nam int)
-AS
-BEGIN
-	select
-		tc.tc_loai		as	'loaiHinhThuc',
-		tc.tc_ngaytao	as	'ngayTao',
-		tc.tc_tien		as	'tien',
-		tc.tc_note		as	'ghiChu',
-		tc.hd_id	as	'hopDongId'
-	from tbl_Thu_Chi tc
-	where MONTH(tc.tc_ngaytao) = @Thang
-	  and YEAR(tc.tc_ngaytao) = @Nam
 END]]></string>
 		</procedure>
 	</schema>

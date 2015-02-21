@@ -28,6 +28,7 @@
       /// </summary>
       private void InitializeComponent()
       {
+         this.components = new System.ComponentModel.Container();
          System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
          this.txtID = new DevComponents.DotNetBar.Controls.TextBoxX();
          this.labelX1 = new DevComponents.DotNetBar.LabelX();
@@ -36,6 +37,7 @@
          this.txtPass = new DevComponents.DotNetBar.Controls.TextBoxX();
          this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
          this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+         this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
          this.SuspendLayout();
          // 
          // txtID
@@ -174,6 +176,11 @@
          this.buttonX1.Tooltip = "Đăng nhập";
          this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
          // 
+         // styleManager1
+         // 
+         this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Metro;
+         this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(163)))), ((int)(((byte)(26))))));
+         // 
          // LoginForm
          // 
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -209,5 +216,6 @@
       private DevComponents.DotNetBar.Controls.TextBoxX txtPass;
       private DevComponents.DotNetBar.ButtonX buttonX1;
       private DevComponents.DotNetBar.ButtonX buttonX2;
+      private DevComponents.DotNetBar.StyleManager styleManager1;
    }
 }

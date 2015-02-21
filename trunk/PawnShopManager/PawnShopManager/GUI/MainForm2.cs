@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PawnShopManager.GUI.BODY;
+using PawnShopManager.Util;
+using System;
 using System.Windows.Forms;
-using System.Collections;
-using PawnShopManager.GUI.BODY;
 
 namespace PawnShopManager.GUI
 {
@@ -21,7 +14,6 @@ namespace PawnShopManager.GUI
       private QlHangCam qlHangCam = null;
       private ThuChi thuchiForm = null;
       private TimKiem timForm = null;
-      private Hashtable SESSION = new Hashtable();
 
       public MainForm2()
       {
@@ -31,13 +23,14 @@ namespace PawnShopManager.GUI
       #region Event
       private void MainForm2_FormClosed(object sender, FormClosedEventArgs e)
       {
+         Global.SESSION.Clear();
          parent.Show();
       }
 
       private void MainForm2_Load(object sender, EventArgs e)
       {
          openChild(enumButtonAction.bntCamDo);
-         SESSION.Add("Action", enumButtonAction.bntCamDo); //luu session, luu nut nao dang dc active
+         Global.SESSION.Add("Action", enumButtonAction.bntCamDo); //luu Global.SESSION, luu nut nao dang dc active
          bntCamDo.Image = Properties.Resources.Money_Bag_48_active;
 
          int w1 = Screen.PrimaryScreen.WorkingArea.Width;         
@@ -57,6 +50,9 @@ namespace PawnShopManager.GUI
 
       private void bntThoat_Click(object sender, EventArgs e)
       {
+         if(camDoForm != null){
+            camDoForm.superValidator1.Enabled = false;
+         }
          this.Close();
       }
 
@@ -121,7 +117,7 @@ namespace PawnShopManager.GUI
       {
          openChild(enumButtonAction.bntCamDo);
          activeButton(bntCamDo);
-         SESSION["Action"] = enumButtonAction.bntCamDo;
+         Global.SESSION["Action"] = enumButtonAction.bntCamDo;
       }
 
       public enum enumButtonAction
@@ -133,12 +129,12 @@ namespace PawnShopManager.GUI
       {
          openChild(enumButtonAction.bntQlHangCam);
          activeButton(bntQlHangCam);
-         SESSION["Action"] = enumButtonAction.bntQlHangCam;
+         Global.SESSION["Action"] = enumButtonAction.bntQlHangCam;
       }
 
       private void bntThongKe_Click(object sender, EventArgs e)
       {
-         SESSION["Action"] = enumButtonAction.bntThongKe;
+         Global.SESSION["Action"] = enumButtonAction.bntThongKe;
          activeButton(bntThongKe);
       }
 
@@ -146,21 +142,21 @@ namespace PawnShopManager.GUI
       {         
          activeButton(bntKiemHang);
          openChild(enumButtonAction.bntKiemHang);
-         SESSION["Action"] = enumButtonAction.bntKiemHang;
+         Global.SESSION["Action"] = enumButtonAction.bntKiemHang;
       }
 
       private void bntThuChi_Click(object sender, EventArgs e)
       {
          activeButton(bntThuChi);
          openChild(enumButtonAction.bntThuChi);
-         SESSION["Action"] = enumButtonAction.bntThuChi;
+         Global.SESSION["Action"] = enumButtonAction.bntThuChi;
       }
 
       private void bntTimKiem_Click(object sender, EventArgs e)
       {
          openChild(enumButtonAction.bntTimKiem);
          activeButton(bntTimKiem);
-         SESSION["Action"] = enumButtonAction.bntTimKiem;
+         Global.SESSION["Action"] = enumButtonAction.bntTimKiem;
          
       }
       private void bntThoat_MouseLeave(object sender, EventArgs e)
@@ -189,7 +185,7 @@ namespace PawnShopManager.GUI
          bntKiemHang.Image = Properties.Resources.Book_Open_48;
          bntThuChi.Image = Properties.Resources.Dollar_48;
          bntTimKiem.Image = Properties.Resources.Search_48;
-         Console.WriteLine("Action " + SESSION["Action"]);
+         Console.WriteLine("Action " + Global.SESSION["Action"]);
          Console.WriteLine("Click " + bnt.Text);
 
          if (bnt.Equals(bntCamDo)) bnt.Image = Properties.Resources.Money_Bag_48_active;
@@ -203,9 +199,9 @@ namespace PawnShopManager.GUI
       private void hoverButton(DevComponents.DotNetBar.LabelItem bnt)
       {
          enumButtonAction bntAction = getButtonAction(bnt);
-         Console.WriteLine("Action " + SESSION["Action"]);
+         Console.WriteLine("Action " + Global.SESSION["Action"]);
          Console.WriteLine("hover " + bntAction);
-         if (!SESSION["Action"].Equals(bntAction))
+         if (!Global.SESSION["Action"].Equals(bntAction))
          {
             //button khong duoc active
             if (bntAction.Equals(enumButtonAction.bntCamDo)) bnt.Image = Properties.Resources.Money_Bag_48_hover;
@@ -219,9 +215,9 @@ namespace PawnShopManager.GUI
       private void leaveButton(DevComponents.DotNetBar.LabelItem bnt)
       {
          enumButtonAction bntAction = getButtonAction(bnt);
-         Console.WriteLine("Action " + SESSION["Action"]);
+         Console.WriteLine("Action " + Global.SESSION["Action"]);
          Console.WriteLine("Leave " + bntAction);
-         if (!SESSION["Action"].Equals(bntAction))
+         if (!Global.SESSION["Action"].Equals(bntAction))
          {
             //button khong duoc active
             if (bntAction.Equals(enumButtonAction.bntCamDo)) bnt.Image = Properties.Resources.Money_Bag_48;
@@ -235,7 +231,7 @@ namespace PawnShopManager.GUI
 
       public void openChild(enumButtonAction bntAction)
       {
-         if (SESSION["Action"] != null && SESSION["Action"].Equals(bntAction))
+         if (Global.SESSION["Action"] != null && Global.SESSION["Action"].Equals(bntAction))
          {
             return;
          }

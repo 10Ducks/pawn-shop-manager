@@ -17,6 +17,8 @@ namespace PawnShopManager
          Application.EnableVisualStyles();
          Application.SetCompatibleTextRenderingDefault(false);
          Application.Run(new GUI.LoginForm());         
+         //Application.Run(new GUI.BODY.Test_Datagrid());         
+         //Application.Run(new GUI.BODY.mergeDataGridView());         
       }
    }
 }
