@@ -156,7 +156,7 @@
 4: vàng trắng
 5: thể loại khác]]></comment>
 			<column name="loaihang_id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="loaihang_ten" type="varchar" length="10" decimal="0" jt="12" regexp="(Xe|Vàng)" regexp_nulls="0" >
+			<column name="loaihang_ten" type="varchar" length="20" jt="12" regexp="(Xe|Vàng)" regexp_nulls="0" >
 				<comment><![CDATA[tên của loại hàng hóa]]></comment>
 			</column>
 			<index name="Pk_tbl_Loai_Hang_0" unique="PRIMARY_KEY" >
@@ -660,10 +660,10 @@ END]]></string>
 		<entity schema="dbo" name="tbl_Chuoc_Hang" color="f5d8b3" x="450" y="450" />
 		<entity schema="dbo" name="tbl_Tra_Lai_Truoc" color="f5d8b3" x="90" y="45" />
 		<entity schema="dbo" name="tbl_Them_Tien" color="bef5b3" x="630" y="240" />
-		<entity schema="dbo" name="tbl_Loai_Hang" color="f5d8b3" x="630" y="105" />
 		<entity schema="dbo" name="tbl_Chi_Tiet_Hang_Cam" color="f5d8b3" x="255" y="240" />
 		<entity schema="dbo" name="tbl_Thanh_Ly" color="b2cdf7" x="450" y="60" />
 		<entity schema="dbo" name="tbl_Thu_Chi" color="b2cdf7" x="300" y="45" />
 		<entity schema="dbo" name="tbl_Hop_Dong" color="f5d8b3" x="45" y="240" />
+		<entity schema="dbo" name="tbl_Loai_Hang" color="f5d8b3" x="630" y="105" />
 	</layout>
 </project>

@@ -19,5 +19,8 @@ namespace PawnShopManager.Dto
       public String ngayCam { get; set; }
       public String ngayHetHan { get; set; }
       public Int32 soNgayCam { get; set; }
+      public Int32 soLuong { get; set; }
+      public String dienThoai { get; set; }
    }
 }
+

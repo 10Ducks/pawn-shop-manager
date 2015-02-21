@@ -1,259 +1,7 @@
---Bảng Admin
---kiểm tra đăng nhập, nếu không đúng mật khẩu thì trả về null
-CREATE PROC getLogin(@ID varchar(50), @PASS varchar(256))
-AS
-BEGIN
-	SELECT *
-	FROM tbl_Admin
-	WHERE Admin_Id = @ID
-	AND Admin_Password = @PASS
-END
 
-EXEC getLogin 'admin', '123'
 -----------------------------------------------------------------------------------------
 
---Bảng Hợp đồng
---lấy mã biên nhận cao nhất trong 1 năm nào đó, khi thêm vào bảng hợp đồng thì +1 vào.
-CREATE PROC layMaBN_Max
-AS
-BEGIN
-	select top 1 hd_maBN
-	from tbl_Hop_Dong
-	where year(hd_ngaytao) = YEAR(GETDATE())
-	  and delete_flag = 0
-	order by hd_maBN desc
-END
-
-exec layMaBN_Max
-
---lấy tất cả hợp đồng theo ngày nhập vào
-ALTER PROC layHD_Ngay(@Date date)
-AS
-BEGIN
-	SELECT *
-	FROM tbl_Hop_Dong
-	WHERE CONVERT(VARCHAR(10),hd_ngaytao, 20) = CONVERT(VARCHAR(10),@Date, 20)
-	  AND delete_flag = 0
-END
-
 select CONVERT(VARCHAR(10),GETDATE(), 20)
-exec layHD_Ngay '2010-11-14'
-
---lấy hợp đồng theo tháng trong năm
-ALTER PROC layHD_ThangNam(@Thang int, @Nam int)
-AS
-BEGIN
-	SELECT *
-	FROM tbl_Hop_Dong
-	WHERE MONTH(hd_ngaytao) = @Thang
-	  AND YEAR(hd_ngaytao) = @Nam
-	  AND delete_flag = 0
-	ORDER BY hd_ngaytao
-END
-
-Exec layHD_ThangNam '11', '2010'
-
---lấy hợp đồng theo năm
-CREATE PROC layHD_Nam(@Nam int)
-AS
-BEGIN
-	SELECT *
-	FROM tbl_Hop_Dong
-	WHERE YEAR(hd_ngaytao) = @Nam
-	  AND delete_flag = 0
-	ORDER BY hd_ngaytao
-END
-
-Exec layHD_Nam '2014'
-
---thống kê hàng tồn theo ngày
-ALTER PROC thongKe_HangTon_Ngay(@Ngay int, @Thang int, @Nam int)
-AS
-BEGIN
-	select
-		hd.hd_maBN as 'maHD',
-		hd.hd_kh_Ten as 'tenKH',
-		loai.loaihang_ten as 'loaiHang',
-		cthc.cthc_ten_hang_cam as 'tenMatHang',
-		cthc.cthc_chatluong as 'chatLuong',
-		cthc.cthc_BienSoXe as 'bienSo',
-		cthc.cthc_loaixe as 'loaiXe',
-		hd.hd_tien_cam as 'tienCam',
-		CONVERT(VARCHAR(10),hd.hd_ngaytao, 3) as 'ngayCam',
-		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 3) as 'ngayHetHan',
-		Datediff(day, hd.hd_ngaytao, GETDATE()) as 'soNgayCam'
-	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hang_Cam cthc, tbl_Loai_Hang loai
-	where hd.hd_id = cthc.hd_id	  
-	  and loai.loaihang_id = cthc.loai_id
-	  and hd.hd_trangthai = 1
-	  --check delete
-	  and hd.delete_flag = 0
-	  and cthc.delete_flag = 0
-		 
-	  and DAY(hd.hd_ngaytao) = @Ngay
-	  and MONTH(hd.hd_ngaytao) = @Thang
-	  and YEAR(hd.hd_ngaytao) = @Nam
-	ORDER BY hd.hd_maBN
-END
-exec thongKe_HangTon_Ngay 3,12,2015
-
---thống kê hàng tồn theo tháng
-ALTER PROC thongKe_HangTon_Thang(@Thang int, @Nam int)
-AS
-BEGIN
-	select
-		hd.hd_maBN as 'maHD',
-		hd.hd_kh_Ten as 'tenKH',
-		loai.loaihang_ten as 'loaiHang',
-		cthc.cthc_ten_hang_cam as 'tenMatHang',
-		cthc.cthc_chatluong as 'chatLuong',
-		cthc.cthc_BienSoXe as 'bienSo',
-		cthc.cthc_loaixe as 'loaiXe',
-		hd.hd_tien_cam as 'tienCam',
-		CONVERT(VARCHAR(10),hd.hd_ngaytao, 3) as 'ngayCam',
-		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 3) as 'ngayHetHan',
-		Datediff(day, hd.hd_ngaytao, GETDATE()) as 'soNgayCam'
-	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hang_Cam cthc, tbl_Loai_Hang loai
-	where hd.hd_id = cthc.hd_id	  
-	  and loai.loaihang_id = cthc.loai_id
-	  and hd.hd_trangthai = 1
-	  --check delete
-	  and hd.delete_flag = 0
-	  and cthc.delete_flag = 0
-		 
-	  and MONTH(hd.hd_ngaytao) = @Thang
-	  and YEAR(hd.hd_ngaytao) = @Nam
-	ORDER BY hd.hd_maBN
-END
-
-exec thongke_HangTon_thang 3,2011
-
---thống kê hàng tồn theo năm
-ALTER PROC thongKe_HangTon_Nam(@Nam int)
-AS
-BEGIN
-	select
-		hd.hd_maBN as 'maHD',
-		hd.hd_kh_Ten as 'tenKH',
-		loai.loaihang_ten as 'loaiHang',
-		cthc.cthc_ten_hang_cam as 'tenMatHang',
-		cthc.cthc_chatluong as 'chatLuong',
-		cthc.cthc_BienSoXe as 'bienSo',
-		cthc.cthc_loaixe as 'loaiXe',
-		hd.hd_tien_cam as 'tienCam',
-		CONVERT(VARCHAR(10),hd.hd_ngaytao, 3) as 'ngayCam',
-		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 3) as 'ngayHetHan',
-		Datediff(day, hd.hd_ngaytao, GETDATE()) as 'soNgayCam'
-	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hang_Cam cthc, tbl_Loai_Hang loai
-	where hd.hd_id = cthc.hd_id	  
-	  and loai.loaihang_id = cthc.loai_id
-	  and hd.hd_trangthai = 1
-	  --check delete
-	  and hd.delete_flag = 0
-	  and cthc.delete_flag = 0
-		 
-	  and YEAR(hd.hd_ngaytao) = @Nam
-	ORDER BY hd.hd_maBN	  
-END
-
-exec thongke_HangTon_Nam 2011
-
---thống kê hàng đã chuộc theo ngày
-ALTER PROC thongKe_DaChuoc_Ngay(@Ngay int, @Thang int, @Nam int)
-AS
-BEGIN
-	select
-		hd.hd_maBN as 'maHD',
-		hd.hd_kh_Ten as 'tenKH',
-		cthc.loai_id as 'loaiHang',
-		cthc.cthc_ten_hang_cam as 'tenMatHang',
-		cthc.cthc_chatluong as 'chatLuong',
-		cthc.cthc_BienSoXe as 'bienSo',
-		cthc.cthc_loaixe as 'loaiXe',
-		hd.hd_tien_cam as 'tienCam',
-		CONVERT(VARCHAR(10),hd.hd_ngaytao, 103) as 'ngayCam',
-		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 103) as 'ngayHetHan',
-		Datediff(day, hd.hd_ngaytao, chuoc.chuoc_ngaytao) as 'soNgayCam'
-	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hang_Cam cthc, tbl_Loai_Hang loai, tbl_Chuoc_Hang chuoc
-	where hd.hd_id = cthc.hd_id	  
-	  and loai.loaihang_id = cthc.loai_id
-	  and chuoc.hd_id = hd.hd_id
-	  and hd.hd_trangthai = 2 --2: đã chuộc
-	  --check delete
-	  and hd.delete_flag = 0
-	  and cthc.delete_flag = 0
-	  and chuoc.delete_flag = 0
-		 
-	  and DAY(hd.hd_ngaytao) = @Ngay
-	  and MONTH(hd.hd_ngaytao) = @Thang
-	  and YEAR(hd.hd_ngaytao) = @Nam
-	ORDER BY hd.hd_maBN	  
-END
-
---thống kê hàng đã chuộc theo tháng
-ALTER PROC thongKe_DaChuoc_Thang(@Thang int, @Nam int)
-AS
-BEGIN
-	select
-		hd.hd_maBN as 'maHD',
-		hd.hd_kh_Ten as 'tenKH',
-		cthc.loai_id as 'loaiHang',
-		cthc.cthc_ten_hang_cam as 'tenMatHang',
-		cthc.cthc_chatluong as 'chatLuong',
-		cthc.cthc_BienSoXe as 'bienSo',
-		cthc.cthc_loaixe as 'loaiXe',
-		hd.hd_tien_cam as 'tienCam',
-		CONVERT(VARCHAR(10),hd.hd_ngaytao, 103) as 'ngayCam',
-		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 103) as 'ngayHetHan',
-		Datediff(day, hd.hd_ngaytao, chuoc.chuoc_ngaytao) as 'soNgayCam'
-	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hang_Cam cthc, tbl_Loai_Hang loai, tbl_Chuoc_Hang chuoc
-	where hd.hd_id = cthc.hd_id	  
-	  and loai.loaihang_id = cthc.loai_id
-	  and chuoc.hd_id = hd.hd_id
-	  and hd.hd_trangthai = 2 --2: đã chuộc
-	  --check delete
-	  and hd.delete_flag = 0
-	  and cthc.delete_flag = 0
-	  and chuoc.delete_flag = 0
-		 
-	  and MONTH(hd.hd_ngaytao) = @Thang
-	  and YEAR(hd.hd_ngaytao) = @Nam
-	ORDER BY hd.hd_maBN	  
-END
-exec thongKe_DaChuoc_Thang 3, 2011
-
---thống kê hàng đã chuộc theo năm
-ALTER PROC thongKe_DaChuoc_Nam(@Nam int)
-AS
-BEGIN
-	select
-		hd.hd_maBN as 'maHD',
-		hd.hd_kh_Ten as 'tenKH',
-		cthc.loai_id as 'loaiHang',
-		cthc.cthc_ten_hang_cam as 'tenMatHang',
-		cthc.cthc_chatluong as 'chatLuong',
-		cthc.cthc_BienSoXe as 'bienSo',
-		cthc.cthc_loaixe as 'loaiXe',
-		hd.hd_tien_cam as 'tienCam',
-		CONVERT(VARCHAR(10),hd.hd_ngaytao, 103) as 'ngayCam',
-		CONVERT(VARCHAR(10),DATEADD(day,59,hd.hd_ngaytao), 103) as 'ngayHetHan',
-		Datediff(day, hd.hd_ngaytao, chuoc.chuoc_ngaytao) as 'soNgayCam'
-	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hang_Cam cthc, tbl_Loai_Hang loai, tbl_Chuoc_Hang chuoc
-	where hd.hd_id = cthc.hd_id	  
-	  and loai.loaihang_id = cthc.loai_id
-	  and chuoc.hd_id = hd.hd_id
-	  and hd.hd_trangthai = 2 --2: đã chuộc
-	  --check delete
-	  and hd.delete_flag = 0
-	  and cthc.delete_flag = 0
-	  and chuoc.delete_flag = 0
-		 
-	  and YEAR(hd.hd_ngaytao) = @Nam
-	ORDER BY hd.hd_maBN	  
-END
-
-exec thongKe_DaChuoc_Nam 2011
-
 
 --thống kê hàng đã thanh lý theo ngày
 CREATE PROC thongKe_ThanhLy_Ngay(@Ngay int, @Thang int, @Nam int)
@@ -410,8 +158,43 @@ BEGIN
 	from tbl_Hop_Dong hd, tbl_Chi_Tiet_Hang_Cam cthc, tbl_Loai_Hang lh
 END
 
+
+--tìm kiếm
+CREATE PROC timkiem(@MaBN int, @LoaiHang int, @TenKH nvarchar(50), @CMND varchar(20), @DienThoai varchar(15),
+					@TuNgay date, @DenNgay date)
+AS
+BEGIN
+	Select
+		hd.hd_id,
+		hd.hd_maBN,
+		hd.hd_ngaytao,
+		hd.hd_kh_Ten,
+		hd.hd_kh_CMND,
+		hd.hd_kh_DienThoai,
+		hd.hd_tien_cam,
+		chuoc.chuoc_tienlai_thoathuan,
+		chuoc.chuoc_tienlai_quahan,
+		chuoc.chuoc_tanggiam,
+		chuoc.chuoc_tongtien,
+		chuoc.chuoc_tongtien - hd.hd_tien_cam as 'tienLoi',
+		chuoc.chuoc_ngaytao,
+		case chuoc.chuoc_ngaytao
+			when (null) then
+				Datediff(day, hd.hd_ngaytao, GETDATE())
+			else
+				Datediff(day, hd.hd_ngaytao, chuoc.chuoc_ngaytao)
+		end as 'aaa'
+	from tbl_Hop_Dong hd
+	left join tbl_Chuoc_Hang chuoc
+		on hd.hd_id = chuoc.hd_id
+	where hd.hd_id = 1671
+	Order by hd.hd_id
+	
+	
+END
 -----------------------------------------------------------------------------------------
 
+select a.cthc_BienSoXe from tbl_Chi_Tiet_Hang_Cam a group by a.hd_id
 
 --test
 

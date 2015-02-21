@@ -42,6 +42,8 @@
          this.dockSite6 = new DevComponents.DotNetBar.DockSite();
          this.dockSite7 = new DevComponents.DotNetBar.DockSite();
          this.bar1 = new DevComponents.DotNetBar.Bar();
+         this.line2 = new DevComponents.DotNetBar.Controls.Line();
+         this.line1 = new DevComponents.DotNetBar.Controls.Line();
          this.bntCamDo = new DevComponents.DotNetBar.LabelItem();
          this.bntQlHangCam = new DevComponents.DotNetBar.LabelItem();
          this.bntThongKe = new DevComponents.DotNetBar.LabelItem();
@@ -51,8 +53,6 @@
          this.lblPadding = new DevComponents.DotNetBar.LabelItem();
          this.bntThoat = new DevComponents.DotNetBar.LabelItem();
          this.dockSite3 = new DevComponents.DotNetBar.DockSite();
-         this.line1 = new DevComponents.DotNetBar.Controls.Line();
-         this.line2 = new DevComponents.DotNetBar.Controls.Line();
          this.dockSite7.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
          this.bar1.SuspendLayout();
@@ -205,6 +205,30 @@
          this.bar1.TabStop = false;
          this.bar1.Text = "bar1";
          // 
+         // line2
+         // 
+         this.line2.BackColor = System.Drawing.Color.Transparent;
+         this.line2.ForeColor = System.Drawing.Color.Black;
+         this.line2.Location = new System.Drawing.Point(392, -1);
+         this.line2.Name = "line2";
+         this.line2.Size = new System.Drawing.Size(15, 84);
+         this.line2.TabIndex = 1;
+         this.line2.Text = "line2";
+         this.line2.Thickness = 2;
+         this.line2.VerticalLine = true;
+         // 
+         // line1
+         // 
+         this.line1.BackColor = System.Drawing.Color.Transparent;
+         this.line1.ForeColor = System.Drawing.Color.Black;
+         this.line1.Location = new System.Drawing.Point(201, 0);
+         this.line1.Name = "line1";
+         this.line1.Size = new System.Drawing.Size(15, 84);
+         this.line1.TabIndex = 0;
+         this.line1.Text = "line1";
+         this.line1.Thickness = 2;
+         this.line1.VerticalLine = true;
+         // 
          // bntCamDo
          // 
          this.bntCamDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -336,35 +360,12 @@
          this.dockSite3.TabIndex = 11;
          this.dockSite3.TabStop = false;
          // 
-         // line1
-         // 
-         this.line1.BackColor = System.Drawing.Color.Transparent;
-         this.line1.ForeColor = System.Drawing.Color.Black;
-         this.line1.Location = new System.Drawing.Point(201, 0);
-         this.line1.Name = "line1";
-         this.line1.Size = new System.Drawing.Size(15, 84);
-         this.line1.TabIndex = 0;
-         this.line1.Text = "line1";
-         this.line1.Thickness = 2;
-         this.line1.VerticalLine = true;
-         // 
-         // line2
-         // 
-         this.line2.BackColor = System.Drawing.Color.Transparent;
-         this.line2.ForeColor = System.Drawing.Color.Black;
-         this.line2.Location = new System.Drawing.Point(392, -1);
-         this.line2.Name = "line2";
-         this.line2.Size = new System.Drawing.Size(15, 84);
-         this.line2.TabIndex = 1;
-         this.line2.Text = "line2";
-         this.line2.Thickness = 2;
-         this.line2.VerticalLine = true;
-         // 
          // MainForm2
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(1022, 603);
+         this.ControlBox = false;
          this.Controls.Add(this.dockSite2);
          this.Controls.Add(this.dockSite1);
          this.Controls.Add(this.dockSite3);
