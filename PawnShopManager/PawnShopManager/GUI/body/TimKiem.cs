@@ -9,6 +9,7 @@ using DevComponents.DotNetBar;
 using System.Globalization;
 using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.DotNetBar.SuperGrid.Style;
+using System.Text.RegularExpressions;
 
 namespace PawnShopManager.GUI.BODY
 {
@@ -24,6 +25,12 @@ namespace PawnShopManager.GUI.BODY
 #region Event
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
+            Regex rg = new Regex("^\\d+$");   
+            if(!txtMaBN.Text.Trim().Equals("") && !rg.IsMatch(txtMaBN.Text)){
+               MessageBox.Show("Yêu cầu chỉ nhập số ở mã BN!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               return;
+            }
+         
             Int32 maBN, loaiHang;
             string tenKH, cmnd, dienThoai, tuNgay, toiNgay;
 
@@ -91,6 +98,7 @@ namespace PawnShopManager.GUI.BODY
            panel.Columns["tienLoi"].HeaderText = "Tiền lời";
            panel.Columns["chuoc_ngaytao"].HeaderText = "Ngày chuộc";
            panel.Columns["tinhTrang"].HeaderText = "Tình trạng";
+           panel.Columns["soNgayCam"].HeaderText = "Số ngày cầm";
 
            panel.Columns[0].CellStyles.Default.Background =
                new Background(Color.AliceBlue);
@@ -144,6 +152,7 @@ namespace PawnShopManager.GUI.BODY
            
         }
         #endregion
+
 #endregion
     }
 }

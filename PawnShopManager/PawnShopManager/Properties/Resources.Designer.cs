@@ -523,6 +523,16 @@ namespace PawnShopManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Settled_credit_record_24 {
+            get {
+                object obj = ResourceManager.GetObject("Settled_credit_record_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap User_128 {
             get {
                 object obj = ResourceManager.GetObject("User_128", resourceCulture);

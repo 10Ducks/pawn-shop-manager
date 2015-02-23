@@ -48,6 +48,8 @@
          this.btnTimKiem = new DevComponents.DotNetBar.ButtonX();
          this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
          this.superGridControl_TimKiem = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
+         this.regularExpressionValidator_maBN = new DevComponents.DotNetBar.Validator.RegularExpressionValidator();
+         this.requiredFieldValidator1 = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Your error message here.");
          ((System.ComponentModel.ISupportInitialize)(this.dateInput_TuNgay)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.dateInput_ToiNgay)).BeginInit();
          this.SuspendLayout();
@@ -400,6 +402,17 @@
          this.superGridControl_TimKiem.TabIndex = 22;
          this.superGridControl_TimKiem.Text = "superGridControl1";
          // 
+         // regularExpressionValidator_maBN
+         // 
+         this.regularExpressionValidator_maBN.ErrorMessage = "Chỉ nhập số!";
+         this.regularExpressionValidator_maBN.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
+         this.regularExpressionValidator_maBN.ValidationExpression = "^[0-9]\\d*$";
+         // 
+         // requiredFieldValidator1
+         // 
+         this.requiredFieldValidator1.ErrorMessage = "Your error message here.";
+         this.requiredFieldValidator1.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
+         // 
          // TimKiem
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -456,5 +469,7 @@
         private DevComponents.Editors.ComboItem cboItemXe;
         private DevComponents.DotNetBar.StyleManager styleManager1;
         private DevComponents.DotNetBar.SuperGrid.SuperGridControl superGridControl_TimKiem;
+        private DevComponents.DotNetBar.Validator.RegularExpressionValidator regularExpressionValidator_maBN;
+        private DevComponents.DotNetBar.Validator.RequiredFieldValidator requiredFieldValidator1;
     }
 }

@@ -29,15 +29,16 @@
       private void InitializeComponent()
       {
          this.components = new System.ComponentModel.Container();
-         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-         System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+         DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn1 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+         DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn2 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+         DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn3 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+         DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn4 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+         DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn5 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+         DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn6 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
          System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CamDo));
          this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+         this.txtDienThoai = new DevComponents.DotNetBar.Controls.TextBoxX();
+         this.txtCMND = new DevComponents.DotNetBar.Controls.TextBoxX();
          this.txtTenKH = new DevComponents.DotNetBar.Controls.TextBoxX();
          this.labelX5 = new DevComponents.DotNetBar.LabelX();
          this.txtDiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -45,6 +46,8 @@
          this.labelX3 = new DevComponents.DotNetBar.LabelX();
          this.labelX2 = new DevComponents.DotNetBar.LabelX();
          this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
+         this.txtLaiSuatQuaHan = new DevComponents.DotNetBar.Controls.TextBoxDropDown();
+         this.txtLaiSuatThoaThuan = new DevComponents.DotNetBar.Controls.TextBoxDropDown();
          this.dateTimeInput_NgayCam = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
          this.btnThemBienNhanMoi = new DevComponents.DotNetBar.ButtonX();
          this.btnVietLai = new DevComponents.DotNetBar.ButtonX();
@@ -63,6 +66,7 @@
          this.labelX13 = new DevComponents.DotNetBar.LabelX();
          this.labelX12 = new DevComponents.DotNetBar.LabelX();
          this.groupVang = new DevComponents.DotNetBar.Controls.GroupPanel();
+         this.dataGridDsHangCam = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
          this.txtTienChu_Xe = new DevComponents.DotNetBar.Controls.TextBoxX();
          this.lblTienChu_Xe = new DevComponents.DotNetBar.LabelX();
          this.txtTienCam_Xe = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -75,13 +79,6 @@
          this.lblTongTien_Vang2 = new DevComponents.DotNetBar.LabelX();
          this.lblTienChu_Vang = new DevComponents.DotNetBar.LabelX();
          this.lblTongTien_Vang1 = new DevComponents.DotNetBar.LabelX();
-         this.dataGridDsHangCam = new DevComponents.DotNetBar.Controls.DataGridViewX();
-         this.clTenVatCam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.clSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.clChatLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.clThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-         this.clHuy = new DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn();
-         this.lblDsHangCam = new DevComponents.DotNetBar.LabelX();
          this.bntThemHangCam = new DevComponents.DotNetBar.ButtonX();
          this.cboLoaiVang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
          this.cboItem_18k = new DevComponents.Editors.ComboItem();
@@ -107,40 +104,36 @@
          this.comboItem2 = new DevComponents.Editors.ComboItem();
          this.comboItem1 = new DevComponents.Editors.ComboItem();
          this.superValidator1 = new DevComponents.DotNetBar.Validator.SuperValidator();
-         this.requiredFieldValidator_tenKH = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập tên người cầm đồ!");
-         this.requiredFieldValidator_DienThoai = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập số điện thoại!");
-         this.requiredFieldValidator_CMND = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập Chứng minh nhân dân!");
-         this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-         this.highlighter1 = new DevComponents.DotNetBar.Validator.Highlighter();
-         this.requiredFieldValidator_cboLoaiVang = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Vui lòng chọn loại vàng!");
-         this.requiredFieldValidator_cboLoaiHang = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Vui lòng chọn loại hàng!");
-         this.regularExpressionValidator_txtSoLuong = new DevComponents.DotNetBar.Validator.RegularExpressionValidator();
-         this.txtCMND = new DevComponents.DotNetBar.Controls.TextBoxX();
-         this.txtDienThoai = new DevComponents.DotNetBar.Controls.TextBoxX();
-         this.regularExpressionValidator_txtCMND = new DevComponents.DotNetBar.Validator.RegularExpressionValidator();
          this.regularExpressionValidator_txtDienThoai = new DevComponents.DotNetBar.Validator.RegularExpressionValidator();
-         this.requiredFieldValidator_txtCMND = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập thông tin CMND!");
          this.requiredFieldValidator_txtDienThoai = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập thông tin số điện thoại!");
-         this.requiredFieldValidator_txtTenVatCam = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập tên vật cầm!");
-         this.regularExpressionValidator_txtTienCam_Vang = new DevComponents.DotNetBar.Validator.RegularExpressionValidator();
-         this.requiredFieldValidator_txtTienCam_Vang = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập số tiền!");
+         this.regularExpressionValidator_txtCMND = new DevComponents.DotNetBar.Validator.RegularExpressionValidator();
+         this.requiredFieldValidator_txtCMND = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập thông tin CMND!");
+         this.requiredFieldValidator_tenKH = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập tên người cầm đồ!");
+         this.requiredFieldValidator_txtLsQuaHan = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập lãi suất quá hạn!");
+         this.regularExpressionValidator_txtLsThoaThuan = new DevComponents.DotNetBar.Validator.RegularExpressionValidator();
          this.regularExpressionValidator_txtTienCam_Xe = new DevComponents.DotNetBar.Validator.RegularExpressionValidator();
          this.requiredFieldValidator_txtTienCam_Xe = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập số tiền cho xe!");
+         this.regularExpressionValidator1 = new DevComponents.DotNetBar.Validator.RegularExpressionValidator();
+         this.requiredFieldValidator_cboLoaiVang = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Vui lòng chọn loại vàng!");
+         this.regularExpressionValidator_txtTienCam_Vang = new DevComponents.DotNetBar.Validator.RegularExpressionValidator();
+         this.requiredFieldValidator_txtTienCam_Vang = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập số tiền!");
+         this.regularExpressionValidator_txtSoLuong = new DevComponents.DotNetBar.Validator.RegularExpressionValidator();
+         this.requiredFieldValidator_txtTenVatCam = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập tên vật cầm!");
+         this.requiredFieldValidator_cboLoaiHang = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Vui lòng chọn loại hàng!");
+         this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+         this.highlighter1 = new DevComponents.DotNetBar.Validator.Highlighter();
+         this.requiredFieldValidator_DienThoai = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập số điện thoại!");
+         this.requiredFieldValidator_CMND = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập Chứng minh nhân dân!");
          this.regularExpressionValidator_LaiThoaThuan = new DevComponents.DotNetBar.Validator.RegularExpressionValidator();
          this.requiredFieldValidator_LaiThoaThuan = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập lãi thỏa thuận");
          this.regularExpressionValidator_LaiQuaHan = new DevComponents.DotNetBar.Validator.RegularExpressionValidator();
          this.requiredFieldValidator_LaiQuaHan = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập lãi suất quá hạn");
-         this.txtLaiSuatThoaThuan = new DevComponents.DotNetBar.Controls.TextBoxDropDown();
-         this.requiredFieldValidator_txtLsQuaHan = new DevComponents.DotNetBar.Validator.RequiredFieldValidator("Yêu cầu nhập lãi suất quá hạn!");
-         this.regularExpressionValidator_txtLsThoaThuan = new DevComponents.DotNetBar.Validator.RegularExpressionValidator();
-         this.txtLaiSuatQuaHan = new DevComponents.DotNetBar.Controls.TextBoxDropDown();
          this.panelEx1.SuspendLayout();
          this.groupPanel4.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput_NgayCam)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.txtThoiHanQuaHan)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.txtThoiHanThoaThuan)).BeginInit();
          this.groupVang.SuspendLayout();
-         ((System.ComponentModel.ISupportInitialize)(this.dataGridDsHangCam)).BeginInit();
          this.groupPanel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
          this.SuspendLayout();
@@ -171,6 +164,40 @@
          this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
          this.panelEx1.Style.GradientAngle = 90;
          this.panelEx1.TabIndex = 10;
+         // 
+         // txtDienThoai
+         // 
+         this.txtDienThoai.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.txtDienThoai.Border.Class = "TextBoxBorder";
+         this.txtDienThoai.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.txtDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+         this.txtDienThoai.ForeColor = System.Drawing.Color.Black;
+         this.txtDienThoai.Location = new System.Drawing.Point(810, 60);
+         this.txtDienThoai.Name = "txtDienThoai";
+         this.txtDienThoai.Size = new System.Drawing.Size(187, 31);
+         this.txtDienThoai.TabIndex = 20;
+         this.superValidator1.SetValidator1(this.txtDienThoai, this.regularExpressionValidator_txtDienThoai);
+         this.superValidator1.SetValidator2(this.txtDienThoai, this.requiredFieldValidator_txtDienThoai);
+         // 
+         // txtCMND
+         // 
+         this.txtCMND.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.txtCMND.Border.Class = "TextBoxBorder";
+         this.txtCMND.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.txtCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+         this.txtCMND.ForeColor = System.Drawing.Color.Black;
+         this.txtCMND.Location = new System.Drawing.Point(494, 63);
+         this.txtCMND.Name = "txtCMND";
+         this.txtCMND.Size = new System.Drawing.Size(141, 31);
+         this.txtCMND.TabIndex = 19;
+         this.superValidator1.SetValidator1(this.txtCMND, this.regularExpressionValidator_txtCMND);
+         this.superValidator1.SetValidator2(this.txtCMND, this.requiredFieldValidator_txtCMND);
          // 
          // txtTenKH
          // 
@@ -333,6 +360,81 @@
          this.groupPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
          this.groupPanel4.TabIndex = 3;
          // 
+         // txtLaiSuatQuaHan
+         // 
+         this.txtLaiSuatQuaHan.AutoCompleteCustomSource.AddRange(new string[] {
+            "2",
+            "3",
+            "3.1",
+            "3.2",
+            "3.3",
+            "3.4",
+            "3.5",
+            "3.6",
+            "3.7",
+            "3.8",
+            "3.9",
+            "4",
+            "4.5",
+            "5"});
+         this.txtLaiSuatQuaHan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+         this.txtLaiSuatQuaHan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+         this.txtLaiSuatQuaHan.AutoSelectAll = true;
+         this.txtLaiSuatQuaHan.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.txtLaiSuatQuaHan.BackgroundStyle.Class = "TextBoxBorder";
+         this.txtLaiSuatQuaHan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.txtLaiSuatQuaHan.ButtonClear.Visible = true;
+         this.txtLaiSuatQuaHan.ForeColor = System.Drawing.Color.Black;
+         this.txtLaiSuatQuaHan.Location = new System.Drawing.Point(134, 86);
+         this.txtLaiSuatQuaHan.Name = "txtLaiSuatQuaHan";
+         this.txtLaiSuatQuaHan.Size = new System.Drawing.Size(66, 19);
+         this.txtLaiSuatQuaHan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+         this.txtLaiSuatQuaHan.TabIndex = 30;
+         this.txtLaiSuatQuaHan.Text = "";
+         this.superValidator1.SetValidator1(this.txtLaiSuatQuaHan, this.requiredFieldValidator_txtLsQuaHan);
+         this.superValidator1.SetValidator2(this.txtLaiSuatQuaHan, this.regularExpressionValidator_txtLsThoaThuan);
+         // 
+         // txtLaiSuatThoaThuan
+         // 
+         this.txtLaiSuatThoaThuan.AutoCompleteCustomSource.AddRange(new string[] {
+            "2",
+            "3",
+            "3.1",
+            "3.2",
+            "3.3",
+            "3.4",
+            "3.5",
+            "3.6",
+            "3.7",
+            "3.8",
+            "3.9",
+            "4",
+            "4.5",
+            "5"});
+         this.txtLaiSuatThoaThuan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+         this.txtLaiSuatThoaThuan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+         this.txtLaiSuatThoaThuan.AutoSelectAll = true;
+         this.txtLaiSuatThoaThuan.BackColor = System.Drawing.Color.White;
+         // 
+         // 
+         // 
+         this.txtLaiSuatThoaThuan.BackgroundStyle.Class = "TextBoxBorder";
+         this.txtLaiSuatThoaThuan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+         this.txtLaiSuatThoaThuan.ButtonClear.Visible = true;
+         this.txtLaiSuatThoaThuan.CausesValidation = false;
+         this.txtLaiSuatThoaThuan.ForeColor = System.Drawing.Color.Black;
+         this.txtLaiSuatThoaThuan.Location = new System.Drawing.Point(134, 59);
+         this.txtLaiSuatThoaThuan.Name = "txtLaiSuatThoaThuan";
+         this.txtLaiSuatThoaThuan.Size = new System.Drawing.Size(66, 19);
+         this.txtLaiSuatThoaThuan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+         this.txtLaiSuatThoaThuan.TabIndex = 29;
+         this.txtLaiSuatThoaThuan.Text = "";
+         this.superValidator1.SetValidator1(this.txtLaiSuatThoaThuan, this.requiredFieldValidator_txtLsQuaHan);
+         this.superValidator1.SetValidator2(this.txtLaiSuatThoaThuan, this.regularExpressionValidator_txtLsThoaThuan);
+         // 
          // dateTimeInput_NgayCam
          // 
          this.dateTimeInput_NgayCam.AllowEmptyState = false;
@@ -387,6 +489,7 @@
          this.dateTimeInput_NgayCam.Size = new System.Drawing.Size(126, 26);
          this.dateTimeInput_NgayCam.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
          this.dateTimeInput_NgayCam.TabIndex = 28;
+         this.dateTimeInput_NgayCam.Value = new System.DateTime(2015, 2, 21, 10, 19, 37, 230);
          // 
          // btnThemBienNhanMoi
          // 
@@ -660,6 +763,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
          this.groupVang.BackColor = System.Drawing.Color.White;
          this.groupVang.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
+         this.groupVang.Controls.Add(this.dataGridDsHangCam);
          this.groupVang.Controls.Add(this.txtTienChu_Xe);
          this.groupVang.Controls.Add(this.lblTienChu_Xe);
          this.groupVang.Controls.Add(this.txtTienCam_Xe);
@@ -672,8 +776,6 @@
          this.groupVang.Controls.Add(this.lblTongTien_Vang2);
          this.groupVang.Controls.Add(this.lblTienChu_Vang);
          this.groupVang.Controls.Add(this.lblTongTien_Vang1);
-         this.groupVang.Controls.Add(this.dataGridDsHangCam);
-         this.groupVang.Controls.Add(this.lblDsHangCam);
          this.groupVang.Controls.Add(this.bntThemHangCam);
          this.groupVang.Controls.Add(this.cboLoaiVang);
          this.groupVang.Controls.Add(this.lbl_2);
@@ -718,6 +820,47 @@
          // 
          this.groupVang.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
          this.groupVang.TabIndex = 2;
+         // 
+         // dataGridDsHangCam
+         // 
+         this.dataGridDsHangCam.BackColor = System.Drawing.Color.White;
+         this.dataGridDsHangCam.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
+         this.dataGridDsHangCam.ForeColor = System.Drawing.Color.Black;
+         this.dataGridDsHangCam.Location = new System.Drawing.Point(21, 111);
+         this.dataGridDsHangCam.Name = "dataGridDsHangCam";
+         gridColumn1.AllowEdit = false;
+         gridColumn1.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+         gridColumn1.HeaderText = "Tên mặt hàng";
+         gridColumn1.Name = "tenMH";
+         gridColumn2.AllowEdit = false;
+         gridColumn2.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+         gridColumn2.HeaderText = "Số lượng (chỉ)";
+         gridColumn2.Name = "soLuong";
+         gridColumn3.AllowEdit = false;
+         gridColumn3.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+         gridColumn3.HeaderText = "Loại vàng";
+         gridColumn3.Name = "loaiVang";
+         gridColumn4.AllowEdit = false;
+         gridColumn4.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+         gridColumn4.HeaderText = "Tiền cầm";
+         gridColumn4.Name = "giatri";
+         gridColumn5.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
+         gridColumn5.HeaderText = "Hủy";
+         gridColumn5.InfoImageAlignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+         gridColumn5.Name = "huy";
+         gridColumn6.Name = "loai";
+         gridColumn6.Visible = false;
+         this.dataGridDsHangCam.PrimaryGrid.Columns.Add(gridColumn1);
+         this.dataGridDsHangCam.PrimaryGrid.Columns.Add(gridColumn2);
+         this.dataGridDsHangCam.PrimaryGrid.Columns.Add(gridColumn3);
+         this.dataGridDsHangCam.PrimaryGrid.Columns.Add(gridColumn4);
+         this.dataGridDsHangCam.PrimaryGrid.Columns.Add(gridColumn5);
+         this.dataGridDsHangCam.PrimaryGrid.Columns.Add(gridColumn6);
+         this.dataGridDsHangCam.PrimaryGrid.MultiSelect = false;
+         this.dataGridDsHangCam.PrimaryGrid.SelectionGranularity = DevComponents.DotNetBar.SuperGrid.SelectionGranularity.RowWithCellHighlight;
+         this.dataGridDsHangCam.Size = new System.Drawing.Size(853, 115);
+         this.dataGridDsHangCam.TabIndex = 30;
+         this.dataGridDsHangCam.Text = "superGridControl1";
          // 
          // txtTienChu_Xe
          // 
@@ -891,12 +1034,13 @@
          this.txtTienChu_Vang.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
          this.txtTienChu_Vang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
          this.txtTienChu_Vang.ForeColor = System.Drawing.Color.Black;
-         this.txtTienChu_Vang.Location = new System.Drawing.Point(213, 259);
+         this.txtTienChu_Vang.Location = new System.Drawing.Point(213, 271);
          this.txtTienChu_Vang.Multiline = true;
          this.txtTienChu_Vang.Name = "txtTienChu_Vang";
          this.txtTienChu_Vang.ReadOnly = true;
          this.txtTienChu_Vang.Size = new System.Drawing.Size(806, 26);
          this.txtTienChu_Vang.TabIndex = 19;
+         this.superValidator1.SetValidator1(this.txtTienChu_Vang, this.regularExpressionValidator1);
          // 
          // lblTongTien_Vang2
          // 
@@ -911,7 +1055,7 @@
          this.lblTongTien_Vang2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
          this.lblTongTien_Vang2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
          this.lblTongTien_Vang2.ForeColor = System.Drawing.Color.Black;
-         this.lblTongTien_Vang2.Location = new System.Drawing.Point(213, 219);
+         this.lblTongTien_Vang2.Location = new System.Drawing.Point(213, 232);
          this.lblTongTien_Vang2.Name = "lblTongTien_Vang2";
          this.lblTongTien_Vang2.Size = new System.Drawing.Size(409, 27);
          this.lblTongTien_Vang2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
@@ -931,9 +1075,9 @@
          this.lblTienChu_Vang.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
          this.lblTienChu_Vang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.lblTienChu_Vang.ForeColor = System.Drawing.Color.Black;
-         this.lblTienChu_Vang.Location = new System.Drawing.Point(21, 259);
+         this.lblTienChu_Vang.Location = new System.Drawing.Point(21, 270);
          this.lblTienChu_Vang.Name = "lblTienChu_Vang";
-         this.lblTienChu_Vang.Size = new System.Drawing.Size(0, 27);
+         this.lblTienChu_Vang.Size = new System.Drawing.Size(188, 27);
          this.lblTienChu_Vang.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
          this.lblTienChu_Vang.TabIndex = 17;
          this.lblTienChu_Vang.Text = "Số tiền bằng chữ:";
@@ -951,146 +1095,12 @@
          this.lblTongTien_Vang1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
          this.lblTongTien_Vang1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.lblTongTien_Vang1.ForeColor = System.Drawing.Color.Black;
-         this.lblTongTien_Vang1.Location = new System.Drawing.Point(21, 219);
+         this.lblTongTien_Vang1.Location = new System.Drawing.Point(24, 232);
          this.lblTongTien_Vang1.Name = "lblTongTien_Vang1";
-         this.lblTongTien_Vang1.Size = new System.Drawing.Size(0, 27);
+         this.lblTongTien_Vang1.Size = new System.Drawing.Size(179, 27);
          this.lblTongTien_Vang1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
          this.lblTongTien_Vang1.TabIndex = 16;
          this.lblTongTien_Vang1.Text = "Tổng tiền cầm:";
-         // 
-         // dataGridDsHangCam
-         // 
-         this.dataGridDsHangCam.AllowUserToAddRows = false;
-         this.dataGridDsHangCam.AllowUserToDeleteRows = false;
-         this.dataGridDsHangCam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-         this.dataGridDsHangCam.BackgroundColor = System.Drawing.Color.White;
-         this.dataGridDsHangCam.BorderStyle = System.Windows.Forms.BorderStyle.None;
-         dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-         dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-         dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-         dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-         dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-         dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-         this.dataGridDsHangCam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-         this.dataGridDsHangCam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-         this.dataGridDsHangCam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clTenVatCam,
-            this.clSoLuong,
-            this.clChatLuong,
-            this.clThanhTien,
-            this.clHuy});
-         dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-         dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-         dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-         dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-         dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-         dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-         this.dataGridDsHangCam.DefaultCellStyle = dataGridViewCellStyle6;
-         this.dataGridDsHangCam.EnableHeadersVisualStyles = false;
-         this.dataGridDsHangCam.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-         this.dataGridDsHangCam.Location = new System.Drawing.Point(21, 141);
-         this.dataGridDsHangCam.MultiSelect = false;
-         this.dataGridDsHangCam.Name = "dataGridDsHangCam";
-         this.dataGridDsHangCam.ReadOnly = true;
-         dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-         dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-         dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-         dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-         dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-         dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-         this.dataGridDsHangCam.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-         this.dataGridDsHangCam.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-         this.dataGridDsHangCam.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Transparent;
-         this.dataGridDsHangCam.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(1);
-         this.dataGridDsHangCam.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-         this.dataGridDsHangCam.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-         this.dataGridDsHangCam.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-         this.dataGridDsHangCam.Size = new System.Drawing.Size(853, 74);
-         this.dataGridDsHangCam.TabIndex = 15;
-         // 
-         // clTenVatCam
-         // 
-         dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-         this.clTenVatCam.DefaultCellStyle = dataGridViewCellStyle2;
-         this.clTenVatCam.FillWeight = 45.68528F;
-         this.clTenVatCam.Frozen = true;
-         this.clTenVatCam.HeaderText = "Tên vật cầm";
-         this.clTenVatCam.Name = "clTenVatCam";
-         this.clTenVatCam.ReadOnly = true;
-         this.clTenVatCam.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-         this.clTenVatCam.Width = 162;
-         // 
-         // clSoLuong
-         // 
-         dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-         this.clSoLuong.DefaultCellStyle = dataGridViewCellStyle3;
-         this.clSoLuong.FillWeight = 45.68528F;
-         this.clSoLuong.Frozen = true;
-         this.clSoLuong.HeaderText = "Số lượng (chỉ)";
-         this.clSoLuong.Name = "clSoLuong";
-         this.clSoLuong.ReadOnly = true;
-         this.clSoLuong.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-         this.clSoLuong.Width = 162;
-         // 
-         // clChatLuong
-         // 
-         dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-         this.clChatLuong.DefaultCellStyle = dataGridViewCellStyle4;
-         this.clChatLuong.FillWeight = 45.68528F;
-         this.clChatLuong.Frozen = true;
-         this.clChatLuong.HeaderText = "Chất lượng";
-         this.clChatLuong.Name = "clChatLuong";
-         this.clChatLuong.ReadOnly = true;
-         this.clChatLuong.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-         this.clChatLuong.Width = 163;
-         // 
-         // clThanhTien
-         // 
-         dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-         this.clThanhTien.DefaultCellStyle = dataGridViewCellStyle5;
-         this.clThanhTien.FillWeight = 317.2589F;
-         this.clThanhTien.Frozen = true;
-         this.clThanhTien.HeaderText = "Thành tiền";
-         this.clThanhTien.Name = "clThanhTien";
-         this.clThanhTien.ReadOnly = true;
-         this.clThanhTien.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-         this.clThanhTien.Width = 225;
-         // 
-         // clHuy
-         // 
-         this.clHuy.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-         this.clHuy.FillWeight = 45.68528F;
-         this.clHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-         this.clHuy.Frozen = true;
-         this.clHuy.HeaderText = "Hủy";
-         this.clHuy.Name = "clHuy";
-         this.clHuy.ReadOnly = true;
-         this.clHuy.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-         this.clHuy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-         this.clHuy.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.clHuy.Text = "Hủy";
-         // 
-         // lblDsHangCam
-         // 
-         this.lblDsHangCam.BackColor = System.Drawing.Color.Transparent;
-         // 
-         // 
-         // 
-         this.lblDsHangCam.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-         this.lblDsHangCam.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
-         this.lblDsHangCam.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.lblDsHangCam.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblDsHangCam.ForeColor = System.Drawing.Color.Black;
-         this.lblDsHangCam.Location = new System.Drawing.Point(10, 109);
-         this.lblDsHangCam.Name = "lblDsHangCam";
-         this.lblDsHangCam.Size = new System.Drawing.Size(237, 31);
-         this.lblDsHangCam.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
-         this.lblDsHangCam.TabIndex = 14;
-         this.lblDsHangCam.Text = "Danh sách hàng cầm";
          // 
          // bntThemHangCam
          // 
@@ -1287,7 +1297,6 @@
          this.chboxNhieuMon.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
          this.chboxNhieuMon.TabIndex = 3;
          this.chboxNhieuMon.Text = "Nhiều món";
-         this.chboxNhieuMon.CheckedChanged += new System.EventHandler(this.chboxNhieuMon_CheckedChanged);
          // 
          // chboxMotMon
          // 
@@ -1305,7 +1314,6 @@
          this.chboxMotMon.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
          this.chboxMotMon.TabIndex = 2;
          this.chboxMotMon.Text = "Một món";
-         this.chboxMotMon.CheckedChanged += new System.EventHandler(this.chboxMotMon_CheckedChanged);
          // 
          // labelX6
          // 
@@ -1318,7 +1326,7 @@
          this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
          this.labelX6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.labelX6.ForeColor = System.Drawing.Color.Black;
-         this.labelX6.Location = new System.Drawing.Point(10, -6);
+         this.labelX6.Location = new System.Drawing.Point(21, -5);
          this.labelX6.Name = "labelX6";
          this.labelX6.Size = new System.Drawing.Size(196, 36);
          this.labelX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
@@ -1450,79 +1458,16 @@
          this.superValidator1.Highlighter = this.highlighter1;
          this.superValidator1.ValidationType = DevComponents.DotNetBar.Validator.eValidationType.ValidatingEventPerControl;
          // 
-         // requiredFieldValidator_tenKH
+         // regularExpressionValidator_txtDienThoai
          // 
-         this.requiredFieldValidator_tenKH.ErrorMessage = "Yêu cầu nhập tên người cầm đồ!";
-         this.requiredFieldValidator_tenKH.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
+         this.regularExpressionValidator_txtDienThoai.ErrorMessage = "Yêu cầu chỉ nhập số!";
+         this.regularExpressionValidator_txtDienThoai.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Orange;
+         this.regularExpressionValidator_txtDienThoai.ValidationExpression = "^[0-9]*$";
          // 
-         // requiredFieldValidator_DienThoai
+         // requiredFieldValidator_txtDienThoai
          // 
-         this.requiredFieldValidator_DienThoai.ErrorMessage = "Yêu cầu nhập số điện thoại!";
-         this.requiredFieldValidator_DienThoai.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
-         // 
-         // requiredFieldValidator_CMND
-         // 
-         this.requiredFieldValidator_CMND.ErrorMessage = "Yêu cầu nhập Chứng minh nhân dân!";
-         this.requiredFieldValidator_CMND.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
-         // 
-         // errorProvider1
-         // 
-         this.errorProvider1.ContainerControl = this;
-         this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
-         // 
-         // highlighter1
-         // 
-         this.highlighter1.ContainerControl = this;
-         // 
-         // requiredFieldValidator_cboLoaiVang
-         // 
-         this.requiredFieldValidator_cboLoaiVang.ErrorMessage = "Vui lòng chọn loại vàng!";
-         this.requiredFieldValidator_cboLoaiVang.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
-         // 
-         // requiredFieldValidator_cboLoaiHang
-         // 
-         this.requiredFieldValidator_cboLoaiHang.ErrorMessage = "Vui lòng chọn loại hàng!";
-         this.requiredFieldValidator_cboLoaiHang.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
-         // 
-         // regularExpressionValidator_txtSoLuong
-         // 
-         this.regularExpressionValidator_txtSoLuong.ErrorMessage = "Yêu cầu chỉ nhập số!";
-         this.regularExpressionValidator_txtSoLuong.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
-         this.regularExpressionValidator_txtSoLuong.ValidationExpression = "^[0-9]*$";
-         // 
-         // txtCMND
-         // 
-         this.txtCMND.BackColor = System.Drawing.Color.White;
-         // 
-         // 
-         // 
-         this.txtCMND.Border.Class = "TextBoxBorder";
-         this.txtCMND.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-         this.txtCMND.ForeColor = System.Drawing.Color.Black;
-         this.txtCMND.Location = new System.Drawing.Point(494, 63);
-         this.txtCMND.Name = "txtCMND";
-         this.txtCMND.Size = new System.Drawing.Size(141, 31);
-         this.txtCMND.TabIndex = 19;
-         this.superValidator1.SetValidator1(this.txtCMND, this.regularExpressionValidator_txtCMND);
-         this.superValidator1.SetValidator2(this.txtCMND, this.requiredFieldValidator_txtCMND);
-         // 
-         // txtDienThoai
-         // 
-         this.txtDienThoai.BackColor = System.Drawing.Color.White;
-         // 
-         // 
-         // 
-         this.txtDienThoai.Border.Class = "TextBoxBorder";
-         this.txtDienThoai.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-         this.txtDienThoai.ForeColor = System.Drawing.Color.Black;
-         this.txtDienThoai.Location = new System.Drawing.Point(810, 60);
-         this.txtDienThoai.Name = "txtDienThoai";
-         this.txtDienThoai.Size = new System.Drawing.Size(187, 31);
-         this.txtDienThoai.TabIndex = 20;
-         this.superValidator1.SetValidator1(this.txtDienThoai, this.regularExpressionValidator_txtDienThoai);
-         this.superValidator1.SetValidator2(this.txtDienThoai, this.requiredFieldValidator_txtDienThoai);
+         this.requiredFieldValidator_txtDienThoai.ErrorMessage = "Yêu cầu nhập thông tin số điện thoại!";
+         this.requiredFieldValidator_txtDienThoai.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
          // 
          // regularExpressionValidator_txtCMND
          // 
@@ -1530,26 +1475,47 @@
          this.regularExpressionValidator_txtCMND.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Orange;
          this.regularExpressionValidator_txtCMND.ValidationExpression = "^[0-9]*$";
          // 
-         // regularExpressionValidator_txtDienThoai
-         // 
-         this.regularExpressionValidator_txtDienThoai.ErrorMessage = "Yêu cầu chỉ nhập số!";
-         this.regularExpressionValidator_txtDienThoai.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Orange;
-         this.regularExpressionValidator_txtDienThoai.ValidationExpression = "^[0-9]*$";
-         // 
          // requiredFieldValidator_txtCMND
          // 
          this.requiredFieldValidator_txtCMND.ErrorMessage = "Yêu cầu nhập thông tin CMND!";
          this.requiredFieldValidator_txtCMND.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
          // 
-         // requiredFieldValidator_txtDienThoai
+         // requiredFieldValidator_tenKH
          // 
-         this.requiredFieldValidator_txtDienThoai.ErrorMessage = "Yêu cầu nhập thông tin số điện thoại!";
-         this.requiredFieldValidator_txtDienThoai.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
+         this.requiredFieldValidator_tenKH.ErrorMessage = "Yêu cầu nhập tên người cầm đồ!";
+         this.requiredFieldValidator_tenKH.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
          // 
-         // requiredFieldValidator_txtTenVatCam
+         // requiredFieldValidator_txtLsQuaHan
          // 
-         this.requiredFieldValidator_txtTenVatCam.ErrorMessage = "Yêu cầu nhập tên vật cầm!";
-         this.requiredFieldValidator_txtTenVatCam.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
+         this.requiredFieldValidator_txtLsQuaHan.ErrorMessage = "Yêu cầu nhập lãi suất quá hạn!";
+         this.requiredFieldValidator_txtLsQuaHan.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
+         // 
+         // regularExpressionValidator_txtLsThoaThuan
+         // 
+         this.regularExpressionValidator_txtLsThoaThuan.ErrorMessage = "Yêu cầu nhập đúng kiểu!";
+         this.regularExpressionValidator_txtLsThoaThuan.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Orange;
+         this.regularExpressionValidator_txtLsThoaThuan.ValidationExpression = "(?:\\d*\\.)?\\d+";
+         // 
+         // regularExpressionValidator_txtTienCam_Xe
+         // 
+         this.regularExpressionValidator_txtTienCam_Xe.ErrorMessage = "Yêu cầu chỉ nhập số!";
+         this.regularExpressionValidator_txtTienCam_Xe.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Orange;
+         this.regularExpressionValidator_txtTienCam_Xe.ValidationExpression = "^[0-9]*$";
+         // 
+         // requiredFieldValidator_txtTienCam_Xe
+         // 
+         this.requiredFieldValidator_txtTienCam_Xe.ErrorMessage = "Yêu cầu nhập số tiền cho xe!";
+         this.requiredFieldValidator_txtTienCam_Xe.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
+         // 
+         // regularExpressionValidator1
+         // 
+         this.regularExpressionValidator1.ErrorMessage = "Your error message here.";
+         this.regularExpressionValidator1.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
+         // 
+         // requiredFieldValidator_cboLoaiVang
+         // 
+         this.requiredFieldValidator_cboLoaiVang.ErrorMessage = "Vui lòng chọn loại vàng!";
+         this.requiredFieldValidator_cboLoaiVang.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
          // 
          // regularExpressionValidator_txtTienCam_Vang
          // 
@@ -1562,16 +1528,40 @@
          this.requiredFieldValidator_txtTienCam_Vang.ErrorMessage = "Yêu cầu nhập số tiền!";
          this.requiredFieldValidator_txtTienCam_Vang.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
          // 
-         // regularExpressionValidator_txtTienCam_Xe
+         // regularExpressionValidator_txtSoLuong
          // 
-         this.regularExpressionValidator_txtTienCam_Xe.ErrorMessage = "Yêu cầu chỉ nhập số!";
-         this.regularExpressionValidator_txtTienCam_Xe.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Orange;
-         this.regularExpressionValidator_txtTienCam_Xe.ValidationExpression = "^[0-9]*$";
+         this.regularExpressionValidator_txtSoLuong.ErrorMessage = "Yêu cầu chỉ nhập số!";
+         this.regularExpressionValidator_txtSoLuong.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
+         this.regularExpressionValidator_txtSoLuong.ValidationExpression = "^[0-9]*$";
          // 
-         // requiredFieldValidator_txtTienCam_Xe
+         // requiredFieldValidator_txtTenVatCam
          // 
-         this.requiredFieldValidator_txtTienCam_Xe.ErrorMessage = "Yêu cầu nhập số tiền cho xe!";
-         this.requiredFieldValidator_txtTienCam_Xe.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
+         this.requiredFieldValidator_txtTenVatCam.ErrorMessage = "Yêu cầu nhập tên vật cầm!";
+         this.requiredFieldValidator_txtTenVatCam.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
+         // 
+         // requiredFieldValidator_cboLoaiHang
+         // 
+         this.requiredFieldValidator_cboLoaiHang.ErrorMessage = "Vui lòng chọn loại hàng!";
+         this.requiredFieldValidator_cboLoaiHang.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
+         // 
+         // errorProvider1
+         // 
+         this.errorProvider1.ContainerControl = this;
+         this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+         // 
+         // highlighter1
+         // 
+         this.highlighter1.ContainerControl = this;
+         // 
+         // requiredFieldValidator_DienThoai
+         // 
+         this.requiredFieldValidator_DienThoai.ErrorMessage = "Yêu cầu nhập số điện thoại!";
+         this.requiredFieldValidator_DienThoai.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
+         // 
+         // requiredFieldValidator_CMND
+         // 
+         this.requiredFieldValidator_CMND.ErrorMessage = "Yêu cầu nhập Chứng minh nhân dân!";
+         this.requiredFieldValidator_CMND.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
          // 
          // regularExpressionValidator_LaiThoaThuan
          // 
@@ -1594,88 +1584,6 @@
          // 
          this.requiredFieldValidator_LaiQuaHan.ErrorMessage = "Yêu cầu nhập lãi suất quá hạn";
          this.requiredFieldValidator_LaiQuaHan.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
-         // 
-         // txtLaiSuatThoaThuan
-         // 
-         this.txtLaiSuatThoaThuan.AutoCompleteCustomSource.AddRange(new string[] {
-            "2",
-            "3",
-            "3.1",
-            "3.2",
-            "3.3",
-            "3.4",
-            "3.5",
-            "3.6",
-            "3.7",
-            "3.8",
-            "3.9",
-            "4",
-            "4.5",
-            "5"});
-         this.txtLaiSuatThoaThuan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-         this.txtLaiSuatThoaThuan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-         this.txtLaiSuatThoaThuan.AutoSelectAll = true;
-         // 
-         // 
-         // 
-         this.txtLaiSuatThoaThuan.BackgroundStyle.Class = "TextBoxBorder";
-         this.txtLaiSuatThoaThuan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtLaiSuatThoaThuan.ButtonClear.Visible = true;
-         this.txtLaiSuatThoaThuan.CausesValidation = false;
-         this.txtLaiSuatThoaThuan.Location = new System.Drawing.Point(134, 59);
-         this.txtLaiSuatThoaThuan.Name = "txtLaiSuatThoaThuan";
-         this.txtLaiSuatThoaThuan.Size = new System.Drawing.Size(66, 19);
-         this.txtLaiSuatThoaThuan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-         this.txtLaiSuatThoaThuan.TabIndex = 29;
-         this.txtLaiSuatThoaThuan.Text = "";
-         this.superValidator1.SetValidator1(this.txtLaiSuatThoaThuan, this.requiredFieldValidator_txtLsQuaHan);
-         this.superValidator1.SetValidator2(this.txtLaiSuatThoaThuan, this.regularExpressionValidator_txtLsThoaThuan);
-         // 
-         // requiredFieldValidator_txtLsQuaHan
-         // 
-         this.requiredFieldValidator_txtLsQuaHan.ErrorMessage = "Yêu cầu nhập lãi suất quá hạn!";
-         this.requiredFieldValidator_txtLsQuaHan.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
-         // 
-         // regularExpressionValidator_txtLsThoaThuan
-         // 
-         this.regularExpressionValidator_txtLsThoaThuan.ErrorMessage = "Yêu cầu nhập đúng kiểu!";
-         this.regularExpressionValidator_txtLsThoaThuan.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Orange;
-         this.regularExpressionValidator_txtLsThoaThuan.ValidationExpression = "(?:\\d*\\.)?\\d+";
-         // 
-         // txtLaiSuatQuaHan
-         // 
-         this.txtLaiSuatQuaHan.AutoCompleteCustomSource.AddRange(new string[] {
-            "2",
-            "3",
-            "3.1",
-            "3.2",
-            "3.3",
-            "3.4",
-            "3.5",
-            "3.6",
-            "3.7",
-            "3.8",
-            "3.9",
-            "4",
-            "4.5",
-            "5"});
-         this.txtLaiSuatQuaHan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-         this.txtLaiSuatQuaHan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-         this.txtLaiSuatQuaHan.AutoSelectAll = true;
-         // 
-         // 
-         // 
-         this.txtLaiSuatQuaHan.BackgroundStyle.Class = "TextBoxBorder";
-         this.txtLaiSuatQuaHan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-         this.txtLaiSuatQuaHan.ButtonClear.Visible = true;
-         this.txtLaiSuatQuaHan.Location = new System.Drawing.Point(134, 86);
-         this.txtLaiSuatQuaHan.Name = "txtLaiSuatQuaHan";
-         this.txtLaiSuatQuaHan.Size = new System.Drawing.Size(66, 19);
-         this.txtLaiSuatQuaHan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-         this.txtLaiSuatQuaHan.TabIndex = 30;
-         this.txtLaiSuatQuaHan.Text = "";
-         this.superValidator1.SetValidator1(this.txtLaiSuatQuaHan, this.requiredFieldValidator_txtLsQuaHan);
-         this.superValidator1.SetValidator2(this.txtLaiSuatQuaHan, this.regularExpressionValidator_txtLsThoaThuan);
          // 
          // CamDo
          // 
@@ -1700,7 +1608,6 @@
          ((System.ComponentModel.ISupportInitialize)(this.txtThoiHanQuaHan)).EndInit();
          ((System.ComponentModel.ISupportInitialize)(this.txtThoiHanThoaThuan)).EndInit();
          this.groupVang.ResumeLayout(false);
-         ((System.ComponentModel.ISupportInitialize)(this.dataGridDsHangCam)).EndInit();
          this.groupPanel1.ResumeLayout(false);
          ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
          this.ResumeLayout(false);
@@ -1732,17 +1639,8 @@
       public DevComponents.DotNetBar.Controls.ComboBoxEx cboLoaiHang;
       private DevComponents.DotNetBar.Controls.TextBoxX txtChatLuong;
       private DevComponents.DotNetBar.Controls.TextBoxX txtLoaiXe;
-      private DevComponents.DotNetBar.Controls.TextBoxX txtTienChu_Vang;
-      private DevComponents.DotNetBar.LabelX lblTongTien_Vang2;
       private DevComponents.DotNetBar.LabelX lblTienChu_Vang;
       private DevComponents.DotNetBar.LabelX lblTongTien_Vang1;
-      private DevComponents.DotNetBar.Controls.DataGridViewX dataGridDsHangCam;
-      private System.Windows.Forms.DataGridViewTextBoxColumn clTenVatCam;
-      private System.Windows.Forms.DataGridViewTextBoxColumn clSoLuong;
-      private System.Windows.Forms.DataGridViewTextBoxColumn clChatLuong;
-      private System.Windows.Forms.DataGridViewTextBoxColumn clThanhTien;
-      private DevComponents.DotNetBar.Controls.DataGridViewButtonXColumn clHuy;
-      private DevComponents.DotNetBar.LabelX lblDsHangCam;
       private DevComponents.DotNetBar.ButtonX bntThemHangCam;
       private DevComponents.DotNetBar.Controls.ComboBoxEx cboLoaiVang;
       private DevComponents.DotNetBar.LabelX lbl_2;
@@ -1806,6 +1704,10 @@
       private DevComponents.DotNetBar.Controls.TextBoxDropDown txtLaiSuatQuaHan;
       private DevComponents.DotNetBar.Validator.RequiredFieldValidator requiredFieldValidator_txtLsQuaHan;
       private DevComponents.DotNetBar.Validator.RegularExpressionValidator regularExpressionValidator_txtLsThoaThuan;
+      private DevComponents.DotNetBar.Validator.RegularExpressionValidator regularExpressionValidator1;
+      public DevComponents.DotNetBar.Controls.TextBoxX txtTienChu_Vang;
+      public DevComponents.DotNetBar.LabelX lblTongTien_Vang2;
+      private DevComponents.DotNetBar.SuperGrid.SuperGridControl dataGridDsHangCam;
 
    }
 }

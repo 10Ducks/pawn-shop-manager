@@ -274,6 +274,7 @@
     <Content Include="Images\normal\User-32.png" />
     <Content Include="Images\normal\Vline.PNG" />
     <Content Include="Images\rec-white-icon.ico" />
+    <Content Include="Images\Settled credit record-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

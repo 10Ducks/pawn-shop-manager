@@ -13,6 +13,22 @@ namespace PawnShopManager.Dao
       public bool themChiTietHangCam_Vang(int hd_id, int soLuong, string tenMH, float giatri, int loai){
          try
          {
+            string chatLuong;
+            switch(loai)
+            {
+               case 2:
+                  chatLuong = "Vàng 18k";
+                  break;
+               case 3:
+                  chatLuong = "Vàng 24k";
+                  break;
+               case 4:
+                  chatLuong = "Vàng trắng";
+                  break;
+               default:
+                  chatLuong = "Vàng";
+                  break;
+            }
             SqlConnection conn = DbProviderFactory.getInstance().connectDB();
 
             SqlCommand command = new SqlCommand();
@@ -24,6 +40,7 @@ namespace PawnShopManager.Dao
             command.Parameters.Add("@tenMH", System.Data.SqlDbType.NVarChar).Value = tenMH;
             command.Parameters.Add("@giatri", System.Data.SqlDbType.Float).Value = giatri;
             command.Parameters.Add("@loai", System.Data.SqlDbType.Int).Value = loai;
+            command.Parameters.Add("@chatLuong", System.Data.SqlDbType.NVarChar).Value = chatLuong;
 
             command.ExecuteNonQuery();
 
