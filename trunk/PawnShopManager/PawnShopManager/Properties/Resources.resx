@@ -271,4 +271,7 @@
   <data name="Document_Edit_48_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\hover\document-edit-48 hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Settled_credit_record_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\settled credit record-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
