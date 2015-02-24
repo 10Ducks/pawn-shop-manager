@@ -4,13 +4,7 @@ using DevComponents.DotNetBar.SuperGrid.Style;
 using PawnShopManager.Util;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PawnShopManager.GUI.BODY
@@ -22,6 +16,9 @@ namespace PawnShopManager.GUI.BODY
       public CamDo()
       {
          InitializeComponent();
+         setTabIndex();
+
+         dateTimeInput_NgayCam.Value = DateTime.Now;
 
          cboLoaiHang.SelectedIndex = 0;
          cboLoaiVang.SelectedIndex = 0;
@@ -41,7 +38,7 @@ namespace PawnShopManager.GUI.BODY
       }
 
 #region Event
-      
+      #region thay đổi trạng thái checkbox 1 món
       private void changeStateCheckboxHandler_MotMon(object sender, EventArgs e){
          if (chboxMotMon.Checked)
          {
@@ -55,7 +52,9 @@ namespace PawnShopManager.GUI.BODY
             chboxMotMon.Checked = true;
          }
       }
+      #endregion
 
+      #region thay đổi trạng thái checkbox nhiều món
       private void changeStateCheckboxHandler_NhieuMon(object sender, EventArgs e)
       {
          if (chboxNhieuMon.Checked)
@@ -71,7 +70,9 @@ namespace PawnShopManager.GUI.BODY
             chboxNhieuMon.Checked = true;
          }
       }
-      
+      #endregion
+
+      #region thay đổi chỉ số cboLoaiHang
       private void cboLoaiHang_SelectedIndexChanged(object sender, EventArgs e)
       {
          if (cboLoaiHang.SelectedIndex == 0)
@@ -86,43 +87,9 @@ namespace PawnShopManager.GUI.BODY
          }
          superValidator1.Enabled = true;
       }
+      #endregion
 
-      private void txtCMND_MouseEnter(object sender, EventArgs e)
-      {
-         if (txtCMND.SelectionStart > txtCMND.Text.Length)
-         {
-            txtCMND.SelectionStart = txtCMND.Text.Length;
-            txtCMND.Focus();
-         }
-      }
-
-      private void txtBienSoXe_MouseEnter(object sender, EventArgs e)
-      {
-         string[] bs = txtBienSoXe.Text.Split('-');
-         if (bs[0].Trim().Length < 4 && txtBienSoXe.SelectionStart > 4)
-         {
-            txtBienSoXe.SelectionStart = bs[0].Trim().Length;
-            txtBienSoXe.Focus();
-         }
-         else
-         {
-            if (bs[1].Trim().Length < 5 && txtBienSoXe.SelectionStart > txtBienSoXe.Text.Length)
-            {
-               txtBienSoXe.SelectionStart = bs[1].Trim().Length + 7;
-               txtBienSoXe.Focus();
-            }
-         }
-      }
-
-      private void txtDienThoai_MouseEnter(object sender, EventArgs e)
-      {
-         if (txtDienThoai.SelectionStart > txtDienThoai.Text.Length)
-         {
-            txtDienThoai.SelectionStart = txtDienThoai.Text.Length;
-            txtDienThoai.Focus();
-         }
-      }
-
+      #region click nút thêm hàng cầm
       private void bntThemHangCam_Click(object sender, EventArgs e)
       {
          //check tinh hop le
@@ -183,8 +150,8 @@ namespace PawnShopManager.GUI.BODY
          dataGridDsHangCam.BeginUpdate();
          panel.Rows.Add(row);
          dataGridDsHangCam.EndUpdate();
-         Global.tongTien_Vang_Nhieu += float.Parse(giatri);
 
+         Global.tongTien_Vang_Nhieu += float.Parse(giatri);
         
          if (chboxNhieuMon.Checked)
          {
@@ -192,7 +159,9 @@ namespace PawnShopManager.GUI.BODY
             txtTienChu_Vang.Text = Util.UtilCommon.docso(Global.tongTien_Vang_Nhieu) + " đồng.";
          }
       }
+      #endregion
 
+      #region click nút Lưu
       private void btnLuu_Click(object sender, EventArgs e)
       {
          if (!superValidator1.Validate(txtTenKH)
@@ -216,23 +185,34 @@ namespace PawnShopManager.GUI.BODY
          //xe         
          if (cboLoaiHang.SelectedIndex == 1)
          {
+            themHD_Xe();
          }
 
       }
+      #endregion
 
+      #region click nút thêm biên nhận mới
       private void btnThemBienNhanMoi_Click(object sender, EventArgs e)
       {
 
       }
+      #endregion
 
+      #region Form Load
       private void CamDo_Load(object sender, EventArgs e)
       {
          int maBN = Controller.Controller.getInstance().getMaBN_max();
          lblMaHD.Text = "Mã biên nhận: " + String.Format("{0:D5}", maBN);
       }
+      #endregion
 
+      #region thay đổi chữ txtTienCam_Vang
       private void txtTienCam_Vang_TextChanged(object sender, EventArgs e)
       {
+         if (txtTienCam_Vang.Text.Trim().Equals(""))
+         {
+            return;
+         }
          Regex regex = new Regex("^[0-9]*$");
          if (!regex.IsMatch(txtTienCam_Vang.Text.Trim()))
          {
@@ -246,17 +226,23 @@ namespace PawnShopManager.GUI.BODY
             txtTienChu_Vang.Text = Util.UtilCommon.docso(Double.Parse(txtTienCam_Vang.Text.Trim())) + " đồng.";
          }
       }
+      #endregion
 
+      #region thay đổi chữ txtTienCam_Xe
       private void txtTienCam_Xe_TextChanged(object sender, EventArgs e)
       {
+         if(txtTienCam_Xe.Text.Trim().Equals("")){
+            return;
+         }
          Regex regex = new Regex("^[0-9]*$");
-         if (!regex.IsMatch(txtTienCam_Vang.Text.Trim()))
+         if (!regex.IsMatch(txtTienCam_Xe.Text.Trim()))
          {
             txtTienChu_Xe.Text = "Yêu cầu không nhập chữ!";
             return;
          }
-         txtTienChu_Xe.Text = Util.UtilCommon.docso(Double.Parse(txtTienCam_Xe.Text.Trim())) + " Đồng";
+         txtTienChu_Xe.Text = Util.UtilCommon.docso(Double.Parse(txtTienCam_Xe.Text.Trim())) + " đồng.";
       }
+      #endregion
 
 #endregion
 
@@ -330,7 +316,73 @@ namespace PawnShopManager.GUI.BODY
       }
 
       #region thêm hợp đồng xe máy
-      public void themHD_Xe() { }
+      public void themHD_Xe() {
+         //check tinh hop le
+         if (!superValidator1.Validate(txtTenKH)
+               || !superValidator1.Validate(txtCMND)
+               || !superValidator1.Validate(txtDienThoai)
+               || !superValidator1.Validate(txtBienSoXe)
+               || !superValidator1.Validate(txtLoaiXe)
+               || !superValidator1.Validate(txtTienCam_Xe)
+               || !superValidator1.Validate(txtLaiSuatThoaThuan)
+               || !superValidator1.Validate(txtLaiSuatQuaHan))
+         {
+            return;
+         }
+
+         //hoi y kien
+         if (MessageBox.Show("Bạn có chắc tạo hợp đồng xe?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.No)
+         {
+            return;
+         }
+
+         string tenKH = txtTenKH.Text.Trim();
+         string cmnd = txtCMND.Text.Trim();
+         string dienThoai = txtDienThoai.Text.Trim();
+         string diaChi = txtDiaChi.Text.Trim();
+
+         string bienSo = txtBienSoXe.Text.Trim();
+         string chatLuong = txtChatLuong.Text.Trim();
+         string loaiXe = txtLoaiXe.Text.Trim();
+         string nhanSoXe = txtNhanSoXe.Text.Trim();
+         float tienCam = float.Parse(txtTienCam_Xe.Text.Trim());
+
+         float laiSuat_ThoaThuan = float.Parse(txtLaiSuatThoaThuan.Text.Trim());
+         float laiSuat_QuaHan = float.Parse(txtLaiSuatQuaHan.Text.Trim());
+
+         int maBN = Controller.Controller.getInstance().getMaBN_max();
+         DateTime ngayCam = dateTimeInput_NgayCam.Value;
+
+         //them hop dong moi
+         int keyAuto = Controller.Controller.getInstance().themHD(maBN, ngayCam, tienCam, cmnd, tenKH, dienThoai, diaChi, laiSuat_ThoaThuan, laiSuat_QuaHan);
+         if (keyAuto > 0)
+         {
+            //save
+            if (Global.SESSION.ContainsKey("KeyAuto"))
+            {
+               Global.SESSION["KeyAuto"] = keyAuto;
+            }
+            else
+            {
+               Global.SESSION.Add("KeyAuto", keyAuto);
+            }
+
+            bool result = Controller.Controller.getInstance().themChiTietHangCam_Xe(keyAuto, bienSo, tienCam, chatLuong, loaiXe, nhanSoXe);
+            if (result)
+            {
+               MessageBox.Show("Thêm hợp đồng xe thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
+               EnableComponentAfterAdd(false);
+            }
+            else
+            {
+               MessageBox.Show("Không thể thêm mới mặt hàng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+         }
+         else
+         {
+            MessageBox.Show("Không thể thêm mới hợp đồng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+         }
+      }
       #endregion
 
       #region thêm hợp đồng vàng - 1 món
@@ -391,18 +443,21 @@ namespace PawnShopManager.GUI.BODY
          int keyAuto = Controller.Controller.getInstance().themHD(maBN, ngayCam, tienCam, cmnd, tenKH, dienThoai, diaChi, laiSuat_ThoaThuan, laiSuat_QuaHan);
          if (keyAuto > 0)
          {
+            //save
+            if (Global.SESSION.ContainsKey("KeyAuto"))
+            {
+               Global.SESSION["KeyAuto"] = keyAuto;
+            }
+            else
+            {
+               Global.SESSION.Add("KeyAuto", keyAuto);
+            }
+
             bool result = Controller.Controller.getInstance().themChiTietHangCam_Vang(keyAuto, soLuong, tenVatCam, tienCam, loai);
             if (result)
             {
                MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
-               chboxMotMon.Enabled = false;
-               chboxNhieuMon.Enabled = false;
-               btnLuu.Enabled = false;
-               if(Global.SESSION.ContainsKey("KeyAuto")){
-                  Global.SESSION["KeyAuto"] = keyAuto;
-               }else{
-                  Global.SESSION.Add("KeyAuto", keyAuto);
-               }
+               EnableComponentAfterAdd(false);
             }
             else
             {
@@ -421,7 +476,9 @@ namespace PawnShopManager.GUI.BODY
          //check tinh hop le
          if (!superValidator1.Validate(txtTenKH)
                || !superValidator1.Validate(txtCMND)
-               || !superValidator1.Validate(txtDienThoai))
+               || !superValidator1.Validate(txtDienThoai) 
+               || !superValidator1.Validate(txtLaiSuatThoaThuan)
+               || !superValidator1.Validate(txtLaiSuatQuaHan))
          {
             return;
          }
@@ -484,9 +541,7 @@ namespace PawnShopManager.GUI.BODY
             }
             if(flag){
                MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
-               chboxMotMon.Enabled = false;
-               chboxNhieuMon.Enabled = false;
-               btnLuu.Enabled = false;
+               EnableComponentAfterAdd(false);
             }
          }
          else
@@ -496,6 +551,53 @@ namespace PawnShopManager.GUI.BODY
       }
       #endregion
 
+      #region bật tắt các Control sau khi thêm thành công hợp đồng
+      private void EnableComponentAfterAdd(bool flag){
+         groupPanel1.Enabled = flag;
+         groupVang.Enabled = flag;
+         txtTenKH.Enabled = flag;
+         txtDiaChi.Enabled = flag;
+         txtDienThoai.Enabled = flag;
+         txtCMND.Enabled = flag;
+
+         btnLuu.Enabled = flag;
+         btnIn.Enabled = !flag;
+         btnThemBienNhanMoi.Enabled = !flag;
+      }
+      #endregion
+
+      private void setTabIndex(){
+         //chung 1
+         cboLoaiHang.TabIndex = 1;
+         txtTenKH.TabIndex = 2;
+         txtCMND.TabIndex = 3;
+         txtDienThoai.TabIndex = 4;
+         txtDiaChi.TabIndex = 5;
+
+         //vang
+         chboxMotMon.TabIndex = 6;
+         chboxNhieuMon.TabIndex = 7;
+         txtTenVatCam.TabIndex = 8;
+         txtSoLuong.TabIndex = 9;
+         cboLoaiVang.TabIndex = 10;
+         txtTienCam_Vang.TabIndex = 11;
+         bntThemHangCam.TabIndex = 12;
+   
+         //xe
+         txtBienSoXe.TabIndex = 6;
+         txtLoaiXe.TabIndex = 7;
+         txtNhanSoXe.TabIndex = 8;
+         txtChatLuong.TabIndex = 9;
+           
+         //chung 2
+         txtLaiSuatThoaThuan.TabIndex = 13;
+         txtLaiSuatQuaHan.TabIndex = 14;
+
+         btnLuu.TabIndex = 15;
+         btnIn.TabIndex = 16;
+         btnVietLai.TabIndex = 17;
+         btnThemBienNhanMoi.TabIndex = 18; 
+      }
 #endregion
 
       #region MyGridButtonXEditControl
@@ -547,9 +649,8 @@ namespace PawnShopManager.GUI.BODY
             GridRow r = (GridRow)panel.Rows[rowIndex];
             double giatri = Double.Parse(r.Cells["giatri"].Value.ToString());
             panel.Rows.RemoveAt(rowIndex);
-            
+
             Global.tongTien_Vang_Nhieu -= giatri;
-            Global.lblTongTien_Vang2.Text = giatri.ToString();
             Global.lblTongTien_Vang2.Text = String.Format("{0:0,0}", Global.tongTien_Vang_Nhieu) + " VNĐ";
             Global.txtTienChu_Vang.Text = Util.UtilCommon.docso(Global.tongTien_Vang_Nhieu) + " đồng.";
          }

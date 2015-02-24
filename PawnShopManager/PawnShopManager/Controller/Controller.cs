@@ -75,6 +75,12 @@ namespace PawnShopManager.Controller
       {
          return chiTietHangCamDAO.themChiTietHangCam_Vang(hd_id, soLuong, tenMH, giatri, loai);
       }
+
+      public bool themChiTietHangCam_Xe(int hd_id, string bienSo, float giaTri, 
+			string chatLuong, string loaiXe, string nhanSoXe)
+      {
+         return chiTietHangCamDAO.themChiTietHangCam_Xe(hd_id, bienSo, giaTri, chatLuong, loaiXe, nhanSoXe);
+      }
    
       public int themHD(int maBN, DateTime ngayTao, float tienCam, 
 					string cmnd, string tenKH, string dienThoai, 
