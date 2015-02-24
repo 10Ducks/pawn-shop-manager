@@ -53,6 +53,36 @@ namespace PawnShopManager.Dao
             return false;
          }
       }
+
+      public bool themChiTietHangCam_Xe(int hd_id, string bienSo, float giaTri, 
+			string chatLuong, string loaiXe, string nhanSoXe)
+      {
+         try
+         {
+            SqlConnection conn = DbProviderFactory.getInstance().connectDB();
+
+            SqlCommand command = new SqlCommand();
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Connection = conn;
+            command.CommandText = "themCTHC_Xe";
+            command.Parameters.Add("@hd_id", System.Data.SqlDbType.Int).Value = hd_id;
+            command.Parameters.Add("@bienSo", System.Data.SqlDbType.VarChar).Value = bienSo;
+            command.Parameters.Add("@giaTri", System.Data.SqlDbType.Float).Value = giaTri;
+            command.Parameters.Add("@chatLuong", System.Data.SqlDbType.NVarChar).Value = chatLuong;
+            command.Parameters.Add("@loaiXe", System.Data.SqlDbType.NVarChar).Value = loaiXe;
+            command.Parameters.Add("@nhanSoXe", System.Data.SqlDbType.NVarChar).Value = nhanSoXe;
+
+            command.ExecuteNonQuery();
+
+            DbProviderFactory.getInstance().closeConnection();
+            return true;
+         }
+         catch (Exception ex)
+         {
+            Console.WriteLine(ex.StackTrace);
+            return false;
+         }
+      }
 #endregion
    }
 }

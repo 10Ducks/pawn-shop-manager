@@ -209,7 +209,7 @@ namespace PawnShopManager.Dao
       }
       #endregion
 
-      #region
+      #region lẫy mã BN lớn nhất
       public int getMaBN_max(){
          SqlConnection conn = DbProviderFactory.getInstance().connectDB();
 
@@ -226,7 +226,7 @@ namespace PawnShopManager.Dao
       }
       #endregion
 
-      #region 
+      #region thêm Hợp đồng
       public int themHD(int maBN, DateTime ngayTao, float tienCam, 
 					string cmnd, string tenKH, string dienThoai, 
 					string diaChi, 
