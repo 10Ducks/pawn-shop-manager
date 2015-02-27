@@ -11,6 +11,7 @@ namespace PawnShopManager.GUI
       public DevComponents.DotNetBar.Metro.MetroForm child = null;
       private CamDo camDoForm = null;
       private KiemHang kiemHangForm = null;
+      private QLGiaoDich QLGDForm = null;
       private QlHangCam qlHangCam = null;
       private ThuChi thuchiForm = null;
       private TimKiem timForm = null;
@@ -134,8 +135,10 @@ namespace PawnShopManager.GUI
 
       private void bntThongKe_Click(object sender, EventArgs e)
       {
-         Global.SESSION["Action"] = enumButtonAction.bntThongKe;
+         
          activeButton(bntThongKe);
+         openChild(enumButtonAction.bntThongKe);
+         Global.SESSION["Action"] = enumButtonAction.bntThongKe;
       }
 
       private void bntKiemHang_Click(object sender, EventArgs e)
@@ -290,6 +293,18 @@ namespace PawnShopManager.GUI
                qlHangCam.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
                qlHangCam.Dock = DockStyle.Fill;
                child = qlHangCam;
+               break;
+            case enumButtonAction.bntThongKe:
+               if (QLGDForm == null)
+               {
+                   QLGDForm = new QLGiaoDich();
+                   QLGDForm.MdiParent = this;
+               }
+               QLGDForm.WindowState = FormWindowState.Normal;
+               QLGDForm.Show();
+               QLGDForm.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
+               QLGDForm.Dock = DockStyle.Fill;
+               child = QLGDForm;
                break;
             case enumButtonAction.bntTimKiem:
                if (timForm == null)
