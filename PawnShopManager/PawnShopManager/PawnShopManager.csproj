@@ -60,11 +60,11 @@
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="Controller\Result.cs" />
     <Compile Include="Controller\SystemError.cs" />
-    <Compile Include="GUI\TEST\CrystalReport2.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport2.rpt</DependentUpon>
-      <SubType>Component</SubType>
+    <Compile Include="GUI\BODY\QLGiaoDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BODY\QLGiaoDich.Designer.cs">
+      <DependentUpon>QLGiaoDich.cs</DependentUpon>
     </Compile>
     <Compile Include="Dao\AdminDAO.cs" />
     <Compile Include="Dao\BaseDao.cs" />
@@ -87,30 +87,6 @@
     </Compile>
     <Compile Include="GUI\BODY\CamDo.Designer.cs">
       <DependentUpon>CamDo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\TEST\CrystalReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\TEST\CrystalReport.Designer.cs">
-      <DependentUpon>CrystalReport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\TEST\CrystalReport1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="GUI\TEST\mergeDataGridView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\TEST\mergeDataGridView.Designer.cs">
-      <DependentUpon>mergeDataGridView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\TEST\Test_Datagrid.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\TEST\Test_Datagrid.Designer.cs">
-      <DependentUpon>Test_Datagrid.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\BODY\TimKiem.cs">
       <SubType>Form</SubType>
@@ -162,9 +138,8 @@
     <Compile Include="Util\Global.cs" />
     <Compile Include="Util\Sha256.cs" />
     <Compile Include="Util\UtilCommon.cs" />
-    <EmbeddedResource Include="GUI\TEST\CrystalReport2.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    <EmbeddedResource Include="GUI\BODY\QLGiaoDich.resx">
+      <DependentUpon>QLGiaoDich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BODY\CamDo.resx">
       <DependentUpon>CamDo.cs</DependentUpon>
@@ -174,16 +149,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BODY\QlHangCam.resx">
       <DependentUpon>QlHangCam.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\TEST\CrystalReport.resx">
-      <DependentUpon>CrystalReport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\TEST\CrystalReport1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\TEST\Test_Datagrid.resx">
-      <DependentUpon>Test_Datagrid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BODY\ThuChi.resx">
       <DependentUpon>ThuChi.cs</DependentUpon>
@@ -313,6 +278,9 @@
     <Content Include="Images\normal\Vline.PNG" />
     <Content Include="Images\rec-white-icon.ico" />
     <Content Include="Images\Settled credit record-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUI\TEST\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
