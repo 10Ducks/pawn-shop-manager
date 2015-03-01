@@ -96,7 +96,7 @@
             this.txtTenKH.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKH.ForeColor = System.Drawing.Color.Black;
-            this.txtTenKH.Location = new System.Drawing.Point(223, 103);
+            this.txtTenKH.Location = new System.Drawing.Point(223, 115);
             this.txtTenKH.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(300, 34);
@@ -111,7 +111,7 @@
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX1.ForeColor = System.Drawing.Color.Black;
-            this.labelX1.Location = new System.Drawing.Point(19, 57);
+            this.labelX1.Location = new System.Drawing.Point(19, 66);
             this.labelX1.Margin = new System.Windows.Forms.Padding(2);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(183, 38);
@@ -127,7 +127,7 @@
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX2.ForeColor = System.Drawing.Color.Black;
-            this.labelX2.Location = new System.Drawing.Point(19, 98);
+            this.labelX2.Location = new System.Drawing.Point(19, 115);
             this.labelX2.Margin = new System.Windows.Forms.Padding(2);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(196, 38);
@@ -143,7 +143,7 @@
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX3.ForeColor = System.Drawing.Color.Black;
-            this.labelX3.Location = new System.Drawing.Point(19, 140);
+            this.labelX3.Location = new System.Drawing.Point(19, 164);
             this.labelX3.Margin = new System.Windows.Forms.Padding(2);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(158, 38);
@@ -160,7 +160,7 @@
             this.txtCmnd.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtCmnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCmnd.ForeColor = System.Drawing.Color.Black;
-            this.txtCmnd.Location = new System.Drawing.Point(223, 145);
+            this.txtCmnd.Location = new System.Drawing.Point(223, 164);
             this.txtCmnd.Margin = new System.Windows.Forms.Padding(2);
             this.txtCmnd.Name = "txtCmnd";
             this.txtCmnd.Size = new System.Drawing.Size(300, 34);
@@ -171,6 +171,7 @@
             this.cboLoaiHang.DisplayMember = "Text";
             this.cboLoaiHang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboLoaiHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.cboLoaiHang.ForeColor = System.Drawing.Color.Black;
             this.cboLoaiHang.FormattingEnabled = true;
             this.cboLoaiHang.ItemHeight = 23;
             this.cboLoaiHang.Items.AddRange(new object[] {
@@ -232,7 +233,7 @@
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX6.ForeColor = System.Drawing.Color.Black;
-            this.labelX6.Location = new System.Drawing.Point(562, 98);
+            this.labelX6.Location = new System.Drawing.Point(562, 115);
             this.labelX6.Margin = new System.Windows.Forms.Padding(2);
             this.labelX6.Name = "labelX6";
             this.labelX6.Size = new System.Drawing.Size(148, 38);
@@ -248,7 +249,7 @@
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX7.ForeColor = System.Drawing.Color.Black;
-            this.labelX7.Location = new System.Drawing.Point(562, 140);
+            this.labelX7.Location = new System.Drawing.Point(562, 164);
             this.labelX7.Margin = new System.Windows.Forms.Padding(2);
             this.labelX7.Name = "labelX7";
             this.labelX7.Size = new System.Drawing.Size(148, 38);
@@ -257,6 +258,7 @@
             // 
             // dateInput_TuNgay
             // 
+            this.dateInput_TuNgay.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -266,9 +268,10 @@
             this.dateInput_TuNgay.ButtonDropDown.Visible = true;
             this.dateInput_TuNgay.CustomFormat = "dd/MM/yyyy";
             this.dateInput_TuNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateInput_TuNgay.ForeColor = System.Drawing.Color.Black;
             this.dateInput_TuNgay.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dateInput_TuNgay.IsPopupCalendarOpen = false;
-            this.dateInput_TuNgay.Location = new System.Drawing.Point(728, 102);
+            this.dateInput_TuNgay.Location = new System.Drawing.Point(728, 115);
             this.dateInput_TuNgay.Margin = new System.Windows.Forms.Padding(2);
             // 
             // 
@@ -311,6 +314,7 @@
             // 
             // dateInput_ToiNgay
             // 
+            this.dateInput_ToiNgay.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -320,9 +324,10 @@
             this.dateInput_ToiNgay.ButtonDropDown.Visible = true;
             this.dateInput_ToiNgay.CustomFormat = "dd/MM/yyyy";
             this.dateInput_ToiNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateInput_ToiNgay.ForeColor = System.Drawing.Color.Black;
             this.dateInput_ToiNgay.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dateInput_ToiNgay.IsPopupCalendarOpen = false;
-            this.dateInput_ToiNgay.Location = new System.Drawing.Point(728, 145);
+            this.dateInput_ToiNgay.Location = new System.Drawing.Point(728, 164);
             this.dateInput_ToiNgay.Margin = new System.Windows.Forms.Padding(2);
             // 
             // 
