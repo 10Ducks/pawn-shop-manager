@@ -1,6 +1,6 @@
 --Bảng Admin
 --kiểm tra đăng nhập, nếu không đúng mật khẩu thì trả về null
-CREATE PROC getLogin(@ID varchar(50), @PASS varchar(256))
+ALTER PROC getLogin(@ID varchar(50), @PASS varchar(256))
 AS
 BEGIN
 	SELECT *

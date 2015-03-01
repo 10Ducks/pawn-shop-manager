@@ -1,6 +1,6 @@
 
 --thêm mới một hợp đồng
-ALTER PROC themHD(@hd_maBN int, @hd_ngaytao date, @hd_tien_cam float, 
+CREATE PROC themHD(@hd_maBN int, @hd_ngaytao date, @hd_tien_cam float, 
 					@hd_kh_CMND varchar(20), @hd_kh_Ten nvarchar(50), @hd_kh_DienThoai varchar(15), 
 					@hd_kh_Diachi nvarchar(max), 
 					@hd_LaiSuat_ThoaThuan float, @hd_LaiSuat_QuaHan float,

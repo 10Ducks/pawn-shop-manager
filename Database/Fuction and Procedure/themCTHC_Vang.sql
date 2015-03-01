@@ -1,5 +1,5 @@
 --thêm chi tiết hàng cầm, loại vàng
-ALTER PROC themCTHC_Vang(@hd_id int, @soLuong int, @tenMH nvarchar(50), @giatri float, @chatLuong nvarchar(50), @loai int)
+CREATE PROC themCTHC_Vang(@hd_id int, @soLuong int, @tenMH nvarchar(50), @giatri float, @chatLuong nvarchar(50), @loai int)
 AS
 BEGIN
 	insert into tbl_Chi_Tiet_Hang_Cam
