@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -82,6 +83,24 @@ namespace PawnShopManager.Dao
             Console.WriteLine(ex.StackTrace);
             return false;
          }
+      }
+
+      public DataTable layCTHC_TheoHdId(int hd_id){
+         DataTable dataTable = new DataTable("CTHC_TheoHdId");
+         SqlDataAdapter adapter = new SqlDataAdapter();
+         SqlConnection conn = DbProviderFactory.getInstance().connectDB();
+
+         SqlCommand command = new SqlCommand();
+         command.CommandType = System.Data.CommandType.StoredProcedure;
+         command.Connection = conn;
+         command.CommandText = "layCTHC_TheoHdId";
+         command.Parameters.Add("@hd_id", System.Data.SqlDbType.Int).Value = hd_id;
+
+         adapter.SelectCommand = command;
+         adapter.Fill(dataTable);
+
+         DbProviderFactory.getInstance().closeConnection();
+         return dataTable;
       }
 #endregion
    }

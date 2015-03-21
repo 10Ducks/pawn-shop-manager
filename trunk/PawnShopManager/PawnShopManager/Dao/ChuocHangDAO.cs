@@ -220,6 +220,32 @@ namespace PawnShopManager.Dao
       }
       #endregion
 
+      public bool Xuly_ChuocDo(int hd_id, DateTime ngayChuoc, 
+			 float tienLaiThoaThuan,  float tienLaiQuaHan, 
+			 float tienTangGiam,  float tongTien){
+         try{
+            SqlConnection conn = DbProviderFactory.getInstance().connectDB();
+
+            SqlCommand command = new SqlCommand();
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Connection = conn;
+            command.CommandText = "Xuly_ChuocDo";
+            command.Parameters.Add("@hd_id", System.Data.SqlDbType.Int).Value = hd_id;
+            command.Parameters.Add("@ngayChuoc", System.Data.SqlDbType.Date).Value = ngayChuoc;
+            command.Parameters.Add("@tienLaiThoaThuan", System.Data.SqlDbType.Float).Value = tienLaiThoaThuan;
+            command.Parameters.Add("@tienLaiQuaHan", System.Data.SqlDbType.Float).Value = tienLaiQuaHan;
+            command.Parameters.Add("@tienTangGiam", System.Data.SqlDbType.Float).Value = tienTangGiam;
+            command.Parameters.Add("@tongTien", System.Data.SqlDbType.Float).Value = tongTien;
+         
+            command.ExecuteNonQuery();         
+
+            DbProviderFactory.getInstance().closeConnection();
+         }catch (Exception ex){
+            Console.WriteLine(ex.StackTrace);
+            return false;
+         }        
+         return true;
+      }
 #endregion
    }
 }

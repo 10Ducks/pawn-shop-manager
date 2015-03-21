@@ -144,6 +144,13 @@
 			<column name="delete_flag" type="bit" length="1" decimal="0" jt="-7" mandatory="y" >
 				<defo>0</defo>
 			</column>
+			<column name="hd_thoihan" type="int" jt="4" >
+				<defo>2</defo>
+				<comment><![CDATA[thời hạn hết hạn của hợp đồng, tính theo tháng, mặc định là 2]]></comment>
+			</column>
+			<column name="hd_ngayBaoMat" type="date" jt="91" >
+				<comment><![CDATA[ngày báo mất hợp đồng]]></comment>
+			</column>
 			<index name="Pk_tbl_Hop_Dong" unique="PRIMARY_KEY" >
 				<column name="hd_id" />
 			</index>
@@ -200,8 +207,12 @@
 				<defo>getdate()</defo>
 				<comment><![CDATA[ngày lấy thêm tiền]]></comment>
 			</column>
-			<column name="them_tienlai" type="float" length="53" decimal="0" jt="8" regexp="int:from=10000;to=500000;format=####################.;" regexp_nulls="0" />
-			<column name="them_tien" type="float" length="53" decimal="0" jt="8" regexp="int:from=10000;to=100000;format=####################.;" regexp_nulls="0" />
+			<column name="them_tienlai" type="float" length="53" decimal="0" jt="8" regexp="int:from=10000;to=500000;format=####################.;" regexp_nulls="0" >
+				<comment><![CDATA[tiền lãi tại thời điểm đó]]></comment>
+			</column>
+			<column name="them_tien" type="float" length="53" decimal="0" jt="8" regexp="int:from=10000;to=100000;format=####################.;" regexp_nulls="0" >
+				<comment><![CDATA[số tiền lấy thêm]]></comment>
+			</column>
 			<column name="them_hinhthuc_tralai" type="int" length="10" decimal="0" jt="4" regexp="int:from=1;to=2;format=#.;" regexp_nulls="0" >
 				<defo>1</defo>
 				<comment><![CDATA[Hình thức trả lãi
@@ -521,11 +532,11 @@ END]]></string>
 		<entity schema="dbo" name="tbl_Admin" color="bef5b3" x="450" y="240" />
 		<entity schema="dbo" name="tbl_Chuoc_Hang" color="f5d8b3" x="450" y="450" />
 		<entity schema="dbo" name="tbl_Tra_Lai_Truoc" color="f5d8b3" x="90" y="45" />
-		<entity schema="dbo" name="tbl_Them_Tien" color="bef5b3" x="630" y="240" />
 		<entity schema="dbo" name="tbl_Chi_Tiet_Hang_Cam" color="f5d8b3" x="255" y="240" />
 		<entity schema="dbo" name="tbl_Thanh_Ly" color="b2cdf7" x="450" y="60" />
 		<entity schema="dbo" name="tbl_Thu_Chi" color="b2cdf7" x="300" y="45" />
-		<entity schema="dbo" name="tbl_Hop_Dong" color="f5d8b3" x="45" y="240" />
 		<entity schema="dbo" name="tbl_Loai_Hang" color="f5d8b3" x="630" y="105" />
+		<entity schema="dbo" name="tbl_Hop_Dong" color="f5d8b3" x="45" y="240" />
+		<entity schema="dbo" name="tbl_Them_Tien" color="bef5b3" x="630" y="240" />
 	</layout>
 </project>

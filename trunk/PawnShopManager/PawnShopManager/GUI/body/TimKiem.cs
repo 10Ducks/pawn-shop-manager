@@ -25,6 +25,7 @@ namespace PawnShopManager.GUI.BODY
 #region Event
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
+            //superGridControl_TimKiem.Update();
             Regex rg = new Regex("^\\d+$");   
             if(!txtMaBN.Text.Trim().Equals("") && !rg.IsMatch(txtMaBN.Text)){
                MessageBox.Show("Yêu cầu chỉ nhập số ở mã BN!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -51,6 +52,7 @@ namespace PawnShopManager.GUI.BODY
                                                     dataSet.Tables[1].Columns["maHD"], false);
             superGridControl_TimKiem.PrimaryGrid.DataSource = dataSet;
             superGridControl_TimKiem.PrimaryGrid.DataMember = "TimKiem";
+
         }
 #endregion
 
@@ -149,10 +151,14 @@ namespace PawnShopManager.GUI.BODY
            {
               column.ColumnSortMode = ColumnSortMode.Multiple;
            }
-           
+
+           panel.GroupByRow.WatermarkText = "Kéo cột vào đây để lọc";
         }
         #endregion
 
+
 #endregion
+
+       
     }
 }
