@@ -600,7 +600,7 @@ namespace PawnShopManager.GUI.BODY
       }
 #endregion
 
-      #region MyGridButtonXEditControl
+#region MyGridButtonXEditControl
 
       /// <summary>
       /// GridButtonXEditControl Class that controls the
