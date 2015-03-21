@@ -16,8 +16,12 @@ namespace PawnShopManager.Controller
       private ChuocHangDAO chuocHangDAO = new ChuocHangDAO();
       private HopDongDAO hopDongDAO = new HopDongDAO();
       private ChiTietHangCamDAO chiTietHangCamDAO = new ChiTietHangCamDAO();
-      private ThuChiDAO thuchiDAO = new ThuChiDAO();
+      private TraLaiTruocDAO traLaiTruocDAO = new TraLaiTruocDAO();
+      private ThanhLyDAO thanhLyDAO = new ThanhLyDAO();
+      private ThemTienDAO themTienDAO = new ThemTienDAO();
+
       private static Controller controller = null;
+
       private Controller(){}
       public static Controller getInstance()
       {
@@ -89,12 +93,43 @@ namespace PawnShopManager.Controller
 					float laiSuat_ThoaThuan, float laiSuat_QuaHan){
          return hopDongDAO.themHD(maBN, ngayTao, tienCam, cmnd, tenKH, dienThoai, diaChi, laiSuat_ThoaThuan, laiSuat_QuaHan);
       }
+      
+      public HopDongDto layHD_TheoMaBN(int maBN, int nam){
+         return hopDongDAO.layHD_TheoMaBN(maBN, nam);
+      }   
 
-      public bool themTC(int loaiThuChi, DateTime ngayThuChi, float tienThuChi,
-                      string ghiChu)
-      {
-          return thuchiDAO.themTC(loaiThuChi, ngayThuChi, tienThuChi,
-                      ghiChu);
+      public string[] layTatCaMaBN(){
+         return hopDongDAO.layTatCaMaBN();
+      }
+
+      public DataTable layCTHC_TheoHdId(int hd_id){
+         return chiTietHangCamDAO.layCTHC_TheoHdId(hd_id);
+      }
+
+      public double layTienTraLaiTruoc(int maHD){
+         return traLaiTruocDAO.layTienTraLaiTruoc(maHD);
+      }
+
+      public bool Xuly_ChuocDo(int hd_id, DateTime ngayChuoc, 
+			       float tienLaiThoaThuan,  float tienLaiQuaHan, 
+			       float tienTangGiam,  float tongTien){
+         return chuocHangDAO.Xuly_ChuocDo(hd_id, ngayChuoc, tienLaiThoaThuan, tienLaiQuaHan, tienTangGiam, tongTien);
+      }
+
+      public bool XuLy_ThanhLy(int hd_id, DateTime ngayThanhLy, float tienThanhLy){
+         return thanhLyDAO.XuLy_ThanhLy(hd_id, ngayThanhLy, tienThanhLy);
+      }
+
+      public bool Xuly_TraLaiTruoc(int hd_id, DateTime ngayTraLai, int soNgay, float tienTraTruoc){
+         return traLaiTruocDAO.Xuly_TraLaiTruoc(hd_id, ngayTraLai, soNgay, tienTraTruoc);
+      }
+
+      public bool xuLy_BaoMatHD(int hd_id, DateTime ngayBaoMat){
+         return hopDongDAO.xuLy_BaoMatHD( hd_id, ngayBaoMat);
+      }
+
+      public bool XuLy_ThemTien( int hd_id,  DateTime ngayThem,  float tienLai,  float tienThem,  int hinhThuc){
+         return themTienDAO.XuLy_ThemTien(hd_id, ngayThem, tienLai, tienThem, hinhThuc);
       }
    }
 }

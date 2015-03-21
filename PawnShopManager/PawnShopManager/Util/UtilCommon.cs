@@ -158,5 +158,36 @@ namespace PawnShopManager.Util
          } while (so > 0);
          return chuoi;
       } 
+   
+      public static double[] tinhTienLai(DateTime ngayCam, DateTime ngayChuoc, double tienCam, double laiSuatThoaThuan, double laiSuatQuaHan, int thoiHan){
+         double[] tienLai = new double[2];
+         tienLai[0] = 0; //tiền lãi thỏa thuận
+         tienLai[1] = 0; //tiền lãi quá hạn
+
+         int dayDiff = ngayChuoc.Subtract(ngayCam).Days + 1; //tính cả ngày cầm nên sẽ + thêm 1
+         //chưa quá hạn
+         if (dayDiff <= 60)
+         {
+            double laisuat = (laiSuatThoaThuan / 30) * dayDiff;
+            tienLai[0] = tienCam * laisuat / 100;
+         }
+         //quá hạn
+         if(dayDiff > 60){
+            double laisuatTT = (laiSuatThoaThuan / 30) * 60;
+            double laisuatQH = (laiSuatThoaThuan / 30) * (dayDiff - 60);
+            tienLai[0] = tienCam * laisuatTT / 100;
+            tienLai[1] = tienCam * laisuatQH / 100;
+         }
+         return tienLai;
+      }
+
+      public static string formatTien(double tien){   
+         return String.Format("{0:0,0}", tien);
+      }
+
+      public static string formatNgay(DateTime ngay)
+      {
+         return String.Format("{0:dd/MM/yyyy}", ngay);
+      }
    }
 }

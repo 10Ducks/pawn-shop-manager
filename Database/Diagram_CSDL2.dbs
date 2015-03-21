@@ -1,0 +1,1534 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="SqlServer" id="Project6869556" template="Default" database="SqlServer" >
+	<schema name="dbo" catalogname="vj-refund" schemaname="dbo" defo="y" >
+		<table name="tblAPI_BOOKING_LOG" >
+			<column name="Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
+			<column name="Reservation" type="int" length="10" decimal="0" jt="4" />
+			<column name="ConvertXML" type="ntext" length="1073741823" decimal="0" jt="-1" />
+			<column name="ConvertJSON" type="ntext" length="1073741823" decimal="0" jt="-1" />
+			<column name="LogDate" type="datetime" length="23" decimal="3" jt="93" />
+			<index name="PK_tblAPI_BOOKING_LOG" unique="PRIMARY_KEY" >
+				<column name="Id" />
+			</index>
+		</table>
+		<table name="tblDE_NGHI_HOAN_VE" >
+			<column name="ID_HOAN_VE" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
+			<column name="MA_KHACH_HANG" type="varchar" length="50" decimal="0" jt="12" mandatory="y" />
+			<column name="TEN_KHACH_HANG" type="nvarchar" length="250" decimal="0" jt="12" mandatory="y" />
+			<column name="TEN_NGUOI_HUONG" type="nvarchar" length="250" decimal="0" jt="12" />
+			<column name="MA_DAT_CHO" type="varchar" length="50" decimal="0" jt="12" mandatory="y" />
+			<column name="NGAY_GIAO_DICH" type="datetime" length="23" decimal="3" jt="93" />
+			<column name="SO_TIEN" type="money" length="19" decimal="4" jt="3" mandatory="y" />
+			<column name="MA_DAI_LY" type="varchar" length="50" decimal="0" jt="12" mandatory="y" />
+			<column name="TEN_DAI_LY" type="nvarchar" length="500" decimal="0" jt="12" />
+			<column name="LOAI_HOAN_VE" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="LY_DO_HOAN_VE" type="nvarchar" length="1500" decimal="0" jt="12" />
+			<column name="THONG_TIN_KHAC" type="nvarchar" length="2000" decimal="0" jt="12" />
+			<column name="USER_CREAT" type="nvarchar" length="50" decimal="0" jt="12" mandatory="y" />
+			<column name="PHONG_BAN_DUYET" type="varchar" length="50" decimal="0" jt="12" mandatory="y" />
+			<column name="TRANG_THAI" type="smallint" length="5" decimal="0" jt="5" mandatory="y" >
+				<comment><![CDATA[1: Chưa duyêt; 2: Đang duyệt; 3: Đã duyệt; 4: Hủy]]></comment>
+			</column>
+			<column name="EMAIL_KHACH_HANG" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="SDT_KHACH_HANG" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="SO_HIEU_CHUYEN_BAY" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="CHANG_BAY" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="NGAY_BAY" type="datetime" length="23" decimal="3" jt="93" />
+			<column name="DON_VI_YEU_CAU" type="nvarchar" length="250" decimal="0" jt="12" />
+			<column name="SO_SERIAL_DON_VI" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="PHAN_LOAI_YEU_CAU" type="int" length="10" decimal="0" jt="4" />
+			<column name="DATE_CREAT" type="datetime" length="23" decimal="3" jt="93" />
+			<column name="PHONG_BAN_NHAP" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="KET_QUA_CC" type="int" length="10" decimal="0" jt="4" />
+			<column name="NGAY_NHAP_CC" type="datetime" length="23" decimal="3" jt="93" />
+			<column name="KET_QUA_HDS" type="int" length="10" decimal="0" jt="4" />
+			<column name="NGAY_NHAP_HDS" type="datetime" length="23" decimal="3" jt="93" />
+			<column name="KET_QUA_FIN_LOI_THE" type="int" length="10" decimal="0" jt="4" />
+			<column name="NGAY_NHAP_FIN_LOI_THE" type="datetime" length="23" decimal="3" jt="93" />
+			<column name="KET_QUA_FIN_HOAN_VE" type="int" length="10" decimal="0" jt="4" />
+			<column name="NGAY_NHAP_FIN_HOAN_VE" type="datetime" length="23" decimal="3" jt="93" />
+			<column name="KET_QUA_FIN_SAU_DUYET_1" type="int" length="10" decimal="0" jt="4" />
+			<column name="NGAY_NHAP_FIN_SAU_DUYET_1" type="datetime" length="23" decimal="3" jt="93" />
+			<column name="KET_QUA_SUPER_1" type="int" length="10" decimal="0" jt="4" />
+			<column name="NGAY_NHAP_SUPER_1" type="datetime" length="23" decimal="3" jt="93" />
+			<column name="KET_QUA_SUPER_2" type="int" length="10" decimal="0" jt="4" />
+			<column name="NGAY_NHAP_SUPER_2" type="datetime" length="23" decimal="3" jt="93" />
+			<column name="KET_QUA_GO_PVE" type="int" length="10" decimal="0" jt="4" />
+			<column name="NGAY_NHAP_GO_PVE" type="datetime" length="23" decimal="3" jt="93" />
+			<column name="KET_QUA_THE_END" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="NGAY_NHAP_END" type="datetime" length="23" decimal="3" jt="93" />
+			<column name="IS_HOAN_VE" type="int" length="10" decimal="0" jt="4" />
+			<column name="IS_LOI_THE" type="int" length="10" decimal="0" jt="4" />
+			<column name="IS_VIP" type="int" length="10" decimal="0" jt="4" />
+			<column name="MA_YEU_CAU" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="IS_HOAN_THANH" type="int" length="10" decimal="0" jt="4" />
+			<column name="IS_ATTACH_FILE" type="int" length="10" decimal="0" jt="4" />
+			<column name="STATE" type="int" jt="4" />
+			<index name="PK_tblDE_NGHI_HOAN_VE" unique="PRIMARY_KEY" >
+				<column name="ID_HOAN_VE" />
+			</index>
+		</table>
+		<table name="tblFILE_ATTACH" >
+			<column name="Id" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
+			<column name="Url" type="varchar" length="500" decimal="0" jt="12" />
+			<column name="Note" type="nvarchar" length="1000" decimal="0" jt="12" />
+			<column name="ID_HOAN_VE" type="int" length="10" decimal="0" jt="4" />
+			<column name="MA_PHONG_BAN" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="FileName" type="varchar" length="500" decimal="0" jt="12" />
+			<index name="PK_tblFILE_ATTACH" unique="PRIMARY_KEY" >
+				<column name="Id" />
+			</index>
+			<fk name="tblAPI_BOOKING_LOG" virtual="y" to_schema="dbo" to_table="tblAPI_BOOKING_LOG" >
+				<fk_column name="Id" pk="Id" />
+			</fk>
+			<fk name="tblDE_NGHI_HOAN_VE" virtual="y" to_schema="dbo" to_table="tblDE_NGHI_HOAN_VE" >
+				<fk_column name="ID_HOAN_VE" pk="ID_HOAN_VE" />
+			</fk>
+		</table>
+		<table name="tblLOG" >
+			<column name="ID_LOG" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
+			<column name="ID_HOAN_VE" type="int" length="10" decimal="0" jt="4" />
+			<column name="USER_ID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="THOI_GIAN_DUYET" type="datetime" length="23" decimal="3" jt="93" />
+			<column name="FROM_TRANG_THAI" type="int" length="10" decimal="0" jt="4" />
+			<column name="TO_TRANG_THAI" type="int" length="10" decimal="0" jt="4" />
+			<column name="CREATED_AT" type="datetime" length="23" decimal="3" jt="93" />
+			<column name="PROCESS_SECONDS" type="bigint" length="19" decimal="0" jt="-5" >
+				<comment><![CDATA[Thoi gian xu ly tinh bang second. Khi moi duoc tao, gia tri nay = NULL]]></comment>
+			</column>
+			<column name="NOTES" type="ntext" length="1073741823" decimal="0" jt="-1" />
+			<column name="PROCESS_PHONG_BAN" type="varchar" length="50" decimal="0" jt="12" mandatory="y" >
+				<comment><![CDATA[Phong ban xu ly DE_NGHI_HOAN_VE]]></comment>
+			</column>
+			<column name="USER_NAME" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="MOI_NHAT" type="int" length="10" decimal="0" jt="4" />
+			<column name="NGAY_NHAP" type="datetime" length="23" decimal="3" jt="93" />
+			<column name="PHONG_BAN_NHAP" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="FROM_PHONG_BAN" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="TO_PHONG_BAN" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="FROM_TRANG_THAI_END" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="TO_TRANG_THAI_END" type="varchar" length="50" decimal="0" jt="12" />
+			<index name="PK_tblLOG" unique="PRIMARY_KEY" >
+				<column name="ID_LOG" />
+			</index>
+			<fk name="tblDE_NGHI_HOAN_VE_0" virtual="y" to_schema="dbo" to_table="tblDE_NGHI_HOAN_VE" >
+				<fk_column name="ID_HOAN_VE" pk="ID_HOAN_VE" />
+			</fk>
+		</table>
+		<table name="tblUSER" >
+			<column name="ID_USER" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
+			<column name="USER_NAME" type="varchar" length="50" decimal="0" jt="12" mandatory="y" />
+			<column name="PHONG_BAN" type="varchar" length="50" decimal="0" jt="12" mandatory="y" />
+			<column name="TOKEN" type="varchar" length="500" decimal="0" jt="12" mandatory="y" />
+			<column name="TOKEN_EXPIRED" type="datetime" length="23" decimal="3" jt="93" />
+			<index name="PK_tblUSER" unique="PRIMARY_KEY" >
+				<column name="ID_USER" />
+			</index>
+		</table>
+		<table name="tblUSER_ONLINE" >
+			<column name="ID_USER" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
+			<column name="USER_NAME" type="varchar" length="50" decimal="0" jt="12" mandatory="y" />
+			<column name="PHONG_BAN" type="varchar" length="50" decimal="0" jt="12" mandatory="y" />
+			<column name="TOKEN" type="varchar" length="500" decimal="0" jt="12" mandatory="y" />
+			<column name="TOKEN_EXPIRED" type="datetime" length="23" decimal="3" jt="93" />
+			<index name="PK_tblUSER_ONLINE" unique="PRIMARY_KEY" >
+				<column name="ID_USER" />
+			</index>
+			<fk name="tblUSER" virtual="y" to_schema="dbo" to_table="tblUSER" >
+				<fk_column name="ID_USER" pk="ID_USER" />
+			</fk>
+		</table>
+		<procedure name="sp_Report_Search" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_Report_Search]
+	 @KENH_HOAN_VE  varchar(50) =null
+    ,@TU_NGAY datetime=null
+    ,@DEN_NGAY datetime=null
+AS
+		SELECT  [ID_HOAN_VE]
+		  ,[MA_KHACH_HANG]
+		  ,[TEN_KHACH_HANG]
+		  ,[TEN_NGUOI_HUONG]
+		  ,[MA_DAT_CHO]
+		  ,[NGAY_GIAO_DICH]
+		  ,[SO_TIEN]
+		  ,[MA_DAI_LY]
+		  ,[TEN_DAI_LY]
+		  ,[LOAI_HOAN_VE]
+		  ,[LY_DO_HOAN_VE]
+		  ,[THONG_TIN_KHAC]
+		  ,[USER_CREAT]
+		  ,[PHONG_BAN_DUYET]
+		  ,[TRANG_THAI]
+		  ,[EMAIL_KHACH_HANG]
+		  ,[SDT_KHACH_HANG]
+		  ,[SO_HIEU_CHUYEN_BAY]
+		  ,[CHANG_BAY]
+		  ,[NGAY_BAY]
+		  ,[DON_VI_YEU_CAU]
+		  ,[SO_SERIAL_DON_VI]
+		  ,[PHAN_LOAI_YEU_CAU]
+		  ,[DATE_CREAT]
+		  ,[PHONG_BAN_NHAP]
+		  ,[KET_QUA_CC]
+		  ,CASE KET_QUA_CC
+		 --   WHEN 1 THEN N'CC Đại lý - Chuyển HDS'
+			--WHEN 2 THEN N'CC Lỗi thẻ - Chuyển Finance kiểm tra lỗi thẻ'
+		 --   WHEN 3 THEN N'CC Kết quả khác - Chuyển Finance kiểm tra Hoàn vé' 
+		    WHEN 4 THEN N'Khách hàng không đồng ý book vé - Chuyển Finance kiểm tra Hoàn vé'
+			WHEN 5 THEN N'Khách hàng đồng ý book vé - Chuyển HDS book lại vé'
+			ELSE N''
+		   END AS KET_QUA_CC_TEXT
+		  ,[NGAY_NHAP_CC]
+		  ,[KET_QUA_HDS]
+		  ,CASE KET_QUA_HDS 
+			WHEN 1 THEN N'HDS không đồng ý hoàn vé - từ chối yêu cầu'
+			WHEN 2 THEN N'HDS đồng ý hoàn vé - đóng hoàn tất'
+		    WHEN 3 THEN N'HDS book lại vé cho khách thành công - đóng hoàn tất'
+		    WHEN 4 THEN N'HDS book lại vé cho khách không thành công - chuyển Finance kiểm tra Hoàn vé'
+			ELSE N'Thông tin khác'
+		   END AS KET_QUA_HDS_TEXT
+		  ,[NGAY_NHAP_HDS]
+		  ,[KET_QUA_FIN_LOI_THE]
+		  ,CASE 
+				WHEN KET_QUA_FIN_LOI_THE=1  THEN N'Lỗi thẻ không nhận được tiền - từ chối yêu cầu'
+				WHEN KET_QUA_FIN_LOI_THE=2 AND LOAI_HOAN_VE <> 4 THEN N'Lỗi thẻ chưa  nhận tiền, Yêu cầu đã được chuyển FINANCE SUPERVISOR duyệt lần 1'
+				WHEN KET_QUA_FIN_LOI_THE=2 AND LOAI_HOAN_VE = 4 THEN N'Lỗi thẻ đã nhận tiền, Yêu cầu đã được chuyển CC kiểm tra lỗi thẻ đã nhận tiền'
+				ELSE ''
+			END AS KET_QUA_FIN_LOI_THE_TEXT
+		 
+		  ,[NGAY_NHAP_FIN_LOI_THE]
+		  ,[KET_QUA_FIN_HOAN_VE]
+		  ,CASE 
+				WHEN KET_QUA_FIN_HOAN_VE=1 THEN N'Finance không đồng ý hoàn vé - từ chối yêu cầu'
+				WHEN KET_QUA_FIN_HOAN_VE=2 AND LOAI_HOAN_VE <> 2 THEN N'Finance đồng ý hoàn vé, chuyển FINANCE SUPERVISOR duyệt lần 1'
+				WHEN KET_QUA_FIN_HOAN_VE=2 AND LOAI_HOAN_VE = 2 THEN N'Finance đồng ý hoàn vé, chuyển GO/PVE trả tiền cho khách'
+				ELSE ''
+			END AS KET_QUA_FIN_HOAN_VE_TEXT
+		  
+		  ,[NGAY_NHAP_FIN_HOAN_VE]
+		  ,[KET_QUA_FIN_SAU_DUYET_1]
+		  ,CASE KET_QUA_FIN_SAU_DUYET_1 
+			WHEN 1 THEN N'Kênh hoàn vé ATM/CREDIT - chuyển tiền cho khách, đóng hoàn tất'
+			WHEN 2 THEN N'Kênh hoàn vé TKNH , CMND - chuyển Finance super visor duyệt lần 2'
+		    ELSE N''
+		   END AS KET_QUA_FIN_SAU_DUYET_1_TEXT
+		  ,[NGAY_NHAP_FIN_SAU_DUYET_1]
+		  ,[KET_QUA_SUPER_1]
+		  ,CASE 
+				WHEN KET_QUA_SUPER_1=1 AND (LOAI_HOAN_VE=5 OR LOAI_HOAN_VE=6)THEN N'Duyệt lần 1 - đồng ý, chuyển duyệt lần 2'
+				WHEN KET_QUA_SUPER_1=1 AND (LOAI_HOAN_VE<>5 AND LOAI_HOAN_VE<>6)THEN N'Duyệt lần 1 - đồng ý, chuyển FINANCE chờ chuyển tiền'
+				WHEN KET_QUA_SUPER_1=2 THEN N'Duyệt lần 1 - từ chối yêu cầu hoàn vé'
+				ELSE ''
+			END AS KET_QUA_SUPER_1_TEXT
+		  
+		  ,[NGAY_NHAP_SUPER_1]
+		  ,[KET_QUA_SUPER_2]
+		  ,CASE KET_QUA_SUPER_2 
+			WHEN 1 THEN N'Duyệt lần 2 - Chuyển tiền thất bại, từ chối yêu cầu hoàn vé'
+			WHEN 2 THEN N'Duyệt lần 2 - Chuyển tiền thành công, đóng hoàn tất'
+		    ELSE N''
+		   END AS KET_QUA_SUPER_2_TEXT
+		  ,[NGAY_NHAP_SUPER_2]
+		  ,[KET_QUA_GO_PVE]
+		  ,CASE KET_QUA_GO_PVE 
+			WHEN 1 THEN N'GO/PVE đã trả lại tiền mặt cho khách tại phòng vé - đóng hoàn tất'
+			WHEN 2 THEN N'GO/PVE đã trả lại tiền mặt cho khách tại sân bay - đóng hoàn tất'
+		    ELSE N''
+		   END AS KET_QUA_GO_PVE_TEXT
+		  ,[NGAY_NHAP_GO_PVE]
+		  ,[KET_QUA_THE_END]
+		  ,[NGAY_NHAP_END]
+		  ,CASE 
+				WHEN KET_QUA_THE_END='CC4' THEN N'Khách hàng không đồng ý book vé - Chuyển Finance kiểm tra Hoàn vé'
+				WHEN KE]]></string>
+		</procedure>
+		<procedure name="sp_tblAPI_BOOKING_LOG_Check_MaDatCho" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblAPI_BOOKING_LOG_Check_MaDatCho]
+    @Reservation int 
+   
+AS
+	declare @p int
+	set @p=0
+	 SELECT 1 FROM tblAPI_BOOKING_LOG
+	 WHERE Reservation =@Reservation
+]]></string>
+		</procedure>
+		<procedure name="sp_tblAPI_BOOKING_LOG_GetMaDatCho" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblAPI_BOOKING_LOG_GetMaDatCho]
+    @Reservation int 
+   
+AS
+ SELECT *FROM tblAPI_BOOKING_LOG
+ WHERE Reservation =@Reservation
+]]></string>
+		</procedure>
+		<procedure name="sp_tblAPI_BOOKING_LOG_INSERT" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblAPI_BOOKING_LOG_INSERT]
+	@Reservation int
+   ,@ConvertXML ntext
+   ,@ConvertJSON ntext
+   ,@LogDate datetime
+AS
+	INSERT INTO [vj-refund].[dbo].[tblAPI_BOOKING_LOG]
+           ([Reservation]
+           ,[ConvertXML]
+           ,[ConvertJSON]
+           ,[LogDate]
+           )
+     VALUES
+           (
+			@Reservation 
+		   ,@ConvertXML 
+		   ,@ConvertJSON 
+		   ,@LogDate 
+           )
+]]></string>
+		</procedure>
+		<procedure name="sp_tblDE_NGHI_HOAN_VE_Check_MaDatCho" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblDE_NGHI_HOAN_VE_Check_MaDatCho]
+    @MA_DAT_CHO varchar(50),
+    @LOAI_HOAN_VE int
+AS
+ 
+ If exists(Select MA_DAT_CHO From tblDE_NGHI_HOAN_VE 
+		Where MA_DAT_CHO=@MA_DAT_CHO 
+			AND LOAI_HOAN_VE=@LOAI_HOAN_VE
+			AND (IS_HOAN_THANH is null or IS_HOAN_THANH=0))
+	Select 1 
+ Else
+	Select 0
+]]></string>
+		</procedure>
+		<procedure name="sp_tblDE_NGHI_HOAN_VE_Delete" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblDE_NGHI_HOAN_VE_Delete]
+	@ID_HOAN_VE		int
+AS
+	DELETE FROM [tblDE_NGHI_HOAN_VE]
+	 WHERE ID_HOAN_VE = @ID_HOAN_VE
+	       AND TRANG_THAI=0
+	DELETE FROM tblLOG 
+	 WHERE ID_HOAN_VE=@ID_HOAN_VE
+	       AND ID_HOAN_VE =( SELECT ID_HOAN_VE 
+							 FROM tblDE_NGHI_HOAN_VE
+							 WHERE ID_HOAN_VE=@ID_HOAN_VE AND TRANG_THAI=0
+							 )
+]]></string>
+		</procedure>
+		<procedure name="sp_tblDE_NGHI_HOAN_VE_GetByAll" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblDE_NGHI_HOAN_VE_GetByAll]
+AS
+	SELECT * FROM [tblDE_NGHI_HOAN_VE]
+]]></string>
+		</procedure>
+		<procedure name="sp_tblDE_NGHI_HOAN_VE_GetById" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblDE_NGHI_HOAN_VE_GetById]
+	@ID_HOAN_VE		int
+AS
+	SELECT [ID_HOAN_VE]
+				  ,[MA_KHACH_HANG]
+				  ,[TEN_KHACH_HANG]
+				  ,[TEN_NGUOI_HUONG]
+				  ,[MA_DAT_CHO]
+				  ,[NGAY_GIAO_DICH]
+				  ,[SO_TIEN]
+				  ,[MA_DAI_LY]
+				  ,[TEN_DAI_LY]
+				  ,[LOAI_HOAN_VE]
+				  ,[LY_DO_HOAN_VE]
+				  ,[THONG_TIN_KHAC]
+				  ,[USER_CREAT]
+				  ,[PHONG_BAN_DUYET]
+				  ,[TRANG_THAI]
+				  ,[EMAIL_KHACH_HANG]
+				  ,[SDT_KHACH_HANG]
+				  ,[SO_HIEU_CHUYEN_BAY]
+				  ,[CHANG_BAY]
+				  ,[NGAY_BAY]
+				  ,[DON_VI_YEU_CAU]
+				  ,[SO_SERIAL_DON_VI]
+				  ,[PHAN_LOAI_YEU_CAU]
+				  ,[DATE_CREAT]
+				  ,[PHONG_BAN_NHAP]
+				  ,[KET_QUA_CC]
+				  ,CASE KET_QUA_CC
+				 --   WHEN 1 THEN N'CC Đại lý - Chuyển HDS'
+					--WHEN 2 THEN N'CC Lỗi thẻ - Chuyển Finance kiểm tra lỗi thẻ'
+				 --   WHEN 3 THEN N'CC Kết quả khác - Chuyển Finance kiểm tra Hoàn vé' 
+					WHEN 4 THEN N'Khách hàng không đồng ý book vé - Chuyển HDS kiểm tra Hoàn vé HDS'
+					WHEN 5 THEN N'Khách hàng đồng ý book vé - Chuyển HDS book lại vé'
+					ELSE N''
+				   END AS KET_QUA_CC_TEXT
+				  ,[NGAY_NHAP_CC]
+				  ,[KET_QUA_HDS]
+				  ,CASE KET_QUA_HDS 
+					WHEN 1 THEN N'HDS không đồng ý hoàn vé - từ chối yêu cầu'
+					WHEN 2 THEN N'HDS đồng ý hoàn vé - đóng hoàn tất'
+					WHEN 3 THEN N'HDS book lại vé cho khách thành công - đóng hoàn tất'
+					WHEN 4 THEN N'HDS book lại vé cho khách không thành công - chuyển Finance kiểm tra Hoàn vé'
+					WHEN 5 THEN N'HDS đồng ý cancel Legs - Chuyển Finance kiểm tra hoàn vé'
+					WHEN 6 THEN N'HDS từ chối cancel Legs'
+					ELSE N'Thông tin khác'
+				   END AS KET_QUA_HDS_TEXT
+				  ,[NGAY_NHAP_HDS]
+				  ,[KET_QUA_FIN_LOI_THE]
+				  ,CASE 
+						WHEN KET_QUA_FIN_LOI_THE=1  THEN N'Lỗi thẻ không nhận được tiền - từ chối yêu cầu'
+						WHEN KET_QUA_FIN_LOI_THE=2 AND LOAI_HOAN_VE <> 4 THEN N'Lỗi thẻ chưa  nhận tiền, Yêu cầu đã được chuyển FINANCE SUPERVISOR duyệt lần 1'
+						WHEN KET_QUA_FIN_LOI_THE=2 AND LOAI_HOAN_VE = 4 THEN N'Lỗi thẻ đã nhận tiền, Yêu cầu đã được chuyển CC kiểm tra lỗi thẻ đã nhận tiền'
+						ELSE ''
+					END AS KET_QUA_FIN_LOI_THE_TEXT
+				 
+				  ,[NGAY_NHAP_FIN_LOI_THE]
+				  ,[KET_QUA_FIN_HOAN_VE]
+				  ,CASE 
+						WHEN KET_QUA_FIN_HOAN_VE=1 THEN N'Finance không đồng ý hoàn vé - từ chối yêu cầu'
+						WHEN KET_QUA_FIN_HOAN_VE=2 AND LOAI_HOAN_VE <> 2 THEN N'Finance đồng ý hoàn vé, chuyển FINANCE SUPERVISOR duyệt lần 1'
+						WHEN KET_QUA_FIN_HOAN_VE=2 AND LOAI_HOAN_VE = 2 THEN N'Finance đồng ý hoàn vé, chuyển GO/PVE trả tiền cho khách'
+						ELSE ''
+					END AS KET_QUA_FIN_HOAN_VE_TEXT
+				  
+				  ,[NGAY_NHAP_FIN_HOAN_VE]
+				  ,[KET_QUA_FIN_SAU_DUYET_1]
+				  ,CASE KET_QUA_FIN_SAU_DUYET_1 
+					WHEN 1 THEN N'Kênh hoàn vé ATM/CREDIT, SUPER VISOR đã đồng ý lần 1 - FINANCE chuyển tiền cho khách, đóng hoàn tất'
+					WHEN 2 THEN N'Kênh hoàn vé TKNH/CMND, SUPER VISOR đã đồng ý lần 2  - FINANCE chuyển tiền cho khách, đóng hoàn tất'
+					ELSE N''
+				   END AS KET_QUA_FIN_SAU_DUYET_1_TEXT
+				  ,[NGAY_NHAP_FIN_SAU_DUYET_1]
+				  ,[KET_QUA_SUPER_1]
+				  ,CASE 
+						WHEN KET_QUA_SUPER_1=1 AND (LOAI_HOAN_VE=5 OR LOAI_HOAN_VE=6)THEN N'Duyệt lần 1 - đồng ý, chuyển duyệt lần 2'
+						WHEN KET_QUA_SUPER_1=1 AND (LOAI_HOAN_VE<>5 AND LOAI_HOAN_VE<>6)THEN N'Duyệt lần 1 - đồng ý, chuyển FINANCE chờ chuyển tiền'
+						WHEN KET_QUA_SUPER_1=2 THEN N'Duyệt lần 1 - từ chối yêu cầu hoàn vé'
+						ELSE ''
+					END AS KET_QUA_SUPER_1_TEXT
+				  
+				  ,[NGAY_NHAP_SUPER_1]
+				  ,[KET_QUA_SUPER_2]
+				  ,CASE KET_QUA_SUPER_2 
+					WHEN 1 THEN N'Duyệt lần 2 - Chuyển tiền thất bại, từ chối yêu cầu hoàn vé'
+					WHEN 2 THEN N'Duyệt lần 2 - Chuyển tiền thành công, đóng hoàn tất'
+					ELSE N''
+				   END AS KET_QUA_SUPER_2_TEXT
+				  ,[NGAY_NHAP_SUPER_2]
+				  ,[KET_QUA_GO_PVE]
+				  ,CASE KET_QUA_GO_PVE 
+					WHEN 1 THEN N'GO/PVE đã trả lại tiền mặt cho khách tại phòng vé - đóng hoàn tất'
+					WHEN 2 THEN N'GO/PVE đã trả lại tiền mặt c]]></string>
+		</procedure>
+		<procedure name="sp_tblDE_NGHI_HOAN_VE_GetByListId" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblDE_NGHI_HOAN_VE_GetByListId]
+	@lstID_HOAN_VE	varchar(MAX)
+AS
+	SELECT [ID_HOAN_VE]
+				  ,[MA_KHACH_HANG]
+				  ,[TEN_KHACH_HANG]
+				  ,[TEN_NGUOI_HUONG]
+				  ,[MA_DAT_CHO]
+				  ,[NGAY_GIAO_DICH]
+				  ,[SO_TIEN]
+				  ,[MA_DAI_LY]
+				  ,[TEN_DAI_LY]
+				  ,[LOAI_HOAN_VE]
+				  ,[LY_DO_HOAN_VE]
+				  ,[THONG_TIN_KHAC]
+				  ,[USER_CREAT]
+				  ,[PHONG_BAN_DUYET]
+				  ,[TRANG_THAI]
+				  ,[EMAIL_KHACH_HANG]
+				  ,[SDT_KHACH_HANG]
+				  ,[SO_HIEU_CHUYEN_BAY]
+				  ,[CHANG_BAY]
+				  ,[NGAY_BAY]
+				  ,[DON_VI_YEU_CAU]
+				  ,[SO_SERIAL_DON_VI]
+				  ,[PHAN_LOAI_YEU_CAU]
+				  ,[DATE_CREAT]
+				  ,[PHONG_BAN_NHAP]
+				  ,[KET_QUA_CC]
+				  ,CASE KET_QUA_CC
+				 --   WHEN 1 THEN N'CC Đại lý - Chuyển HDS'
+					--WHEN 2 THEN N'CC Lỗi thẻ - Chuyển Finance kiểm tra lỗi thẻ'
+				 --   WHEN 3 THEN N'CC Kết quả khác - Chuyển Finance kiểm tra Hoàn vé' 
+					WHEN 4 THEN N'Khách hàng không đồng ý book vé - Chuyển HDS kiểm tra Hoàn vé HDS'
+					WHEN 5 THEN N'Khách hàng đồng ý book vé - Chuyển HDS book lại vé'
+					ELSE N''
+				   END AS KET_QUA_CC_TEXT
+				  ,[NGAY_NHAP_CC]
+				  ,[KET_QUA_HDS]
+				  ,CASE KET_QUA_HDS 
+					WHEN 1 THEN N'HDS không đồng ý hoàn vé - từ chối yêu cầu'
+					WHEN 2 THEN N'HDS đồng ý hoàn vé - đóng hoàn tất'
+					WHEN 3 THEN N'HDS book lại vé cho khách thành công - đóng hoàn tất'
+					WHEN 4 THEN N'HDS book lại vé cho khách không thành công - chuyển Finance kiểm tra Hoàn vé'
+					WHEN 5 THEN N'HDS đồng ý cancel Legs - Chuyển Finance kiểm tra hoàn vé'
+					WHEN 6 THEN N'HDS từ chối cancel Legs'
+					ELSE N'Thông tin khác'
+				   END AS KET_QUA_HDS_TEXT
+				  ,[NGAY_NHAP_HDS]
+				  ,[KET_QUA_FIN_LOI_THE]
+				  ,CASE 
+						WHEN KET_QUA_FIN_LOI_THE=1  THEN N'Lỗi thẻ không nhận được tiền - từ chối yêu cầu'
+						WHEN KET_QUA_FIN_LOI_THE=2 AND LOAI_HOAN_VE <> 4 THEN N'Lỗi thẻ chưa  nhận tiền, Yêu cầu đã được chuyển FINANCE SUPERVISOR duyệt lần 1'
+						WHEN KET_QUA_FIN_LOI_THE=2 AND LOAI_HOAN_VE = 4 THEN N'Lỗi thẻ đã nhận tiền, Yêu cầu đã được chuyển CC kiểm tra lỗi thẻ đã nhận tiền'
+						ELSE ''
+					END AS KET_QUA_FIN_LOI_THE_TEXT
+				 
+				  ,[NGAY_NHAP_FIN_LOI_THE]
+				  ,[KET_QUA_FIN_HOAN_VE]
+				  ,CASE 
+						WHEN KET_QUA_FIN_HOAN_VE=1 THEN N'Finance không đồng ý hoàn vé - từ chối yêu cầu'
+						WHEN KET_QUA_FIN_HOAN_VE=2 AND LOAI_HOAN_VE <> 2 THEN N'Finance đồng ý hoàn vé, chuyển FINANCE SUPERVISOR duyệt lần 1'
+						WHEN KET_QUA_FIN_HOAN_VE=2 AND LOAI_HOAN_VE = 2 THEN N'Finance đồng ý hoàn vé, chuyển GO/PVE trả tiền cho khách'
+						ELSE ''
+					END AS KET_QUA_FIN_HOAN_VE_TEXT
+				  
+				  ,[NGAY_NHAP_FIN_HOAN_VE]
+				  ,[KET_QUA_FIN_SAU_DUYET_1]
+				  ,CASE KET_QUA_FIN_SAU_DUYET_1 
+					WHEN 1 THEN N'Kênh hoàn vé ATM/CREDIT, SUPER VISOR đã đồng ý lần 1 - FINANCE chuyển tiền cho khách, đóng hoàn tất'
+					WHEN 2 THEN N'Kênh hoàn vé TKNH/CMND, SUPER VISOR đã đồng ý lần 2  - FINANCE chuyển tiền cho khách, đóng hoàn tất'
+					ELSE N''
+				   END AS KET_QUA_FIN_SAU_DUYET_1_TEXT
+				  ,[NGAY_NHAP_FIN_SAU_DUYET_1]
+				  ,[KET_QUA_SUPER_1]
+				  ,CASE 
+						WHEN KET_QUA_SUPER_1=1 AND (LOAI_HOAN_VE=5 OR LOAI_HOAN_VE=6)THEN N'Duyệt lần 1 - đồng ý, chuyển duyệt lần 2'
+						WHEN KET_QUA_SUPER_1=1 AND (LOAI_HOAN_VE<>5 AND LOAI_HOAN_VE<>6)THEN N'Duyệt lần 1 - đồng ý, chuyển FINANCE chờ chuyển tiền'
+						WHEN KET_QUA_SUPER_1=2 THEN N'Duyệt lần 1 - từ chối yêu cầu hoàn vé'
+						ELSE ''
+					END AS KET_QUA_SUPER_1_TEXT
+				  
+				  ,[NGAY_NHAP_SUPER_1]
+				  ,[KET_QUA_SUPER_2]
+				  ,CASE KET_QUA_SUPER_2 
+					WHEN 1 THEN N'Duyệt lần 2 - Chuyển tiền thất bại, từ chối yêu cầu hoàn vé'
+					WHEN 2 THEN N'Duyệt lần 2 - Chuyển tiền thành công, đóng hoàn tất'
+					ELSE N''
+				   END AS KET_QUA_SUPER_2_TEXT
+				  ,[NGAY_NHAP_SUPER_2]
+				  ,[KET_QUA_GO_PVE]
+				  ,CASE KET_QUA_GO_PVE 
+					WHEN 1 THEN N'GO/PVE đã trả lại tiền mặt cho khách tại phòng vé - đóng hoàn tất'
+					WHEN 2 THEN N'GO/PVE đã trả]]></string>
+		</procedure>
+		<procedure name="sp_tblDE_NGHI_HOAN_VE_GetByTop" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[
+CREATE PROCEDURE dbo.sp_tblDE_NGHI_HOAN_VE_GetByTop
+	@MA_PHONG_BAN VARCHAR(50)
+AS
+	IF @MA_PHONG_BAN='GO' 
+				SELECT TOP 10 ID_HOAN_VE
+				  ,MA_KHACH_HANG
+				  ,TEN_KHACH_HANG
+				  ,TEN_NGUOI_HUONG
+				  ,MA_DAT_CHO
+				  ,NGAY_GIAO_DICH
+				  ,SO_TIEN
+				  ,MA_DAI_LY
+				  ,TEN_DAI_LY
+				  ,LOAI_HOAN_VE
+				  ,LY_DO_HOAN_VE
+				  ,THONG_TIN_KHAC
+				  ,USER_CREAT
+				  ,PHONG_BAN_DUYET
+				  ,TRANG_THAI
+				  ,EMAIL_KHACH_HANG
+				  ,SDT_KHACH_HANG
+				  ,SO_HIEU_CHUYEN_BAY
+				  ,CHANG_BAY
+				  ,NGAY_BAY
+				  ,DON_VI_YEU_CAU
+				  ,SO_SERIAL_DON_VI
+				  ,PHAN_LOAI_YEU_CAU
+				  ,DATE_CREAT
+				  ,PHONG_BAN_NHAP
+				  ,KET_QUA_CC
+				  ,CASE KET_QUA_CC
+				 --   WHEN 1 THEN N'CC Đại lý - Chuyển HDS'
+					--WHEN 2 THEN N'CC Lỗi thẻ - Chuyển Finance kiểm tra lỗi thẻ'
+				 --   WHEN 3 THEN N'CC Kết quả khác - Chuyển Finance kiểm tra Hoàn vé' 
+					WHEN 4 THEN N'Khách hàng không đồng ý book vé - Chuyển Finance kiểm tra Hoàn vé'
+					WHEN 5 THEN N'Khách hàng đồng ý book vé - Chuyển HDS book lại vé'
+					ELSE N''
+				   END AS KET_QUA_CC_TEXT
+				  ,NGAY_NHAP_CC
+				  ,KET_QUA_HDS
+				  ,CASE KET_QUA_HDS 
+					WHEN 1 THEN N'HDS không đồng ý hoàn vé - từ chối yêu cầu'
+					WHEN 2 THEN N'HDS đồng ý hoàn vé - đóng hoàn tất'
+					WHEN 3 THEN N'HDS book lại vé cho khách thành công - đóng hoàn tất'
+					WHEN 4 THEN N'HDS book lại vé cho khách không thành công - chuyển Finance kiểm tra Hoàn vé'
+					WHEN 5 THEN N'HDS đồng ý cancel Legs - Chuyển Finance kiểm tra hoàn vé'
+					WHEN 6 THEN N'HDS từ chối cancel Legs'
+					ELSE N'Thông tin khác'
+				   END AS KET_QUA_HDS_TEXT
+				  ,NGAY_NHAP_HDS
+				  ,KET_QUA_FIN_LOI_THE
+				  ,CASE 
+						WHEN KET_QUA_FIN_LOI_THE=1  THEN N'Lỗi thẻ không nhận được tiền - từ chối yêu cầu'
+						WHEN KET_QUA_FIN_LOI_THE=2 AND LOAI_HOAN_VE <> 4 THEN N'Lỗi thẻ chưa  nhận tiền, Yêu cầu đã được chuyển FINANCE SUPERVISOR duyệt lần 1'
+						WHEN KET_QUA_FIN_LOI_THE=2 AND LOAI_HOAN_VE = 4 THEN N'Lỗi thẻ đã nhận tiền, Yêu cầu đã được chuyển CC kiểm tra lỗi thẻ đã nhận tiền'
+						ELSE ''
+					END AS KET_QUA_FIN_LOI_THE_TEXT
+				  
+				  ,NGAY_NHAP_FIN_LOI_THE
+				  ,KET_QUA_FIN_HOAN_VE
+				  ,CASE 
+						WHEN KET_QUA_FIN_HOAN_VE=1 THEN N'Finance không đồng ý hoàn vé - từ chối yêu cầu'
+						WHEN KET_QUA_FIN_HOAN_VE=2 AND LOAI_HOAN_VE <> 2 THEN N'Finance đồng ý hoàn vé, chuyển FINANCE SUPERVISOR duyệt lần 1'
+						WHEN KET_QUA_FIN_HOAN_VE=2 AND LOAI_HOAN_VE = 2 THEN N'Finance đồng ý hoàn vé, chuyển GO/PVE trả tiền cho khách'
+						ELSE ''
+					END AS KET_QUA_FIN_HOAN_VE_TEXT
+				  
+				  ,NGAY_NHAP_FIN_HOAN_VE
+				  ,KET_QUA_FIN_SAU_DUYET_1
+				  ,CASE KET_QUA_FIN_SAU_DUYET_1 
+					WHEN 1 THEN N'Kênh hoàn vé ATM/CREDIT, SUPER VISOR đã đồng ý lần 1 - FINANCE chuyển tiền cho khách, đóng hoàn tất'
+					WHEN 2 THEN N'Kênh hoàn vé TKNH/CMND, SUPER VISOR đã đồng ý lần 2  - FINANCE chuyển tiền cho khách, đóng hoàn tất'
+					ELSE N''
+				   END AS KET_QUA_FIN_SAU_DUYET_1_TEXT
+				  ,NGAY_NHAP_FIN_SAU_DUYET_1
+				  ,KET_QUA_SUPER_1
+				  ,CASE 
+						WHEN KET_QUA_SUPER_1=1 AND (LOAI_HOAN_VE=5 OR LOAI_HOAN_VE=6)THEN N'Duyệt lần 1 - đồng ý, chuyển duyệt lần 2'
+						WHEN KET_QUA_SUPER_1=1 AND (LOAI_HOAN_VE<>5 AND LOAI_HOAN_VE<>6)THEN N'Duyệt lần 1 - đồng ý, chuyển FINANCE chờ chuyển tiền'
+						WHEN KET_QUA_SUPER_1=2 THEN N'Duyệt lần 1 - từ chối yêu cầu hoàn vé'
+						ELSE ''
+					END AS KET_QUA_SUPER_1_TEXT
+				  
+				  ,NGAY_NHAP_SUPER_1
+				  ,KET_QUA_SUPER_2
+				  ,CASE KET_QUA_SUPER_2 
+					WHEN 1 THEN N'Duyệt lần 2 - Chuyển tiền thất bại, từ chối yêu cầu hoàn vé'
+					WHEN 2 THEN N'Duyệt lần 2 - Chuyển tiền thành công, đóng hoàn tất'
+					ELSE N''
+				   END AS KET_QUA_SUPER_2_TEXT
+				  ,NGAY_NHAP_SUPER_2
+				  ,KET_QUA_GO_PVE
+				  ,CASE KET_QUA_GO_PVE 
+					WHEN 1 THEN N'GO/PVE đã trả lại tiền mặt cho khách tại phòng vé - đóng hoàn tất'
+					WHEN 2 THEN N'GO/PVE đã trả lại tiền mặt cho khách tại sân bay - đóng hoàn tất]]></string>
+		</procedure>
+		<procedure name="sp_tblDE_NGHI_HOAN_VE_Insert" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblDE_NGHI_HOAN_VE_Insert]
+	@MA_KHACH_HANG		varchar(50),
+	@TEN_KHACH_HANG		nvarchar(250),
+	@TEN_NGUOI_HUONG		nvarchar(250),
+	@MA_DAT_CHO		varchar(50),
+	@NGAY_GIAO_DICH		datetime,
+	@SO_TIEN		money,
+	@MA_DAI_LY		varchar(50),
+	@TEN_DAI_LY		nvarchar(500),
+	@LOAI_HOAN_VE		int,
+	@LY_DO_HOAN_VE		nvarchar(1500),
+	@THONG_TIN_KHAC		nvarchar(2000),
+	@USER_CREAT		nvarchar(50),
+	@PHONG_BAN_DUYET		varchar(50),
+	@TRANG_THAI		smallint,
+	@EMAIL_KHACH_HANG varchar(50),
+	@SDT_KHACH_HANG varchar(50),
+	@SO_HIEU_CHUYEN_BAY varchar(50),
+	@CHANG_BAY varchar(50),
+	@NGAY_BAY datetime,
+	@DON_VI_YEU_CAU nvarchar(50),
+	@SO_SERIAL_DON_VI varchar(50),
+	@PHAN_LOAI_YEU_CAU int,
+	@DATE_CREAT datetime,
+	@PHONG_BAN_NHAP varchar(50),
+	@IS_VIP int,
+	@IS_ATTACH_FILE int,
+	@MaxId int output
+AS
+	INSERT INTO [tblDE_NGHI_HOAN_VE]([MA_KHACH_HANG], [TEN_KHACH_HANG], [TEN_NGUOI_HUONG], [MA_DAT_CHO], [NGAY_GIAO_DICH], [SO_TIEN], [MA_DAI_LY], [TEN_DAI_LY], [LOAI_HOAN_VE], [LY_DO_HOAN_VE], [THONG_TIN_KHAC], [USER_CREAT], [PHONG_BAN_DUYET], [TRANG_THAI]
+	 ,EMAIL_KHACH_HANG,SDT_KHACH_HANG,SO_HIEU_CHUYEN_BAY,CHANG_BAY ,NGAY_BAY 
+	 ,DON_VI_YEU_CAU,SO_SERIAL_DON_VI,PHAN_LOAI_YEU_CAU,DATE_CREAT,PHONG_BAN_NHAP,IS_VIP,MA_YEU_CAU,IS_HOAN_THANH,IS_ATTACH_FILE )
+	VALUES(@MA_KHACH_HANG, @TEN_KHACH_HANG, @TEN_NGUOI_HUONG, @MA_DAT_CHO, @NGAY_GIAO_DICH, @SO_TIEN, @MA_DAI_LY, @TEN_DAI_LY, @LOAI_HOAN_VE, @LY_DO_HOAN_VE, @THONG_TIN_KHAC, @USER_CREAT, @PHONG_BAN_DUYET, 0
+	,@EMAIL_KHACH_HANG,@SDT_KHACH_HANG,@SO_HIEU_CHUYEN_BAY,@CHANG_BAY ,@NGAY_BAY
+	,@DON_VI_YEU_CAU,@SO_SERIAL_DON_VI,@PHAN_LOAI_YEU_CAU,@DATE_CREAT,@PHONG_BAN_NHAP,@IS_VIP,dbo.SinhMaVJTuDong(),0,@IS_ATTACH_FILE )
+    SELECT @MaxId=SCOPE_IDENTITY()
+]]></string>
+		</procedure>
+		<procedure name="sp_tblDE_NGHI_HOAN_VE_PHEDUYET" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblDE_NGHI_HOAN_VE_PHEDUYET]
+	 @ID_HOAN_VE int
+	 ,@USER_ID int
+	 ,@THOI_GIAN_DUYET datetime
+	 ,@FROM_TRANG_THAI int
+	 ,@TO_TRANG_THAI int
+	 ,@CREATED_AT datetime
+	 ,@PROCESS_SECONDS bigint
+	 ,@NOTES ntext
+	 ,@PROCESS_PHONG_BAN varchar(50)
+	 ,@USER_NAME varchar(50)
+	 ,@PHONG_BAN_DUYET varchar(50)
+	 ,@PHAN_LOAI_YEU_CAU int
+	 ,@FINANCE_NUMBER int =0
+	 ,@SUPER_NUMBER int =0
+	 ,@FROM_PHONG_BAN varchar(50)
+	 ,@TO_PHONG_BAN varchar(50)
+	 
+AS
+	IF @PHONG_BAN_DUYET='GO_PVE'
+		
+		   UPDATE tblDE_NGHI_HOAN_VE 
+			SET KET_QUA_GO_PVE=@TO_TRANG_THAI
+				,NGAY_NHAP_GO_PVE=@THOI_GIAN_DUYET
+				,KET_QUA_THE_END ='GOPVE'+ CAST(@TO_TRANG_THAI as Varchar)
+				,PHONG_BAN_DUYET='GO_PVE'
+				,TRANG_THAI=@TO_TRANG_THAI
+			WHERE ID_HOAN_VE=@ID_HOAN_VE
+			
+	ELSE IF @PHONG_BAN_DUYET='CC'
+		UPDATE tblDE_NGHI_HOAN_VE 
+		SET KET_QUA_CC=@TO_TRANG_THAI
+			,NGAY_NHAP_CC=@THOI_GIAN_DUYET
+			,KET_QUA_THE_END ='CC'+CAST(@TO_TRANG_THAI as Varchar)
+			,PHONG_BAN_DUYET='CC'
+			,TRANG_THAI=@TO_TRANG_THAI
+		WHERE ID_HOAN_VE=@ID_HOAN_VE
+	ELSE IF @PHONG_BAN_DUYET='HDS'
+	   BEGIN
+			UPDATE tblDE_NGHI_HOAN_VE 
+			SET KET_QUA_HDS=@TO_TRANG_THAI
+				,NGAY_NHAP_HDS=@THOI_GIAN_DUYET
+				,KET_QUA_THE_END ='HDS'+CAST(@TO_TRANG_THAI as Varchar)
+				,PHONG_BAN_DUYET='HDS'
+				,TRANG_THAI=@TO_TRANG_THAI
+			WHERE ID_HOAN_VE=@ID_HOAN_VE
+			IF  @TO_TRANG_THAI=1
+				UPDATE tblDE_NGHI_HOAN_VE 
+				SET IS_HOAN_THANH=-1
+				WHERE ID_HOAN_VE=@ID_HOAN_VE
+			ELSE
+				UPDATE tblDE_NGHI_HOAN_VE 
+				SET IS_HOAN_THANH=1
+				WHERE ID_HOAN_VE=@ID_HOAN_VE
+	   END
+	ELSE IF @PHONG_BAN_DUYET='FINANCE' AND @FINANCE_NUMBER=1
+		BEGIN
+			UPDATE tblDE_NGHI_HOAN_VE 
+			SET KET_QUA_FIN_LOI_THE=@TO_TRANG_THAI
+				,NGAY_NHAP_FIN_LOI_THE=@THOI_GIAN_DUYET
+				,KET_QUA_THE_END ='FINL'+CAST(@TO_TRANG_THAI as Varchar)
+				,PHONG_BAN_DUYET='FINANCE'
+				,TRANG_THAI=@TO_TRANG_THAI
+			WHERE ID_HOAN_VE=@ID_HOAN_VE
+			IF @TO_TRANG_THAI=1
+				UPDATE tblDE_NGHI_HOAN_VE 
+				SET IS_HOAN_THANH=-1
+				WHERE ID_HOAN_VE=@ID_HOAN_VE
+		END
+	ELSE IF @PHONG_BAN_DUYET='FINANCE' AND @FINANCE_NUMBER=2
+		BEGIN
+			UPDATE tblDE_NGHI_HOAN_VE 
+			SET KET_QUA_FIN_HOAN_VE=@TO_TRANG_THAI
+				,NGAY_NHAP_FIN_HOAN_VE=@THOI_GIAN_DUYET
+				,KET_QUA_THE_END ='FINH'+CAST(@TO_TRANG_THAI as Varchar)
+				,PHONG_BAN_DUYET='FINANCE'
+				,TRANG_THAI=@TO_TRANG_THAI
+			WHERE ID_HOAN_VE=@ID_HOAN_VE
+			IF @TO_TRANG_THAI=1
+				UPDATE tblDE_NGHI_HOAN_VE 
+				SET IS_HOAN_THANH=-1
+				WHERE ID_HOAN_VE=@ID_HOAN_VE
+		END
+	ELSE IF @PHONG_BAN_DUYET='FINANCE' AND @FINANCE_NUMBER=3
+		BEGIN
+			UPDATE tblDE_NGHI_HOAN_VE 
+			SET KET_QUA_FIN_SAU_DUYET_1=@TO_TRANG_THAI
+				,NGAY_NHAP_FIN_SAU_DUYET_1=@THOI_GIAN_DUYET
+				,KET_QUA_THE_END ='FINA'+CAST(@TO_TRANG_THAI as Varchar)
+				,PHONG_BAN_DUYET='FINANCE'
+				,TRANG_THAI=@TO_TRANG_THAI
+			WHERE ID_HOAN_VE=@ID_HOAN_VE
+			IF @TO_TRANG_THAI=1 OR @TO_TRANG_THAI=2
+				UPDATE tblDE_NGHI_HOAN_VE 
+				SET IS_HOAN_THANH=1
+				WHERE ID_HOAN_VE=@ID_HOAN_VE
+		END
+	ELSE IF @PHONG_BAN_DUYET='SUPER' AND @SUPER_NUMBER=1
+		BEGIN
+			UPDATE tblDE_NGHI_HOAN_VE 
+			SET KET_QUA_SUPER_1=@TO_TRANG_THAI
+				,NGAY_NHAP_SUPER_1=@THOI_GIAN_DUYET
+				,KET_QUA_THE_END ='SUP1'+CAST(@TO_TRANG_THAI as Varchar)
+				,PHONG_BAN_DUYET='SUPER'
+				,TRANG_THAI=@TO_TRANG_THAI
+			WHERE ID_HOAN_VE=@ID_HOAN_VE
+			IF @TO_TRANG_THAI=2
+				UPDATE tblDE_NGHI_HOAN_VE 
+				SET IS_HOAN_THANH=-1
+				WHERE ID_HOAN_VE=@ID_HOAN_VE
+		END
+	ELSE IF @PHONG_BAN_DUYET='SUPER' AND @SUPER_NUMBER=2
+		UPDATE tblDE_NGHI_HOAN_VE 
+		SET KET_QUA_SUPER_2=@TO_TRANG_THAI
+			,NGAY_NHAP_SUPER_2=@THOI_GIAN_DUYET
+			,KET_QUA_THE_END ='SUP2'+CAST(@TO_TRANG_THAI as Varchar)
+			,PHONG_BAN_DUYET='SUPER'
+			,TRANG_THAI=@TO_TRANG_THAI
+	    WHERE ID_HOAN_VE=@ID_HOAN_VE
+	ELSE
+		select 1
+	
+	UPDATE tblLOG SET MOI_NHAT=0 WHERE ID_HOAN_VE=@ID_HOAN_VE AND MOI_NHAT=1
+	 INSERT INTO tblLOG
+	 (
+		 ID_HOAN_VE 
+		 ,USER_ID
+		 ,THOI_GIAN_DUYET
+		 ,FROM_TRANG_TH]]></string>
+		</procedure>
+		<procedure name="sp_tblDE_NGHI_HOAN_VE_PHEDUYET_DELETE" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblDE_NGHI_HOAN_VE_PHEDUYET_DELETE]
+	 @ID_HOAN_VE int
+	 ,@ID_LOG int
+AS
+	 --DELETE tblLOG
+	 --  WHERE ID_LOG=@ID_LOG
+	    
+	 --UPDATE tblDE_NGHI_HOAN_VE
+		--SET TRANG_THAI=0
+		--    ,PHONG_BAN_DUYET=NULL
+	 --   WHERE 
+	 --      1= (SELECT 1 FROM tblLOG 
+	 --         WHERE ID_HOAN_VE=@ID_HOAN_VE
+	 --       )
+	 --      AND ID_HOAN_VE=@ID_HOAN_VE
+	DELETE TBLLOG WHERE 1=2
+]]></string>
+		</procedure>
+		<procedure name="sp_tblDE_NGHI_HOAN_VE_Paging" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblDE_NGHI_HOAN_VE_Paging]
+	@CurentPage int,
+	@PageSize int
+AS
+	WITH tbpage_Paging AS
+	(
+		SELECT ROW_NUMBER()
+		OVER(ORDER BY ID_HOAN_VE) AS RowNum,*
+		FROM [dbo].[tblDE_NGHI_HOAN_VE]
+	)
+	SELECT * FROM tbpage_Paging
+	WHERE RowNum BETWEEN (@CurentPage - 1) * @PageSize + 1 AND @CurentPage * @PageSize
+	ORDER BY ID_HOAN_VE
+]]></string>
+		</procedure>
+		<procedure name="sp_tblDE_NGHI_HOAN_VE_Search" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblDE_NGHI_HOAN_VE_Search]
+	@MA_DAI_LY  varchar(50) =null
+    ,@MA_DAT_CHO  varchar(250)=null
+    ,@TEN_DAI_LY  varchar(250)=null
+    ,@TEN_KHACH_HANG  varchar(250)=null
+    ,@NGAY_GIAO_DICH_TU datetime=null
+    ,@NGAY_GIAO_DICH_DEN datetime=null
+    ,@LOAI_HOAN_VE As int=null
+    ,@MA_PHONG_BAN as varchar(50)=null
+AS
+  IF @MA_PHONG_BAN='GO' 
+		SELECT 
+		  a.[ID_HOAN_VE]
+		  ,a.[MA_KHACH_HANG]
+		  ,a.[TEN_KHACH_HANG]
+		  ,a.[TEN_NGUOI_HUONG]
+		  ,a.[MA_DAT_CHO]
+		  ,a.[NGAY_GIAO_DICH]
+		  ,a.[SO_TIEN]
+		  --,a.[MA_DAI_LY]
+		  ,a.[TEN_DAI_LY]
+		  ,a.MA_DAI_LY+'-'+a.TEN_DAI_LY as MA_DAI_LY
+		  ,a.[LOAI_HOAN_VE]
+		  ,a.[LY_DO_HOAN_VE]
+		  ,a.[THONG_TIN_KHAC]
+		  ,a.[USER_CREAT]
+		  ,a.[PHONG_BAN_DUYET]
+		  ,a.[TRANG_THAI]
+		  ,a.[EMAIL_KHACH_HANG]
+		  ,a.[SDT_KHACH_HANG]
+		  ,a.[SO_HIEU_CHUYEN_BAY]
+		  ,a.[CHANG_BAY]
+		  ,a.[NGAY_BAY]
+		  ,b.[USER_ID]
+		  ,b.[THOI_GIAN_DUYET]
+		  ,b.[FROM_TRANG_THAI]
+		  ,b.[TO_TRANG_THAI]
+		  ,b.[CREATED_AT]
+		  ,b.[PROCESS_SECONDS]
+		  ,b.[NOTES]
+		  ,b.[PROCESS_PHONG_BAN]
+		  ,CASE a.TRANG_THAI 
+			WHEN 1 THEN N'CC - Bác bỏ book lại vé - Chuyển TCKT'
+			WHEN 2 THEN N'CC - Đồng ý book lại vé - chuyển HDS'
+		    WHEN 3 THEN N'HDS - Đồng ý hoàn vé - Đóng hoàn tất'
+		    WHEN 4 THEN N'HDS - Từ chối hoàn vé'
+			WHEN 5 THEN N'HDS - Book lại vé cho khách, không thành công - chuyển TCKT'
+			WHEN 6 THEN N'HDS - Book lại vé cho khách, thành công - Đóng hoàn tất'
+			WHEN 7 THEN N'TCKT - đồng ý, duyệt lệnh hoàn'
+			WHEN 8 THEN N'TCKT - đồng ý, GO trả lại tiền mặt cho khách hàng tại phòng vé hoặc sân bay'
+			WHEN 9 THEN N'TCKT - từ chối yêu cầu hoàn vé'
+			WHEN 10 THEN N'Supervisor - Đồng ý hoàn vé'
+			WHEN 11 THEN N'Supervisor - từ chối yêu cầu hoàn vé'
+			WHEN 12 THEN N'CC - chuyển TCKT'
+			WHEN 13 THEN N'TCKT - chuyển Supervisor'
+			ELSE N'Chưa phê duyệt'
+		   END AS TRANG_THAI_PHE_DUYET
+          ,a.TRANG_THAI 
+          ,a.PHONG_BAN_NHAP
+		FROM [tblDE_NGHI_HOAN_VE] a LEFT JOIN  tblLOG b
+									ON a.ID_HOAN_VE=b.ID_HOAN_VE
+									   
+		WHERE 
+			(@MA_DAI_LY IS NULL OR MA_DAI_LY LIKE '%'+@MA_DAI_LY +'%' )
+			AND (@MA_DAT_CHO IS NULL OR MA_DAT_CHO LIKE '%'+@MA_DAT_CHO +'%' )
+			AND (@TEN_DAI_LY IS NULL OR TEN_DAI_LY LIKE '%'+@TEN_DAI_LY +'%' )
+			AND (@TEN_KHACH_HANG IS NULL OR TEN_KHACH_HANG LIKE '%'+@TEN_KHACH_HANG +'%' )
+			AND (@LOAI_HOAN_VE IS NULL OR LOAI_HOAN_VE =@LOAI_HOAN_VE)
+			AND (datediff(day, @NGAY_GIAO_DICH_TU, NGAY_GIAO_DICH) >= 0 OR @NGAY_GIAO_DICH_TU IS NULL)
+			AND (datediff(day, NGAY_GIAO_DICH, @NGAY_GIAO_DICH_DEN) >= 0 OR @NGAY_GIAO_DICH_DEN IS NULL)
+	        AND (b.MOI_NHAT IS null OR b.MOI_NHAT=1)
+ ELSE IF @MA_PHONG_BAN='HDS'
+	
+		SELECT 
+		  a.[ID_HOAN_VE]
+		  ,a.[MA_KHACH_HANG]
+		  ,a.[TEN_KHACH_HANG]
+		  ,a.[TEN_NGUOI_HUONG]
+		  ,a.[MA_DAT_CHO]
+		  ,a.[NGAY_GIAO_DICH]
+		  ,a.[SO_TIEN]
+		  --,a.[MA_DAI_LY]
+		  ,a.[TEN_DAI_LY]
+		  ,a.MA_DAI_LY+'-'+a.TEN_DAI_LY as MA_DAI_LY
+		  ,a.[LOAI_HOAN_VE]
+		  ,a.[LY_DO_HOAN_VE]
+		  ,a.[THONG_TIN_KHAC]
+		  ,a.[USER_CREAT]
+		  ,a.[PHONG_BAN_DUYET]
+		  ,a.[TRANG_THAI]
+		  ,a.[EMAIL_KHACH_HANG]
+		  ,a.[SDT_KHACH_HANG]
+		  ,a.[SO_HIEU_CHUYEN_BAY]
+		  ,a.[CHANG_BAY]
+		  ,a.[NGAY_BAY]
+		  ,b.[USER_ID]
+		  ,b.[THOI_GIAN_DUYET]
+		  ,b.[FROM_TRANG_THAI]
+		  ,b.[TO_TRANG_THAI]
+		  ,b.[CREATED_AT]
+		  ,b.[PROCESS_SECONDS]
+		  ,b.[NOTES]
+		  ,b.[PROCESS_PHONG_BAN]
+		  ,CASE a.TRANG_THAI 
+			WHEN 1 THEN N'CC - Bác bỏ book lại vé - Chuyển TCKT'
+			WHEN 2 THEN N'CC - Đồng ý book lại vé - chuyển HDS'
+		    WHEN 3 THEN N'HDS - Đồng ý hoàn vé - Đóng hoàn tất'
+		    WHEN 4 THEN N'HDS - Từ chối hoàn vé'
+			WHEN 5 THEN N'HDS - Book lại vé cho khách, không thành công - chuyển TCKT'
+			WHEN 6 THEN N'HDS - Book lại vé cho khách, thành công - Đóng hoàn tất'
+			WHEN 7 THEN N'TCKT - đồng ý, duyệt lệnh hoàn'
+			WHEN 8 THEN N'TCKT - đồng ý, GO trả lại tiền mặt cho khách hàng tại phòng vé hoặc sân bay'
+			WHEN 9 THEN N'TCKT - từ c]]></string>
+		</procedure>
+		<procedure name="sp_tblDE_NGHI_HOAN_VE_TIMKIEM" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblDE_NGHI_HOAN_VE_TIMKIEM]
+	@MA_DAI_LY  varchar(50) =null
+    ,@MA_DAT_CHO  varchar(250)=null
+    ,@TEN_DAI_LY  varchar(250)=null
+    ,@TEN_KHACH_HANG  varchar(250)=null
+    ,@NGAY_GIAO_DICH_TU datetime=null
+    ,@NGAY_GIAO_DICH_DEN datetime=null
+    ,@LOAI_HOAN_VE As int=null
+    ,@MA_PHONG_BAN as varchar(50)=null
+ AS
+	 IF @MA_PHONG_BAN='GO' 
+		SELECT [ID_HOAN_VE]
+		  ,[MA_KHACH_HANG]
+		  ,[TEN_KHACH_HANG]
+		  ,[TEN_NGUOI_HUONG]
+		  ,[MA_DAT_CHO]
+		  ,[NGAY_GIAO_DICH]
+		  ,[SO_TIEN]
+		  ,[MA_DAI_LY]
+		  ,[TEN_DAI_LY]
+		  ,[LOAI_HOAN_VE]
+		  ,[LY_DO_HOAN_VE]
+		  ,[THONG_TIN_KHAC]
+		  ,[USER_CREAT]
+		  ,[PHONG_BAN_DUYET]
+		  ,[TRANG_THAI]
+		  ,[EMAIL_KHACH_HANG]
+		  ,[SDT_KHACH_HANG]
+		  ,[SO_HIEU_CHUYEN_BAY]
+		  ,[CHANG_BAY]
+		  ,[NGAY_BAY]
+		  ,[DON_VI_YEU_CAU]
+		  ,[SO_SERIAL_DON_VI]
+		  ,[PHAN_LOAI_YEU_CAU]
+		  ,[DATE_CREAT]
+		  ,[PHONG_BAN_NHAP]
+		  ,[KET_QUA_CC]
+		  ,CASE KET_QUA_CC 
+			WHEN 1 THEN N'CC Đại lý - Chuyển HDS'
+			WHEN 2 THEN N'CC Lỗi thẻ - Chuyển Finance kiểm tra lỗi thẻ'
+		    WHEN 3 THEN N'CC Kết quả khác - Chuyển Finance kiểm tra Hoàn vé'
+		    WHEN 4 THEN N'CC Lỗi thẻ đã nhận tiền, khách hàng không đồng ý book vé - Chuyển Finance kiểm tra Hoàn vé'
+			WHEN 5 THEN N'CC Lỗi thẻ đã nhận tiền, khách hàng đồng ý book vé - Chuyển HDS book lại vé'
+			ELSE N'Thông tin khác'
+		   END AS KET_QUA_CC_TEXT
+		  ,[NGAY_NHAP_CC]
+		  ,[KET_QUA_HDS]
+		  ,CASE KET_QUA_HDS 
+			WHEN 1 THEN N'HDS không đồng ý hoàn vé - từ chối'
+			WHEN 2 THEN N'HDS đồng ý hoàn vé - đóng hoàn tất'
+		    WHEN 3 THEN N'HDS book lại vé cho khách thành công - đóng hoàn tất'
+		    WHEN 4 THEN N'HDS book lại vé cho khách không thành công - chuyển Finance kiểm tra Hoàn vé'
+			ELSE N'Thông tin khác'
+		   END AS KET_QUA_HDS_TEXT
+		  ,[NGAY_NHAP_HDS]
+		  ,[KET_QUA_FIN_LOI_THE]
+		  ,CASE KET_QUA_FIN_LOI_THE 
+			WHEN 1 THEN N'Finance kiểm tra lỗi thẻ không nhận được tiền - từ chối'
+			WHEN 2 THEN N'Finance kiểm tra lỗi thẻ đã nhận tiền (ATMNOIDIA) - chuyển HDS lỗi thẻ đã nhận tiền'
+		    WHEN 3 THEN N'Finance kiểm tra lỗi thẻ đã nhận tiền (CREDIT) - Chuyển Finance Super visor duyệt lần 1'
+		    ELSE N'Thông tin khác'
+		   END AS KET_QUA_FIN_LOI_THE_TEXT
+		  ,[NGAY_NHAP_FIN_LOI_THE]
+		  ,[KET_QUA_FIN_HOAN_VE]
+		  ,CASE KET_QUA_FIN_HOAN_VE 
+			WHEN 1 THEN N'Finance không đồng ý hoàn vé - từ chối'
+			WHEN 2 THEN N'Finance đồng ý hoàn vé(PHONGVE) - chuyển GO/PVE  trả tiền cho khách'
+		    WHEN 3 THEN N'Finance đồng ý hoàn vé(not PHONGVE) - Chuyển Finance super visor duyệt lần 1'
+		    ELSE N'Thông tin khác'
+		   END AS KET_QUA_FIN_HOAN_VE_TEXT
+		  ,[NGAY_NHAP_FIN_HOAN_VE]
+		  ,[KET_QUA_FIN_SAU_DUYET_1]
+		  ,CASE KET_QUA_FIN_SAU_DUYET_1 
+			WHEN 1 THEN N'Kênh hoàn vé ATM/CREDIT - chuyển tiền cho khách, đóng hoàn tất'
+			WHEN 2 THEN N'Kênh hoàn vé TKNH , CMND - chuyển Finance super visor duyệt lần 2'
+		    ELSE N'Thông tin khác'
+		   END AS KET_QUA_FIN_SAU_DUYET_1_TEXT
+		  ,[NGAY_NHAP_FIN_SAU_DUYET_1]
+		  ,[KET_QUA_SUPER_1]
+		  ,CASE KET_QUA_SUPER_1 
+			WHEN 1 THEN N'Finance super visor không đồng ý lần 1 - từ chối'
+			WHEN 2 THEN N'Finance super visor đồng ý lần 1 - chuyển Finance kiểm tra kênh hoàn vé'
+		    ELSE N'Thông tin khác'
+		   END AS KET_QUA_SUPER_1_TEXT
+		  ,[NGAY_NHAP_SUPER_1]
+		  ,[KET_QUA_SUPER_2]
+		  ,CASE KET_QUA_SUPER_2 
+			WHEN 1 THEN N'Finance super visor duyệt lần 2 , chuyển tiền thất bại - từ chối'
+			WHEN 2 THEN N'Finance super visor duyệt lần 2 , chuyển tiền thành công - đóng hoàn tất'
+		    ELSE N'Thông tin khác'
+		   END AS KET_QUA_SUPER_2_TEXT
+		  ,[NGAY_NHAP_SUPER_2]
+		  ,[KET_QUA_GO_PVE]
+		  ,CASE KET_QUA_GO_PVE 
+			WHEN 1 THEN N'GO/PVE đã trả lại tiền mặt cho khách tại phòng vé - đóng hoàn tất'
+			WHEN 2 THEN N'GO/PVE đã trả lại tiền mặt cho khách tại sân bay - đóng hoàn tất'
+		    ELSE N'Thông tin khác'
+		   END AS KET_QUA_GO_PVE_TEXT
+		  ,[NGAY_NHAP_GO_PVE]
+		  ,[KET_QUA_THE_END]
+		  ,[NGAY_NHAP_END]
+	  ]]></string>
+		</procedure>
+		<procedure name="sp_tblDE_NGHI_HOAN_VE_TIMKIEM_18122014" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblDE_NGHI_HOAN_VE_TIMKIEM_18122014]
+	@MA_DAI_LY  varchar(50) =null
+    ,@MA_DAT_CHO  varchar(250)=null
+    ,@TEN_DAI_LY  varchar(250)=null
+    ,@TEN_KHACH_HANG  varchar(250)=null
+    ,@NGAY_GIAO_DICH_TU datetime=null
+    ,@NGAY_GIAO_DICH_DEN datetime=null
+    ,@LOAI_HOAN_VE As int=null
+    ,@MA_PHONG_BAN as varchar(50)=null
+    ,@CHO_PHE_DUYET as int
+ AS
+	
+			IF @MA_PHONG_BAN='GO' 
+				SELECT [ID_HOAN_VE]
+				  ,[MA_KHACH_HANG]
+				  ,[TEN_KHACH_HANG]
+				  ,[TEN_NGUOI_HUONG]
+				  ,[MA_DAT_CHO]
+				  ,[NGAY_GIAO_DICH]
+				  ,[SO_TIEN]
+				  ,[MA_DAI_LY]
+				  ,[TEN_DAI_LY]
+				  ,[LOAI_HOAN_VE]
+				  ,[LY_DO_HOAN_VE]
+				  ,[THONG_TIN_KHAC]
+				  ,[USER_CREAT]
+				  ,[PHONG_BAN_DUYET]
+				  ,[TRANG_THAI]
+				  ,[EMAIL_KHACH_HANG]
+				  ,[SDT_KHACH_HANG]
+				  ,[SO_HIEU_CHUYEN_BAY]
+				  ,[CHANG_BAY]
+				  ,[NGAY_BAY]
+				  ,[DON_VI_YEU_CAU]
+				  ,[SO_SERIAL_DON_VI]
+				  ,[PHAN_LOAI_YEU_CAU]
+				  ,[DATE_CREAT]
+				  ,[PHONG_BAN_NHAP]
+				  ,[KET_QUA_CC]
+				  ,CASE KET_QUA_CC
+				 --   WHEN 1 THEN N'CC Đại lý - Chuyển HDS'
+					--WHEN 2 THEN N'CC Lỗi thẻ - Chuyển Finance kiểm tra lỗi thẻ'
+				 --   WHEN 3 THEN N'CC Kết quả khác - Chuyển Finance kiểm tra Hoàn vé' 
+					WHEN 4 THEN N'Khách hàng không đồng ý book vé - Chuyển HDS kiểm tra Hoàn vé HDS'
+					WHEN 5 THEN N'Khách hàng đồng ý book vé - Chuyển HDS book lại vé'
+					ELSE N''
+				   END AS KET_QUA_CC_TEXT
+				  ,[NGAY_NHAP_CC]
+				  ,[KET_QUA_HDS]
+				  ,CASE KET_QUA_HDS 
+					WHEN 1 THEN N'HDS không đồng ý hoàn vé - từ chối yêu cầu'
+					WHEN 2 THEN N'HDS đồng ý hoàn vé - đóng hoàn tất'
+					WHEN 3 THEN N'HDS book lại vé cho khách thành công - đóng hoàn tất'
+					WHEN 4 THEN N'HDS book lại vé cho khách không thành công - chuyển Finance kiểm tra Hoàn vé'
+					WHEN 5 THEN N'HDS đồng ý cancel Legs - Chuyển Finance kiểm tra hoàn vé'
+					WHEN 6 THEN N'HDS từ chối cancel Legs'
+					ELSE N'Thông tin khác'
+				   END AS KET_QUA_HDS_TEXT
+				  ,[NGAY_NHAP_HDS]
+				  ,[KET_QUA_FIN_LOI_THE]
+				  ,CASE 
+						WHEN KET_QUA_FIN_LOI_THE=1  THEN N'Lỗi thẻ không nhận được tiền - từ chối yêu cầu'
+						WHEN KET_QUA_FIN_LOI_THE=2 AND LOAI_HOAN_VE <> 4 THEN N'Lỗi thẻ chưa  nhận tiền, Yêu cầu đã được chuyển FINANCE SUPERVISOR duyệt lần 1'
+						WHEN KET_QUA_FIN_LOI_THE=2 AND LOAI_HOAN_VE = 4 THEN N'Lỗi thẻ đã nhận tiền, Yêu cầu đã được chuyển CC kiểm tra lỗi thẻ đã nhận tiền'
+						ELSE ''
+					END AS KET_QUA_FIN_LOI_THE_TEXT
+				  
+				  ,[NGAY_NHAP_FIN_LOI_THE]
+				  ,[KET_QUA_FIN_HOAN_VE]
+				  ,CASE 
+						WHEN KET_QUA_FIN_HOAN_VE=1 THEN N'Finance không đồng ý hoàn vé - từ chối yêu cầu'
+						WHEN KET_QUA_FIN_HOAN_VE=2 AND LOAI_HOAN_VE <> 2 THEN N'Finance đồng ý hoàn vé, chuyển FINANCE SUPERVISOR duyệt lần 1'
+						WHEN KET_QUA_FIN_HOAN_VE=2 AND LOAI_HOAN_VE = 2 THEN N'Finance đồng ý hoàn vé, chuyển GO/PVE trả tiền cho khách'
+						ELSE ''
+					END AS KET_QUA_FIN_HOAN_VE_TEXT
+				  
+				  ,[NGAY_NHAP_FIN_HOAN_VE]
+				  ,[KET_QUA_FIN_SAU_DUYET_1]
+				  ,CASE KET_QUA_FIN_SAU_DUYET_1 
+					WHEN 1 THEN N'Kênh hoàn vé ATM/CREDIT, SUPER VISOR đã đồng ý lần 1 - FINANCE chuyển tiền cho khách, đóng hoàn tất'
+					WHEN 2 THEN N'Kênh hoàn vé TKNH/CMND, SUPER VISOR đã đồng ý lần 2  - FINANCE chuyển tiền cho khách, đóng hoàn tất'
+					ELSE N''
+				   END AS KET_QUA_FIN_SAU_DUYET_1_TEXT
+				  ,[NGAY_NHAP_FIN_SAU_DUYET_1]
+				  ,[KET_QUA_SUPER_1]
+				  ,CASE 
+						WHEN KET_QUA_SUPER_1=1 AND (LOAI_HOAN_VE=5 OR LOAI_HOAN_VE=6)THEN N'Duyệt lần 1 - đồng ý, chuyển duyệt lần 2'
+						WHEN KET_QUA_SUPER_1=1 AND (LOAI_HOAN_VE<>5 AND LOAI_HOAN_VE<>6)THEN N'Duyệt lần 1 - đồng ý, chuyển FINANCE chờ chuyển tiền'
+						WHEN KET_QUA_SUPER_1=2 THEN N'Duyệt lần 1 - từ chối yêu cầu hoàn vé'
+						ELSE ''
+					END AS KET_QUA_SUPER_1_TEXT
+				  
+				  ,[NGAY_NHAP_SUPER_1]
+				  ,[KET_QUA_SUPER_2]
+				  ,CASE KET_QUA_SUPER_2 
+					WHEN 1 THEN N'Duyệt lần 2 - Chuyển tiền thất bại, từ chối yêu cầu]]></string>
+		</procedure>
+		<procedure name="sp_tblDE_NGHI_HOAN_VE_Update" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblDE_NGHI_HOAN_VE_Update]
+	@ID_HOAN_VE		int,
+	@MA_KHACH_HANG		varchar(50),
+	@TEN_KHACH_HANG		nvarchar(250),
+	@TEN_NGUOI_HUONG		nvarchar(250),
+	@MA_DAT_CHO		varchar(50),
+	@NGAY_GIAO_DICH		datetime,
+	@SO_TIEN		money,
+	@MA_DAI_LY		varchar(50),
+	@TEN_DAI_LY		nvarchar(500),
+	@LOAI_HOAN_VE		int,
+	@LY_DO_HOAN_VE		nvarchar(1500),
+	@THONG_TIN_KHAC		nvarchar(2000),
+	@USER_CREAT		nvarchar(50),
+	@PHONG_BAN_DUYET		varchar(50),
+	@TRANG_THAI		smallint,
+	@EMAIL_KHACH_HANG varchar(50),
+	@SDT_KHACH_HANG varchar(50),
+	@SO_HIEU_CHUYEN_BAY varchar(50),
+	@CHANG_BAY varchar(50),
+	@NGAY_BAY datetime,
+	@DON_VI_YEU_CAU nvarchar(50),
+	@SO_SERIAL_DON_VI varchar(50),
+	@PHAN_LOAI_YEU_CAU int,
+	@IS_VIP int
+AS
+	UPDATE [tblDE_NGHI_HOAN_VE] 
+	 SET [MA_KHACH_HANG] = @MA_KHACH_HANG
+		  ,[TEN_KHACH_HANG] = @TEN_KHACH_HANG
+		  ,[TEN_NGUOI_HUONG] = @TEN_NGUOI_HUONG
+		  ,[MA_DAT_CHO] = @MA_DAT_CHO
+		  ,[NGAY_GIAO_DICH] = @NGAY_GIAO_DICH
+		  ,[SO_TIEN] = @SO_TIEN
+		  ,[MA_DAI_LY] = @MA_DAI_LY
+		  ,[TEN_DAI_LY] = @TEN_DAI_LY
+		  ,[LOAI_HOAN_VE] = @LOAI_HOAN_VE
+		  ,[LY_DO_HOAN_VE] = @LY_DO_HOAN_VE
+		  ,[THONG_TIN_KHAC] = @THONG_TIN_KHAC
+		  ,[USER_CREAT] = @USER_CREAT
+		  ,[PHONG_BAN_DUYET] = @PHONG_BAN_DUYET
+		  ,[TRANG_THAI] = @TRANG_THAI
+		  ,EMAIL_KHACH_HANG=@EMAIL_KHACH_HANG
+		  ,SDT_KHACH_HANG=@SDT_KHACH_HANG
+		  ,SO_HIEU_CHUYEN_BAY=@SO_HIEU_CHUYEN_BAY
+		  ,CHANG_BAY=@CHANG_BAY
+		  ,NGAY_BAY=@NGAY_BAY
+		  ,DON_VI_YEU_CAU=@DON_VI_YEU_CAU 
+		  ,SO_SERIAL_DON_VI=@SO_SERIAL_DON_VI 
+		  ,PHAN_LOAI_YEU_CAU=@PHAN_LOAI_YEU_CAU
+		  ,IS_VIP=@IS_VIP 
+	 WHERE ID_HOAN_VE = @ID_HOAN_VE
+			AND TRANG_THAI=0
+]]></string>
+		</procedure>
+		<procedure name="sp_tblFILE_ATTACH_DELETE" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblFILE_ATTACH_DELETE]
+    @Id int
+  
+AS
+	DELETE FROM [vj-refund].[dbo].[tblFILE_ATTACH]
+	
+	 WHERE Id=@Id
+]]></string>
+		</procedure>
+		<procedure name="sp_tblFILE_ATTACH_GetByID_HOAN_VE" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblFILE_ATTACH_GetByID_HOAN_VE]
+    @ID_HOAN_VE int
+  
+AS
+	SELECT *FROM  [vj-refund].[dbo].[tblFILE_ATTACH]
+	
+	 WHERE ID_HOAN_VE=@ID_HOAN_VE
+]]></string>
+		</procedure>
+		<procedure name="sp_tblFILE_ATTACH_INSERT" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblFILE_ATTACH_INSERT]
+	@Url varchar(500)
+   ,@Note nvarchar(500)
+   ,@ID_HOAN_VE int
+   ,@MA_PHONG_BAN varchar(50)
+   ,@FileName varchar(500)
+AS
+	INSERT INTO [vj-refund].[dbo].[tblFILE_ATTACH]
+           ([Url]
+           ,[Note]
+           ,[ID_HOAN_VE]
+           ,[MA_PHONG_BAN]
+           ,[FileName]
+           )
+     VALUES(
+           @Url,
+           @Note,
+           @ID_HOAN_VE,
+           @MA_PHONG_BAN,
+           @FileName
+           )
+]]></string>
+		</procedure>
+		<procedure name="sp_tblFILE_ATTACH_UPDATE" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblFILE_ATTACH_UPDATE]
+    @Id int
+   ,@Url varchar(500)
+   ,@Note nvarchar(500)
+   ,@ID_HOAN_VE int
+   ,@MA_PHONG_BAN varchar(50)
+AS
+	UPDATE [vj-refund].[dbo].[tblFILE_ATTACH]
+	   SET [Url] = @Url
+		  ,[Note] = @Note
+		  ,[ID_HOAN_VE] = @ID_HOAN_VE
+		  ,[MA_PHONG_BAN] = @MA_PHONG_BAN
+	 WHERE Id=@Id
+]]></string>
+		</procedure>
+		<procedure name="sp_tblGET_FILE_ATTACH_MA_PHONG_BAN" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblGET_FILE_ATTACH_MA_PHONG_BAN]
+    @ID_HOAN_VE int
+    ,@MA_PHONG_BAN varchar(50)
+AS
+	SELECT *FROM  [vj-refund].[dbo].[tblFILE_ATTACH]
+	
+	 WHERE (@ID_HOAN_VE IS NULL OR ID_HOAN_VE=@ID_HOAN_VE)
+		AND (@MA_PHONG_BAN IS NULL OR MA_PHONG_BAN =@MA_PHONG_BAN)
+]]></string>
+		</procedure>
+		<procedure name="sp_tblLOG_GetByID_HOAN_VE" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblLOG_GetByID_HOAN_VE]
+    @ID_HOAN_VE int
+   
+AS
+ SELECT [ID_LOG]
+      ,a.[ID_HOAN_VE]
+      ,[USER_ID]
+      ,[THOI_GIAN_DUYET]
+      ,[FROM_TRANG_THAI]
+      ,[TO_TRANG_THAI]
+      ,[CREATED_AT]
+      ,[PROCESS_SECONDS]
+      ,[NOTES]
+      ,[PROCESS_PHONG_BAN]
+      ,[USER_NAME]
+      ,[MOI_NHAT]
+      ,[NGAY_NHAP]
+      ,a.[PHONG_BAN_NHAP]
+      ,[FROM_PHONG_BAN]
+      ,[TO_PHONG_BAN]
+      ,CASE 
+			WHEN FROM_PHONG_BAN='GO' THEN N''
+			WHEN FROM_PHONG_BAN='GO_PVE' AND FROM_TRANG_THAI=1 and b.KET_QUA_GO_PVE=1 THEN N'GO/PVE đã trả lại tiền mặt cho khách tại phòng vé - đóng hoàn tất'
+			WHEN FROM_PHONG_BAN='GO_PVE' AND FROM_TRANG_THAI=2 and b.KET_QUA_GO_PVE=2 THEN N'GO/PVE đã trả lại tiền mặt cho khách tại sân bay - đóng hoàn tất'
+			WHEN FROM_PHONG_BAN='CC' AND FROM_TRANG_THAI=4 and b.KET_QUA_CC=4 THEN N'Khách hàng không đồng ý book vé - Chuyển HDS kiểm tra Hoàn vé HDS'
+			WHEN FROM_PHONG_BAN='CC' AND FROM_TRANG_THAI=5 and b.KET_QUA_CC=5 THEN N'Khách hàng đồng ý book vé - Chuyển HDS book lại vé'
+			WHEN FROM_PHONG_BAN='HDS' AND FROM_TRANG_THAI=1 and b.KET_QUA_HDS=1 THEN N'HDS không đồng ý hoàn vé - từ chối yêu cầu'
+			WHEN FROM_PHONG_BAN='HDS' AND FROM_TRANG_THAI=2 and b.KET_QUA_HDS=2 THEN N'HDS đồng ý hoàn vé - đóng hoàn tất'
+			WHEN FROM_PHONG_BAN='HDS' AND FROM_TRANG_THAI=3 and b.KET_QUA_HDS=3 THEN N'HDS book lại vé cho khách thành công - đóng hoàn tất'
+			WHEN FROM_PHONG_BAN='HDS' AND FROM_TRANG_THAI=4 and b.KET_QUA_HDS=4 THEN N'HDS book lại vé cho khách không thành công - chuyển Finance kiểm tra Hoàn vé'
+			WHEN FROM_PHONG_BAN='HDS' AND FROM_TRANG_THAI=5 and b.KET_QUA_HDS=5 THEN N'HDS đồng ý cancel Legs - Chuyển Finance kiểm tra hoàn vé'
+			WHEN FROM_PHONG_BAN='HDS' AND FROM_TRANG_THAI=6 and b.KET_QUA_HDS=6 THEN N'HDS từ chối cancel Legs'
+			
+			WHEN FROM_PHONG_BAN='FINANCE' AND b.PHAN_LOAI_YEU_CAU=2 AND FROM_TRANG_THAI=1 THEN N'Lỗi thẻ không nhận được tiền - từ chối yêu cầu'
+			WHEN FROM_PHONG_BAN='FINANCE' AND b.PHAN_LOAI_YEU_CAU=2 AND b.LOAI_HOAN_VE<>4 AND FROM_TRANG_THAI=2 THEN N'Lỗi thẻ chưa  nhận tiền, Yêu cầu đã được chuyển FINANCE SUPERVISOR duyệt lần 1'
+			WHEN FROM_PHONG_BAN='FINANCE' AND b.PHAN_LOAI_YEU_CAU=2 AND b.LOAI_HOAN_VE=4 AND FROM_TRANG_THAI=2 THEN N'Lỗi thẻ đã nhận tiền, Yêu cầu đã được chuyển CC kiểm tra lỗi thẻ đã nhận tiền'
+			WHEN FROM_PHONG_BAN='FINANCE' AND b.PHAN_LOAI_YEU_CAU<>2 AND b.LOAI_HOAN_VE <> 2 AND FROM_TRANG_THAI=2 THEN N'Finance đồng ý hoàn vé, chuyển FINANCE SUPERVISOR duyệt lần 1'
+			WHEN FROM_PHONG_BAN='FINANCE' AND b.PHAN_LOAI_YEU_CAU<>2 AND b.LOAI_HOAN_VE = 2 AND FROM_TRANG_THAI=2 THEN N'Finance đồng ý hoàn vé, chuyển GO/PVE trả tiền cho khách'
+			WHEN FROM_PHONG_BAN='FINANCE' AND b.PHAN_LOAI_YEU_CAU<>2 AND FROM_TRANG_THAI=1 THEN N'Finance không đồng ý hoàn vé - từ chối yêu cầu'
+			
+			WHEN FROM_PHONG_BAN='FINANCE' AND b.KET_QUA_FIN_SAU_DUYET_1=1 AND FROM_TRANG_THAI=1 THEN N'Kênh hoàn vé ATM/CREDIT, SUPER VISOR đã đồng ý lần 1 - FINANCE chuyển tiền cho khách, đóng hoàn tất'
+			WHEN FROM_PHONG_BAN='FINANCE' AND b.KET_QUA_FIN_SAU_DUYET_1=2 AND FROM_TRANG_THAI=2 THEN N'Kênh hoàn vé TKNH/CMND, SUPER VISOR đã đồng ý lần 2  - FINANCE chuyển tiền cho khách, đóng hoàn tất'
+			
+			
+			WHEN FROM_PHONG_BAN='SUPER' AND b.KET_QUA_SUPER_1=1 AND (b.LOAI_HOAN_VE=5 OR b.LOAI_HOAN_VE=6) AND FROM_TRANG_THAI =1 THEN N'Duyệt lần 1 - đồng ý, chuyển duyệt lần 2'
+			WHEN FROM_PHONG_BAN='SUPER' AND b.KET_QUA_SUPER_1=1 AND (b.LOAI_HOAN_VE<>5 AND b.LOAI_HOAN_VE<>6) AND FROM_TRANG_THAI =1 THEN N'Duyệt lần 1 - đồng ý, chuyển FINANCE chờ chuyển tiền'
+			WHEN FROM_PHONG_BAN='SUPER' AND b.KET_QUA_SUPER_1=2 AND FROM_TRANG_THAI=2 THEN N'Duyệt lần 1 - từ chối yêu cầu hoàn vé'
+			WHEN FROM_PHONG_BAN='SUPER' AND b.KET_QUA_SUPER_2=1 AND FROM_TRANG_THAI=1 THEN N'Duyệt lần 2 - Chuyển tiền thất bại, từ chối yêu cầu hoàn vé'
+			WHEN FROM_PHONG_BAN='SUPER' AND b.KET_QUA_SUPER_2=2 AND FROM_TRANG_THAI=1 THEN N'Duyệt lần 2 - Chuyển tiền thành côn]]></string>
+		</procedure>
+		<procedure name="sp_tblUSER_DELETE" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblUSER_DELETE]
+    @ID_USER int
+   
+AS
+ DELETE FROM tblUSER
+ WHERE ID_USER=@ID_USER
+]]></string>
+		</procedure>
+		<procedure name="sp_tblUSER_GetByID" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblUSER_GetByID]
+    @ID_USER int
+   
+AS
+ SELECT *FROM tblUSER
+ WHERE ID_USER=@ID_USER
+]]></string>
+		</procedure>
+		<procedure name="sp_tblUSER_GetByUserName" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblUSER_GetByUserName]
+	@USER_NAME varchar(50)
+	,@TOKEN varchar(500)
+AS
+	SELECT * FROM tblUSER
+	WHERE USER_NAME=@USER_NAME AND TOKEN=@TOKEN
+]]></string>
+		</procedure>
+		<procedure name="sp_tblUSER_INSERT" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblUSER_INSERT]
+	@USER_NAME varchar(50)
+   ,@PHONG_BAN varchar(50)
+   ,@TOKEN varchar(50)
+   ,@TOKEN_EXPIRED datetime
+AS
+	INSERT INTO [vj-refund].[dbo].[tblUSER]
+           ([USER_NAME]
+           ,[PHONG_BAN]
+           ,[TOKEN]
+           ,[TOKEN_EXPIRED])
+     VALUES
+           (@USER_NAME
+           ,@PHONG_BAN
+           ,@TOKEN
+           ,@TOKEN_EXPIRED)
+]]></string>
+		</procedure>
+		<procedure name="sp_tblUSER_ONLINE_DELETE" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblUSER_ONLINE_DELETE]
+    @ID_USER int
+   
+AS
+ DELETE FROM tblUSER_ONLINE
+ WHERE ID_USER=@ID_USER
+]]></string>
+		</procedure>
+		<procedure name="sp_tblUSER_ONLINE_INSERT" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblUSER_ONLINE_INSERT]
+	@USER_NAME varchar(50)
+   ,@PHONG_BAN varchar(50)
+   ,@TOKEN varchar(50)
+   ,@TOKEN_EXPIRED datetime
+AS
+	INSERT INTO [vj-refund].[dbo].[tblUSER_ONLINE]
+           ([USER_NAME]
+           ,[PHONG_BAN]
+           ,[TOKEN]
+           ,[TOKEN_EXPIRED])
+     VALUES
+           (@USER_NAME
+           ,@PHONG_BAN
+           ,@TOKEN
+           ,@TOKEN_EXPIRED)
+]]></string>
+		</procedure>
+		<procedure name="sp_tblUSER_SEARCH" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblUSER_SEARCH]
+    @USER_NAME varchar(50)
+   ,@PHONG_BAN varchar(50)
+   
+AS
+ SELECT *FROM tblUSER
+ WHERE (@USER_NAME is null or USER_NAME like '%'+@USER_NAME+'%')
+       AND (@PHONG_BAN is null OR PHONG_BAN =@PHONG_BAN)
+]]></string>
+		</procedure>
+		<procedure name="sp_tblUSER_UPDATE" id="Procedure6941403" isSystem="false" >
+			<string><![CDATA[CREATE PROCEDURE [dbo].[sp_tblUSER_UPDATE]
+    @ID_USER int
+   ,@USER_NAME varchar(50)
+   ,@PHONG_BAN varchar(50)
+   ,@TOKEN varchar(50)
+   ,@TOKEN_EXPIRED datetime
+AS
+ UPDATE [vj-refund].[dbo].[tblUSER]
+   SET [USER_NAME] = @USER_NAME
+      ,[PHONG_BAN] = @PHONG_BAN
+      ,[TOKEN] = @TOKEN
+      ,[TOKEN_EXPIRED] = @TOKEN_EXPIRED
+ WHERE ID_USER=@ID_USER
+]]></string>
+		</procedure>
+		<function name="NextCustomerNumber" id="Function6941966" isSystem="false" >
+			<string><![CDATA[create function [dbo].[NextCustomerNumber]() 
+returns char(5) 
+as 
+	begin 
+		declare @lastval char(5) 
+		set @lastval = (select max(customerNumber) from Customers)
+		 if @lastval is null 
+			set @lastval = 'C0001' 
+			declare @i int set @i = right(@lastval,4) + 1 
+			return 'C' + right('000' + convert(varchar(10),@i),4) 
+		 end
+]]></string>
+		</function>
+		<function name="SinhMaVJTuDong" id="Function6941966" isSystem="false" >
+			<string><![CDATA[-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date, ,>
+-- Description:	<Description, ,>
+-- =============================================
+CREATE FUNCTION [dbo].[SinhMaVJTuDong]()
+RETURNS VARCHAR(50)
+AS BEGIN
+    DECLARE @Work VARCHAR(50)
+    DECLARE @MA_YEU_CAU VARCHAR(50)
+    SET @MA_YEU_CAU=(SELECT TOP 1 MA_YEU_CAU FROM tblDE_NGHI_HOAN_VE
+							WHERE ID_HOAN_VE=(SELECT MAX(ID_HOAN_VE) FROM tblDE_NGHI_HOAN_VE)
+							)
+    IF @MA_YEU_CAU IS NULL 
+		BEGIN
+			SET @Work = 'VJ'+Cast(Year(GETDATE()) as VARCHAR)+'000001'
+    
+		END
+    ELSE
+		BEGIN
+			DECLARE @YEAR_NOW as VARCHAR(50)
+			SET @YEAR_NOW=(SELECT Cast(Year(GETDATE()) as VARCHAR) )
+			DECLARE @YEAR_MAX as VARCHAR(50)
+			SET @YEAR_MAX=(SELECT SUBSTRING(@MA_YEU_CAU,3,4))
+			IF @YEAR_NOW<>@YEAR_MAX
+				BEGIN
+					SET @Work =  'VJ'+@YEAR_NOW+'000001'
+				END
+			ELSE
+			  BEGIN
+					declare @i int 
+					set @i = right(@MA_YEU_CAU,6) + 1 
+					--return 'C' + right('000' + convert(varchar(10),@i),4) 
+					SET @Work =  'VJ'+@YEAR_NOW+right('00000' + convert(varchar(10),@i),6) 
+			  END 
+		END
+    
+    RETURN @work
+END
+--select right('VJ2015000001',6)
+--select 'VJ'+'2015'+right('00000' + convert(varchar(10),1000000),6)
+]]></string>
+		</function>
+		<function name="Split" id="Function6941966" isSystem="false" >
+			<string><![CDATA[CREATE FUNCTION [dbo].[Split](@String varchar(MAX), @Delimiter char(1))       
+returns @temptable TABLE (items varchar(MAX))       
+as       
+begin      
+    declare @idx int       
+    declare @slice varchar(8000)       
+    select @idx = 1       
+        if len(@String)<1 or @String is null  return       
+    while @idx!= 0       
+    begin       
+        set @idx = charindex(@Delimiter,@String)       
+        if @idx!=0       
+            set @slice = left(@String,@idx - 1)       
+        else       
+            set @slice = @String       
+        if(len(@slice)>0)  
+            insert into @temptable(Items) values(@slice)       
+        set @String = right(@String,len(@String) - @idx)       
+        if len(@String) = 0 break       
+    end   
+return 
+end;
+]]></string>
+		</function>
+		<function name="splitstring" id="Function6941966" isSystem="false" >
+			<string><![CDATA[CREATE FUNCTION [dbo].[splitstring] ( @stringToSplit VARCHAR(MAX) )
+RETURNS
+ @returnList TABLE ([Name] [nvarchar] (300))
+AS
+BEGIN
+ 
+ DECLARE @name NVARCHAR(255)
+ DECLARE @pos INT
+ 
+ WHILE CHARINDEX(',', @stringToSplit) > 0
+ BEGIN
+  SELECT @pos  = CHARINDEX(',', @stringToSplit) 
+  SELECT @name = SUBSTRING(@stringToSplit, 1, @pos-1)
+ 
+  INSERT INTO @returnList
+  SELECT @name
+ 
+  SELECT @stringToSplit = SUBSTRING(@stringToSplit, @pos+1, LEN(@stringToSplit)-@pos)
+ END
+ 
+ INSERT INTO @returnList
+ SELECT @stringToSplit
+ 
+ RETURN
+END
+]]></string>
+		</function>
+	</schema>
+	<connector name="SqlServer" database="SqlServer" driver_class="net.sourceforge.jtds.jdbc.Driver" driver_jar="jtds-1.3.1.jar" host="vj-refund.mssql.somee.com" port="1433" instance="vj-refund" user="atadi_sql" schema_mapping="" />
+	<layout id="Layout6980266" name="dbo" show_relation_columns="y" >
+		<entity schema="dbo" name="tblAPI_BOOKING_LOG" color="b2cdf7" x="300" y="420" />
+		<entity schema="dbo" name="tblFILE_ATTACH" color="b2cdf7" x="480" y="420" />
+		<entity schema="dbo" name="tblLOG" color="b2cdf7" x="300" y="45" />
+		<entity schema="dbo" name="tblUSER" color="b2cdf7" x="120" y="240" />
+		<entity schema="dbo" name="tblUSER_ONLINE" color="b2cdf7" x="300" y="600" />
+		<entity schema="dbo" name="tblDE_NGHI_HOAN_VE" color="b2cdf7" x="45" y="420" />
+	</layout>
+</project>

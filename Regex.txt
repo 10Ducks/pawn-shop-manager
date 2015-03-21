@@ -1,0 +1,22 @@
+Only whole numbers:
+
+/^\d+$/
+         # explanation
+\d       match a digit
+ +       one or more times
+ 
+ 
+Numbers with at most 2 decimal places:
+
+/^\d+(?:\.\d{1,2})?$/
+
+         # explanation
+ \d       match a digit...
+ +        one or more times
+  (        begin group...
+   ?:      but do not capture anything
+   \.      match literal dot
+   \d      match a digit...
+   {1,2}   one or two times
+  )        end group
+ ?        make the entire group optional

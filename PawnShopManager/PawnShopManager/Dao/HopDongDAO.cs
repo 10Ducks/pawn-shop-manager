@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PawnShopManager.Dto;
 
 namespace PawnShopManager.Dao
 {
@@ -69,7 +70,7 @@ namespace PawnShopManager.Dao
          if (maBN > 0)
          {
             sb.Append(" and hd.hd_maBN = ").Append(maBN);
-            sb.Append(" and YEAR(hd.hd_ngaytao) = YEAR(GETDATE())");
+            //sb.Append(" and YEAR(hd.hd_ngaytao) = YEAR(GETDATE())");
          }
          if (!tenKH.Equals(""))
          {
@@ -261,6 +262,86 @@ namespace PawnShopManager.Dao
          }
       }
       #endregion
+
+      #region lấy hợp đồng them mã BN - trong phần quản lý hàng cầm
+      public HopDongDto layHD_TheoMaBN(int maBN, int nam){
+
+         SqlConnection conn = DbProviderFactory.getInstance().connectDB();
+
+         SqlCommand command = new SqlCommand("layHD_TheoMaBN", conn);
+         command.CommandType = System.Data.CommandType.StoredProcedure;
+         command.Parameters.Add("@maBN", System.Data.SqlDbType.Int).Value = maBN;
+         command.Parameters.Add("@nam", System.Data.SqlDbType.Int).Value = nam;
+
+         SqlDataReader reader = command.ExecuteReader();
+         HopDongDto hd = null;
+         while (reader.Read())
+         {
+            hd = new HopDongDto();
+            hd.hd_id = reader.GetInt32(0);
+            hd.maBN = reader.GetInt32(1);
+            hd.ngayTao = reader.GetDateTime(2);
+            hd.trangThai = reader.GetInt32(3);
+            hd.baoMat = reader.GetBoolean(4);
+            hd.tienCam = reader.GetDouble(5);
+            hd.cmnd = reader.GetString(6);
+            hd.tenKH = reader.GetString(7);
+            hd.laiSuatThoaThuan = reader.GetDouble(8);
+            hd.laiSuatQuaHan = reader.GetDouble(9);
+            hd.thoiHan = reader.GetInt32(10);
+
+            break; //cheat code, only 1 was returned
+         }
+
+         DbProviderFactory.getInstance().closeConnection();
+         return hd;
+      }
+      #endregion
+
+      #region lấy tất cả mã biên nhận
+      public string[] layTatCaMaBN()
+      {
+         SqlConnection conn = DbProviderFactory.getInstance().connectDB();
+
+         SqlCommand command = new SqlCommand("layTatCaMaBN", conn);
+         command.CommandType = System.Data.CommandType.StoredProcedure;
+
+         SqlDataReader reader = command.ExecuteReader();
+         List<string> list = new List<string>();
+         while (reader.Read())
+         {
+            list.Add(reader.GetInt32(0).ToString());
+         }
+
+         DbProviderFactory.getInstance().closeConnection();
+         return list.ToArray();
+      }
+      #endregion
+
+      public bool xuLy_BaoMatHD(int hd_id, DateTime ngayBaoMat)
+      {
+         try
+         {
+            SqlConnection conn = DbProviderFactory.getInstance().connectDB();
+
+            SqlCommand command = new SqlCommand();
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Connection = conn;
+            command.CommandText = "XuLy_BaoMatHD";
+            command.Parameters.Add("@hd_id", System.Data.SqlDbType.Int).Value = hd_id;
+            command.Parameters.Add("@ngayBaoMat", System.Data.SqlDbType.Date).Value = ngayBaoMat;
+
+            command.ExecuteNonQuery();
+
+            DbProviderFactory.getInstance().closeConnection();
+         }
+         catch (Exception ex)
+         {
+            Console.WriteLine(ex.StackTrace);
+            return false;
+         }
+         return true;
+      }
 #endregion
    }
 }
