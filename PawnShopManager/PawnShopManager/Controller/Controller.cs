@@ -16,6 +16,7 @@ namespace PawnShopManager.Controller
       private ChuocHangDAO chuocHangDAO = new ChuocHangDAO();
       private HopDongDAO hopDongDAO = new HopDongDAO();
       private ChiTietHangCamDAO chiTietHangCamDAO = new ChiTietHangCamDAO();
+      private ThuChiDAO thuchiDAO = new ThuChiDAO();
       private static Controller controller = null;
       private Controller(){}
       public static Controller getInstance()
@@ -87,6 +88,13 @@ namespace PawnShopManager.Controller
 					string diaChi, 
 					float laiSuat_ThoaThuan, float laiSuat_QuaHan){
          return hopDongDAO.themHD(maBN, ngayTao, tienCam, cmnd, tenKH, dienThoai, diaChi, laiSuat_ThoaThuan, laiSuat_QuaHan);
+      }
+
+      public bool themTC(int loaiThuChi, DateTime ngayThuChi, float tienThuChi,
+                      string ghiChu)
+      {
+          return thuchiDAO.themTC(loaiThuChi, ngayThuChi, tienThuChi,
+                      ghiChu);
       }
    }
 }
