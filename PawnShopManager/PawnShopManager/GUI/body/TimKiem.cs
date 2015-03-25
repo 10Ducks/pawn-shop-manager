@@ -26,10 +26,10 @@ namespace PawnShopManager.GUI.BODY
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             //superGridControl_TimKiem.Update();
-            Regex rg = new Regex("^\\d+$");   
-            if(!txtMaBN.Text.Trim().Equals("") && !rg.IsMatch(txtMaBN.Text)){
-               MessageBox.Show("Yêu cầu chỉ nhập số ở mã BN!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               return;
+            if (txtMaBN.Text.Trim().Length > 0 && !Util.UtilCommon.validateInteger(txtMaBN.Text.Trim()))
+            {
+                MessageBox.Show("Yêu cầu chỉ nhập số ở mã BN!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
          
             Int32 maBN, loaiHang;
@@ -50,6 +50,10 @@ namespace PawnShopManager.GUI.BODY
             dataSet.Tables.Add(tbl2);
             dataSet.Relations.Add("1", dataSet.Tables[0].Columns["maHD"],
                                                     dataSet.Tables[1].Columns["maHD"], false);
+
+            superGridControl_TimKiem.PrimaryGrid.Columns.Clear();
+            superGridControl_TimKiem.PrimaryGrid.ClearAll();
+            superGridControl_TimKiem.PrimaryGrid.DataSource = null;
             superGridControl_TimKiem.PrimaryGrid.DataSource = dataSet;
             superGridControl_TimKiem.PrimaryGrid.DataMember = "TimKiem";
 
