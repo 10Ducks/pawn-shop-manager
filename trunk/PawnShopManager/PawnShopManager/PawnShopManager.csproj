@@ -68,8 +68,10 @@
     <Compile Include="Dao\HopDongDAO.cs" />
     <Compile Include="Dao\ThanhLyDAO.cs" />
     <Compile Include="Dao\ThemTienDAO.cs" />
+    <Compile Include="Dao\ThuChiDAO.cs" />
     <Compile Include="Dao\TraLaiTruocDAO.cs" />
     <Compile Include="Dto\HopDongDto.cs" />
+    <Compile Include="Dto\NhatKyGiaoDichDto.cs" />
     <Compile Include="Dto\TkChuocDto.cs" />
     <Compile Include="Entity\Admin.cs" />
     <Compile Include="Entity\ChiTietHangCam.cs" />
@@ -91,12 +93,6 @@
     </Compile>
     <Compile Include="GUI\BODY\QLGiaoDich.Designer.cs">
       <DependentUpon>QLGiaoDich.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\TEST\CrystalReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\TEST\CrystalReport.Designer.cs">
-      <DependentUpon>CrystalReport.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\TEST\mergeDataGridView.cs">
       <SubType>Form</SubType>
@@ -171,9 +167,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BODY\QlHangCam.resx">
       <DependentUpon>QlHangCam.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\TEST\CrystalReport.resx">
-      <DependentUpon>CrystalReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\TEST\Test_Datagrid.resx">
       <DependentUpon>Test_Datagrid.cs</DependentUpon>

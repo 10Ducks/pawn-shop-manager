@@ -157,9 +157,8 @@
             this.panelEx1.Controls.Add(this.groupPanel1);
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx1.Location = new System.Drawing.Point(0, 0);
-            this.panelEx1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(1379, 780);
+            this.panelEx1.Size = new System.Drawing.Size(1034, 634);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.Color = System.Drawing.Color.Transparent;
             this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -178,13 +177,12 @@
             this.txtDienThoai.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtDienThoai.ForeColor = System.Drawing.Color.Black;
-            this.txtDienThoai.Location = new System.Drawing.Point(1080, 74);
-            this.txtDienThoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDienThoai.Location = new System.Drawing.Point(810, 60);
             this.txtDienThoai.Name = "txtDienThoai";
-            this.txtDienThoai.Size = new System.Drawing.Size(249, 37);
+            this.txtDienThoai.Size = new System.Drawing.Size(187, 31);
             this.txtDienThoai.TabIndex = 4;
             this.superValidator1.SetValidator1(this.txtDienThoai, this.regularExpressionValidator_txtDienThoai);
-            this.superValidator1.SetValidator2(this.txtDienThoai, this.requiredFieldValidator_txtDienThoai);
+            //this.superValidator1.SetValidator2(this.txtDienThoai, this.requiredFieldValidator_txtDienThoai);
             // 
             // txtCMND
             // 
@@ -196,13 +194,12 @@
             this.txtCMND.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtCMND.ForeColor = System.Drawing.Color.Black;
-            this.txtCMND.Location = new System.Drawing.Point(659, 78);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCMND.Location = new System.Drawing.Point(494, 63);
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(188, 37);
+            this.txtCMND.Size = new System.Drawing.Size(141, 31);
             this.txtCMND.TabIndex = 3;
             this.superValidator1.SetValidator1(this.txtCMND, this.regularExpressionValidator_txtCMND);
-            this.superValidator1.SetValidator2(this.txtCMND, this.requiredFieldValidator_txtCMND);
+            //this.superValidator1.SetValidator2(this.txtCMND, this.requiredFieldValidator_txtCMND);
             // 
             // txtTenKH
             // 
@@ -214,12 +211,11 @@
             this.txtTenKH.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKH.ForeColor = System.Drawing.Color.Black;
-            this.txtTenKH.Location = new System.Drawing.Point(263, 78);
-            this.txtTenKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenKH.Location = new System.Drawing.Point(197, 63);
             this.txtTenKH.Name = "txtTenKH";
-            this.txtTenKH.Size = new System.Drawing.Size(247, 37);
+            this.txtTenKH.Size = new System.Drawing.Size(185, 31);
             this.txtTenKH.TabIndex = 2;
-            this.superValidator1.SetValidator1(this.txtTenKH, this.requiredFieldValidator_tenKH);
+            //this.superValidator1.SetValidator1(this.txtTenKH, this.requiredFieldValidator_tenKH);
             // 
             // labelX5
             // 
@@ -232,10 +228,9 @@
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX5.ForeColor = System.Drawing.Color.Black;
-            this.labelX5.Location = new System.Drawing.Point(917, 78);
-            this.labelX5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX5.Location = new System.Drawing.Point(688, 63);
             this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(155, 34);
+            this.labelX5.Size = new System.Drawing.Size(116, 28);
             this.labelX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.labelX5.TabIndex = 0;
             this.labelX5.Text = "Điện thoại:";
@@ -250,10 +245,9 @@
             this.txtDiaChi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.ForeColor = System.Drawing.Color.Black;
-            this.txtDiaChi.Location = new System.Drawing.Point(659, 127);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiaChi.Location = new System.Drawing.Point(494, 103);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(671, 37);
+            this.txtDiaChi.Size = new System.Drawing.Size(503, 31);
             this.txtDiaChi.TabIndex = 5;
             // 
             // labelX4
@@ -267,10 +261,9 @@
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX4.ForeColor = System.Drawing.Color.Black;
-            this.labelX4.Location = new System.Drawing.Point(548, 127);
-            this.labelX4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX4.Location = new System.Drawing.Point(411, 103);
             this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(116, 34);
+            this.labelX4.Size = new System.Drawing.Size(87, 28);
             this.labelX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.labelX4.TabIndex = 0;
             this.labelX4.Text = "Địa chỉ:";
@@ -286,10 +279,9 @@
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX3.ForeColor = System.Drawing.Color.Black;
-            this.labelX3.Location = new System.Drawing.Point(548, 81);
-            this.labelX3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX3.Location = new System.Drawing.Point(411, 66);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(111, 28);
+            this.labelX3.Size = new System.Drawing.Size(83, 23);
             this.labelX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.labelX3.TabIndex = 0;
             this.labelX3.Text = "CMND:";
@@ -305,10 +297,9 @@
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX2.ForeColor = System.Drawing.Color.Black;
-            this.labelX2.Location = new System.Drawing.Point(27, 75);
-            this.labelX2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX2.Location = new System.Drawing.Point(20, 61);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(237, 37);
+            this.labelX2.Size = new System.Drawing.Size(178, 30);
             this.labelX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.labelX2.TabIndex = 0;
             this.labelX2.Text = "Họ tên người cầm:";
@@ -338,10 +329,9 @@
             this.groupPanel4.Controls.Add(this.labelX14);
             this.groupPanel4.Controls.Add(this.labelX13);
             this.groupPanel4.Controls.Add(this.labelX12);
-            this.groupPanel4.Location = new System.Drawing.Point(4, 559);
-            this.groupPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupPanel4.Location = new System.Drawing.Point(3, 454);
             this.groupPanel4.Name = "groupPanel4";
-            this.groupPanel4.Size = new System.Drawing.Size(1371, 207);
+            this.groupPanel4.Size = new System.Drawing.Size(1028, 168);
             // 
             // 
             // 
@@ -400,14 +390,13 @@
             this.txtLaiSuatQuaHan.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtLaiSuatQuaHan.ButtonClear.Visible = true;
             this.txtLaiSuatQuaHan.ForeColor = System.Drawing.Color.Black;
-            this.txtLaiSuatQuaHan.Location = new System.Drawing.Point(179, 106);
-            this.txtLaiSuatQuaHan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLaiSuatQuaHan.Location = new System.Drawing.Point(134, 86);
             this.txtLaiSuatQuaHan.Name = "txtLaiSuatQuaHan";
-            this.txtLaiSuatQuaHan.Size = new System.Drawing.Size(88, 23);
+            this.txtLaiSuatQuaHan.Size = new System.Drawing.Size(66, 19);
             this.txtLaiSuatQuaHan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.txtLaiSuatQuaHan.TabIndex = 15;
             this.txtLaiSuatQuaHan.Text = "4";
-            this.superValidator1.SetValidator1(this.txtLaiSuatQuaHan, this.requiredFieldValidator_txtLsQuaHan);
+            //this.superValidator1.SetValidator1(this.txtLaiSuatQuaHan, this.requiredFieldValidator_txtLsQuaHan);
             this.superValidator1.SetValidator2(this.txtLaiSuatQuaHan, this.regularExpressionValidator_txtLsThoaThuan);
             // 
             // txtLaiSuatThoaThuan
@@ -439,14 +428,13 @@
             this.txtLaiSuatThoaThuan.ButtonClear.Visible = true;
             this.txtLaiSuatThoaThuan.CausesValidation = false;
             this.txtLaiSuatThoaThuan.ForeColor = System.Drawing.Color.Black;
-            this.txtLaiSuatThoaThuan.Location = new System.Drawing.Point(179, 73);
-            this.txtLaiSuatThoaThuan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLaiSuatThoaThuan.Location = new System.Drawing.Point(134, 59);
             this.txtLaiSuatThoaThuan.Name = "txtLaiSuatThoaThuan";
-            this.txtLaiSuatThoaThuan.Size = new System.Drawing.Size(88, 23);
+            this.txtLaiSuatThoaThuan.Size = new System.Drawing.Size(66, 19);
             this.txtLaiSuatThoaThuan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.txtLaiSuatThoaThuan.TabIndex = 14;
             this.txtLaiSuatThoaThuan.Text = "3";
-            this.superValidator1.SetValidator1(this.txtLaiSuatThoaThuan, this.requiredFieldValidator_txtLsQuaHan);
+            //this.superValidator1.SetValidator1(this.txtLaiSuatThoaThuan, this.requiredFieldValidator_txtLsQuaHan);
             this.superValidator1.SetValidator2(this.txtLaiSuatThoaThuan, this.regularExpressionValidator_txtLsThoaThuan);
             // 
             // dateTimeInput_NgayCam
@@ -465,8 +453,8 @@
             this.dateTimeInput_NgayCam.ForeColor = System.Drawing.Color.Black;
             this.dateTimeInput_NgayCam.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dateTimeInput_NgayCam.IsPopupCalendarOpen = false;
-            this.dateTimeInput_NgayCam.Location = new System.Drawing.Point(389, 14);
-            this.dateTimeInput_NgayCam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimeInput_NgayCam.Location = new System.Drawing.Point(292, 11);
+            this.dateTimeInput_NgayCam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             // 
             // 
             // 
@@ -500,7 +488,7 @@
             this.dateTimeInput_NgayCam.MonthCalendar.TodayButtonVisible = true;
             this.dateTimeInput_NgayCam.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dateTimeInput_NgayCam.Name = "dateTimeInput_NgayCam";
-            this.dateTimeInput_NgayCam.Size = new System.Drawing.Size(168, 30);
+            this.dateTimeInput_NgayCam.Size = new System.Drawing.Size(126, 26);
             this.dateTimeInput_NgayCam.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dateTimeInput_NgayCam.TabIndex = 13;
             this.dateTimeInput_NgayCam.Value = new System.DateTime(2015, 2, 21, 10, 19, 37, 230);
@@ -515,10 +503,9 @@
             this.btnThemBienNhanMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemBienNhanMoi.HoverImage = global::PawnShopManager.Properties.Resources.Add_New_48_hover;
             this.btnThemBienNhanMoi.Image = global::PawnShopManager.Properties.Resources.Add_New_48;
-            this.btnThemBienNhanMoi.Location = new System.Drawing.Point(847, 130);
-            this.btnThemBienNhanMoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThemBienNhanMoi.Location = new System.Drawing.Point(635, 106);
             this.btnThemBienNhanMoi.Name = "btnThemBienNhanMoi";
-            this.btnThemBienNhanMoi.Size = new System.Drawing.Size(457, 54);
+            this.btnThemBienNhanMoi.Size = new System.Drawing.Size(343, 44);
             this.btnThemBienNhanMoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.btnThemBienNhanMoi.TabIndex = 19;
             this.btnThemBienNhanMoi.Text = "VIẾT THÊM BIÊN NHẬN MỚI";
@@ -534,10 +521,9 @@
             this.btnVietLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVietLai.HoverImage = global::PawnShopManager.Properties.Resources.Document_Delete_02_48_hover;
             this.btnVietLai.Image = global::PawnShopManager.Properties.Resources.Document_Delete_02_48;
-            this.btnVietLai.Location = new System.Drawing.Point(956, 71);
-            this.btnVietLai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVietLai.Location = new System.Drawing.Point(717, 58);
             this.btnVietLai.Name = "btnVietLai";
-            this.btnVietLai.Size = new System.Drawing.Size(205, 54);
+            this.btnVietLai.Size = new System.Drawing.Size(154, 44);
             this.btnVietLai.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.btnVietLai.TabIndex = 18;
             this.btnVietLai.Text = "VIẾT LẠI";
@@ -553,10 +539,9 @@
             this.btnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIn.HoverImage = global::PawnShopManager.Properties.Resources.Printer_48_hover;
             this.btnIn.Image = global::PawnShopManager.Properties.Resources.Printer_48;
-            this.btnIn.Location = new System.Drawing.Point(1099, 12);
-            this.btnIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIn.Location = new System.Drawing.Point(824, 10);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(205, 54);
+            this.btnIn.Size = new System.Drawing.Size(154, 44);
             this.btnIn.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.btnIn.TabIndex = 17;
             this.btnIn.Text = "IN";
@@ -571,10 +556,9 @@
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.HoverImage = global::PawnShopManager.Properties.Resources.Save_48_hover;
             this.btnLuu.Image = global::PawnShopManager.Properties.Resources.Save_48;
-            this.btnLuu.Location = new System.Drawing.Point(847, 10);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLuu.Location = new System.Drawing.Point(635, 8);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(205, 54);
+            this.btnLuu.Size = new System.Drawing.Size(154, 44);
             this.btnLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.btnLuu.TabIndex = 16;
             this.btnLuu.Text = "LƯU";
@@ -590,10 +574,9 @@
             this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelX21.ForeColor = System.Drawing.Color.Black;
-            this.labelX21.Location = new System.Drawing.Point(565, 103);
-            this.labelX21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX21.Location = new System.Drawing.Point(424, 84);
             this.labelX21.Name = "labelX21";
-            this.labelX21.Size = new System.Drawing.Size(49, 28);
+            this.labelX21.Size = new System.Drawing.Size(37, 23);
             this.labelX21.TabIndex = 0;
             this.labelX21.Text = "tháng";
             // 
@@ -606,10 +589,9 @@
             this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelX20.ForeColor = System.Drawing.Color.Black;
-            this.labelX20.Location = new System.Drawing.Point(565, 76);
-            this.labelX20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX20.Location = new System.Drawing.Point(424, 62);
             this.labelX20.Name = "labelX20";
-            this.labelX20.Size = new System.Drawing.Size(49, 28);
+            this.labelX20.Size = new System.Drawing.Size(37, 23);
             this.labelX20.TabIndex = 0;
             this.labelX20.Text = "tháng";
             // 
@@ -624,13 +606,12 @@
             this.txtThoiHanQuaHan.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.txtThoiHanQuaHan.ForeColor = System.Drawing.Color.Black;
             this.txtThoiHanQuaHan.IsInputReadOnly = true;
-            this.txtThoiHanQuaHan.Location = new System.Drawing.Point(476, 107);
-            this.txtThoiHanQuaHan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtThoiHanQuaHan.Location = new System.Drawing.Point(357, 87);
             this.txtThoiHanQuaHan.MaxValue = 2;
             this.txtThoiHanQuaHan.MinValue = 2;
             this.txtThoiHanQuaHan.Name = "txtThoiHanQuaHan";
             this.txtThoiHanQuaHan.ShowUpDown = true;
-            this.txtThoiHanQuaHan.Size = new System.Drawing.Size(81, 22);
+            this.txtThoiHanQuaHan.Size = new System.Drawing.Size(61, 20);
             this.txtThoiHanQuaHan.TabIndex = 0;
             this.txtThoiHanQuaHan.Value = 2;
             // 
@@ -645,13 +626,12 @@
             this.txtThoiHanThoaThuan.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.txtThoiHanThoaThuan.ForeColor = System.Drawing.Color.Black;
             this.txtThoiHanThoaThuan.IsInputReadOnly = true;
-            this.txtThoiHanThoaThuan.Location = new System.Drawing.Point(476, 76);
-            this.txtThoiHanThoaThuan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtThoiHanThoaThuan.Location = new System.Drawing.Point(357, 62);
             this.txtThoiHanThoaThuan.MaxValue = 2;
             this.txtThoiHanThoaThuan.MinValue = 2;
             this.txtThoiHanThoaThuan.Name = "txtThoiHanThoaThuan";
             this.txtThoiHanThoaThuan.ShowUpDown = true;
-            this.txtThoiHanThoaThuan.Size = new System.Drawing.Size(81, 22);
+            this.txtThoiHanThoaThuan.Size = new System.Drawing.Size(61, 20);
             this.txtThoiHanThoaThuan.TabIndex = 0;
             this.txtThoiHanThoaThuan.Value = 2;
             // 
@@ -664,10 +644,9 @@
             this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelX19.ForeColor = System.Drawing.Color.Black;
-            this.labelX19.Location = new System.Drawing.Point(385, 107);
-            this.labelX19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX19.Location = new System.Drawing.Point(289, 87);
             this.labelX19.Name = "labelX19";
-            this.labelX19.Size = new System.Drawing.Size(85, 28);
+            this.labelX19.Size = new System.Drawing.Size(64, 23);
             this.labelX19.TabIndex = 0;
             this.labelX19.Text = "Thời hạn:";
             // 
@@ -680,10 +659,9 @@
             this.labelX18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelX18.ForeColor = System.Drawing.Color.Black;
-            this.labelX18.Location = new System.Drawing.Point(385, 73);
-            this.labelX18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX18.Location = new System.Drawing.Point(289, 59);
             this.labelX18.Name = "labelX18";
-            this.labelX18.Size = new System.Drawing.Size(85, 28);
+            this.labelX18.Size = new System.Drawing.Size(64, 23);
             this.labelX18.TabIndex = 0;
             this.labelX18.Text = "Thời hạn:";
             // 
@@ -696,10 +674,9 @@
             this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelX16.ForeColor = System.Drawing.Color.Black;
-            this.labelX16.Location = new System.Drawing.Point(275, 107);
-            this.labelX16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX16.Location = new System.Drawing.Point(206, 87);
             this.labelX16.Name = "labelX16";
-            this.labelX16.Size = new System.Drawing.Size(87, 28);
+            this.labelX16.Size = new System.Drawing.Size(65, 23);
             this.labelX16.TabIndex = 0;
             this.labelX16.Text = "% / tháng";
             // 
@@ -712,10 +689,9 @@
             this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelX17.ForeColor = System.Drawing.Color.Black;
-            this.labelX17.Location = new System.Drawing.Point(13, 103);
-            this.labelX17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX17.Location = new System.Drawing.Point(10, 84);
             this.labelX17.Name = "labelX17";
-            this.labelX17.Size = new System.Drawing.Size(160, 28);
+            this.labelX17.Size = new System.Drawing.Size(120, 23);
             this.labelX17.TabIndex = 0;
             this.labelX17.Text = "Lãi suất quá hạn:";
             // 
@@ -728,10 +704,9 @@
             this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelX15.ForeColor = System.Drawing.Color.Black;
-            this.labelX15.Location = new System.Drawing.Point(275, 71);
-            this.labelX15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX15.Location = new System.Drawing.Point(206, 58);
             this.labelX15.Name = "labelX15";
-            this.labelX15.Size = new System.Drawing.Size(87, 28);
+            this.labelX15.Size = new System.Drawing.Size(65, 23);
             this.labelX15.TabIndex = 0;
             this.labelX15.Text = "% / tháng";
             // 
@@ -744,10 +719,9 @@
             this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelX14.ForeColor = System.Drawing.Color.Black;
-            this.labelX14.Location = new System.Drawing.Point(13, 68);
-            this.labelX14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX14.Location = new System.Drawing.Point(10, 55);
             this.labelX14.Name = "labelX14";
-            this.labelX14.Size = new System.Drawing.Size(160, 28);
+            this.labelX14.Size = new System.Drawing.Size(120, 23);
             this.labelX14.TabIndex = 0;
             this.labelX14.Text = "Lãi suất thỏa thuận:";
             // 
@@ -760,10 +734,9 @@
             this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX13.ForeColor = System.Drawing.Color.Black;
-            this.labelX13.Location = new System.Drawing.Point(303, 20);
-            this.labelX13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX13.Location = new System.Drawing.Point(227, 16);
             this.labelX13.Name = "labelX13";
-            this.labelX13.Size = new System.Drawing.Size(100, 28);
+            this.labelX13.Size = new System.Drawing.Size(75, 23);
             this.labelX13.TabIndex = 0;
             this.labelX13.Text = "Ngày cầm";
             // 
@@ -778,10 +751,9 @@
             this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX12.ForeColor = System.Drawing.Color.Black;
-            this.labelX12.Location = new System.Drawing.Point(13, 4);
-            this.labelX12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX12.Location = new System.Drawing.Point(10, 3);
             this.labelX12.Name = "labelX12";
-            this.labelX12.Size = new System.Drawing.Size(261, 44);
+            this.labelX12.Size = new System.Drawing.Size(196, 36);
             this.labelX12.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.labelX12.TabIndex = 0;
             this.labelX12.Text = "Chi tiết thanh toán";
@@ -819,10 +791,9 @@
             this.groupVang.Controls.Add(this.chboxMotMon);
             this.groupVang.Controls.Add(this.labelX6);
             this.groupVang.DrawTitleBox = false;
-            this.groupVang.Location = new System.Drawing.Point(4, 181);
-            this.groupVang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupVang.Location = new System.Drawing.Point(3, 147);
             this.groupVang.Name = "groupVang";
-            this.groupVang.Size = new System.Drawing.Size(1371, 370);
+            this.groupVang.Size = new System.Drawing.Size(1028, 301);
             // 
             // 
             // 
@@ -862,10 +833,9 @@
             this.txtBienSoXe.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtBienSoXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.txtBienSoXe.ForeColor = System.Drawing.Color.Black;
-            this.txtBienSoXe.Location = new System.Drawing.Point(284, 47);
-            this.txtBienSoXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBienSoXe.Location = new System.Drawing.Point(213, 38);
             this.txtBienSoXe.Name = "txtBienSoXe";
-            this.txtBienSoXe.Size = new System.Drawing.Size(237, 38);
+            this.txtBienSoXe.Size = new System.Drawing.Size(178, 32);
             this.txtBienSoXe.TabIndex = 31;
             // 
             // dataGridDsHangCam
@@ -873,8 +843,7 @@
             this.dataGridDsHangCam.BackColor = System.Drawing.Color.White;
             this.dataGridDsHangCam.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
             this.dataGridDsHangCam.ForeColor = System.Drawing.Color.Black;
-            this.dataGridDsHangCam.Location = new System.Drawing.Point(28, 137);
-            this.dataGridDsHangCam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridDsHangCam.Location = new System.Drawing.Point(21, 111);
             this.dataGridDsHangCam.Name = "dataGridDsHangCam";
             gridColumn7.AllowEdit = false;
             gridColumn7.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
@@ -906,7 +875,7 @@
             this.dataGridDsHangCam.PrimaryGrid.Columns.Add(gridColumn12);
             this.dataGridDsHangCam.PrimaryGrid.MultiSelect = false;
             this.dataGridDsHangCam.PrimaryGrid.SelectionGranularity = DevComponents.DotNetBar.SuperGrid.SelectionGranularity.RowWithCellHighlight;
-            this.dataGridDsHangCam.Size = new System.Drawing.Size(1137, 142);
+            this.dataGridDsHangCam.Size = new System.Drawing.Size(853, 115);
             this.dataGridDsHangCam.TabIndex = 30;
             this.dataGridDsHangCam.Text = "superGridControl1";
             // 
@@ -920,12 +889,11 @@
             this.txtTienChu_Xe.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTienChu_Xe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.txtTienChu_Xe.ForeColor = System.Drawing.Color.Black;
-            this.txtTienChu_Xe.Location = new System.Drawing.Point(284, 212);
-            this.txtTienChu_Xe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTienChu_Xe.Location = new System.Drawing.Point(213, 172);
             this.txtTienChu_Xe.Multiline = true;
             this.txtTienChu_Xe.Name = "txtTienChu_Xe";
             this.txtTienChu_Xe.ReadOnly = true;
-            this.txtTienChu_Xe.Size = new System.Drawing.Size(881, 154);
+            this.txtTienChu_Xe.Size = new System.Drawing.Size(661, 125);
             this.txtTienChu_Xe.TabIndex = 29;
             this.txtTienChu_Xe.Visible = false;
             // 
@@ -940,10 +908,9 @@
             this.lblTienChu_Xe.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblTienChu_Xe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTienChu_Xe.ForeColor = System.Drawing.Color.Black;
-            this.lblTienChu_Xe.Location = new System.Drawing.Point(28, 214);
-            this.lblTienChu_Xe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTienChu_Xe.Location = new System.Drawing.Point(21, 174);
             this.lblTienChu_Xe.Name = "lblTienChu_Xe";
-            this.lblTienChu_Xe.Size = new System.Drawing.Size(256, 33);
+            this.lblTienChu_Xe.Size = new System.Drawing.Size(192, 27);
             this.lblTienChu_Xe.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.lblTienChu_Xe.TabIndex = 28;
             this.lblTienChu_Xe.Text = "Số tiền bằng chữ:";
@@ -959,14 +926,13 @@
             this.txtTienCam_Xe.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTienCam_Xe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.txtTienCam_Xe.ForeColor = System.Drawing.Color.Black;
-            this.txtTienCam_Xe.Location = new System.Drawing.Point(284, 161);
-            this.txtTienCam_Xe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTienCam_Xe.Location = new System.Drawing.Point(213, 131);
             this.txtTienCam_Xe.MaxLength = 10;
             this.txtTienCam_Xe.Name = "txtTienCam_Xe";
-            this.txtTienCam_Xe.Size = new System.Drawing.Size(515, 41);
+            this.txtTienCam_Xe.Size = new System.Drawing.Size(386, 35);
             this.txtTienCam_Xe.TabIndex = 27;
             this.superValidator1.SetValidator1(this.txtTienCam_Xe, this.regularExpressionValidator_txtTienCam_Xe);
-            this.superValidator1.SetValidator2(this.txtTienCam_Xe, this.requiredFieldValidator_txtTienCam_Xe);
+            //this.superValidator1.SetValidator2(this.txtTienCam_Xe, this.requiredFieldValidator_txtTienCam_Xe);
             this.txtTienCam_Xe.Visible = false;
             this.txtTienCam_Xe.TextChanged += new System.EventHandler(this.txtTienCam_Xe_TextChanged);
             // 
@@ -981,10 +947,9 @@
             this.lblTienCam_Xe.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblTienCam_Xe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTienCam_Xe.ForeColor = System.Drawing.Color.Black;
-            this.lblTienCam_Xe.Location = new System.Drawing.Point(28, 174);
-            this.lblTienCam_Xe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTienCam_Xe.Location = new System.Drawing.Point(21, 141);
             this.lblTienCam_Xe.Name = "lblTienCam_Xe";
-            this.lblTienCam_Xe.Size = new System.Drawing.Size(228, 33);
+            this.lblTienCam_Xe.Size = new System.Drawing.Size(171, 27);
             this.lblTienCam_Xe.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.lblTienCam_Xe.TabIndex = 26;
             this.lblTienCam_Xe.Text = "Tiền cầm:";
@@ -1000,10 +965,9 @@
             this.txtNhanSoXe.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtNhanSoXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNhanSoXe.ForeColor = System.Drawing.Color.Black;
-            this.txtNhanSoXe.Location = new System.Drawing.Point(284, 91);
-            this.txtNhanSoXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNhanSoXe.Location = new System.Drawing.Point(213, 74);
             this.txtNhanSoXe.Name = "txtNhanSoXe";
-            this.txtNhanSoXe.Size = new System.Drawing.Size(237, 37);
+            this.txtNhanSoXe.Size = new System.Drawing.Size(178, 31);
             this.txtNhanSoXe.TabIndex = 25;
             this.txtNhanSoXe.Visible = false;
             // 
@@ -1013,15 +977,13 @@
             // 
             // 
             // 
-            this.txtChatLuong.Border.BorderColor = System.Drawing.Color.Red;
             this.txtChatLuong.Border.Class = "TextBoxBorder";
             this.txtChatLuong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtChatLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChatLuong.ForeColor = System.Drawing.Color.Black;
-            this.txtChatLuong.Location = new System.Drawing.Point(841, 91);
-            this.txtChatLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtChatLuong.Location = new System.Drawing.Point(631, 74);
             this.txtChatLuong.Name = "txtChatLuong";
-            this.txtChatLuong.Size = new System.Drawing.Size(324, 37);
+            this.txtChatLuong.Size = new System.Drawing.Size(243, 31);
             this.txtChatLuong.TabIndex = 23;
             this.txtChatLuong.Visible = false;
             // 
@@ -1050,12 +1012,11 @@
             this.txtLoaiXe.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtLoaiXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLoaiXe.ForeColor = System.Drawing.Color.Black;
-            this.txtLoaiXe.Location = new System.Drawing.Point(841, 46);
-            this.txtLoaiXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLoaiXe.Location = new System.Drawing.Point(631, 37);
             this.txtLoaiXe.Name = "txtLoaiXe";
-            this.txtLoaiXe.Size = new System.Drawing.Size(324, 37);
+            this.txtLoaiXe.Size = new System.Drawing.Size(243, 31);
             this.txtLoaiXe.TabIndex = 22;
-            this.superValidator1.SetValidator1(this.txtLoaiXe, this.requiredFieldValidator_txtLoaiXe);
+            //this.superValidator1.SetValidator1(this.txtLoaiXe, this.requiredFieldValidator_txtLoaiXe);
             this.txtLoaiXe.Visible = false;
             // 
             // txtTienChu_Vang
@@ -1070,12 +1031,11 @@
             this.txtTienChu_Vang.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTienChu_Vang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtTienChu_Vang.ForeColor = System.Drawing.Color.Black;
-            this.txtTienChu_Vang.Location = new System.Drawing.Point(284, 334);
-            this.txtTienChu_Vang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTienChu_Vang.Location = new System.Drawing.Point(213, 271);
             this.txtTienChu_Vang.Multiline = true;
             this.txtTienChu_Vang.Name = "txtTienChu_Vang";
             this.txtTienChu_Vang.ReadOnly = true;
-            this.txtTienChu_Vang.Size = new System.Drawing.Size(1075, 32);
+            this.txtTienChu_Vang.Size = new System.Drawing.Size(806, 26);
             this.txtTienChu_Vang.TabIndex = 12;
             this.superValidator1.SetValidator1(this.txtTienChu_Vang, this.regularExpressionValidator1);
             // 
@@ -1092,10 +1052,9 @@
             this.lblTongTien_Vang2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblTongTien_Vang2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.lblTongTien_Vang2.ForeColor = System.Drawing.Color.Black;
-            this.lblTongTien_Vang2.Location = new System.Drawing.Point(284, 286);
-            this.lblTongTien_Vang2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTongTien_Vang2.Location = new System.Drawing.Point(213, 232);
             this.lblTongTien_Vang2.Name = "lblTongTien_Vang2";
-            this.lblTongTien_Vang2.Size = new System.Drawing.Size(545, 33);
+            this.lblTongTien_Vang2.Size = new System.Drawing.Size(409, 27);
             this.lblTongTien_Vang2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.lblTongTien_Vang2.TabIndex = 18;
             this.lblTongTien_Vang2.Text = "0";
@@ -1113,10 +1072,9 @@
             this.lblTienChu_Vang.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblTienChu_Vang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTienChu_Vang.ForeColor = System.Drawing.Color.Black;
-            this.lblTienChu_Vang.Location = new System.Drawing.Point(28, 332);
-            this.lblTienChu_Vang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTienChu_Vang.Location = new System.Drawing.Point(21, 270);
             this.lblTienChu_Vang.Name = "lblTienChu_Vang";
-            this.lblTienChu_Vang.Size = new System.Drawing.Size(251, 33);
+            this.lblTienChu_Vang.Size = new System.Drawing.Size(188, 27);
             this.lblTienChu_Vang.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.lblTienChu_Vang.TabIndex = 0;
             this.lblTienChu_Vang.Text = "Số tiền bằng chữ:";
@@ -1134,10 +1092,9 @@
             this.lblTongTien_Vang1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblTongTien_Vang1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTongTien_Vang1.ForeColor = System.Drawing.Color.Black;
-            this.lblTongTien_Vang1.Location = new System.Drawing.Point(32, 286);
-            this.lblTongTien_Vang1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTongTien_Vang1.Location = new System.Drawing.Point(24, 232);
             this.lblTongTien_Vang1.Name = "lblTongTien_Vang1";
-            this.lblTongTien_Vang1.Size = new System.Drawing.Size(239, 33);
+            this.lblTongTien_Vang1.Size = new System.Drawing.Size(179, 27);
             this.lblTongTien_Vang1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.lblTongTien_Vang1.TabIndex = 0;
             this.lblTongTien_Vang1.Text = "Tổng tiền cầm:";
@@ -1151,10 +1108,9 @@
             this.bntThemHangCam.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntThemHangCam.HoverImage = global::PawnShopManager.Properties.Resources.Document_Add_02_48_hover;
             this.bntThemHangCam.Image = global::PawnShopManager.Properties.Resources.Document_Add_02_48;
-            this.bntThemHangCam.Location = new System.Drawing.Point(1219, 46);
-            this.bntThemHangCam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bntThemHangCam.Location = new System.Drawing.Point(914, 37);
             this.bntThemHangCam.Name = "bntThemHangCam";
-            this.bntThemHangCam.Size = new System.Drawing.Size(345, 85);
+            this.bntThemHangCam.Size = new System.Drawing.Size(259, 69);
             this.bntThemHangCam.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.bntThemHangCam.TabIndex = 12;
             this.bntThemHangCam.Text = "Thêm vào danh sách\r\nhàng cầm";
@@ -1178,10 +1134,9 @@
             this.cboItem_18k,
             this.cboItem_24k,
             this.cboItem_VangTrang});
-            this.cboLoaiVang.Location = new System.Drawing.Point(284, 91);
-            this.cboLoaiVang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboLoaiVang.Location = new System.Drawing.Point(213, 74);
             this.cboLoaiVang.Name = "cboLoaiVang";
-            this.cboLoaiVang.Size = new System.Drawing.Size(236, 31);
+            this.cboLoaiVang.Size = new System.Drawing.Size(178, 31);
             this.cboLoaiVang.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.cboLoaiVang.TabIndex = 10;
             this.superValidator1.SetValidator1(this.cboLoaiVang, this.requiredFieldValidator_cboLoaiVang);
@@ -1207,10 +1162,9 @@
             this.lbl_2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbl_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_2.ForeColor = System.Drawing.Color.Black;
-            this.lbl_2.Location = new System.Drawing.Point(28, 92);
-            this.lbl_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbl_2.Location = new System.Drawing.Point(21, 75);
             this.lbl_2.Name = "lbl_2";
-            this.lbl_2.Size = new System.Drawing.Size(209, 37);
+            this.lbl_2.Size = new System.Drawing.Size(157, 30);
             this.lbl_2.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.lbl_2.TabIndex = 0;
             this.lbl_2.Text = "Loại vàng:";
@@ -1225,14 +1179,13 @@
             this.txtTienCam_Vang.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTienCam_Vang.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTienCam_Vang.ForeColor = System.Drawing.Color.Black;
-            this.txtTienCam_Vang.Location = new System.Drawing.Point(841, 91);
-            this.txtTienCam_Vang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTienCam_Vang.Location = new System.Drawing.Point(631, 74);
             this.txtTienCam_Vang.MaxLength = 10;
             this.txtTienCam_Vang.Name = "txtTienCam_Vang";
-            this.txtTienCam_Vang.Size = new System.Drawing.Size(324, 37);
+            this.txtTienCam_Vang.Size = new System.Drawing.Size(243, 31);
             this.txtTienCam_Vang.TabIndex = 11;
             this.superValidator1.SetValidator1(this.txtTienCam_Vang, this.regularExpressionValidator_txtTienCam_Vang);
-            this.superValidator1.SetValidator2(this.txtTienCam_Vang, this.requiredFieldValidator_txtTienCam_Vang);
+            //this.superValidator1.SetValidator2(this.txtTienCam_Vang, this.requiredFieldValidator_txtTienCam_Vang);
             this.txtTienCam_Vang.TextChanged += new System.EventHandler(this.txtTienCam_Vang_TextChanged);
             // 
             // lbl_4
@@ -1246,10 +1199,9 @@
             this.lbl_4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbl_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_4.ForeColor = System.Drawing.Color.Black;
-            this.lbl_4.Location = new System.Drawing.Point(605, 85);
-            this.lbl_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbl_4.Location = new System.Drawing.Point(454, 69);
             this.lbl_4.Name = "lbl_4";
-            this.lbl_4.Size = new System.Drawing.Size(237, 48);
+            this.lbl_4.Size = new System.Drawing.Size(178, 39);
             this.lbl_4.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.lbl_4.TabIndex = 0;
             this.lbl_4.Text = "Tiền cầm:";
@@ -1264,10 +1216,9 @@
             this.txtSoLuong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuong.ForeColor = System.Drawing.Color.Black;
-            this.txtSoLuong.Location = new System.Drawing.Point(841, 46);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSoLuong.Location = new System.Drawing.Point(631, 37);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(324, 37);
+            this.txtSoLuong.Size = new System.Drawing.Size(243, 31);
             this.txtSoLuong.TabIndex = 9;
             this.superValidator1.SetValidator1(this.txtSoLuong, this.regularExpressionValidator_txtSoLuong);
             // 
@@ -1282,10 +1233,9 @@
             this.lbl_3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbl_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_3.ForeColor = System.Drawing.Color.Black;
-            this.lbl_3.Location = new System.Drawing.Point(605, 39);
-            this.lbl_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbl_3.Location = new System.Drawing.Point(454, 32);
             this.lbl_3.Name = "lbl_3";
-            this.lbl_3.Size = new System.Drawing.Size(237, 48);
+            this.lbl_3.Size = new System.Drawing.Size(178, 39);
             this.lbl_3.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.lbl_3.TabIndex = 0;
             this.lbl_3.Text = "Số lượng (chỉ):";
@@ -1300,13 +1250,12 @@
             this.txtTenVatCam.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTenVatCam.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenVatCam.ForeColor = System.Drawing.Color.Black;
-            this.txtTenVatCam.Location = new System.Drawing.Point(284, 47);
-            this.txtTenVatCam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenVatCam.Location = new System.Drawing.Point(213, 38);
             this.txtTenVatCam.Name = "txtTenVatCam";
-            this.txtTenVatCam.Size = new System.Drawing.Size(237, 37);
+            this.txtTenVatCam.Size = new System.Drawing.Size(178, 31);
             this.txtTenVatCam.TabIndex = 8;
             this.txtTenVatCam.Text = "Vàng 18k";
-            this.superValidator1.SetValidator1(this.txtTenVatCam, this.requiredFieldValidator_txtTenVatCam);
+            //this.superValidator1.SetValidator1(this.txtTenVatCam, this.requiredFieldValidator_txtTenVatCam);
             // 
             // lbl_1
             // 
@@ -1319,10 +1268,9 @@
             this.lbl_1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbl_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_1.ForeColor = System.Drawing.Color.Black;
-            this.lbl_1.Location = new System.Drawing.Point(28, 39);
-            this.lbl_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbl_1.Location = new System.Drawing.Point(21, 32);
             this.lbl_1.Name = "lbl_1";
-            this.lbl_1.Size = new System.Drawing.Size(237, 48);
+            this.lbl_1.Size = new System.Drawing.Size(178, 39);
             this.lbl_1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.lbl_1.TabIndex = 0;
             this.lbl_1.Text = "Tên vật cầm:";
@@ -1340,10 +1288,9 @@
             this.chboxNhieuMon.FocusCuesEnabled = false;
             this.chboxNhieuMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chboxNhieuMon.ForeColor = System.Drawing.Color.Black;
-            this.chboxNhieuMon.Location = new System.Drawing.Point(476, 6);
-            this.chboxNhieuMon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chboxNhieuMon.Location = new System.Drawing.Point(357, 5);
             this.chboxNhieuMon.Name = "chboxNhieuMon";
-            this.chboxNhieuMon.Size = new System.Drawing.Size(117, 28);
+            this.chboxNhieuMon.Size = new System.Drawing.Size(88, 23);
             this.chboxNhieuMon.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.chboxNhieuMon.TabIndex = 7;
             this.chboxNhieuMon.Text = "Nhiều món";
@@ -1358,10 +1305,9 @@
             this.chboxMotMon.FocusCuesEnabled = false;
             this.chboxMotMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chboxMotMon.ForeColor = System.Drawing.Color.Black;
-            this.chboxMotMon.Location = new System.Drawing.Point(303, 6);
-            this.chboxMotMon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chboxMotMon.Location = new System.Drawing.Point(227, 5);
             this.chboxMotMon.Name = "chboxMotMon";
-            this.chboxMotMon.Size = new System.Drawing.Size(111, 28);
+            this.chboxMotMon.Size = new System.Drawing.Size(83, 23);
             this.chboxMotMon.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.chboxMotMon.TabIndex = 6;
             this.chboxMotMon.Text = "Một món";
@@ -1377,10 +1323,9 @@
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX6.ForeColor = System.Drawing.Color.Black;
-            this.labelX6.Location = new System.Drawing.Point(28, -6);
-            this.labelX6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX6.Location = new System.Drawing.Point(21, -5);
             this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(261, 44);
+            this.labelX6.Size = new System.Drawing.Size(196, 36);
             this.labelX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.labelX6.TabIndex = 0;
             this.labelX6.Text = "Chi tiết hàng cầm";
@@ -1395,10 +1340,9 @@
             this.groupPanel1.Controls.Add(this.cboLoaiHang);
             this.groupPanel1.Controls.Add(this.labelX1);
             this.groupPanel1.DrawTitleBox = false;
-            this.groupPanel1.Location = new System.Drawing.Point(4, 6);
-            this.groupPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupPanel1.Location = new System.Drawing.Point(3, 5);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(1371, 54);
+            this.groupPanel1.Size = new System.Drawing.Size(1028, 44);
             // 
             // 
             // 
@@ -1436,10 +1380,9 @@
             this.lblMaHD.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblMaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaHD.ForeColor = System.Drawing.Color.Black;
-            this.lblMaHD.Location = new System.Drawing.Point(544, 9);
-            this.lblMaHD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblMaHD.Location = new System.Drawing.Point(408, 7);
             this.lblMaHD.Name = "lblMaHD";
-            this.lblMaHD.Size = new System.Drawing.Size(419, 34);
+            this.lblMaHD.Size = new System.Drawing.Size(314, 28);
             this.lblMaHD.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.lblMaHD.TabIndex = 2;
             this.lblMaHD.Text = "Mã biên nhận:";
@@ -1461,10 +1404,9 @@
             this.cboLoaiHang.Items.AddRange(new object[] {
             this.cboItemVang,
             this.cboItemXe});
-            this.cboLoaiHang.Location = new System.Drawing.Point(259, 7);
-            this.cboLoaiHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboLoaiHang.Location = new System.Drawing.Point(194, 6);
             this.cboLoaiHang.Name = "cboLoaiHang";
-            this.cboLoaiHang.Size = new System.Drawing.Size(245, 31);
+            this.cboLoaiHang.Size = new System.Drawing.Size(185, 31);
             this.cboLoaiHang.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.cboLoaiHang.TabIndex = 1;
             this.superValidator1.SetValidator1(this.cboLoaiHang, this.requiredFieldValidator_cboLoaiHang);
@@ -1487,10 +1429,9 @@
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX1.ForeColor = System.Drawing.Color.Black;
-            this.labelX1.Location = new System.Drawing.Point(23, 7);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX1.Location = new System.Drawing.Point(17, 6);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(209, 37);
+            this.labelX1.Size = new System.Drawing.Size(157, 30);
             this.labelX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "Loại hàng cầm:";
@@ -1565,6 +1506,7 @@
             // 
             // requiredFieldValidator_txtLoaiXe
             // 
+            this.requiredFieldValidator_txtLoaiXe.Enabled = false;
             this.requiredFieldValidator_txtLoaiXe.ErrorMessage = "Yêu cầu nhập loại xe!";
             this.requiredFieldValidator_txtLoaiXe.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red;
             // 
@@ -1653,19 +1595,18 @@
             // 
             // CamDo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1379, 780);
+            this.ClientSize = new System.Drawing.Size(1034, 634);
             this.ControlBox = false;
             this.Controls.Add(this.panelEx1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1364, 716);
+            this.MinimumSize = new System.Drawing.Size(1023, 582);
             this.Name = "CamDo";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

@@ -22,7 +22,7 @@ namespace PawnShopManager.Dao
             command.Parameters.Add("@ngayThem", System.Data.SqlDbType.Date).Value = ngayThem;
             command.Parameters.Add("@tienLai", System.Data.SqlDbType.Float).Value = tienLai;
             command.Parameters.Add("@tienThem", System.Data.SqlDbType.Float).Value = tienThem;
-            command.Parameters.Add("@hinhThuc", System.Data.SqlDbType.Float).Value = hinhThuc;
+            command.Parameters.Add("@hinhThuc", System.Data.SqlDbType.Int).Value = hinhThuc;
 
             command.ExecuteNonQuery();
 
