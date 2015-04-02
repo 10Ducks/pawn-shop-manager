@@ -159,7 +159,7 @@ namespace PawnShopManager.Util
             return chuoi;
         }
 
-        public static double[] tinhTienLai(DateTime ngayCam, DateTime ngayChuoc, double tienCam, double laiSuatThoaThuan, double laiSuatQuaHan, int thoiHan, DateTime ngayThemTien, int tienThem)
+        public static double[] tinhTienLai(DateTime ngayCam, DateTime ngayChuoc, double tienCam, double laiSuatThoaThuan, double laiSuatQuaHan, int thoiHan, DateTime ngayThemTien, float tienThem)
         {
             double[] tienLai = new double[2];
             tienLai[0] = 0; //tiền lãi thỏa thuận

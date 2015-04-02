@@ -468,6 +468,42 @@ namespace PawnShopManager.Dao
             }
             return tien;
         }
+
+        public ThongKeGdDto thongKeGiaoDich(DateTime ngay)
+        {
+            ThongKeGdDto result;
+            try
+            {
+                SqlConnection conn = DbProviderFactory.getInstance().connectDB();
+
+                SqlCommand command = new SqlCommand();
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Connection = conn;
+                command.CommandText = "thongKeGD";
+                command.Parameters.Add("@ngay", System.Data.SqlDbType.DateTime).Value = ngay;
+
+                SqlDataReader reader = command.ExecuteReader();
+                result = new ThongKeGdDto();
+                if (reader.Read())
+                {
+                    result.tongVonChuocDo = reader.GetDouble(0);
+                    result.tongLaiTraTruoc = reader.GetDouble(1);
+                    result.tongLaiThanhLy = reader.GetDouble(2);
+                    result.tongTienThuKhac = reader.GetDouble(3);
+                    result.tongTienCamDo = reader.GetDouble(4);
+                    result.tongTienLayThem = reader.GetDouble(5);
+                    result.tongTienChiKhac = reader.GetDouble(6);
+                }
+
+                DbProviderFactory.getInstance().closeConnection();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+                return null;
+            }
+            return result;
+        }
         #endregion
     }
 }

@@ -72,6 +72,7 @@
     <Compile Include="Dao\TraLaiTruocDAO.cs" />
     <Compile Include="Dto\HopDongDto.cs" />
     <Compile Include="Dto\NhatKyGiaoDichDto.cs" />
+    <Compile Include="Dto\ThongKeGdDto.cs" />
     <Compile Include="Dto\TkChuocDto.cs" />
     <Compile Include="Entity\Admin.cs" />
     <Compile Include="Entity\ChiTietHangCam.cs" />
