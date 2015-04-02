@@ -164,5 +164,20 @@ namespace PawnShopManager.Controller
         {
             return hopDongDAO.getNhatKyGiaoDich2(hd_id);
         }
+
+        public float layTienCam(int hd_id)
+        {
+            return hopDongDAO.layTienCam(hd_id);
+        }
+
+        public DateTime layNgayThemTien(int hd_id)
+        {
+            return themTienDAO.layNgayThemTien(hd_id);
+        }
+
+        public ThongKeGdDto thongKeGiaoDich(DateTime ngay)
+        {
+            return hopDongDAO.thongKeGiaoDich(ngay);
+        }
     }
 }

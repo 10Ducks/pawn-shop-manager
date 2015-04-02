@@ -17,7 +17,7 @@ namespace PawnShopManager.GUI.BODY
         private bool _flag2 = false;
 
         private DateTime _ngayThemTien = new DateTime();
-        private int _tienThem = 0;
+        private float _tienThem = 0;
 
         public QlHangCam()
         {
@@ -80,9 +80,11 @@ namespace PawnShopManager.GUI.BODY
             bindingSuperDataGrid(_hd.hd_id);
 
             DateTime ngayChuoc = dateTimeInputNgayChuoc_ChuocDo.Value;
-            _tienLai_Chuoc = Util.UtilCommon.tinhTienLai(_hd.ngayTao, ngayChuoc, _hd.tienCam, _hd.laiSuatThoaThuan, _hd.laiSuatQuaHan, _hd.thoiHan, _ngayThemTien, _tienThem);
             _tienDongLaiTruoc = Controller.Controller.getInstance().layTienTraLaiTruoc(_hd.hd_id);
             _tienLai_ThanhLy = (double[])_tienLai_Chuoc.Clone();
+            _tienThem = Controller.Controller.getInstance().layTienCam(_hd.hd_id);
+            _ngayThemTien = Controller.Controller.getInstance().layNgayThemTien(_hd.hd_id);
+            _tienLai_Chuoc = Util.UtilCommon.tinhTienLai(_hd.ngayTao, ngayChuoc, _hd.tienCam, _hd.laiSuatThoaThuan, _hd.laiSuatQuaHan, _hd.thoiHan, _ngayThemTien, _tienThem);
 
             updateChange_ChuocDo();
             updateChange_ThanhLy();

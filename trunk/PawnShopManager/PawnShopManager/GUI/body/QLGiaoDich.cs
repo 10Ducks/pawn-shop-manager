@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PawnShopManager.Dto;
 
 namespace PawnShopManager.GUI.BODY
 {
@@ -15,6 +16,49 @@ namespace PawnShopManager.GUI.BODY
         public QLGiaoDich()
         {
             InitializeComponent();
+        }
+
+        private void QLGiaoDich_Load(object sender, EventArgs e)
+        {
+            ThongKeGdDto thongKeDto = new ThongKeGdDto();
+            thongKeDto = Controller.Controller.getInstance().thongKeGiaoDich(DateTime.Now);
+
+            lblTongVonChuocDo.Text = Util.UtilCommon.formatTien(thongKeDto.tongVonChuocDo);
+            lblTongLaiTraTruoc.Text = Util.UtilCommon.formatTien(thongKeDto.tongLaiTraTruoc);
+            lblTongLaiThanhLy.Text = Util.UtilCommon.formatTien(thongKeDto.tongLaiThanhLy);
+            lblTongTienThuKhac.Text = Util.UtilCommon.formatTien(thongKeDto.tongTienThuKhac);
+
+            lblTongTienCamDo.Text = Util.UtilCommon.formatTien(thongKeDto.tongTienCamDo);
+            lblTongTienLayThem.Text = Util.UtilCommon.formatTien(thongKeDto.tongTienLayThem);
+            lblTongTienChiKhac.Text = Util.UtilCommon.formatTien(thongKeDto.tongTienChiKhac);
+
+            double thuHomNay = 0;
+            double chiHomNay = 0;
+            double thuChiConLai = 0;
+
+            thuHomNay = thongKeDto.tongVonChuocDo + thongKeDto.tongLaiTraTruoc + thongKeDto.tongLaiThanhLy + thongKeDto.tongTienThuKhac;
+            chiHomNay = thongKeDto.tongTienCamDo + thongKeDto.tongTienLayThem + thongKeDto.tongTienChiKhac;
+            thuChiConLai =  thuHomNay - chiHomNay;
+
+            lblThuHomNay.Text = Util.UtilCommon.formatTien(thuHomNay);
+            lblChiHomNay.Text = Util.UtilCommon.formatTien(chiHomNay);
+            lblThuChiConLai.Text = Util.UtilCommon.formatTien(thuChiConLai);
+
+            DateTime homQua = DateTime.Now.AddDays(-1);
+            ThongKeGdDto thongKe_HomQua = Controller.Controller.getInstance().thongKeGiaoDich(homQua);
+
+            double tongTienConLai_HomQua = 0;
+            double thuHomQua = 0;
+            double chiHomQua = 0;
+
+            thuHomQua = thongKe_HomQua.tongVonChuocDo + thongKe_HomQua.tongLaiTraTruoc + thongKe_HomQua.tongLaiThanhLy + thongKe_HomQua.tongTienThuKhac;
+            chiHomQua = thongKe_HomQua.tongTienCamDo + thongKe_HomQua.tongTienLayThem + thongKe_HomQua.tongTienChiKhac;
+            tongTienConLai_HomQua = thuHomQua - chiHomQua;
+
+            lblTongTienConLai_HomNay.Text = Util.UtilCommon.formatTien(thuChiConLai);
+            lblTongTienConLai_NgayTruoc.Text = Util.UtilCommon.formatTien(tongTienConLai_HomQua);
+
+            tabControl1.SelectedTab = tabTkChiTiet;
         }
     }
 }
