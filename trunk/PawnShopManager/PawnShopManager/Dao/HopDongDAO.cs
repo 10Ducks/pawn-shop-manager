@@ -504,6 +504,78 @@ namespace PawnShopManager.Dao
             }
             return result;
         }
+
+        public List<ThongKeGdDto> thongKeGiaoDich_Ngay_Thang_Nam(int ngay, int thang, int nam)
+        {
+            List<ThongKeGdDto> result;
+            try
+            {
+                SqlConnection conn = DbProviderFactory.getInstance().connectDB();
+
+                SqlCommand command = new SqlCommand();
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Connection = conn;
+                command.CommandText = "ThongKeGD_Ngay_Thang_Nam";
+                command.Parameters.Add("@ngay", System.Data.SqlDbType.Int).Value = ngay;
+                command.Parameters.Add("@thang", System.Data.SqlDbType.Int).Value = thang;
+                command.Parameters.Add("@nam", System.Data.SqlDbType.Int).Value = nam;
+
+                SqlDataReader reader = command.ExecuteReader();
+                result = new List<ThongKeGdDto>() ;
+                if (reader.Read())
+                {
+                    ThongKeGdDto tk = new ThongKeGdDto();
+                    tk.tongVonChuocDo = reader.GetDouble(0);
+                    tk.tongLaiTraTruoc = reader.GetDouble(1);
+                    tk.tongLaiThanhLy = reader.GetDouble(2);
+                    tk.tongTienThuKhac = reader.GetDouble(3);
+                    tk.tongTienCamDo = reader.GetDouble(4);
+                    tk.tongTienLayThem = reader.GetDouble(5);
+                    tk.tongTienChiKhac = reader.GetDouble(6);
+
+                    result.Add(tk);
+                }
+
+                DbProviderFactory.getInstance().closeConnection();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+                return null;
+            }
+            return result;
+        }
+
+        public DataTable ThongKeGiaoDich_Table(int ngay, int thang, int nam, int loai)
+        {
+            DataTable dataTable = new DataTable("ThongKeGiaoDich_Table");
+            try
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                SqlConnection conn = DbProviderFactory.getInstance().connectDB();
+
+                SqlCommand command = new SqlCommand();
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Connection = conn;
+                command.CommandText = "ThongKeGiaoDich";
+                command.Parameters.Add("@ngay", System.Data.SqlDbType.Int).Value = ngay;
+                command.Parameters.Add("@thang", System.Data.SqlDbType.Int).Value = thang;
+                command.Parameters.Add("@nam", System.Data.SqlDbType.Int).Value = nam;
+                command.Parameters.Add("@loai", System.Data.SqlDbType.Int).Value = loai;
+
+                adapter.SelectCommand = command;
+                adapter.Fill(dataTable);
+
+                DbProviderFactory.getInstance().closeConnection();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+                return null;
+            }
+            return dataTable;
+        }
+
         #endregion
     }
 }

@@ -16,6 +16,10 @@ namespace PawnShopManager.GUI.BODY
         public QLGiaoDich()
         {
             InitializeComponent();
+
+            cboTkTheo.SelectedIndex = 0;
+            cboLoaiGiaoDich.SelectedIndex = 0;
+            datePicker_ChonNgay.Value = DateTime.Now;
         }
 
         private void QLGiaoDich_Load(object sender, EventArgs e)
@@ -59,6 +63,53 @@ namespace PawnShopManager.GUI.BODY
             lblTongTienConLai_NgayTruoc.Text = Util.UtilCommon.formatTien(tongTienConLai_HomQua);
 
             tabControl1.SelectedTab = tabTkChiTiet;
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            int ngay = 0;
+            int thang = 0;
+            int nam = 0;
+            int loai = 0;
+            int index = cboTkTheo.SelectedIndex;
+            switch (index)
+            {
+                case 0:
+                    ngay = datePicker_ChonNgay.Value.Day;
+                    thang = datePicker_ChonNgay.Value.Month;
+                    nam = datePicker_ChonNgay.Value.Year;
+                    break;
+                case 1:
+                    thang = datePicker_ChonNgay.Value.Month;
+                    nam = datePicker_ChonNgay.Value.Year;
+                    break;
+                case 2:
+                    nam = datePicker_ChonNgay.Value.Year;
+                    break;
+            }
+
+            loai = cboLoaiGiaoDich.SelectedIndex;
+
+            DataTable table = Controller.Controller.getInstance().ThongKeGiaoDich_Table(ngay, thang, nam, loai);
+            superGridControl_ThongKe.PrimaryGrid.DataSource = table;
+            superGridControl_ThongKe.PrimaryGrid.DataMember = "ThongKeGiaoDich_Table";
+        }
+
+        private void cboTkTheo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = cboTkTheo.SelectedIndex;
+            switch (index)
+            {
+                case 0:
+                    datePicker_ChonNgay.CustomFormat = "dd/MM/yyyy";
+                    break;
+                case 1:
+                    datePicker_ChonNgay.CustomFormat = "MM/yyyy";
+                    break;
+                case 2:
+                    datePicker_ChonNgay.CustomFormat = "yyyy";
+                    break;
+            }
         }
     }
 }

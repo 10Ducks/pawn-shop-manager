@@ -179,5 +179,10 @@ namespace PawnShopManager.Controller
         {
             return hopDongDAO.thongKeGiaoDich(ngay);
         }
+
+        public DataTable ThongKeGiaoDich_Table(int ngay, int thang, int nam, int loai)
+        {
+            return hopDongDAO.ThongKeGiaoDich_Table(ngay, thang, nam, loai);
+        }
     }
 }
